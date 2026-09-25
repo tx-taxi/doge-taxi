@@ -199,7 +199,7 @@ export class TxTaxiExplorerRegistryService {
       .map((chain) => {
         const site = chain.site!;
         const logo = site.switcherLogo!;
-        const allowed:Record<string,string>={dogecoin:'http://127.0.0.1:4351','bitcoin-cash':'http://127.0.0.1:4361',dash:'http://127.0.0.1:4370'};
+        const allowed:Record<string,string>={dogecoin:'http://127.0.0.1:4451','bitcoin-cash':'http://127.0.0.1:4361',dash:'http://127.0.0.1:4370'};
         const local=this.routerOrigin==='http://127.0.0.1:4340' && site.localReviewOrigin===allowed[chain.id] ? site.localReviewOrigin : undefined;
         if(local)this.localOrigins.set(chain.id,local);
         const health = healthSnapshots.find((snapshot) =>

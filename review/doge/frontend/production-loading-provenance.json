@@ -1,0 +1,104 @@
+{
+  "profiles": [
+    {
+      "chain": "btc",
+      "coin": "bitcoin",
+      "background": "#08090b",
+      "port": 4341,
+      "origin": "https://btc.tx.taxi",
+      "icon": "/assets/chains/bitcoin.png"
+    },
+    {
+      "chain": "eth",
+      "coin": "ethereum",
+      "background": "#070812",
+      "port": 4342,
+      "origin": "https://eth.tx.taxi",
+      "icon": "/assets/chains/ethereum.png"
+    },
+    {
+      "chain": "xmr",
+      "coin": "monero",
+      "background": "#000000",
+      "port": 4343,
+      "origin": "https://xmr.tx.taxi",
+      "icon": "/assets/chains/monero.png"
+    },
+    {
+      "chain": "ltc",
+      "coin": "litecoin",
+      "background": "#0d1018",
+      "port": 4344,
+      "origin": "https://ltc.tx.taxi",
+      "icon": "/assets/chains/litecoin.png"
+    },
+    {
+      "chain": "doge",
+      "coin": "dogecoin",
+      "background": "rgb(18, 17, 14)",
+      "port": 4451,
+      "origin": "https://doge.tx.taxi",
+      "icon": "/assets/chains/dogecoin.png"
+    },
+    {
+      "chain": "bch",
+      "coin": "bitcoin-cash",
+      "background": "rgb(7, 21, 16)",
+      "port": 4361,
+      "origin": "https://bch.tx.taxi",
+      "icon": "/assets/chains/bitcoin-cash.png"
+    },
+    {
+      "chain": "dash",
+      "coin": "dash",
+      "background": "rgb(3, 19, 32)",
+      "port": 4370,
+      "origin": "https://dash.tx.taxi",
+      "icon": "/assets/chains/dash.png"
+    }
+  ],
+  "records": [
+    {
+      "chain": "doge",
+      "theme": "default",
+      "source": "/home/lukee/dev/doge-taxi/frontend/src/app/components",
+      "background": "rgb(18, 17, 14)",
+      "sha256": "5db53fbbe789322392b33b624e73c26b1f54846474a9fd6273be11b42cb9a683"
+    },
+    {
+      "chain": "doge",
+      "theme": "original",
+      "source": "/home/lukee/dev/doge-taxi/frontend/src/app/components",
+      "background": "rgb(0, 0, 0)",
+      "sha256": "5bd97c454861324a9c4eafeb10f79adf1581125514483ac56af8f8974f0ef248"
+    },
+    {
+      "chain": "bch",
+      "theme": "default",
+      "source": "/home/lukee/dev/bch-taxi/frontend/src/app/components",
+      "background": "rgb(7, 21, 16)",
+      "sha256": "bbbbf543bd8177fbb26070dd345400ff03e2c40986dd44492a4f29bda8dd8341"
+    },
+    {
+      "chain": "bch",
+      "theme": "original",
+      "source": "/home/lukee/dev/bch-taxi/frontend/src/app/components",
+      "background": "rgb(0, 0, 0)",
+      "sha256": "cae37de69a4060679d071f60cfde2bd53c049ae7a4dfadee5d280f3f3113380f"
+    },
+    {
+      "chain": "dash",
+      "theme": "default",
+      "source": "/home/lukee/dev/dash-taxi/frontend/src/app/components",
+      "background": "rgb(3, 19, 32)",
+      "sha256": "f266cc29fb3f38e563df7803cc05c7208049245d891a70bb2e4a007189271d52"
+    },
+    {
+      "chain": "dash",
+      "theme": "original",
+      "source": "/home/lukee/dev/dash-taxi/frontend/src/app/components",
+      "background": "rgb(0, 0, 0)",
+      "sha256": "b5de974746fd0505e02f627097f584745bc0323644dd01cba3687df8fad8ccef"
+    }
+  ]
+}

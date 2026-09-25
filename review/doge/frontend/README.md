@@ -31,3 +31,11 @@ No frontend deployment or push performed by this agent. Adapter quality and prod
 Address desktop/mobile native/Original captures use the recorded BlockCypher `DDogepartyxxxxxxxxxxxxxxxxxxw1dfzr` response, parsed losslessly and mapped through the current native transaction helper. No provider billing was incurred. Exact balance 1,854,588,274.48319109 DOGE remains visible; missing UTXO/fiat/provider-health data in this intentionally bounded fixture remain unavailable, not fabricated. `address-fixture.json`.
 
 Live pending route checked after restoring its actual detail component, both widths/themes; `pending-live.json`. Fee distribution labels sampled bytes, not Bitcoin weight. Final production build log accompanies this review.
+
+### Production navigation promotion
+
+DOGE/BCH/DASH transition profiles now use their production origins without local-only gating, and actual native gold/emerald/deep-blue backgrounds. Local DOGE review destination is 4451. Websocket hub snapshot installation already had no local-only gate; strict chain/time/size validation remains unchanged.
+
+Loading templates were freshly captured from the actual current DOGE 4450, verified BCH Original 4421 and DASH Original 4423 native components, both themes. This restores omitted pending skeleton components. Only profile/template JSON was replaced in the existing script; all approved Original preboot/stylesheet/shadow overrides are preserved. Inline and standalone scripts match exactly. See `production-loading-provenance.json`.
+
+Production-origin first-paint check mapped https://doge.tx.taxi to the local review server and blocked all external JavaScript/API requests. Both 1440×900 and 390×844 displayed real native pending/mined placeholders before bootstrap, with divider exactly centered (720/195), native gold or Original black backgrounds. Screenshots inspected; `production-firstpaint.json`. Production build after these changes passed (`production-promotion-build.log`). No push/deploy by this agent.

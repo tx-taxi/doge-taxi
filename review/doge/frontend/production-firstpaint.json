@@ -1,0 +1,38 @@
+[
+  {
+    "width": 1440,
+    "theme": "default",
+    "bg": "rgb(18, 17, 14)",
+    "body": "rgb(18, 17, 14)",
+    "pending": 8,
+    "mined": 8,
+    "divider": 720
+  },
+  {
+    "width": 1440,
+    "theme": "original",
+    "bg": "rgb(0, 0, 0)",
+    "body": "rgb(0, 0, 0)",
+    "pending": 8,
+    "mined": 8,
+    "divider": 720
+  },
+  {
+    "width": 390,
+    "theme": "default",
+    "bg": "rgb(18, 17, 14)",
+    "body": "rgb(18, 17, 14)",
+    "pending": 8,
+    "mined": 8,
+    "divider": 195
+  },
+  {
+    "width": 390,
+    "theme": "original",
+    "bg": "rgb(0, 0, 0)",
+    "body": "rgb(0, 0, 0)",
+    "pending": 8,
+    "mined": 8,
+    "divider": 195
+  }
+]
