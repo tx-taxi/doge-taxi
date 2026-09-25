@@ -1,9 +1,9 @@
 {
   "chain": "doge",
-  "commit": "d1d436618baf230cd57783773173fe9a3608e4c1",
+  "commit": "d943a57eb1edfe0912bc662262cc8a824fcadd84",
   "approvedBaseline": "6ba310ede",
   "extractionAncestor": "2519326f9",
   "reconciliation": "Exact native DOGE candidate components at pinned source commit; parent matched-data desktop/mobile appearance, links and lifecycle pass. Recorded-data UI verification only; sustained live/provider acceptance incomplete.",
   "hubWrapper": "Owner-approved centered divider and native Offline/Reconnecting export-only adaptation; isolated controlled renderer verified desktop/mobile.",
-  "status": "Audit-cleaned native local source; bounded evidence in review/design-cleanup/README.md; provider limits remain explicit"
+  "status": "Independent recheck corrected local candidate; review/recheck-fixes and provider limits apply"
 }
