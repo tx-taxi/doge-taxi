@@ -48,9 +48,6 @@
         <p class="category">Explore</p>
         <p><a [routerLink]="['/' | relativeUrl]">Dashboard</a></p>
         <p><a [routerLink]="['/blocks' | relativeUrl]">Recent Blocks</a></p>
-        <p><a [routerLink]="['/mempool-block/0' | relativeUrl]">Mempool Wall</a></p>
-        <p><a *ngIf="env.MINING_DASHBOARD" [routerLink]="['/mining' | relativeUrl]">Mining Dashboard</a></p>
-        <p><a [routerLink]="['/graphs' | relativeUrl]">Dogecoin Graphs</a></p>
       </div>
       <div class="links">
         <p class="category">Tools &amp; Docs</p>
@@ -65,7 +62,6 @@
         <p class="category">doge.tx.taxi</p>
         <p><a [routerLink]="['/about']">About</a></p>
         <p><a href="https://t.me/hiss" target="_blank" rel="noopener noreferrer">Contact Us</a></p>
-        <p><a href="https://github.com/mempool/mempool" target="_blank" rel="noopener noreferrer">Upstream project</a></p>
       </div>
       <div class="links">
         <p class="category">Legal</p>

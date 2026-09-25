@@ -22,3 +22,5 @@ Status: **incomplete**, preserved for local review. No deploy, push, production 
 - Historical fiat unsupported. Current quotes are independent and do not fix chain live coverage.
 
 Smallest requirement: reachable DOGE indexed/live capacity sufficient for the above remaining route/update checks, plus documented or raw-node AuxPoW size reconciliation. A paid key alone does not prove historical aggregation support. Full route acceptance is not claimed; inherited unsupported tool/docs routes remain candidate scope.
+
+Final navigation cleanup: removed promotional upstream footer link and known unsupported Mempool Wall, Mining Dashboard and Graphs entry points; retained About and Trademark/Attribution access. Fee heading explicitly says provider estimates with BlockCypher/no-guarantee tooltip. Reopened affected final desktop root screenshot: no overflow or page errors; watch build passes. Native strip and export sources unchanged.

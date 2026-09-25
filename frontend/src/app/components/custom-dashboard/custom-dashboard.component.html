@@ -5,7 +5,7 @@
       @switch (widget.component) {
         @case ('fees') {
           <div class="col card-wrapper" [style.order]="isMobile && widget.mobileOrder || 8">
-            <div class="main-title" i18n="fees-box.transaction-fees">Transaction Fees</div>
+            <div class="main-title" title="BlockCypher fee estimates; not a confirmation guarantee">Provider fee estimates</div>
             <div class="card">
               <div class="card-body less-padding">
                 <app-fees-box class="d-block"></app-fees-box>
