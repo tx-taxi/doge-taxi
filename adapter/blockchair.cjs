@@ -40,7 +40,7 @@ async function transactions(ids){const out=[];for(let i=0;i<ids.length;i+=10){co
 async function outspends(id){const d=await request('/dashboards/transaction/'+id,{ttl:30000,cost:1});const item=d.data[id];if(!item||item.outputs.length!==item.transaction.output_count)throw new Error('Incomplete transaction outputs');return item.outputs.map(o=>({spent:!!o.is_spent,txid:o.spending_transaction_hash||undefined,vin:o.spending_index??undefined,status:o.is_spent?{confirmed:o.spending_block_id>=0,block_height:o.spending_block_id>=0?o.spending_block_id:undefined}:undefined}));}
 async function enrichBlock(item){
  const b=block(item.block),file=path.join(dir,'enriched-'+b.id+'.json');
- try{return JSON.parse(fs.readFileSync(file));}catch{}
+ try{const saved=JSON.parse(fs.readFileSync(file));saved.extras.summaryAvailable=saved.tx_count<=100&&saved.extras.feeRange.length>0;return saved;}catch{}
  // Bound on-demand fee enrichment, never present a partial range as complete.
  if(b.tx_count<=100){
   const all=item.transactions.length===b.tx_count?item:await blockPage(b.id,0,100);
@@ -49,6 +49,7 @@ async function enrichBlock(item){
    const rates=paid.map(t=>t.fee/t.size).sort((a,b)=>a-b);
    const sum=paid.reduce((n,t)=>n+t.fee,0);
    if(sum!==Number(b.extras.totalFees))throw new Error('Block fee index is incomplete');
+   b.extras.summaryAvailable=true;
    if(rates.length){const mid=Math.floor(rates.length/2);b.extras.feeRange=[rates[0],rates.at(-1)];b.extras.medianFee=rates.length%2?rates[mid]:(rates[mid-1]+rates[mid])/2;}
    const coinbase=txs.find(t=>t.vin[0]?.is_coinbase);const payout=coinbase?.vout.filter(o=>o.scriptpubkey_address).sort((a,b)=>b.value-a.value)[0]?.scriptpubkey_address;
    if(payout)b.extras.pool.address=payout;

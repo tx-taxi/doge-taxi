@@ -95,6 +95,12 @@ async function route(p){let m;const pathname=p.split('?')[0];
  if(pathname==='/api/blocks/tip/hash')return (await fetchJson('',refreshInterval,'collector')).hash;
  if(m=pathname.match(/^\/api\/block-height\/(\d+)$/))return (await getBlock(m[1])).id;
  if(m=pathname.match(/^\/api\/(?:v1\/)?blocks(?:\/(\d+))?$/)){if(!m[1])return (await snapshot()).blocks;const h=Number(m[1]);return(await chair.blocks(Array.from({length:Math.min(10,h+1)},(_,i)=>h-i))).blocks;}
+ if(m=pathname.match(/^\/api\/v1\/block\/([a-f0-9]{64})\/summary$/)){
+  const item=await chair.blockPage(m[1],0,100);
+  if(item.block.transaction_count>100||item.transactions.length!==item.block.transaction_count)throw Object.assign(new Error('Complete block visualization is unavailable within the provider budget'),{status:503});
+  const txs=await chair.transactions(item.transactions);
+  return txs.map(t=>({txid:t.txid,fee:t.fee,vsize:t.size,value:Number(t.doge.value),rate:t.fee/t.size,flags:0}));
+ }
  if(m=pathname.match(/^\/api\/(?:v1\/)?block\/([a-f0-9]{64}|\d+)(?:\/(txids|txs)(?:\/(\d+))?)?$/)){
   const item=await chair.blockPage(m[1],Number(m[3]||0),m[2]==='txids'?10000:25);
   if(m[2]==='txids'){if(item.transactions.length!==item.block.transaction_count)throw new Error('Complete block transaction list unavailable');return item.transactions;}
