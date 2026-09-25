@@ -32,6 +32,9 @@ import { AmountShortenerPipe } from '@app/shared/pipes/amount-shortener.pipe';
 })
 export class HashrateChartComponent implements OnInit {
   @Input() tableOnly = false;
+  @Input() capabilityUnavailable = false;
+  @Input() unavailableTitle = 'Hashrate & Difficulty';
+  @Input() unavailableReason = 'Historical hashrate and difficulty series are unavailable from this provider.';
   @Input() widget = false;
   @Input() height: number = 300;
   @Input() right: number | string = 45;
@@ -68,6 +71,7 @@ export class HashrateChartComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    if (this.capabilityUnavailable) return;
     this.stateService.networkChanged$.subscribe((network) => this.network = network);
 
     let firstRun = true;

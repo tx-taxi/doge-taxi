@@ -39,7 +39,7 @@ const routes: Routes = [
       {
         path: 'mining/pool/:slug',
         data: { networks: ['bitcoin'] },
-        component: PoolComponent,
+        component: MiningDashboardComponent,
       },
       {
         path: 'mining',
@@ -59,7 +59,7 @@ const routes: Routes = [
         children: [
           {
             path: '',
-            component: MempoolBlockComponent,
+            component: DashboardComponent,
           },
         ]
       },

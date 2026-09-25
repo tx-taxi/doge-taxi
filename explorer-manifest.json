@@ -138,6 +138,17 @@
       "loading": "native skeleton",
       "failure": "explicit503;404 only confirmed absence",
       "stale": "native offline/reconnect; no invented zero"
+    },
+    {
+      "component": "Observed pending treemap and incoming chart",
+      "route": "/",
+      "source": "Existing BlockCypher pending sample; persisted provider observation timestamps, no extra upstream requests",
+      "availability": "Native pending treemap observed with real sample; incoming rate requires consecutive fresh samples and remains live-provider constrained",
+      "units": "serialized bytes/second, sample transaction count",
+      "cadence": "120 seconds shared snapshot; deduplicated across viewers; 2-hour bounded retained observations",
+      "loading": "Native graph geometry with explicit insufficient observations",
+      "failure": "Native offline connection state; no fabricated zero for outages",
+      "stale": "No repeated cached observation counted as new; gaps >300 seconds break the series"
     }
   ],
   "unresolved": [
@@ -150,6 +161,10 @@
     {
       "report": "review/doge/acceptance.md",
       "status": "incomplete"
+    },
+    {
+      "report": "review/design-cleanup/README.md",
+      "status": "Design fixes verified within bounded cases; provider completeness unresolved"
     }
   ]
 }

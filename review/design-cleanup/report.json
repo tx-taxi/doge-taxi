@@ -1,0 +1,182 @@
+[
+  {
+    "name": "root",
+    "width": 1440,
+    "theme": "default",
+    "errors": [],
+    "failures": [],
+    "text": "PROVIDER FEE ESTIMATES\nNo Priority\nLow Priority\nMedium Priority\nHigh Priority\nSCRYPT MINING\nnetwork | rewards\nNetwork data unavailable\n—\nDifficulty\n60 s\nTarget interval\nPending Transactions\n\nObserved sample · not a projected block\n\nUnconfirmed\nSample\nIncoming Transactions\n\nNewly observed sample bytes/second · gaps are not zero activity\n\nNo consecutive observations available.\n\nRecent Blocks \nHeight\tMined\tTXs\tSize\t\t\t\n\t\t\t\n\t\t\t\n\t\t\t\n\t\t\t\n\t\t\t\nRecent Transactions \nTXID\tUSD\tAmount\tFee\t\t\t\n\t\t\t\n\t\t\t\n\t\t\t\n\t\t\t\n\t\t\t\n ",
+    "overflow": false
+  },
+  {
+    "name": "mining",
+    "width": 1440,
+    "theme": "default",
+    "errors": [],
+    "failures": [],
+    "text": " \n6388393\n—\n—\n‎0.00 DOGE\n1 transaction\n2 minutes ago\nUnknown\n \n6388392\n—\n—\n‎2.161 DOGE\n7 transactions\n3 minutes ago\nUnknown\n \n6388391\n—\n—\n‎0.693 DOGE\n3 transactions\n4 minutes ago\nUnknown\n \n6388390\n—\n—\n‎6.799 DOGE\n34 transactions\n5 minutes ago\nUnknown\n \n6388389\n—\n—\n‎1.084 DOGE\n4 transactions\n5 minutes ago\nUnknown\n \n6388388\n—\n—\n‎2.371 DOGE\n7 transactions\n6 minutes ago\nUnknown\nSCRYPT MINING\nnetwork | rewards\nBlock size · 0.0%\n29,429,734\nDifficulty\n60 s\nTarget interval\nAuxPoW\nMerged mining\nSCRYPT MINING\nnetwork | rewards\nContinuous issuance · no halving\n10,000\nDOGE subsidy\n‎0.00000000 DOGE\nLatest block fees\nMining Pools\nHistorical pool attribution is unavailable from this provider.\nHashrate & Difficulty\nHistorical hashrate and difficulty series are unavailable from this provider.",
+    "overflow": false
+  },
+  {
+    "name": "graphs",
+    "width": 1440,
+    "theme": "default",
+    "errors": [],
+    "failures": [],
+    "text": "Dogecoin Charts\nHistorical network statistics\nHistorical mining, fee-distribution and mempool series are unavailable from the current provider.\nView the live observed sample »",
+    "overflow": false
+  },
+  {
+    "name": "calculator",
+    "width": 1440,
+    "theme": "default",
+    "errors": [],
+    "failures": [],
+    "text": "Calculator\nUSD\nDOGE\nkoinu\n\n\nÐ 1.00 000 000koinu\n$0.10\nCurrent fiat price: $0.10",
+    "overflow": false
+  },
+  {
+    "name": "docs",
+    "width": 1440,
+    "theme": "default",
+    "errors": [],
+    "failures": [],
+    "text": "Dogecoin explorer documentation\nBlocks, transactions and addresses\n\nSearch a block height, block hash, transaction ID, transparent Dogecoin address, or supported explorer URL. A 64-character hash may belong to several chains; manual chain selection stays available.\n\nDogecoin targets one block per minute, uses per-block DigiShield difficulty adjustment and supports Scrypt merged mining through AuxPoW. Since block 600,000 the block subsidy is 10,000 DOGE, with no further halvings.\n\n1 DOGE = 100,000,000 koinu. Fee rates use koinu/B. Fiat values use the provider's Dogecoin prices and may lag the market.\n\nPrivacy and coverage\n\nThe explorer shows public Dogecoin transactions. Historical mining series and complete address indexing are not currently verified. Provider rate limits are separate from missing indexing capability.\n\nThe pending view reflects a node’s mempool; different nodes may see different transactions. Estimates are not confirmation guarantees.\n\nRead-only API\n\nRequests use the same local origin. Successful retained responses carry X-DOGE-Observed-At and X-DOGE-Stale headers. Provider failures return 503; absence returns 404. This local review does not broadcast transactions.\n\nGET /api/blocks/tip/height\nGET /api/block-height/100000\nGET /api/block/100000/txs\nGET /api/tx/19220173c151925d493a25dbe67798fa11e6e4db01b927b1c04cddead85d3d12\nGET /api/address/DDogepartyxxxxxxxxxxxxxxxxxxw1dfzr/txs\nGET /api/address/:address/txs/chain/:last-confirmed-txid\n\nLive updates: WebSocket /api/v1/ws with action init, followed by action want and data [blocks, stats, mempool-blocks].",
+    "overflow": false
+  },
+  {
+    "name": "root",
+    "width": 1440,
+    "theme": "original",
+    "errors": [],
+    "failures": [],
+    "text": " \n6388393\n—\n—\n‎0.00 DOGE\n1 transaction\n2 minutes ago\nUnknown\n \n6388392\n—\n—\n‎2.161 DOGE\n7 transactions\n3 minutes ago\nUnknown\n \n6388391\n—\n—\n‎0.693 DOGE\n3 transactions\n4 minutes ago\nUnknown\n \n6388390\n—\n—\n‎6.799 DOGE\n34 transactions\n5 minutes ago\nUnknown\n \n6388389\n—\n—\n‎1.084 DOGE\n4 transactions\n5 minutes ago\nUnknown\n \n6388388\n—\n—\n‎2.371 DOGE\n7 transactions\n6 minutes ago\nUnknown\nPROVIDER FEE ESTIMATES\nNo Priority\nLow Priority\nMedium Priority\nHigh Priority\n13,429 koinu/B\n$0.00\n13,429 koinu/B\n$0.00\n53,987 koinu/B\n$0.01\n189,237 koinu/B\n$0.04\nSCRYPT MINING\nnetwork | rewards\nBlock size · 0.0%\n29,429,734\nDifficulty\n60 s\nTarget interval\nAuxPoW\nMerged mining\nPending Transactions\n\nObserved sample · not a projected block\n\nUnconfirmed\n\n46 TXs\n\nSample\n\n9 TXs\n\nIncoming Transactions\n\nNewly observed sample bytes/second · gaps are not zero activity\n\nNo consecutive observations available.\n\nRecent Blocks \nHeight\tMined\tTXs\tSize6388393\t2 minutes ago\t1\t\n \n182 B\n\n6388392\t3 minutes ago\t7\t\n \n2.24 kB\n\n6388391\t4 minutes ago\t3\t\n \n915 B\n\n6388390\t5 minutes ago\t34\t\n \n10.13 kB\n\n6388389\t5 minutes ago\t4\t\n \n1.14 kB\n\n6388388\t6 minutes ago\t7\t\n \n1.65 kB\nRecent Transactions \nTXID\tUSD\tAmount\tFee\n3e159d5e41a7cf496ff326793f1143f6865bae12a863049984d63ab3b17\n12d48\n3e159d5e41a7cf496ff326793f1143f6865bae12a863049984d63ab3b1712d48\n\t$4.30\t‎45.2446 DOGE\t1,003 koinu/B\n\nb49f8c2a0ad7aa8e2ef4ca1f08cbf96b3cfb0d988bdd3ff6e26481821c6\n7b1e8\nb49f8c2a0ad7aa8e2ef4ca1f08cbf96b3cfb0d988bdd3ff6e26481821c67b1e8\n\t$19,379\t‎203,837.0497 DOGE\t201,770 koinu/B\n\nd548d6b6c626d30c68b2663ef085fb921bb6de6b68663e00823d49b4ddf\nb215d\nd548d6b6c626d30c68b2663ef085fb921bb6de6b68663e00823d49b4ddfb215d\n\t$279.66\t‎2,941.5995 DOGE\t33,186 koinu/B\n\n87da2edd7d8d2ac8bfa39576cb29ee653fb352c2315dd41dc37965a00aa\na91ff\n87da2edd7d8d2ac8bfa39576cb29ee653fb352c2315dd41dc37965a00aaa91ff\n\t$2.62\t‎27.6105 DOGE\t70,664 koinu/B\n\nac26118ccba172589fa3156aeb4910741d1f1640a89c0a8eed2e82b1fbe\n635e7\nac26118ccba172589fa3156aeb4910741d1f1640a89c0a8eed2e82b1fbe635e7\n\t$784,245\t‎8,248,971.7238 DOGE\t86,116 koinu/B\n\n25209433cc957e49ba8c60c35b041fddfa66c2b3dc9a58f84995b38b9d9\n14ce7\n25209433cc957e49ba8c60c35b041fddfa66c2b3dc9a58f84995b38b9d914ce7\n\t$2,000\t‎21,040.0191 DOGE\t1,004 koinu/B\n ",
+    "overflow": false
+  },
+  {
+    "name": "mining",
+    "width": 1440,
+    "theme": "original",
+    "errors": [],
+    "failures": [],
+    "text": " \n6388393\n—\n—\n‎0.00 DOGE\n1 transaction\n2 minutes ago\nUnknown\n \n6388392\n—\n—\n‎2.161 DOGE\n7 transactions\n3 minutes ago\nUnknown\n \n6388391\n—\n—\n‎0.693 DOGE\n3 transactions\n4 minutes ago\nUnknown\n \n6388390\n—\n—\n‎6.799 DOGE\n34 transactions\n5 minutes ago\nUnknown\n \n6388389\n—\n—\n‎1.084 DOGE\n4 transactions\n5 minutes ago\nUnknown\n \n6388388\n—\n—\n‎2.371 DOGE\n7 transactions\n6 minutes ago\nUnknown\nSCRYPT MINING\nnetwork | rewards\nBlock size · 0.0%\n29,429,734\nDifficulty\n60 s\nTarget interval\nAuxPoW\nMerged mining\nSCRYPT MINING\nnetwork | rewards\nContinuous issuance · no halving\n10,000\nDOGE subsidy\n‎0.00000000 DOGE\nLatest block fees\nMining Pools\nHistorical pool attribution is unavailable from this provider.\nHashrate & Difficulty\nHistorical hashrate and difficulty series are unavailable from this provider.",
+    "overflow": false
+  },
+  {
+    "name": "graphs",
+    "width": 1440,
+    "theme": "original",
+    "errors": [],
+    "failures": [],
+    "text": "Dogecoin Charts\nHistorical network statistics\nHistorical mining, fee-distribution and mempool series are unavailable from the current provider.\nView the live observed sample »",
+    "overflow": false
+  },
+  {
+    "name": "calculator",
+    "width": 1440,
+    "theme": "original",
+    "errors": [],
+    "failures": [],
+    "text": "Calculator\nUSD\nDOGE\nkoinu\n\n\nÐ 1.00 000 000koinu\n$0.10\nCurrent fiat price: $0.10",
+    "overflow": false
+  },
+  {
+    "name": "docs",
+    "width": 1440,
+    "theme": "original",
+    "errors": [],
+    "failures": [],
+    "text": "Dogecoin explorer documentation\nBlocks, transactions and addresses\n\nSearch a block height, block hash, transaction ID, transparent Dogecoin address, or supported explorer URL. A 64-character hash may belong to several chains; manual chain selection stays available.\n\nDogecoin targets one block per minute, uses per-block DigiShield difficulty adjustment and supports Scrypt merged mining through AuxPoW. Since block 600,000 the block subsidy is 10,000 DOGE, with no further halvings.\n\n1 DOGE = 100,000,000 koinu. Fee rates use koinu/B. Fiat values use the provider's Dogecoin prices and may lag the market.\n\nPrivacy and coverage\n\nThe explorer shows public Dogecoin transactions. Historical mining series and complete address indexing are not currently verified. Provider rate limits are separate from missing indexing capability.\n\nThe pending view reflects a node’s mempool; different nodes may see different transactions. Estimates are not confirmation guarantees.\n\nRead-only API\n\nRequests use the same local origin. Successful retained responses carry X-DOGE-Observed-At and X-DOGE-Stale headers. Provider failures return 503; absence returns 404. This local review does not broadcast transactions.\n\nGET /api/blocks/tip/height\nGET /api/block-height/100000\nGET /api/block/100000/txs\nGET /api/tx/19220173c151925d493a25dbe67798fa11e6e4db01b927b1c04cddead85d3d12\nGET /api/address/DDogepartyxxxxxxxxxxxxxxxxxxw1dfzr/txs\nGET /api/address/:address/txs/chain/:last-confirmed-txid\n\nLive updates: WebSocket /api/v1/ws with action init, followed by action want and data [blocks, stats, mempool-blocks].",
+    "overflow": false
+  },
+  {
+    "name": "root",
+    "width": 390,
+    "theme": "default",
+    "errors": [],
+    "failures": [],
+    "text": " \n6388393\n—\n—\n‎0.00 DOGE\n1 transaction\n2 minutes ago\nUnknown\n \n6388392\n—\n—\n‎2.161 DOGE\n7 transactions\n3 minutes ago\nUnknown\n \n6388391\n—\n—\n‎0.693 DOGE\n3 transactions\n5 minutes ago\nUnknown\n \n6388390\n—\n—\n‎6.799 DOGE\n34 transactions\n5 minutes ago\nUnknown\n \n6388389\n—\n—\n‎1.084 DOGE\n4 transactions\n6 minutes ago\nUnknown\n \n6388388\n—\n—\n‎2.371 DOGE\n7 transactions\n6 minutes ago\nUnknown\nPROVIDER FEE ESTIMATES\nLow Priority\nMedium Priority\nHigh Priority\n13,429 koinu/B\n$0.00\n53,987 koinu/B\n$0.01\n189,237 koinu/B\n$0.04\nSCRYPT MINING\nnetwork | rewards\nBlock size · 0.0%\n29,429,734\nDifficulty\n60 s\nTarget interval\nAuxPoW\nMerged mining\nPending Transactions\n\nObserved sample · not a projected block\n\nUnconfirmed\n\n46 TXs\n\nSample\n\n9 TXs\n\nIncoming Transactions\n\nNewly observed sample bytes/second · gaps are not zero activity\n\nNo consecutive observations available.\n\nRecent Blocks \nHeight\tMined\tTXs6388393\t2 minutes ago\t1\n6388392\t3 minutes ago\t7\n6388391\t5 minutes ago\t3\n6388390\t5 minutes ago\t34\n6388389\t6 minutes ago\t4\n6388388\t6 minutes ago\t7\nRecent Transactions \nTXID\tFee\n3e159d5e41a7cf496ff326793f1143f6865bae12a863049984d63ab3b17\n12d48\n3e159d5e41a7cf496ff326793f1143f6865bae12a863049984d63ab3b1712d48\n\t1,003 koinu/B\n\nb49f8c2a0ad7aa8e2ef4ca1f08cbf96b3cfb0d988bdd3ff6e26481821c6\n7b1e8\nb49f8c2a0ad7aa8e2ef4ca1f08cbf96b3cfb0d988bdd3ff6e26481821c67b1e8\n\t201,770 koinu/B\n\nd548d6b6c626d30c68b2663ef085fb921bb6de6b68663e00823d49b4ddf\nb215d\nd548d6b6c626d30c68b2663ef085fb921bb6de6b68663e00823d49b4ddfb215d\n\t33,186 koinu/B\n\n87da2edd7d8d2ac8bfa39576cb29ee653fb352c2315dd41dc37965a00aa\na91ff\n87da2edd7d8d2ac8bfa39576cb29ee653fb352c2315dd41dc37965a00aaa91ff\n\t70,664 koinu/B\n\nac26118ccba172589fa3156aeb4910741d1f1640a89c0a8eed2e82b1fbe\n635e7\nac26118ccba172589fa3156aeb4910741d1f1640a89c0a8eed2e82b1fbe635e7\n\t86,116 koinu/B\n\n25209433cc957e49ba8c60c35b041fddfa66c2b3dc9a58f84995b38b9d9\n14ce7\n25209433cc957e49ba8c60c35b041fddfa66c2b3dc9a58f84995b38b9d914ce7\n\t1,004 koinu/B\n ",
+    "overflow": false
+  },
+  {
+    "name": "mining",
+    "width": 390,
+    "theme": "default",
+    "errors": [],
+    "failures": [],
+    "text": " \n6388393\n—\n—\n‎0.00 DOGE\n1 transaction\n2 minutes ago\nUnknown\n \n6388392\n—\n—\n‎2.161 DOGE\n7 transactions\n3 minutes ago\nUnknown\n \n6388391\n—\n—\n‎0.693 DOGE\n3 transactions\n5 minutes ago\nUnknown\n \n6388390\n—\n—\n‎6.799 DOGE\n34 transactions\n5 minutes ago\nUnknown\n \n6388389\n—\n—\n‎1.084 DOGE\n4 transactions\n6 minutes ago\nUnknown\n \n6388388\n—\n—\n‎2.371 DOGE\n7 transactions\n6 minutes ago\nUnknown\nSCRYPT MINING\nnetwork | rewards\nBlock size · 0.0%\n29,429,734\nDifficulty\n60 s\nTarget interval\nAuxPoW\nMerged mining\nSCRYPT MINING\nnetwork | rewards\nContinuous issuance · no halving\n10,000\nDOGE subsidy\n‎0.00000000 DOGE\nLatest block fees\nMining Pools\nHistorical pool attribution is unavailable from this provider.\nHashrate & Difficulty\nHistorical hashrate and difficulty series are unavailable from this provider.",
+    "overflow": false
+  },
+  {
+    "name": "graphs",
+    "width": 390,
+    "theme": "default",
+    "errors": [],
+    "failures": [],
+    "text": "Dogecoin Charts\nHistorical network statistics\nHistorical mining, fee-distribution and mempool series are unavailable from the current provider.\nView the live observed sample »",
+    "overflow": false
+  },
+  {
+    "name": "calculator",
+    "width": 390,
+    "theme": "default",
+    "errors": [],
+    "failures": [],
+    "text": "Calculator\nUSD\nDOGE\nkoinu\n\n\nÐ 1.00 000 000koinu\n$0.10\nCurrent fiat price: $0.10",
+    "overflow": false
+  },
+  {
+    "name": "docs",
+    "width": 390,
+    "theme": "default",
+    "errors": [],
+    "failures": [],
+    "text": "Dogecoin explorer documentation\nBlocks, transactions and addresses\n\nSearch a block height, block hash, transaction ID, transparent Dogecoin address, or supported explorer URL. A 64-character hash may belong to several chains; manual chain selection stays available.\n\nDogecoin targets one block per minute, uses per-block DigiShield difficulty adjustment and supports Scrypt merged mining through AuxPoW. Since block 600,000 the block subsidy is 10,000 DOGE, with no further halvings.\n\n1 DOGE = 100,000,000 koinu. Fee rates use koinu/B. Fiat values use the provider's Dogecoin prices and may lag the market.\n\nPrivacy and coverage\n\nThe explorer shows public Dogecoin transactions. Historical mining series and complete address indexing are not currently verified. Provider rate limits are separate from missing indexing capability.\n\nThe pending view reflects a node’s mempool; different nodes may see different transactions. Estimates are not confirmation guarantees.\n\nRead-only API\n\nRequests use the same local origin. Successful retained responses carry X-DOGE-Observed-At and X-DOGE-Stale headers. Provider failures return 503; absence returns 404. This local review does not broadcast transactions.\n\nGET /api/blocks/tip/height\nGET /api/block-height/100000\nGET /api/block/100000/txs\nGET /api/tx/19220173c151925d493a25dbe67798fa11e6e4db01b927b1c04cddead85d3d12\nGET /api/address/DDogepartyxxxxxxxxxxxxxxxxxxw1dfzr/txs\nGET /api/address/:address/txs/chain/:last-confirmed-txid\n\nLive updates: WebSocket /api/v1/ws with action init, followed by action want and data [blocks, stats, mempool-blocks].",
+    "overflow": false
+  },
+  {
+    "name": "root",
+    "width": 390,
+    "theme": "original",
+    "errors": [],
+    "failures": [],
+    "text": " \n6388393\n—\n—\n‎0.00 DOGE\n1 transaction\n2 minutes ago\nUnknown\n \n6388392\n—\n—\n‎2.161 DOGE\n7 transactions\n3 minutes ago\nUnknown\n \n6388391\n—\n—\n‎0.693 DOGE\n3 transactions\n5 minutes ago\nUnknown\n \n6388390\n—\n—\n‎6.799 DOGE\n34 transactions\n5 minutes ago\nUnknown\n \n6388389\n—\n—\n‎1.084 DOGE\n4 transactions\n6 minutes ago\nUnknown\n \n6388388\n—\n—\n‎2.371 DOGE\n7 transactions\n7 minutes ago\nUnknown\nPROVIDER FEE ESTIMATES\nLow Priority\nMedium Priority\nHigh Priority\n13,429 koinu/B\n$0.00\n53,987 koinu/B\n$0.01\n189,237 koinu/B\n$0.04\nSCRYPT MINING\nnetwork | rewards\nBlock size · 0.0%\n29,429,734\nDifficulty\n60 s\nTarget interval\nAuxPoW\nMerged mining\nPending Transactions\n\nObserved sample · not a projected block\n\nUnconfirmed\n\n46 TXs\n\nSample\n\n9 TXs\n\nIncoming Transactions\n\nNewly observed sample bytes/second · gaps are not zero activity\n\nNo consecutive observations available.\n\nRecent Blocks \nHeight\tMined\tTXs6388393\t2 minutes ago\t1\n6388392\t3 minutes ago\t7\n6388391\t5 minutes ago\t3\n6388390\t5 minutes ago\t34\n6388389\t6 minutes ago\t4\n6388388\t7 minutes ago\t7\nRecent Transactions \nTXID\tFee\n3e159d5e41a7cf496ff326793f1143f6865bae12a863049984d63ab3b17\n12d48\n3e159d5e41a7cf496ff326793f1143f6865bae12a863049984d63ab3b1712d48\n\t1,003 koinu/B\n\nb49f8c2a0ad7aa8e2ef4ca1f08cbf96b3cfb0d988bdd3ff6e26481821c6\n7b1e8\nb49f8c2a0ad7aa8e2ef4ca1f08cbf96b3cfb0d988bdd3ff6e26481821c67b1e8\n\t201,770 koinu/B\n\nd548d6b6c626d30c68b2663ef085fb921bb6de6b68663e00823d49b4ddf\nb215d\nd548d6b6c626d30c68b2663ef085fb921bb6de6b68663e00823d49b4ddfb215d\n\t33,186 koinu/B\n\n87da2edd7d8d2ac8bfa39576cb29ee653fb352c2315dd41dc37965a00aa\na91ff\n87da2edd7d8d2ac8bfa39576cb29ee653fb352c2315dd41dc37965a00aaa91ff\n\t70,664 koinu/B\n\nac26118ccba172589fa3156aeb4910741d1f1640a89c0a8eed2e82b1fbe\n635e7\nac26118ccba172589fa3156aeb4910741d1f1640a89c0a8eed2e82b1fbe635e7\n\t86,116 koinu/B\n\n25209433cc957e49ba8c60c35b041fddfa66c2b3dc9a58f84995b38b9d9\n14ce7\n25209433cc957e49ba8c60c35b041fddfa66c2b3dc9a58f84995b38b9d914ce7\n\t1,004 koinu/B\n ",
+    "overflow": false
+  },
+  {
+    "name": "mining",
+    "width": 390,
+    "theme": "original",
+    "errors": [],
+    "failures": [],
+    "text": " \n6388393\n—\n—\n‎0.00 DOGE\n1 transaction\n2 minutes ago\nUnknown\n \n6388392\n—\n—\n‎2.161 DOGE\n7 transactions\n3 minutes ago\nUnknown\n \n6388391\n—\n—\n‎0.693 DOGE\n3 transactions\n5 minutes ago\nUnknown\n \n6388390\n—\n—\n‎6.799 DOGE\n34 transactions\n5 minutes ago\nUnknown\n \n6388389\n—\n—\n‎1.084 DOGE\n4 transactions\n6 minutes ago\nUnknown\n \n6388388\n—\n—\n‎2.371 DOGE\n7 transactions\n7 minutes ago\nUnknown\nSCRYPT MINING\nnetwork | rewards\nBlock size · 0.0%\n29,429,734\nDifficulty\n60 s\nTarget interval\nAuxPoW\nMerged mining\nSCRYPT MINING\nnetwork | rewards\nContinuous issuance · no halving\n10,000\nDOGE subsidy\n‎0.00000000 DOGE\nLatest block fees\nMining Pools\nHistorical pool attribution is unavailable from this provider.\nHashrate & Difficulty\nHistorical hashrate and difficulty series are unavailable from this provider.",
+    "overflow": false
+  },
+  {
+    "name": "graphs",
+    "width": 390,
+    "theme": "original",
+    "errors": [],
+    "failures": [],
+    "text": "Dogecoin Charts\nHistorical network statistics\nHistorical mining, fee-distribution and mempool series are unavailable from the current provider.\nView the live observed sample »",
+    "overflow": false
+  },
+  {
+    "name": "calculator",
+    "width": 390,
+    "theme": "original",
+    "errors": [],
+    "failures": [],
+    "text": "Calculator\nUSD\nDOGE\nkoinu\n\n\nÐ 1.00 000 000koinu\n$0.10\nCurrent fiat price: $0.10",
+    "overflow": false
+  },
+  {
+    "name": "docs",
+    "width": 390,
+    "theme": "original",
+    "errors": [],
+    "failures": [],
+    "text": "Dogecoin explorer documentation\nBlocks, transactions and addresses\n\nSearch a block height, block hash, transaction ID, transparent Dogecoin address, or supported explorer URL. A 64-character hash may belong to several chains; manual chain selection stays available.\n\nDogecoin targets one block per minute, uses per-block DigiShield difficulty adjustment and supports Scrypt merged mining through AuxPoW. Since block 600,000 the block subsidy is 10,000 DOGE, with no further halvings.\n\n1 DOGE = 100,000,000 koinu. Fee rates use koinu/B. Fiat values use the provider's Dogecoin prices and may lag the market.\n\nPrivacy and coverage\n\nThe explorer shows public Dogecoin transactions. Historical mining series and complete address indexing are not currently verified. Provider rate limits are separate from missing indexing capability.\n\nThe pending view reflects a node’s mempool; different nodes may see different transactions. Estimates are not confirmation guarantees.\n\nRead-only API\n\nRequests use the same local origin. Successful retained responses carry X-DOGE-Observed-At and X-DOGE-Stale headers. Provider failures return 503; absence returns 404. This local review does not broadcast transactions.\n\nGET /api/blocks/tip/height\nGET /api/block-height/100000\nGET /api/block/100000/txs\nGET /api/tx/19220173c151925d493a25dbe67798fa11e6e4db01b927b1c04cddead85d3d12\nGET /api/address/DDogepartyxxxxxxxxxxxxxxxxxxw1dfzr/txs\nGET /api/address/:address/txs/chain/:last-confirmed-txid\n\nLive updates: WebSocket /api/v1/ws with action init, followed by action want and data [blocks, stats, mempool-blocks].",
+    "overflow": false
+  }
+]

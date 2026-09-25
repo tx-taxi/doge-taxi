@@ -130,7 +130,7 @@
 
   <ng-template #restOfTable>
     <ng-container *ngIf="block && !isLoadingBlock; else loadingRest">
-      <tr *ngIf="network !== 'liquid' && network !== 'liquidtestnet'">
+      <tr *ngIf="network !== 'liquid' && network !== 'liquidtestnet' && block.extras?.minFee != null && block.extras?.maxFee != null">
         <td i18n="mempool-block.fee-span">Fee span</td>
         <td><app-fee-rate [fee]="block.extras?.minFee" [showUnit]="false"></app-fee-rate> - <app-fee-rate [fee]="block.extras?.maxFee"></app-fee-rate></td>
       </tr>

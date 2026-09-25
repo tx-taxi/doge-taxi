@@ -22,6 +22,7 @@ import { isMobile } from '@app/shared/common.utils';
 })
 export class PoolRankingComponent implements OnInit {
   @Input() height: number = 300;
+  @Input() capabilityUnavailable = false;
   @Input() widget = false;
 
   miningWindowPreference: string;
@@ -54,6 +55,7 @@ export class PoolRankingComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    if (this.capabilityUnavailable) return;
     if (this.widget) {
       this.miningWindowPreference = '1w';
     } else {

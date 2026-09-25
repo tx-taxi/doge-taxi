@@ -19,6 +19,7 @@ import { FilterMode, GradientMode } from '@app/shared/filters.utils';
   standalone: false,
 })
 export class MempoolBlockOverviewComponent implements OnInit, OnDestroy, OnChanges, AfterViewInit {
+  @Input() observedSample = false;
   @Input() index: number;
   @Input() resolution = 86;
   @Input() showFilters: boolean = false;
@@ -58,6 +59,10 @@ export class MempoolBlockOverviewComponent implements OnInit, OnDestroy, OnChang
   }
 
   ngAfterViewInit(): void {
+    if (this.observedSample) {
+      this.blockSub = this.stateService.observedPending$.subscribe(txs => { if (txs) { this.resumeBlock(txs); this.cd.markForCheck(); } });
+      return;
+    }
     this.blockSub = this.stateService.mempoolBlockUpdate$.subscribe((update) => {
       // process update
       if (isMempoolDelta(update)) {
@@ -107,6 +112,7 @@ export class MempoolBlockOverviewComponent implements OnInit, OnDestroy, OnChang
   }
 
   ngOnChanges(changes): void {
+    if (this.observedSample) return;
     if (changes.index) {
       this.firstLoad = true;
       if (this.blockGraph) {
@@ -124,7 +130,7 @@ export class MempoolBlockOverviewComponent implements OnInit, OnDestroy, OnChang
     this.blockGraph?.destroy();
     this.blockSub.unsubscribe();
     this.timeLtrSubscription.unsubscribe();
-    this.websocketService.stopTrackMempoolBlock();
+    if (!this.observedSample) this.websocketService.stopTrackMempoolBlock();
   }
 
   replaceBlock(transactionsStripped: TransactionStripped[]): void {

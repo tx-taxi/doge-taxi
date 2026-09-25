@@ -55,7 +55,7 @@ export class WebsocketService {
   ) {
     if (this.stateService.isBrowser) {
       const refreshQuote=()=>this.apiService.getCurrentDogePrice$().subscribe({
-        next: quote => this.stateService.conversions$.next({USD:quote.USD}),
+        next: quote => this.stateService.conversions$.next({USD:quote.USD,time:quote.time || Math.floor(quote.fetchedAt / 1000)}),
         error: () => this.stateService.conversions$.next({})
       });
       refreshQuote(); setInterval(refreshQuote,60000);
@@ -435,6 +435,7 @@ export class WebsocketService {
     }
 
     if (response.transactions) {
+      this.stateService.observedPending$.next(response.transactions);
       this.stateService.transactions$.next(response.transactions.slice(0, 6));
     }
 

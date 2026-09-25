@@ -1,6 +1,7 @@
 <app-block-overview-graph
   #blockGraph
-  [isLoading]="(isLoading$ | async) || !stateService.isBrowser"
+  [isLoading]="!observedSample && ((isLoading$ | async) || !stateService.isBrowser)"
+  [unavailable]="observedSample && (stateService.connectionState$ | async) !== 2"
   [resolution]="resolution"
   [blockLimit]="stateService.blockVSize"
   [orientation]="timeLtr ? 'right' : 'left'"

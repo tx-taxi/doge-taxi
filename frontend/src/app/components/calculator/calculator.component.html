@@ -16,7 +16,7 @@
           ngbDatepicker
           #startDate="ngbDatepicker"
           (dateSelect)="updatePrice()"
-          [minDate]="{year: 2011, month: 10, day: 7}"
+          [minDate]="{year: 2013, month: 12, day: 6}"
           [maxDate]="todayDateModel"
           [dayTemplate]="dayTemplate"
         />
@@ -48,7 +48,7 @@
 
     <div class="row justify-content-center mt-3" *ngIf="isMaxSupply">
       <div class="alert alert-warning" role="alert" i18n="calculator.max-supply-warning|Max supply warning message">
-        Values were capped at the max supply of 84M DOGE
+        Values were capped at the calculator’s safe precision limit
       </div>
     </div>
 
@@ -56,7 +56,7 @@
 
     <div class="row calculator-inline-row justify-content-center">
       <div class="bitcoin-satoshis-text">
-        Ł
+        Ð
          <span [innerHTML]="form.get('bitcoin').value | bitcoinsatoshis"></span> 
         <span class="sats" i18n="shared.sats">koinu</span>
       </div>
@@ -71,7 +71,7 @@
     <div class="row calculator-inline-row justify-content-center mt-3">
       <div class="symbol" *ngIf="{ value: (price$ | async) } as priceData">
         @if (todaySelected && priceData.value > 0) {
-          <span>Fiat price last updated <app-time kind="since" [time]="lastFiatPrice$ | async" [fastRender]="true"></app-time>: {{ priceData.value | fiatCurrency : '1.0-0' : (currency$ | async) }}</span>
+          <span>Current fiat price<span *ngIf="lastFiatPrice$ | async as quoteTime"> · updated <app-time kind="since" [time]="quoteTime" [fastRender]="true"></app-time></span>: {{ priceData.value | fiatCurrency : '1.0-0' : (currency$ | async) }}</span>
         } @else if (priceData.value > 0) {
           <span>Fiat daily closing price <app-time kind="since" [time]="timestamp$ | async" [fastRender]="true"></app-time>: {{ priceData.value | fiatCurrency : '1.0-0' : (currency$ | async) }}</span>
         } @else {

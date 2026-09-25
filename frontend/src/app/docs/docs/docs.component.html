@@ -1,11 +1,11 @@
 <div class="container-xl py-4">
  <h1>Dogecoin explorer documentation</h1>
- <div class="card p-4 my-4"><h2>Blocks, transactions and addresses</h2><p>Search a block height, block hash, transaction ID, transparent Dogecoin address, or supported explorer URL. A 64-character hash may belong to several chains; manual chain selection stays available.</p><p>Dogecoin targets one block every 2.5 minutes. Difficulty adjusts every 2,016 blocks. The block subsidy halves every 840,000 blocks.</p><p>1 DOGE = 100,000,000 koinu. Fee rates use koinu/B. Fiat values use the provider's Dogecoin prices and may lag the market.</p></div>
- <div class="card p-4 my-4"><h2>Privacy and coverage</h2><p>The transaction and address views show the transparent chain. MWEB hides transfer amounts and recipient history; a public explorer cannot reconstruct these private details. HogEx and peg-in/peg-out data must not be interpreted as ordinary wallet transfers.</p><p>The pending view reflects a node’s mempool; different nodes may see different transactions. Estimates are not confirmation guarantees.</p></div>
+ <div class="card p-4 my-4"><h2>Blocks, transactions and addresses</h2><p>Search a block height, block hash, transaction ID, transparent Dogecoin address, or supported explorer URL. A 64-character hash may belong to several chains; manual chain selection stays available.</p><p>Dogecoin targets one block per minute, uses per-block DigiShield difficulty adjustment and supports Scrypt merged mining through AuxPoW. Since block 600,000 the block subsidy is 10,000 DOGE, with no further halvings.</p><p>1 DOGE = 100,000,000 koinu. Fee rates use koinu/B. Fiat values use the provider's Dogecoin prices and may lag the market.</p></div>
+ <div class="card p-4 my-4"><h2>Privacy and coverage</h2><p>The explorer shows public Dogecoin transactions. Historical mining series and complete address indexing are not currently verified. Provider rate limits are separate from missing indexing capability.</p><p>The pending view reflects a node’s mempool; different nodes may see different transactions. Estimates are not confirmation guarantees.</p></div>
  <div class="card p-4 my-4"><h2>Read-only API</h2><p>Requests use the same local origin. Successful retained responses carry X-DOGE-Observed-At and X-DOGE-Stale headers. Provider failures return 503; absence returns 404. This local review does not broadcast transactions.</p><pre>GET /api/blocks/tip/height
 GET /api/block-height/100000
-GET /api/block/e11049dfa5858be3809f285685e12a5d6f84b936b0f8e8272b5363bf3946ce60/txs
-GET /api/tx/a959ab3b821f375917c7458befed853b3e084324f97896a537ef99218d2d67bd
-GET /api/address/LYhttvnKawAv6RcHQ4eBkNtifuiEA99PFe/txs
+GET /api/block/100000/txs
+GET /api/tx/19220173c151925d493a25dbe67798fa11e6e4db01b927b1c04cddead85d3d12
+GET /api/address/DDogepartyxxxxxxxxxxxxxxxxxxw1dfzr/txs
 GET /api/address/:address/txs/chain/:last-confirmed-txid</pre><p>Live updates: WebSocket /api/v1/ws with action init, followed by action want and data [blocks, stats, mempool-blocks].</p></div>
 </div>

@@ -1,4 +1,4 @@
-<app-indexing-progress *ngIf="!widget"></app-indexing-progress>
+<ng-container *ngIf="!capabilityUnavailable; else unavailable"><app-indexing-progress *ngIf="!widget"></app-indexing-progress>
 
 <div [class]="widget === false ? 'full-container' : ''">
 
@@ -181,3 +181,5 @@
     </div>
   </div>
 </ng-template>
+</ng-container>
+<ng-template #unavailable><h5 class="card-title">Mining Pools</h5><div class="chart-widget d-flex align-items-center justify-content-center text-center text-secondary px-3" [style.height.px]="height">Historical pool attribution is unavailable from this provider.</div></ng-template>

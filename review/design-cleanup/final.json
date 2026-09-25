@@ -1,0 +1,100 @@
+[
+  {
+    "width": 1440,
+    "theme": "default",
+    "errors": [
+      "Failed to read the 'localStorage' property from 'Window': Access is denied for this document."
+    ],
+    "data": {
+      "root": "PROVIDER FEE ESTIMATES\nNo Priority\nLow Priority\nMedium Priority\nHigh Priority\n13,448 koinu/B\n$0.00\n13,448 koinu/B\n$0.00\n53,624 koinu/B\n$0.01\n186,446 koinu/B\n$0.04\nSCRYPT MINING\nnetwork | rewards\nObserved header gap · 73 s\n29,429,734\nDifficulty\n60 s\nTarget interval\nAuxPoW\nMerged mining\nPending Transactions\n\nObserved sample · not a projected block\n\nUnconfirmed\n\n48 TXs\n\nSample\n\n50 TXs\n\nIncoming Transactions\n\nNewly observed sample bytes/second · gaps are not zero activity\n\nNo consecutive observations available.\n\nRecent Blocks \nHeight\tMined\tTXs\tSize6388394\t3 minutes ago\t45\t\n \n22.35 kB\n\n6388393\t4 minutes ago\t1\t\n \n182 B\n\n6388392\t5 minutes ago\t7\t\n \n2.24 kB\n\n6388391\t6 minutes ago\t3\t\n \n915 B\n\n6388390\t7 minutes ago\t34\t\n \n10.13 kB\n\n6388389\t7 minutes ago\t4\t\n \n1.14 kB\nRecent Transactions \nTXID\tUSD\tAmount\tFee\nd8fddc5ba9c57c1b70cbc4378e594d6fda7f420914832550dec91321f65\n0c845\nd8fddc5ba9c57c1b70cbc4378e594d6fda7f420914832550dec91321f650c845\n\t$728.80\t‎7,647.4475 DOGE\t22,701 koinu/B\n\nf59a25a7e3a280c65b1aeb19dffa586a3d13d782e95baeff4d70fb23c6d\n169e9\nf59a25a7e3a280c65b1aeb19dffa586a3d13d782e95baeff4d70fb23c6d169e9\n\t$63.46\t‎665.9022 DOGE\t50,921 koinu/B\n\n5da3d53990c141640800a13b61053a0f29f29aadda1c0467b8689a7efb7\nae268\n5da3d53990c141640800a13b61053a0f29f29aadda1c0467b8689a7efb7ae268\n\t$18.01\t‎188.9655 DOGE\t50,656 koinu/B\n\nbdd877767a7dae6cd7ffc225c073ac971605dbc88d906649a1c886ed0c3\n43400\nbdd877767a7dae6cd7ffc225c073ac971605dbc88d906649a1c886ed0c343400\n\t$44.14\t‎463.1263 DOGE\t39,703 koinu/B\n\ndf7799a718ef0ccb9e0a8c02f78d8b3123eed5046f26490ca3a13eeb182\nd468a\ndf7799a718ef0ccb9e0a8c02f78d8b3123eed5046f26490ca3a13eeb182d468a\n\t$9,220\t‎96,751.391 DOGE\t405,333 koinu/B\n\nb10e5b99b3da6b38c36d3aa72b20a083deab3b8f541b4d727c31ef0ff3a\nd7d1a\nb10e5b99b3da6b38c36d3aa72b20a083deab3b8f541b4d727c31ef0ff3ad7d1a\n\t$96.45\t‎1,012.0719 DOGE\t1,000 koinu/B\n ",
+      "graph": {
+        "x": 230,
+        "y": 595.5,
+        "width": 410,
+        "height": 410,
+        "top": 595.5,
+        "right": 640,
+        "bottom": 1005.5,
+        "left": 230
+      },
+      "overflow": false
+    },
+    "calculator": "Calculator\nUSD\nDOGE\nkoinu\n\n\nÐ 1.00 000 000koinu\n$0.10\nCurrent fiat price · updated Just now: $0.10"
+  },
+  {
+    "width": 1440,
+    "theme": "original",
+    "errors": [
+      "Failed to read the 'localStorage' property from 'Window': Access is denied for this document."
+    ],
+    "data": {
+      "root": "PROVIDER FEE ESTIMATES\nNo Priority\nLow Priority\nMedium Priority\nHigh Priority\n13,448 koinu/B\n$0.00\n13,448 koinu/B\n$0.00\n53,624 koinu/B\n$0.01\n186,446 koinu/B\n$0.04\nSCRYPT MINING\nnetwork | rewards\nObserved header gap · 73 s\n29,429,734\nDifficulty\n60 s\nTarget interval\nAuxPoW\nMerged mining\nPending Transactions\n\nObserved sample · not a projected block\n\nUnconfirmed\n\n48 TXs\n\nSample\n\n50 TXs\n\nIncoming Transactions\n\nNewly observed sample bytes/second · gaps are not zero activity\n\nNo consecutive observations available.\n\nRecent Blocks \nHeight\tMined\tTXs\tSize6388394\t3 minutes ago\t45\t\n \n22.35 kB\n\n6388393\t4 minutes ago\t1\t\n \n182 B\n\n6388392\t5 minutes ago\t7\t\n \n2.24 kB\n\n6388391\t7 minutes ago\t3\t\n \n915 B\n\n6388390\t7 minutes ago\t34\t\n \n10.13 kB\n\n6388389\t8 minutes ago\t4\t\n \n1.14 kB\nRecent Transactions \nTXID\tUSD\tAmount\tFee\nd8fddc5ba9c57c1b70cbc4378e594d6fda7f420914832550dec91321f65\n0c845\nd8fddc5ba9c57c1b70cbc4378e594d6fda7f420914832550dec91321f650c845\n\t$728.80\t‎7,647.4475 DOGE\t22,701 koinu/B\n\nf59a25a7e3a280c65b1aeb19dffa586a3d13d782e95baeff4d70fb23c6d\n169e9\nf59a25a7e3a280c65b1aeb19dffa586a3d13d782e95baeff4d70fb23c6d169e9\n\t$63.46\t‎665.9022 DOGE\t50,921 koinu/B\n\n5da3d53990c141640800a13b61053a0f29f29aadda1c0467b8689a7efb7\nae268\n5da3d53990c141640800a13b61053a0f29f29aadda1c0467b8689a7efb7ae268\n\t$18.01\t‎188.9655 DOGE\t50,656 koinu/B\n\nbdd877767a7dae6cd7ffc225c073ac971605dbc88d906649a1c886ed0c3\n43400\nbdd877767a7dae6cd7ffc225c073ac971605dbc88d906649a1c886ed0c343400\n\t$44.14\t‎463.1263 DOGE\t39,703 koinu/B\n\ndf7799a718ef0ccb9e0a8c02f78d8b3123eed5046f26490ca3a13eeb182\nd468a\ndf7799a718ef0ccb9e0a8c02f78d8b3123eed5046f26490ca3a13eeb182d468a\n\t$9,220\t‎96,751.391 DOGE\t405,333 koinu/B\n\nb10e5b99b3da6b38c36d3aa72b20a083deab3b8f541b4d727c31ef0ff3a\nd7d1a\nb10e5b99b3da6b38c36d3aa72b20a083deab3b8f541b4d727c31ef0ff3ad7d1a\n\t$96.45\t‎1,012.0719 DOGE\t1,000 koinu/B\n ",
+      "graph": {
+        "x": 230,
+        "y": 595.5,
+        "width": 410,
+        "height": 410,
+        "top": 595.5,
+        "right": 640,
+        "bottom": 1005.5,
+        "left": 230
+      },
+      "overflow": false
+    },
+    "calculator": "Calculator\nUSD\nDOGE\nkoinu\n\n\nÐ 1.00 000 000koinu\n$0.10\nCurrent fiat price · updated Just now: $0.10"
+  },
+  {
+    "width": 390,
+    "theme": "default",
+    "errors": [
+      "Failed to read the 'localStorage' property from 'Window': Access is denied for this document."
+    ],
+    "data": {
+      "root": "PROVIDER FEE ESTIMATES\nLow Priority\nMedium Priority\nHigh Priority\n13,448 koinu/B\n$0.00\n53,624 koinu/B\n$0.01\n186,446 koinu/B\n$0.04\nSCRYPT MINING\nnetwork | rewards\nObserved header gap · 73 s\n29,429,734\nDifficulty\n60 s\nTarget interval\nAuxPoW\nMerged mining\nPending Transactions\n\nObserved sample · not a projected block\n\nUnconfirmed\n\n48 TXs\n\nSample\n\n50 TXs\n\nIncoming Transactions\n\nNewly observed sample bytes/second · gaps are not zero activity\n\nNo consecutive observations available.\n\nRecent Blocks \nHeight\tMined\tTXs6388394\t3 minutes ago\t45\n6388393\t4 minutes ago\t1\n6388392\t5 minutes ago\t7\n6388391\t7 minutes ago\t3\n6388390\t7 minutes ago\t34\n6388389\t8 minutes ago\t4\nRecent Transactions \nTXID\tFee\nd8fddc5ba9c57c1b70cbc4378e594d6fda7f420914832550dec91321f65\n0c845\nd8fddc5ba9c57c1b70cbc4378e594d6fda7f420914832550dec91321f650c845\n\t22,701 koinu/B\n\nf59a25a7e3a280c65b1aeb19dffa586a3d13d782e95baeff4d70fb23c6d\n169e9\nf59a25a7e3a280c65b1aeb19dffa586a3d13d782e95baeff4d70fb23c6d169e9\n\t50,921 koinu/B\n\n5da3d53990c141640800a13b61053a0f29f29aadda1c0467b8689a7efb7\nae268\n5da3d53990c141640800a13b61053a0f29f29aadda1c0467b8689a7efb7ae268\n\t50,656 koinu/B\n\nbdd877767a7dae6cd7ffc225c073ac971605dbc88d906649a1c886ed0c3\n43400\nbdd877767a7dae6cd7ffc225c073ac971605dbc88d906649a1c886ed0c343400\n\t39,703 koinu/B\n\ndf7799a718ef0ccb9e0a8c02f78d8b3123eed5046f26490ca3a13eeb182\nd468a\ndf7799a718ef0ccb9e0a8c02f78d8b3123eed5046f26490ca3a13eeb182d468a\n\t405,333 koinu/B\n\nb10e5b99b3da6b38c36d3aa72b20a083deab3b8f541b4d727c31ef0ff3a\nd7d1a\nb10e5b99b3da6b38c36d3aa72b20a083deab3b8f541b4d727c31ef0ff3ad7d1a\n\t1,000 koinu/B\n ",
+      "graph": {
+        "x": 66,
+        "y": 779,
+        "width": 258,
+        "height": 258,
+        "top": 779,
+        "right": 324,
+        "bottom": 1037,
+        "left": 66
+      },
+      "overflow": false
+    },
+    "calculator": "Calculator\nUSD\nDOGE\nkoinu\n\n\nÐ 1.00 000 000koinu\n$0.10\nCurrent fiat price · updated Just now: $0.10"
+  },
+  {
+    "width": 390,
+    "theme": "original",
+    "errors": [
+      "Failed to read the 'localStorage' property from 'Window': Access is denied for this document."
+    ],
+    "data": {
+      "root": "PROVIDER FEE ESTIMATES\nLow Priority\nMedium Priority\nHigh Priority\n13,448 koinu/B\n$0.00\n53,624 koinu/B\n$0.01\n186,446 koinu/B\n$0.04\nSCRYPT MINING\nnetwork | rewards\nObserved header gap · 73 s\n29,429,734\nDifficulty\n60 s\nTarget interval\nAuxPoW\nMerged mining\nPending Transactions\n\nObserved sample · not a projected block\n\nUnconfirmed\n\n48 TXs\n\nSample\n\n50 TXs\n\nIncoming Transactions\n\nNewly observed sample bytes/second · gaps are not zero activity\n\nNo consecutive observations available.\n\nRecent Blocks \nHeight\tMined\tTXs6388394\t3 minutes ago\t45\n6388393\t4 minutes ago\t1\n6388392\t5 minutes ago\t7\n6388391\t7 minutes ago\t3\n6388390\t7 minutes ago\t34\n6388389\t8 minutes ago\t4\nRecent Transactions \nTXID\tFee\nd8fddc5ba9c57c1b70cbc4378e594d6fda7f420914832550dec91321f65\n0c845\nd8fddc5ba9c57c1b70cbc4378e594d6fda7f420914832550dec91321f650c845\n\t22,701 koinu/B\n\nf59a25a7e3a280c65b1aeb19dffa586a3d13d782e95baeff4d70fb23c6d\n169e9\nf59a25a7e3a280c65b1aeb19dffa586a3d13d782e95baeff4d70fb23c6d169e9\n\t50,921 koinu/B\n\n5da3d53990c141640800a13b61053a0f29f29aadda1c0467b8689a7efb7\nae268\n5da3d53990c141640800a13b61053a0f29f29aadda1c0467b8689a7efb7ae268\n\t50,656 koinu/B\n\nbdd877767a7dae6cd7ffc225c073ac971605dbc88d906649a1c886ed0c3\n43400\nbdd877767a7dae6cd7ffc225c073ac971605dbc88d906649a1c886ed0c343400\n\t39,703 koinu/B\n\ndf7799a718ef0ccb9e0a8c02f78d8b3123eed5046f26490ca3a13eeb182\nd468a\ndf7799a718ef0ccb9e0a8c02f78d8b3123eed5046f26490ca3a13eeb182d468a\n\t405,333 koinu/B\n\nb10e5b99b3da6b38c36d3aa72b20a083deab3b8f541b4d727c31ef0ff3a\nd7d1a\nb10e5b99b3da6b38c36d3aa72b20a083deab3b8f541b4d727c31ef0ff3ad7d1a\n\t1,000 koinu/B\n ",
+      "graph": {
+        "x": 66,
+        "y": 779,
+        "width": 258,
+        "height": 258,
+        "top": 779,
+        "right": 324,
+        "bottom": 1037,
+        "left": 66
+      },
+      "overflow": false
+    },
+    "calculator": "Calculator\nUSD\nDOGE\nkoinu\n\n\nÐ 1.00 000 000koinu\n$0.10\nCurrent fiat price · updated Just now: $0.10"
+  },
+  {
+    "controlledEmpty": true,
+    "widget": "SCRYPT MINING\nnetwork | rewards\nNetwork data unavailable\n—\nDifficulty\n60 s\nTarget interval",
+    "rect": {
+      "x": 15,
+      "y": 556,
+      "width": 360,
+      "height": 126.5
+    }
+  }
+]

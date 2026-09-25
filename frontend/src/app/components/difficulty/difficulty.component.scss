@@ -253,3 +253,8 @@
 .inactive {
   color: var(--transparent-fg);
 }
+// Chain-adapted primary metrics retain the native widget grid at narrow widths.
+.difficulty-stats .item:nth-child(1) { display: block; }
+.difficulty-stats .item { min-width: 0; }
+.difficulty-stats .card-text { font-size: clamp(14px, 1.3vw, 18px); }
+.symbol { white-space: normal; }

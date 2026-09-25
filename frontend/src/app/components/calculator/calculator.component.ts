@@ -68,7 +68,7 @@ export class CalculatorComponent implements OnInit {
 
         return this.todaySelected
           ? this.stateService.conversions$.asObservable()
-          : this.apiService.getHistoricalPrice$(timestamp, currency).pipe(
+          : !this.stateService.env.HISTORICAL_PRICE ? of({ [currency]: 0 }) : this.apiService.getHistoricalPrice$(timestamp, currency).pipe(
             map((p: any) => {
               const formatted: { time: number; [key: string]: number } = {
                 time: p.prices[0].time

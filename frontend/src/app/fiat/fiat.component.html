@@ -3,7 +3,7 @@
 </ng-container>
 <ng-template #livePrice>
  <ng-container *ngIf="conversions$ | async as conversions; else unavailable">
-  <span [class]="colorClass" *ngIf="conversions[currency] > 0; else unavailable">{{ conversions[currency] * value / 100000000 | fiatCurrency : digitsInfo : currency }}</span>
+  <span title="Current-price equivalent; historical valuation unavailable" [class]="colorClass" *ngIf="conversions[currency] > 0; else unavailable">{{ conversions[currency] * value / 100000000 | fiatCurrency : digitsInfo : currency }}</span>
  </ng-container>
 </ng-template>
 <ng-template #unavailable><span title="Fiat price unavailable">—</span></ng-template>

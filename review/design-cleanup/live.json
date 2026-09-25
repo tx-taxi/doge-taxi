@@ -1,0 +1,36 @@
+{
+  "events": [
+    {
+      "at": 1790305690699,
+      "height": 6388394,
+      "count": 50,
+      "heartbeat": false
+    },
+    {
+      "at": 1790305710475,
+      "heartbeat": true
+    },
+    {
+      "at": 1790305711834,
+      "height": 6388394,
+      "count": 50,
+      "heartbeat": false
+    },
+    {
+      "at": 1790305731669,
+      "heartbeat": true
+    },
+    {
+      "at": 1790305747680,
+      "height": 6388394,
+      "count": 50,
+      "heartbeat": false
+    },
+    {
+      "at": 1790305767463,
+      "heartbeat": true
+    }
+  ],
+  "errors": [],
+  "text": "PROVIDER FEE ESTIMATES\nNo Priority\nLow Priority\nMedium Priority\nHigh Priority\nSCRYPT MINING\nnetwork | rewards\nNetwork data unavailable\n—\nDifficulty\n60 s\nTarget interval\nPending Transactions\n\nObserved sample · not a projected block\n\nnot available\n\nPending sample unavailable. Reconnecting…\n\nUnconfirmed\nSample\nIncoming Transactions\n\nNewly observed sample bytes/second · gaps are not zero activity\n\nInsufficient consecutive observations.\n\nRecent Blocks \nHeight\tMined\tTXs\tSize\t\t\t\n\t\t\t\n\t\t\t\n\t\t\t\n\t\t\t\n\t\t\t\nRecent Transactions \nTXID\tUSD\tAmount\tFee\t\t\t\n\t\t\t\n\t\t\t\n\t\t\t\n\t\t\t\n\t\t\t\n "
+}

@@ -34,19 +34,36 @@ async function getBlock(id){return block(await fetchJson('/blocks/'+id+'?txstart
 async function getTx(id){return tx(await fetchJson('/txs/'+id+'?limit=10000',86400000));}
 async function getAddress(id,before){return fetchJson('/addrs/'+id+'/full?limit=25&txlimit=10000'+(before?'&before='+before:''),120000);}
 let latest=null, snapshotAt=0;
+const observationsFile=path.join(disk,'../pending-observations.json');
+let observations={at:0,ids:[],points:[]};try{observations=JSON.parse(fs.readFileSync(observationsFile));}catch{}
+function recordPending(txs,at){
+ if(!at||at<=observations.at)return;
+ const elapsed=(at-observations.at)/1000, previous=new Set(observations.ids);
+ // A provider outage is a gap, never an invented zero or a rate across an unknown interval.
+ if(elapsed>300&&observations.points.length) observations.points.push({added:Math.floor(at/1000),vbytes_per_second:null});
+ if(elapsed>=60&&elapsed<=300){const bytes=txs.filter(t=>!previous.has(t.txid)).reduce((n,t)=>n+t.size,0);observations.points.push({added:Math.floor(at/1000),vbytes_per_second:bytes/elapsed});}
+ observations={at,ids:txs.map(t=>t.txid),points:observations.points.filter(p=>p.added>at/1000-7200).slice(-120)};
+ fs.writeFileSync(observationsFile,JSON.stringify(observations));
+}
+let snapshotInFlight;
 async function snapshot(){
+ if(snapshotInFlight)return snapshotInFlight;
+ snapshotInFlight=collectSnapshot();try{return await snapshotInFlight;}finally{snapshotInFlight=null;}
+}
+async function collectSnapshot(){
  if(latest&&Date.now()-snapshotAt<120000)return latest;
  const tip=await fetchJson('');
  let blocks=latest?.blocks||[];
  if(!blocks.length){for(let n=0;n<6;n++)blocks.push(await getBlock(tip.height-n));}
  else if(blocks[0].height!==tip.height){const b=await getBlock(tip.height);blocks=[b,...blocks.filter(x=>x.height<b.height)].slice(0,8);}
  const pending=await fetchJson('/txs?limit=50');
- const txs=pending.map(tx);const fees={fastestFee:tip.high_fee_per_kb/1000,halfHourFee:tip.medium_fee_per_kb/1000,hourFee:tip.low_fee_per_kb/1000,economyFee:tip.low_fee_per_kb/1000,minimumFee:1000};
- latest={blocks,fees,transactions:txs.map(t=>({txid:t.txid,fee:t.fee,vsize:t.size,value:t.doge.value})),mempoolInfo:{loaded:true,size:tip.unconfirmed_count},backend:'esplora',loadingIndicators:{mempool:100},backendInfo:{gitCommit:'doge-candidate',version:'0.1'},doge:{targetBlockTime:60,subsidy:10000e8,pendingSample:txs.length,observedAt:Date.now(),tip},'mempool-blocks':[]};snapshotAt=Date.now();return latest;
+ const txs=pending.map(tx);recordPending(txs,cache.get('/txs?limit=50')?.at);const fees={fastestFee:tip.high_fee_per_kb/1000,halfHourFee:tip.medium_fee_per_kb/1000,hourFee:tip.low_fee_per_kb/1000,economyFee:tip.low_fee_per_kb/1000,minimumFee:1000};
+ latest={'live-2h-chart':observations.points.at(-1),blocks,fees,transactions:txs.map(t=>({txid:t.txid,fee:t.fee,vsize:t.size,value:t.doge.value})),mempoolInfo:{loaded:true,size:tip.unconfirmed_count},backend:'esplora',loadingIndicators:{mempool:100},backendInfo:{gitCommit:'doge-candidate',version:'0.1'},doge:{targetBlockTime:60,subsidy:10000e8,pendingSample:txs.length,observedAt:Date.now(),tip},'mempool-blocks':[]};snapshotAt=Date.now();return latest;
 }
 async function route(p){let m;const pathname=p.split('?')[0];
  if(pathname==='/api/v1/prices')return require('./price.cjs').current();
  if(pathname==='/api/v1/historical-price'&&!new URL(p,'http://localhost').searchParams.has('timestamp')){const q=await require('./price.cjs').current();return {prices:[{time:Math.floor(q.fetchedAt/1000),USD:q.USD}],exchangeRates:{}};}
+ if(pathname==='/api/v1/statistics/2h')return observations.points.filter(p=>p.added>Date.now()/1000-7200).slice().reverse();
  if(pathname==='/api/v1/init-data')return snapshot();
  if(pathname==='/api/blocks/tip/height')return String((await fetchJson('')).height);
  if(pathname==='/api/blocks/tip/hash')return (await fetchJson('')).hash;
