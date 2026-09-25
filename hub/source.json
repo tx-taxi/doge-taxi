@@ -1,6 +1,6 @@
 {
   "chain": "doge",
-  "commit": "ab6e8b398579f0f83047d51d23ebe30fd562f707",
+  "commit": "d1d436618baf230cd57783773173fe9a3608e4c1",
   "approvedBaseline": "6ba310ede",
   "extractionAncestor": "2519326f9",
   "reconciliation": "Exact native DOGE candidate components at pinned source commit; parent matched-data desktop/mobile appearance, links and lifecycle pass. Recorded-data UI verification only; sustained live/provider acceptance incomplete.",
