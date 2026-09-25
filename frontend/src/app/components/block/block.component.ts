@@ -122,7 +122,7 @@ export class BlockComponent implements OnInit, OnDestroy {
     private cd: ChangeDetectorRef,
     private preloadService: PreloadService,
   ) {
-    this.webGlEnabled = false; // No full-block transaction summary provider.
+    this.webGlEnabled = false; // Enabled only when a complete summary is available.
   }
 
   get showComparison() {
@@ -172,6 +172,7 @@ export class BlockComponent implements OnInit, OnDestroy {
         for (const block of blocks) {
           if (block.id === this.blockHash) {
             this.block = block;
+        this.webGlEnabled = this.stateService.isBrowser && detectWebGL() && block.extras?.summaryAvailable === true;
             if (block.extras) {
               block.extras.minFee = this.getMinBlockFee(block);
               block.extras.maxFee = this.getMaxBlockFee(block);
@@ -279,6 +280,7 @@ export class BlockComponent implements OnInit, OnDestroy {
         }
         this.updateAuditAvailableFromBlockHeight(block.height);
         this.block = block;
+        this.webGlEnabled = this.stateService.isBrowser && detectWebGL() && block.extras?.summaryAvailable === true;
         if (block.extras) {
           block.extras.minFee = this.getMinBlockFee(block);
           block.extras.maxFee = this.getMaxBlockFee(block);
@@ -320,13 +322,15 @@ export class BlockComponent implements OnInit, OnDestroy {
       switchMap((block) => {
         return forkJoin([
           of(block),
-          throwError(() => new Error('Block overview not available'))
+          block.extras?.summaryAvailable === true ? this.apiService.getStrippedBlockTransactions$(block.id)
             .pipe(
               catchError((err) => {
                 this.overviewError = err;
+                this.webGlEnabled = false;
+                this.cd.markForCheck();
                 return of(null);
               })
-            ),
+            ) : of(null),
           !this.isAuditAvailableFromBlockHeight(block.height) ? of(null) : this.apiService.getBlockAudit$(block.id)
             .pipe(
               catchError((err) => {

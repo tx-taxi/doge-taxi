@@ -208,6 +208,7 @@ export interface PoolStat {
 }
 
 export interface BlockExtension {
+  summaryAvailable?: boolean; // True only for complete, verified block transaction summaries.
   totalFees?: number;
   medianFee?: number;
   avgFeeRate?: number; // DOGE total block fees per serialized byte, not median transaction rate
