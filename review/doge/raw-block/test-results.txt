@@ -1,0 +1,13 @@
+✔ real AuxPoW block matches independently indexed transactions and detailed transaction size (2.264205ms)
+✔ truncated headers, AuxPoW data and transactions are rejected (0.581047ms)
+✔ trailing bytes and transaction merkle corruption are rejected (0.789852ms)
+✔ noncanonical and oversized AuxPoW input counts are rejected before allocation (0.26445ms)
+✔ malformed hex and oversized block payloads are rejected (5.08867ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 57.783735
