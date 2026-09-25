@@ -1,6 +1,6 @@
 {
   "chain": "doge",
-  "sourceCommit": "candidate-working-tree",
+  "sourceCommit": "e13d43cb709508cca045e66ff9f028e826e69477",
   "files": [
     {
       "path": "hub/feed.js",
@@ -15,6 +15,10 @@
       "sha256": "af849c87526a20e67cf12f87dd8d8f0f20e54fd143736db63d5112e40acb9448"
     },
     {
+      "path": "frontend/src/app/components/blockchain/blockchain.component.ts",
+      "sha256": "d1a8d0a0a9315bf82a48d3eb4ca4a83b7c4e33bc55a18abc00711b8bd1e8e11b"
+    },
+    {
       "path": "frontend/src/app/shared/pipes/fiat-currency.pipe.ts",
       "sha256": "c2954c6e6fad86d5241822f823d9c87190378b0b593daf1db899d9c952783141"
     },
@@ -23,36 +27,20 @@
       "sha256": "60e71e639c4286c2f94db1a14bc04983492f5711dc4590680db0ddd0b0536251"
     },
     {
-      "path": "frontend/src/app/shared/pipes/fee-rounding/fee-rounding.pipe.ts",
-      "sha256": "0e51471913c9b3fdcec3163001b55c73fa9b90aa414f160340d7554f68d5a444"
-    },
-    {
-      "path": "frontend/src/app/components/blockchain-blocks/blockchain-blocks.component.ts",
-      "sha256": "ab9864f86c468f40658099f41add14dd2eda1ac87ef99bede201d53f1ef3b277"
-    },
-    {
       "path": "frontend/src/app/services/time.service.ts",
       "sha256": "17c500ee5a0a6167ab41420408e76a494686c88e1508457e91b59d636022d8c4"
     },
     {
-      "path": "frontend/src/app/shared/pipes/math-ceil/math-ceil.pipe.ts",
-      "sha256": "f4709a7616c3a118ac24e10e70b73b61b4b346434bca50767c9421466cc5eaf3"
+      "path": "frontend/src/app/shared/pipes/fee-rounding/fee-rounding.pipe.ts",
+      "sha256": "0e51471913c9b3fdcec3163001b55c73fa9b90aa414f160340d7554f68d5a444"
     },
     {
       "path": "frontend/src/app/components/time/time.component.ts",
       "sha256": "f09ad7cafd65bae5f3cd949428c27e419f0608253129829378645aaa9e1c1d7c"
     },
     {
-      "path": "frontend/src/app/components/mempool-blocks/mempool-blocks.component.ts",
-      "sha256": "98826e627bec22c4b97ff2f9b4a6492b435db0d415722183fc8143de9a7bf2fa"
-    },
-    {
       "path": "hub/facade.ts",
       "sha256": "622ad12d141a9f172bcd311a430e3027dd798704e6e30a9ff86c43cd46b69d43"
-    },
-    {
-      "path": "frontend/src/app/shared/pipes/relative-url/relative-url.pipe.ts",
-      "sha256": "e029194d77e70c2977aa5c087ddc6de9890b0258eb0e7093aa077cd194e0957d"
     },
     {
       "path": "frontend/src/app/components/amount/amount.component.ts",
@@ -63,16 +51,28 @@
       "sha256": "ee44c40579d97e144b7736d665b7708ed83759f1bbad38b5bc4eb26769872740"
     },
     {
-      "path": "frontend/src/app/shared/components/fee-rate/fee-rate.component.ts",
-      "sha256": "1cff2bdc69c20d138fd12a764bebe2d28ed747c20ddad53efcf42f260fc88d8f"
+      "path": "frontend/src/app/shared/pipes/math-ceil/math-ceil.pipe.ts",
+      "sha256": "f4709a7616c3a118ac24e10e70b73b61b4b346434bca50767c9421466cc5eaf3"
     },
     {
-      "path": "frontend/src/app/components/blockchain/blockchain.component.ts",
-      "sha256": "d1a8d0a0a9315bf82a48d3eb4ca4a83b7c4e33bc55a18abc00711b8bd1e8e11b"
+      "path": "frontend/src/app/components/blockchain-blocks/blockchain-blocks.component.ts",
+      "sha256": "ab9864f86c468f40658099f41add14dd2eda1ac87ef99bede201d53f1ef3b277"
     },
     {
       "path": "frontend/src/app/shared/components/mining-pool/mining-pool.component.ts",
       "sha256": "3a3fd343c49df55dab3e5844beb814a20fd91c28ec9b200cf943cf1c7afab71a"
+    },
+    {
+      "path": "frontend/src/app/components/mempool-blocks/mempool-blocks.component.ts",
+      "sha256": "98826e627bec22c4b97ff2f9b4a6492b435db0d415722183fc8143de9a7bf2fa"
+    },
+    {
+      "path": "frontend/src/app/shared/components/fee-rate/fee-rate.component.ts",
+      "sha256": "1cff2bdc69c20d138fd12a764bebe2d28ed747c20ddad53efcf42f260fc88d8f"
+    },
+    {
+      "path": "frontend/src/app/shared/pipes/relative-url/relative-url.pipe.ts",
+      "sha256": "e029194d77e70c2977aa5c087ddc6de9890b0258eb0e7093aa077cd194e0957d"
     },
     {
       "path": "frontend/src/app/shared/i18n/dates.ts",
@@ -95,24 +95,16 @@
       "sha256": "0e3e5b0f7374cacd69e45a7dcb5654a198887f61553f6a7b549d7412598af8e9"
     },
     {
-      "path": "frontend/src/app/components/blockchain-blocks/blockchain-blocks.component.html",
-      "sha256": "1d5ca55f70e164c5fa38308c9d2946f363d3b9c4002667f6462371a832b2e1d5"
+      "path": "frontend/src/app/components/blockchain/blockchain.component.html",
+      "sha256": "593ad314cfe12d8af28cac509bf02026374817f53e17c45af834f5cbe3e10eb4"
     },
     {
-      "path": "frontend/src/app/components/blockchain-blocks/blockchain-blocks.component.scss",
-      "sha256": "4e4b6df03504cf545f88a6145bda4d17b18121636473dbad948054575c3925dd"
+      "path": "frontend/src/app/components/blockchain/blockchain.component.scss",
+      "sha256": "d1dc060b5a9d2ae50dde574cc4e09fe2b3b38b64bb95bb932a947ba51ecdec2f"
     },
     {
       "path": "frontend/src/app/components/time/time.component.html",
       "sha256": "096306f2cde844b5e123cecb087edc3c2f4d39a252dad694fc1164194acd58da"
-    },
-    {
-      "path": "frontend/src/app/components/mempool-blocks/mempool-blocks.component.html",
-      "sha256": "c6c57995863869c90bb156047f1b25eaec7f48538bb35a2d7de43b7b32da800b"
-    },
-    {
-      "path": "frontend/src/app/components/mempool-blocks/mempool-blocks.component.scss",
-      "sha256": "8528593beb45d3de11f3bb08842eccbd75f4cea54c5647dd58cba7ab2908e1be"
     },
     {
       "path": "frontend/src/app/components/amount/amount.component.html",
@@ -123,20 +115,12 @@
       "sha256": "ac9836b12d35f3ae48a640401b2a7956fedfcf9248dd2b38ff5c65fabe9a8ae5"
     },
     {
-      "path": "frontend/src/app/shared/components/fee-rate/fee-rate.component.html",
-      "sha256": "e87c21d06e3b53cfe7da2ccc5fd5299db36e27ad7ca6260c3b343ceffcd039fb"
+      "path": "frontend/src/app/components/blockchain-blocks/blockchain-blocks.component.html",
+      "sha256": "1d5ca55f70e164c5fa38308c9d2946f363d3b9c4002667f6462371a832b2e1d5"
     },
     {
-      "path": "frontend/src/app/shared/components/fee-rate/fee-rate.component.scss",
-      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-    },
-    {
-      "path": "frontend/src/app/components/blockchain/blockchain.component.html",
-      "sha256": "593ad314cfe12d8af28cac509bf02026374817f53e17c45af834f5cbe3e10eb4"
-    },
-    {
-      "path": "frontend/src/app/components/blockchain/blockchain.component.scss",
-      "sha256": "d1dc060b5a9d2ae50dde574cc4e09fe2b3b38b64bb95bb932a947ba51ecdec2f"
+      "path": "frontend/src/app/components/blockchain-blocks/blockchain-blocks.component.scss",
+      "sha256": "4e4b6df03504cf545f88a6145bda4d17b18121636473dbad948054575c3925dd"
     },
     {
       "path": "frontend/src/app/shared/components/mining-pool/mining-pool.component.html",
@@ -145,6 +129,22 @@
     {
       "path": "frontend/src/app/shared/components/mining-pool/mining-pool.component.scss",
       "sha256": "44c419e20b690caf91f39415fc8ab8160b04091a04b8b0f115e82f46543ab463"
+    },
+    {
+      "path": "frontend/src/app/components/mempool-blocks/mempool-blocks.component.html",
+      "sha256": "c6c57995863869c90bb156047f1b25eaec7f48538bb35a2d7de43b7b32da800b"
+    },
+    {
+      "path": "frontend/src/app/components/mempool-blocks/mempool-blocks.component.scss",
+      "sha256": "8528593beb45d3de11f3bb08842eccbd75f4cea54c5647dd58cba7ab2908e1be"
+    },
+    {
+      "path": "frontend/src/app/shared/components/fee-rate/fee-rate.component.html",
+      "sha256": "e87c21d06e3b53cfe7da2ccc5fd5299db36e27ad7ca6260c3b343ceffcd039fb"
+    },
+    {
+      "path": "frontend/src/app/shared/components/fee-rate/fee-rate.component.scss",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
       "path": "frontend/src/styles.scss",

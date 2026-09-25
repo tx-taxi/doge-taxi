@@ -1,1 +1,7 @@
-{"chain":"doge","commit":"candidate-working-tree","approvedBaseline":"6ba310ede","extractionAncestor":"2519326f9","reconciliation":"Native LTC components retained with chain amount/byte fee and DOGE palette changes. Candidate, not approved/verified DOGE baseline. DOGE BlockCypher live data, local only, missing mining/index capacity tracked review/doge."}
+{
+  "chain": "doge",
+  "commit": "e13d43cb709508cca045e66ff9f028e826e69477",
+  "approvedBaseline": "6ba310ede",
+  "extractionAncestor": "2519326f9",
+  "reconciliation": "Exact native DOGE candidate components at pinned source commit; parent matched-data desktop/mobile appearance, links and lifecycle pass. Recorded-data UI verification only; sustained live/provider acceptance incomplete."
+}

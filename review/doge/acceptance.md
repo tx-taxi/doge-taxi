@@ -11,7 +11,7 @@ Status: **incomplete**, preserved for local review. No deploy, push, production 
 - Affected final desktop root and exact balance screenshots reopened after amount-width/UTXO fixes. Native component geometry retained, amount columns legible, unknown UTXO count is an em dash. Final root neutralizes unverified capacity fill and replaces unavailable median fee with dash (`final-root-desktop.png`, `final-affected.json`).
 - Real provider failure opened on mobile (`actual-throttled-mobile.png`), native Offline/reconnect state visible. Provider health remains stale during cooldown; immutable history cannot reset live freshness.
 - Root and historical transaction1200×630 social cards opened and inspected (`root-card.png`, `tx-card.png`). Root screenshot predates the final removal of unsupported “live/mining” marketing words; same native composition preserved.
-- Parent integrator owns matched-data native/hub appearance, local navigation and lifecycle evidence under its isolated router4340 review directory.
+- Parent integrator verified matched-data native/hub desktop6blocks and mobile2blocks exact text/geometry/colors, local links and lifecycle; both final side-by-side screenshots opened. Evidence under isolated router4340 review directory. Recorded-data UI only.
 
 ## Not verified / concrete blockers
 
