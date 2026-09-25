@@ -1,0 +1,102 @@
+[
+  {
+    "width": 1440,
+    "theme": "default",
+    "name": "root",
+    "overflow": false,
+    "body": "rgb(18, 17, 14)",
+    "canvas": 1,
+    "errors": [],
+    "failed": []
+  },
+  {
+    "width": 1440,
+    "theme": "default",
+    "name": "pending",
+    "overflow": false,
+    "h1": "Pending sample",
+    "body": "rgb(18, 17, 14)",
+    "canvas": 1,
+    "errors": [],
+    "failed": []
+  },
+  {
+    "width": 1440,
+    "theme": "original",
+    "name": "root",
+    "overflow": false,
+    "body": "rgb(0, 0, 0)",
+    "canvas": 1,
+    "errors": [],
+    "failed": []
+  },
+  {
+    "width": 1440,
+    "theme": "original",
+    "name": "pending",
+    "overflow": false,
+    "h1": "Pending sample",
+    "body": "rgb(0, 0, 0)",
+    "canvas": 1,
+    "errors": [
+      "Cannot read properties of undefined (reading 'coord')"
+    ],
+    "failed": []
+  },
+  {
+    "width": 390,
+    "theme": "default",
+    "name": "root",
+    "overflow": false,
+    "body": "rgb(18, 17, 14)",
+    "canvas": 1,
+    "errors": [],
+    "failed": []
+  },
+  {
+    "width": 390,
+    "theme": "default",
+    "name": "pending",
+    "overflow": false,
+    "h1": "Pending sample",
+    "body": "rgb(18, 17, 14)",
+    "canvas": 1,
+    "errors": [],
+    "failed": []
+  },
+  {
+    "width": 390,
+    "theme": "original",
+    "name": "root",
+    "overflow": false,
+    "body": "rgb(0, 0, 0)",
+    "canvas": 1,
+    "errors": [],
+    "failed": []
+  },
+  {
+    "width": 390,
+    "theme": "original",
+    "name": "pending",
+    "overflow": false,
+    "h1": "Pending sample",
+    "body": "rgb(0, 0, 0)",
+    "canvas": 1,
+    "errors": [],
+    "failed": []
+  },
+  {
+    "name": "mining",
+    "errors": [],
+    "overflow": false,
+    "canvas": 0,
+    "text": " \n~50,669 koinu/B\n1,000 - 550,000 koinu/B\n‎15.529 DOGE\nSample: 33 transactions\nPending sample\n \n6389342\n—\n—\n‎3.421 DOGE\n18 transactions\n3 minutes ago\n \n6389341\n—\n—\n‎0.747 DOGE\n6 transactions\n4 minutes ago\n \n6389340\n—\n—\n‎0.00 DOGE\n1 transaction\n4 minutes ago\n \n6389339\n—\n—\n‎0.00 DOGE\n1 transaction\n4 minutes ago\n \n6389338\n—\n—\n‎5.056 DOGE\n33 transactions\n4 minutes ago\n \n6389337\n—\n—\n‎3.113 DOGE\n27 transactions\n6 minutes ago\n \n6389336\n—\n—\n‎10.198 DOGE\n16 transactions\n6 minutes ago\n \n6389335\n—\n—\n‎4.602"
+  },
+  {
+    "name": "block",
+    "errors": [],
+    "overflow": false,
+    "canvas": 1,
+    "text": " \n6389140\n—\n—\n‎6.686 DOGE\n58 transactions\n4 hours ago\n \n6389139\n—\n—\n‎1.268 DOGE\n4 transactions\n4 hours ago\n \n6389138\n—\n—\n‎0.00 DOGE\n1 transaction\n4 hours ago\n \n6389137\n—\n—\n‎0.997 DOGE\n3 transactions\n4 hours ago\n \n6389136\n—\n—\n‎4.279 DOGE\n5 transactions\n4 hours ago\n \n6389135\n—\n—\n‎56.459 DOGE\n21 transactions\n4 hours ago\n \n6389134\n—\n—\n‎1.534 DOGE\n39 transactions\n4 hours ago\n \n6389133\n—\n—\n‎14.006 DOGE\n8 transactions\n4 hours ago\n \n6389132\n—\n—\n‎48.445 DOGE\n44 transactions\n4 hours ago\n \n6389131\n~2,010 k"
+  }
+]

@@ -10,7 +10,7 @@
     "deployedRuntime": "c131fadfe",
     "nativeHubExtraction": "2519326f9"
   },
-  "status": "production-release-in-progress",
+  "status": "deployed-with-explicit-provider-coverage-limits",
   "productionRequested": true,
   "local": {
     "url": "http://127.0.0.1:4451",
@@ -29,21 +29,21 @@
     {
       "component": "Root native blocks",
       "route": "/",
-      "source": "BlockCypher tip/blocks",
+      "source": "BlockCypher canonical tip + Blockchair contiguous blocks",
       "availability": "observed real snapshots",
       "units": "DOGE/koinu/bytes",
-      "cadence": "120s live;86400s immutable cache",
+      "cadence": "240s shared collector; persisted source observation time",
       "loading": "native skeleton",
       "failure": "explicit503;404 only confirmed absence",
       "stale": "native offline/reconnect; no invented zero"
     },
     {
       "component": "Pending sample",
-      "route": "/txs",
+      "route": "/mempool-block/0",
       "source": "BlockCypher /txs",
       "availability": "observed; not full global mempool",
       "units": "DOGE/koinu/B",
-      "cadence": "120s live;86400s immutable cache",
+      "cadence": "240s shared collector; 30s pending detail cache",
       "loading": "native skeleton",
       "failure": "explicit503;404 only confirmed absence",
       "stale": "native offline/reconnect; no invented zero"
@@ -51,10 +51,10 @@
     {
       "component": "Historical transaction",
       "route": "/tx/:id",
-      "source": "BlockCypher /txs/:id",
+      "source": "Blockchair complete vin/vout with BlockCypher fallback",
       "availability": "verified exact representative quantities",
       "units": "DOGE/koinu",
-      "cadence": "120s live;86400s immutable cache",
+      "cadence": "Immutable confirmed cache; 30s pending cache",
       "loading": "native skeleton",
       "failure": "explicit503;404 only confirmed absence",
       "stale": "native offline/reconnect; no invented zero"
@@ -62,10 +62,10 @@
     {
       "component": "Historical block",
       "route": "/block/:id",
-      "source": "BlockCypher /blocks/:id",
-      "availability": "observed2014 history; page transaction collection pending",
+      "source": "Blockchair and BlockCypher; complete transaction enrichment bounded to 100 transactions",
+      "availability": "Verified block, complete representative 32-transaction summary, fee range, payout and AuxPoW tag",
       "units": "physical bytes",
-      "cadence": "120s live;86400s immutable cache",
+      "cadence": "24h hash cache; 30s canonical-height cache",
       "loading": "native skeleton",
       "failure": "explicit503;404 only confirmed absence",
       "stale": "native offline/reconnect; no invented zero"
@@ -74,9 +74,9 @@
       "component": "Indexed address",
       "route": "/address/:id",
       "source": "BlockCypher /addrs/:id/full",
-      "availability": "first page observed; exact balance display verified; documented same-height pagination mapped; live second page blocked",
+      "availability": "Indexed full transactions; two real pages verified with same-height boundary preservation",
       "units": "DOGE/koinu",
-      "cadence": "120s live;86400s immutable cache",
+      "cadence": "120s address response cache",
       "loading": "native skeleton",
       "failure": "explicit503;404 only confirmed absence",
       "stale": "native offline/reconnect; no invented zero"
@@ -84,10 +84,10 @@
     {
       "component": "Mining/dashboard graphs",
       "route": "/mining, /graphs/**",
-      "source": "BlockCypher actual block difficulty/reward/fees; no aggregate index",
-      "availability": "current block mining data observed; aggregate charts unavailable",
+      "source": "Blockchair complete daily records",
+      "availability": "30 complete daily records; daily mean difficulty and estimated hashrate; historical pool dominance unavailable",
       "units": "H/s,difficulty,DOGE",
-      "cadence": "120s live;86400s immutable cache",
+      "cadence": "1 day cached history, current day excluded",
       "loading": "native skeleton",
       "failure": "explicit503;404 only confirmed absence",
       "stale": "native offline/reconnect; no invented zero"
@@ -106,10 +106,10 @@
     {
       "component": "Search",
       "route": "header",
-      "source": "router local4340",
-      "availability": "candidate inherited approved components; direct-routing gap patched",
+      "source": "https://tx.taxi router registry",
+      "availability": "Production native DOGE routing, grouped native/third-party selection",
       "units": "identifiers",
-      "cadence": "120s live;86400s immutable cache",
+      "cadence": "Query-driven",
       "loading": "native skeleton",
       "failure": "explicit503;404 only confirmed absence",
       "stale": "native offline/reconnect; no invented zero"
@@ -127,11 +127,11 @@
     },
     {
       "component": "Hub band",
-      "route": "isolated router4340",
+      "route": "https://tx.taxi/",
       "source": "chain-owned extracted native components",
-      "availability": "candidate; parent integrator verification",
+      "availability": "Production; matched 1440/390 native parity, all nine tiles",
       "units": "DOGE/bytes",
-      "cadence": "120s live;86400s immutable cache",
+      "cadence": "Shared 240s chain collector via WebSocket; stale threshold 480s",
       "loading": "native skeleton",
       "failure": "explicit503;404 only confirmed absence",
       "stale": "native offline/reconnect; no invented zero"
@@ -142,15 +142,15 @@
       "source": "Existing BlockCypher pending sample; persisted provider observation timestamps, no extra upstream requests",
       "availability": "Native pending treemap observed with real sample; incoming rate requires consecutive fresh samples and remains live-provider constrained",
       "units": "serialized bytes/second, sample transaction count",
-      "cadence": "120 seconds shared snapshot; deduplicated across viewers; 2-hour bounded retained observations",
+      "cadence": "240s shared snapshot; 2-hour bounded retained observations",
       "loading": "Native graph geometry with explicit insufficient observations",
       "failure": "Native offline connection state; no fabricated zero for outages",
-      "stale": "No repeated cached observation counted as new; gaps >300 seconds break the series"
+      "stale": "Persisted source times; cached frames are not new observations; outages stay unavailable"
     }
   ],
   "unresolved": [
     "Universal live fee ranges and full historical pool dominance need additional indexed coverage/budget; ranges only shown after complete transaction verification",
-    "Sustained production capacity and container deployment remain unverified"
+    "Public-provider quotas constrain sustained high-volume entity lookups; pending pool is an observed sample, not a complete global mempool"
   ],
   "acceptance": [
     {
@@ -179,5 +179,15 @@
       "review/doge/frontend/README.md",
       "review/doge/gateway/README.md"
     ]
+  },
+  "deployment": {
+    "url": "https://doge.tx.taxi",
+    "coolifyApp": "nvmlexfieesvcej03omudjgk",
+    "server": "game-1",
+    "dataVolume": "nvmlexfieesvcej03omudjgk-doge-provider-data",
+    "statusUrl": "https://status.tx.taxi",
+    "monitorId": 64,
+    "hubRevision": "02301b73d860f397da0f167c69819fd8e6f6dced",
+    "evidence": "review/deployment/README-doge-launch.md"
   }
 }
