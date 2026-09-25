@@ -41,6 +41,7 @@ export class MempoolBlockOverviewComponent implements OnInit, OnDestroy, OnChang
 
   blockSub: Subscription;
   firstLoad: boolean = true;
+  private destroyed = false;
 
   constructor(
     public stateService: StateService,
@@ -127,6 +128,7 @@ export class MempoolBlockOverviewComponent implements OnInit, OnDestroy, OnChang
   }
 
   ngOnDestroy(): void {
+    this.destroyed = true;
     this.blockGraph?.destroy();
     this.blockSub.unsubscribe();
     this.timeLtrSubscription.unsubscribe();
@@ -166,7 +168,11 @@ export class MempoolBlockOverviewComponent implements OnInit, OnDestroy, OnChang
   }
 
   resumeBlock(transactionsStripped: TransactionStripped[]): void {
-    if (this.blockGraph) {
+    if (this.destroyed) return;
+    if (this.blockGraph?.scene) {
+      if (this.observedSample) {
+        this.blockGraph.scene.fitTransactions(transactionsStripped, true);
+      }
       this.firstLoad = false;
       this.blockGraph.setup(transactionsStripped, true);
       this.blockIndex = this.index;

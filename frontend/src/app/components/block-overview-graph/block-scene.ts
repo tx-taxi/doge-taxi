@@ -87,6 +87,26 @@ export default class BlockScene {
     this.layout = null;
   }
 
+  fitTransactions(transactions: TransactionStripped[], sort: boolean): void {
+    const extent = transactions.reduce((sum, tx) => sum + Math.max(0, tx.vsize || 0), 0);
+    this.vbytesPerUnit = Math.max(1, extent) / Math.pow(this.gridWidth / 1.02, 2);
+    const probes = transactions.map(tx => ({
+      txid: tx.txid, vsize: tx.vsize, feerate: tx.fee / tx.vsize,
+      applyGridPosition: () => {},
+    } as unknown as TxView));
+    if (sort) probes.sort(feeRateDescending);
+    for (let attempt = 0; attempt < 32; attempt++) {
+      const layout = new BlockLayout({ width: this.gridWidth, height: this.gridHeight });
+      let end = 0;
+      probes.forEach(tx => {
+        const position = layout.insert(tx, this.txSize(tx));
+        end = Math.max(end, position.y + position.s);
+      });
+      if (end <= this.gridHeight) return;
+      this.vbytesPerUnit *= Math.max(1.05, end / this.gridHeight);
+    }
+  }
+
   // set up the scene with an initial set of transactions, without any transition animation
   setup(txs: TransactionStripped[], sort: boolean = false) {
     // clean up any old transactions

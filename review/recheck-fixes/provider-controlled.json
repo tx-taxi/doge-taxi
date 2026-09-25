@@ -1,0 +1,26 @@
+{
+  collectorCycles: 24,
+  concurrentViewers: 20,
+  collectorRequests: 74,
+  detailRequests: 14,
+  totalRequests: 88,
+  budget: {
+    hourly: 90,
+    collector: 76,
+    detail: 14,
+    used: 88,
+    collectorUsed: 74,
+    detailUsed: 14
+  },
+  cachedReadsAfterExhaustion: true,
+  restartPreservesBudgetAndSnapshot: true,
+  throttleRequestsAcrossRestart: 1,
+  sparseHeights: [
+    1072, 1069, 1066,
+    1063, 1060, 1057,
+    1054, 1051
+  ],
+  scope: 'Controlled provider responses, not upstream acceptance'
+}
+rolled provider responses, not upstream acceptance"
+}

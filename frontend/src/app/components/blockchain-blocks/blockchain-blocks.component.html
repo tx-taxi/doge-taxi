@@ -33,6 +33,7 @@
             ></div>
           </ng-container>
         }
+        <span *ngIf="!minimal && blocks[i + 1] && block.height - blocks[i + 1].height > 1" class="height-gap" [attr.aria-label]="(block.height - blocks[i + 1].height - 1) + ' blocks between ' + block.height + ' and ' + blocks[i + 1].height" [title]="(block.height - 1) + '–' + (blocks[i + 1].height + 1)">⋯<small>{{block.height - blocks[i + 1].height - 1}}</small></span>
         <div class="block-body">
           <ng-container *ngIf="!minimal">
             <div *ngIf="block?.extras; else emptyfees" [attr.data-cy]="'bitcoin-block-offset=' + offset + '-index-' + i + '-fees'" class="fees">

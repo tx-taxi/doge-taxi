@@ -30,7 +30,7 @@ function currentProviderStatus(now = Date.now()) {
  return {...base, source: dogecoin.health,
   stale: limited || !observedAt || now - observedAt > 180000,
   degraded: base.degraded || limited,
-  cooldownUntil: cooldownUntil || null, cacheEntries: cache.size};
+  cooldownUntil: cooldownUntil || null, budget: dogecoin.budget(), cacheEntries: cache.size};
 }
 
 async function api(path) {
@@ -141,6 +141,6 @@ wss.on('connection',client=>{
  if(m.action==='init'||m['refresh-blocks'])await update();
  if(m['track-tx']&&m['track-tx']!=='stop'){const t=await api('/api/tx/'+m['track-tx']);if(t.status===200&&client.readyState===1)client.send(JSON.stringify({tx:t.data}));}
  });
- const timer=setInterval(update,120000);const heartbeat=setInterval(()=>{if(client.readyState===1)client.send(JSON.stringify({heartbeat:Date.now()}));},20000);client.on('close',()=>{clearInterval(timer);clearInterval(heartbeat);});
+ const timer=setInterval(update,dogecoin.refreshInterval);const heartbeat=setInterval(()=>{if(client.readyState===1)client.send(JSON.stringify({heartbeat:Date.now()}));},20000);client.on('close',()=>{clearInterval(timer);clearInterval(heartbeat);});
 });
 server.listen(Number(process.env.PORT||4351),process.env.DOGE_HOST||'127.0.0.1',()=>console.log('DOGE adapter on 127.0.0.1:'+ (process.env.PORT||4351)));

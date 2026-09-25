@@ -1,0 +1,67 @@
+DOGE adapter on 127.0.0.1:4398
+{
+  "case": "Persisted cooldown health consistency without upstream probe",
+  "probes": 0,
+  "results": [
+    {
+      "status": 200,
+      "body": {
+        "primary": "https://api.blockcypher.com/v1/doge/main",
+        "lastSuccess": null,
+        "lastFailure": null,
+        "websocket": "connecting",
+        "degraded": true,
+        "recentFailures": 0,
+        "stale": true,
+        "source": {
+          "requests": 0
+        },
+        "cooldownUntil": 1790314713532,
+        "budget": {
+          "used": 0
+        },
+        "cacheEntries": 0
+      }
+    },
+    {
+      "status": 200,
+      "body": {
+        "primary": "https://api.blockcypher.com/v1/doge/main",
+        "lastSuccess": null,
+        "lastFailure": null,
+        "websocket": "connecting",
+        "degraded": true,
+        "recentFailures": 0,
+        "stale": true,
+        "source": {
+          "requests": 0
+        },
+        "cooldownUntil": 1790314713532,
+        "budget": {
+          "used": 0
+        },
+        "cacheEntries": 0
+      }
+    },
+    {
+      "status": 200,
+      "body": {
+        "primary": "https://api.blockcypher.com/v1/doge/main",
+        "lastSuccess": null,
+        "lastFailure": null,
+        "websocket": "connecting",
+        "degraded": true,
+        "recentFailures": 0,
+        "stale": true,
+        "source": {
+          "requests": 0
+        },
+        "cooldownUntil": 1790314713532,
+        "budget": {
+          "used": 0
+        },
+        "cacheEntries": 0
+      }
+    }
+  ]
+}
