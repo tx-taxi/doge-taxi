@@ -1,0 +1,18 @@
+{
+  "chain": "doge",
+  "checkedAt": "2026-09-25T02:38:58.983Z",
+  "cases": [
+    {
+      "width": 1440,
+      "transactionListRendered": 1,
+      "errorText": "Error loading data.\n\n(503 Service Unavailable: Provider rate limit: retry after 2026-09-25T03:00:00.000Z)\n\n\n\n",
+      "pageErrors": []
+    },
+    {
+      "width": 390,
+      "transactionListRendered": 1,
+      "errorText": "Error loading data.\n\n(503 Service Unavailable: Provider rate limit: retry after 2026-09-25T03:00:00.000Z)\n\n\n\n",
+      "pageErrors": []
+    }
+  ]
+}

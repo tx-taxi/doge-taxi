@@ -3,7 +3,7 @@ import { Location } from '@angular/common';
 import { ActivatedRoute, ParamMap, Params, Router } from '@angular/router';
 import { ElectrsApiService } from '@app/services/electrs-api.service';
 import { switchMap, tap, throttleTime, catchError, map, shareReplay, startWith, filter, take } from 'rxjs/operators';
-import { Observable, of, Subscription, asyncScheduler, EMPTY, combineLatest, forkJoin } from 'rxjs';
+import { Observable, of, Subscription, asyncScheduler, EMPTY, combineLatest, forkJoin, throwError } from 'rxjs';
 import { StateService } from '@app/services/state.service';
 import { SeoService } from '@app/services/seo.service';
 import { WebsocketService } from '@app/services/websocket.service';
@@ -122,7 +122,7 @@ export class BlockComponent implements OnInit, OnDestroy {
     private cd: ChangeDetectorRef,
     private preloadService: PreloadService,
   ) {
-    this.webGlEnabled = this.stateService.isBrowser && detectWebGL();
+    this.webGlEnabled = false; // No full-block transaction summary provider.
   }
 
   get showComparison() {
@@ -315,7 +315,7 @@ export class BlockComponent implements OnInit, OnDestroy {
       switchMap((block) => {
         return forkJoin([
           of(block),
-          this.apiService.getStrippedBlockTransactions$(block.id)
+          throwError(() => new Error('Full block overview is unavailable from this provider'))
             .pipe(
               catchError((err) => {
                 this.overviewError = err;
@@ -340,7 +340,7 @@ export class BlockComponent implements OnInit, OnDestroy {
                       return of(null);
                     })
                   ),
-                  this.apiService.getStrippedBlockTransactions$(hash).pipe(
+                  throwError(() => new Error('Full block overview is unavailable from this provider')).pipe(
                     catchError((err) => {
                       console.error('Error fetching canonical transactions:', err);
                       this.overviewError = err;
@@ -593,7 +593,7 @@ export class BlockComponent implements OnInit, OnDestroy {
                 return of(null);
               })
             ),
-            this.apiService.getStrippedBlockTransactions$(hash).pipe(
+            throwError(() => new Error('Full block overview is unavailable from this provider')).pipe(
               catchError((err) => {
                 console.error('Error fetching canonical transactions:', err);
                 this.overviewError = err;

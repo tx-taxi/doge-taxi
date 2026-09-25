@@ -15,7 +15,7 @@
   "PUBLIC_ACCELERATIONS": false,
   "STRATUM_ENABLED": false,
   "MEMPOOL_WEBSITE_URL": "https://doge.tx.taxi",
-  "HISTORICAL_PRICE": true,
+  "HISTORICAL_PRICE": false,
   "TX_TAXI_ROUTER_URL": "/local-router",
   "ITEMS_PER_PAGE": 25
 }

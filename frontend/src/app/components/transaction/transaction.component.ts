@@ -245,9 +245,7 @@ export class TransactionComponent implements OnInit, AfterViewInit, OnDestroy {
     this.hideAccelerationSummary = this.stateService.isMempoolSpaceBuild ? this.storageService.getValue('hide-accelerator-pref') == 'true' : true;
 
     if (!this.stateService.isLiquid()) {
-      this.miningService.getMiningStats('1m').subscribe(stats => {
-        this.miningStats = stats;
-      });
+      // Pool distribution is unavailable from the DOGE provider.
     }
 
     this.websocketService.want(['blocks', 'mempool-blocks']);
@@ -302,8 +300,7 @@ export class TransactionComponent implements OnInit, AfterViewInit, OnDestroy {
     this.fetchCpfpSubscription = this.fetchCpfp$
       .pipe(
         switchMap((txId) =>
-          this.apiService
-            .getCpfpinfo$(txId)
+          of(null)
             .pipe(retryWhen((errors) => errors.pipe(
               mergeMap((error) => {
                 if (!this.tx?.status || this.tx.status.confirmed) {
@@ -330,15 +327,14 @@ export class TransactionComponent implements OnInit, AfterViewInit, OnDestroy {
     this.fetchRbfSubscription = this.fetchRbfHistory$
     .pipe(
       switchMap((txId) =>
-        this.apiService
-          .getRbfHistory$(txId)
+        of(null)
       ),
       catchError(() => {
         return of(null);
       })
     ).subscribe((rbfResponse) => {
-      this.rbfInfo = rbfResponse?.replacements;
-      this.rbfReplaces = rbfResponse?.replaces || null;
+      this.rbfInfo = null;
+      this.rbfReplaces = null;
     });
 
     this.fetchCachedTxSubscription = this.fetchCachedTx$
@@ -581,9 +577,7 @@ export class TransactionComponent implements OnInit, AfterViewInit, OnDestroy {
           if (this.stateService.network === '') {
             if (!this.mempoolPosition.accelerated) {
               if (!this.accelerationFlowCompleted && !this.hideAccelerationSummary && !this.showAccelerationSummary) {
-                this.miningService.getMiningStats('1m').subscribe(stats => {
-                  this.miningStats = stats;
-                });
+                // Pool distribution is unavailable from the DOGE provider.
               }
             }
           }
@@ -992,10 +986,7 @@ export class TransactionComponent implements OnInit, AfterViewInit, OnDestroy {
     }
     if (this.isAcceleration) {
       // this immediately returns cached stats if we fetched them recently
-      this.miningService.getMiningStats('1m').subscribe(stats => {
-        this.miningStats = stats;
-        this.isAccelerated$.next(this.isAcceleration); // hack to trigger recalculation of ETA without adding another source observable
-      });
+      // Pool distribution is unavailable from the DOGE provider.
     }
     this.isAccelerated$.next(this.isAcceleration);
   }

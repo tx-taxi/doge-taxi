@@ -17,6 +17,7 @@ async function fetchJson(p,ttl=120000){
  if(Date.now()<cooldownUntil)throw Object.assign(new Error('Provider rate limit: retry after '+new Date(cooldownUntil).toISOString()),{status:503});
  if(health.lastFailure && Date.now()-health.lastFailure.at<60000)throw new Error('Provider cooldown: '+health.lastFailure.message);
  const run=queue.catch(()=>{}).then(async()=>{
+  if(Date.now()<cooldownUntil)throw Object.assign(new Error('Provider rate limit: retry after '+new Date(cooldownUntil).toISOString()),{status:503});
   await new Promise(r=>setTimeout(r,Math.max(0,next-Date.now())));next=Date.now()+1100;
   const u=new URL(root+p);if(token)u.searchParams.set('token',token);
   const res=await fetch(u,{signal:AbortSignal.timeout(9000)});health.requests++;
@@ -57,6 +58,7 @@ async function route(p){let m;const pathname=p.split('?')[0];
   if(m[2]==='txs'){const ids=b.txids.slice(Number(m[3]||0),Number(m[3]||0)+25);const out=[];for(const id of ids)out.push(await getTx(id));return out;}
   return block(b);
  }
+ if(pathname==='/api/txs/outspends'){const ids=new URL(p,'http://localhost').searchParams.get('txids')?.split(',')||[];return Promise.all(ids.map(id=>route('/api/tx/'+id+'/outspends')));}
  if(m=pathname.match(/^\/api\/tx\/([a-f0-9]{64})(?:\/(status|outspends|hex))?$/)){
   const t=await fetchJson('/txs/'+m[1]+'?limit=10000',86400000);
   if(m[2]==='status')return tx(t).status;

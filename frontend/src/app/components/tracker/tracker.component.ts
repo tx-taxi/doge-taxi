@@ -166,9 +166,7 @@ export class TrackerComponent implements OnInit, OnDestroy {
 
     this.acceleratorAvailable = this.stateService.env.OFFICIAL_MEMPOOL_SPACE && this.stateService.env.ACCELERATOR && this.stateService.network === '';
 
-    this.miningService.getMiningStats('1w').subscribe(stats => {
-      this.miningStats = stats;
-    });
+    // Pool distribution is unavailable from the DOGE provider.
 
     this.enterpriseService.page();
 
@@ -197,8 +195,7 @@ export class TrackerComponent implements OnInit, OnDestroy {
     this.fetchCpfpSubscription = this.fetchCpfp$
       .pipe(
         switchMap((txId) =>
-          this.apiService
-            .getCpfpinfo$(txId)
+          of(null)
             .pipe(retryWhen((errors) => errors.pipe(
               mergeMap((error) => {
                 if (!this.tx?.status || this.tx.status.confirmed) {
@@ -225,15 +222,14 @@ export class TrackerComponent implements OnInit, OnDestroy {
     this.fetchRbfSubscription = this.fetchRbfHistory$
     .pipe(
       switchMap((txId) =>
-        this.apiService
-          .getRbfHistory$(txId)
+        of(null)
       ),
       catchError(() => {
         return of(null);
       })
     ).subscribe((rbfResponse) => {
-      this.rbfInfo = rbfResponse?.replacements;
-      this.rbfReplaces = rbfResponse?.replaces || null;
+      this.rbfInfo = null;
+      this.rbfReplaces = null;
       if (this.rbfInfo) {
         // link to the latest pending version
         this.latestReplacement = this.rbfInfo.tx.txid;
@@ -760,10 +756,7 @@ export class TrackerComponent implements OnInit, OnDestroy {
     this.isAcceleration = (this.tx.acceleration || (this.accelerationInfo && this.pool && this.accelerationInfo.pools.some(pool => (pool === this.pool.id))));
     if (this.isAcceleration) {
       // this immediately returns cached stats if we fetched them recently
-      this.miningService.getMiningStats('1w').subscribe(stats => {
-        this.miningStats = stats;
-        this.isAccelerated$.next(this.isAcceleration); // hack to trigger recalculation of ETA without adding another source observable
-      });
+      // Pool distribution is unavailable from the DOGE provider.
       this.accelerationFlowCompleted = true;
     }
     this.isAccelerated$.next(this.isAcceleration);
