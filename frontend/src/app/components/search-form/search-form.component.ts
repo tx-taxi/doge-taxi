@@ -49,6 +49,7 @@ export class SearchFormComponent implements OnInit {
   isTypeaheading$ = new BehaviorSubject<boolean>(false);
   typeAhead$: Observable<any>;
   explorers$: Observable<TxTaxiExplorer[]>;
+  thirdPartyExplorers$: typeof this.explorerRegistry.thirdPartyExplorers$;
   selectedChainId$ = new BehaviorSubject<string | undefined>(this.sourceChainId);
   activeTarget$ = new BehaviorSubject<SearchTarget>({
     kind: 'explorer',
@@ -128,6 +129,7 @@ export class SearchFormComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.thirdPartyExplorers$ = this.explorerRegistry.thirdPartyExplorers$;
     this.env = this.stateService.env;
     this.stateService.networkChanged$.subscribe((network) => {
       this.network = network;
