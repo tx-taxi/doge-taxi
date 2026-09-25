@@ -1,0 +1,18 @@
+[
+  {
+    "chain": "doge",
+    "width": 1440,
+    "dividerX": 720,
+    "expected": 720,
+    "errors": [],
+    "overflow": false
+  },
+  {
+    "chain": "doge",
+    "width": 390,
+    "dividerX": 195,
+    "expected": 195,
+    "errors": [],
+    "overflow": false
+  }
+]

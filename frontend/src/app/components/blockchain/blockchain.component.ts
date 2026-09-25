@@ -128,9 +128,9 @@ export class BlockchainComponent implements OnInit, OnDestroy, OnChanges {
   }
 
   onResize(): void {
-    // DOGE has no supported projected-block feed. Keep the actual mined strip
-    // visible from the first block instead of reserving an empty pending half.
-    this.dividerOffset = 40;
+    const width = this.containerWidth || window.innerWidth;
+    // Keep the native divider centered even without a projected pending pool.
+    this.dividerOffset = width * 0.5;
     this.updateStyle();
   }
 }

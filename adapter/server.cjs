@@ -112,12 +112,13 @@ const server=http.createServer(async(req,res)=>{
 });
 const wss=new WebSocketServer({noServer:true});
 server.on('upgrade',(req,socket,head)=>{
+ socket.on('error',()=>socket.destroy());
  if(req.url==='/api/v1/ws')wss.handleUpgrade(req,socket,head,client=>wss.emit('connection',client));
  else {
   if(STATIC_ROOT){socket.destroy();return;}
   // Preserve Angular incremental rebuild notifications.
   const upstream=http.request({host:'127.0.0.1',port:4350,path:req.url,headers:req.headers});
-  upstream.on('upgrade',(r,s,h)=>{socket.write('HTTP/1.1 101 Switching Protocols\r\n'+Object.entries(r.headers).map(([k,v])=>`${k}: ${v}`).join('\r\n')+'\r\n\r\n');if(h.length)socket.write(h);if(head.length)s.write(head);s.pipe(socket).pipe(s);});upstream.on('error',()=>socket.destroy());upstream.end();
+  upstream.on('upgrade',(r,s,h)=>{const close=()=>{s.destroy();socket.destroy();};s.on('error',close);socket.on('error',close);s.on('close',()=>socket.destroy());socket.on('close',()=>s.destroy());if(socket.destroyed){s.destroy();return;}socket.write('HTTP/1.1 101 Switching Protocols\r\n'+Object.entries(r.headers).map(([k,v])=>`${k}: ${v}`).join('\r\n')+'\r\n\r\n');if(h.length)socket.write(h);if(head.length)s.write(head);s.pipe(socket).pipe(s);});upstream.on('error',()=>socket.destroy());upstream.end();
  }
 });
 wss.on('connection',client=>{
