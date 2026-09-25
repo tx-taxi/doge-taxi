@@ -1,7 +1,7 @@
 /** Chain-owned native explorer transport; snapshot age and stream liveness are distinct. */
 export function startFeed({onSnapshot,onStatus,signal}) {
  const local=['localhost','127.0.0.1'].includes(location.hostname);
- const endpoint=local?'ws://127.0.0.1:4351/api/v1/ws':'wss://doge.tx.taxi/api/v1/ws';
+ const endpoint=local?'ws://127.0.0.1:4451/api/v1/ws':'wss://doge.tx.taxi/api/v1/ws';
  let providerState='stale';
  let socket,retry,watchdog,initial,lastMessage=0,lastData=0,attempt=0,stopped=false,haveData=false;
  const status=(state,error)=>onStatus?.({state,updatedAt:lastData||null,error});
