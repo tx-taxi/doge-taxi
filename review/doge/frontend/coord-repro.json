@@ -1,0 +1,88 @@
+[
+  {
+    "data": [],
+    "fixed": false,
+    "error": null
+  },
+  {
+    "data": [],
+    "fixed": true,
+    "error": null
+  },
+  {
+    "data": [
+      [
+        1,
+        0
+      ]
+    ],
+    "fixed": false,
+    "error": "TypeError: Cannot read properties of undefined (reading 'coord')\n    at getVisualGradient (/home/lukee/dev/btc-taxi/frontend/node_modules/echarts/dist/echarts.js:42481:43)\n    at LineView.render (/home/lukee/dev/btc-taxi/frontend/node_modules/echarts/dist/echarts.js:42777:27)\n    at Task.progress (/home/lukee/dev/btc-taxi/frontend/node_modules/echarts/dist/echarts.js:24943:24)\n    at Task._doProgress (/home/lukee/dev/btc-taxi/frontend/node_modules/echarts/dist/echarts.js:21229:14)\n    at Task.perform (/home/lukee/dev/btc-taxi/frontend/node_modules/echarts/dist/echarts.js:21195:20)\n    at /home/lukee/dev/btc-taxi/frontend/node_modules/echarts/dist/echarts.js:29890:28\n    at GlobalModel.<anonymous> (/home/lukee/dev/btc-taxi/frontend/node_modules/echarts/dist/echarts.js:18965:14)\n    at Array.forEach (<anonymous>)\n    at each (/home/lukee/dev/btc-taxi/frontend/node_modules/echarts/dist/echarts.js:413:17)\n    at GlobalModel.eachSeries (/home/lukee/dev/btc-taxi/frontend/node_modules/echarts/dist/echarts.js:18962:9)"
+  },
+  {
+    "data": [
+      [
+        1,
+        0
+      ]
+    ],
+    "fixed": true,
+    "error": null
+  },
+  {
+    "data": [
+      [
+        1,
+        0
+      ],
+      [
+        2,
+        0
+      ]
+    ],
+    "fixed": false,
+    "error": "TypeError: Cannot read properties of undefined (reading 'coord')\n    at getVisualGradient (/home/lukee/dev/btc-taxi/frontend/node_modules/echarts/dist/echarts.js:42481:43)\n    at LineView.render (/home/lukee/dev/btc-taxi/frontend/node_modules/echarts/dist/echarts.js:42777:27)\n    at Task.progress (/home/lukee/dev/btc-taxi/frontend/node_modules/echarts/dist/echarts.js:24943:24)\n    at Task._doProgress (/home/lukee/dev/btc-taxi/frontend/node_modules/echarts/dist/echarts.js:21229:14)\n    at Task.perform (/home/lukee/dev/btc-taxi/frontend/node_modules/echarts/dist/echarts.js:21195:20)\n    at /home/lukee/dev/btc-taxi/frontend/node_modules/echarts/dist/echarts.js:29890:28\n    at GlobalModel.<anonymous> (/home/lukee/dev/btc-taxi/frontend/node_modules/echarts/dist/echarts.js:18965:14)\n    at Array.forEach (<anonymous>)\n    at each (/home/lukee/dev/btc-taxi/frontend/node_modules/echarts/dist/echarts.js:413:17)\n    at GlobalModel.eachSeries (/home/lukee/dev/btc-taxi/frontend/node_modules/echarts/dist/echarts.js:18962:9)"
+  },
+  {
+    "data": [
+      [
+        1,
+        0
+      ],
+      [
+        2,
+        0
+      ]
+    ],
+    "fixed": true,
+    "error": null
+  },
+  {
+    "data": [
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "fixed": false,
+    "error": "TypeError: Cannot read properties of undefined (reading 'coord')\n    at getVisualGradient (/home/lukee/dev/btc-taxi/frontend/node_modules/echarts/dist/echarts.js:42481:43)\n    at LineView.render (/home/lukee/dev/btc-taxi/frontend/node_modules/echarts/dist/echarts.js:42777:27)\n    at Task.progress (/home/lukee/dev/btc-taxi/frontend/node_modules/echarts/dist/echarts.js:24943:24)\n    at Task._doProgress (/home/lukee/dev/btc-taxi/frontend/node_modules/echarts/dist/echarts.js:21229:14)\n    at Task.perform (/home/lukee/dev/btc-taxi/frontend/node_modules/echarts/dist/echarts.js:21195:20)\n    at /home/lukee/dev/btc-taxi/frontend/node_modules/echarts/dist/echarts.js:29890:28\n    at GlobalModel.<anonymous> (/home/lukee/dev/btc-taxi/frontend/node_modules/echarts/dist/echarts.js:18965:14)\n    at Array.forEach (<anonymous>)\n    at each (/home/lukee/dev/btc-taxi/frontend/node_modules/echarts/dist/echarts.js:413:17)\n    at GlobalModel.eachSeries (/home/lukee/dev/btc-taxi/frontend/node_modules/echarts/dist/echarts.js:18962:9)"
+  },
+  {
+    "data": [
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "fixed": true,
+    "error": null
+  }
+]

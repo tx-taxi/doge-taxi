@@ -1,0 +1,90 @@
+[
+  {
+    "theme": "default",
+    "values": [],
+    "options": {
+      "color": "#c3a634",
+      "visualMap": null
+    },
+    "errors": []
+  },
+  {
+    "theme": "default",
+    "values": [
+      0
+    ],
+    "options": {
+      "color": "#c3a634",
+      "visualMap": null
+    },
+    "errors": []
+  },
+  {
+    "theme": "default",
+    "values": [
+      0,
+      0
+    ],
+    "options": {
+      "color": "#c3a634",
+      "visualMap": null
+    },
+    "errors": []
+  },
+  {
+    "theme": "default",
+    "values": [
+      2,
+      3
+    ],
+    "options": {
+      "color": "#c3a634",
+      "visualMap": null
+    },
+    "errors": []
+  },
+  {
+    "theme": "original",
+    "values": [],
+    "options": {
+      "color": "#7CB342",
+      "visualMap": null
+    },
+    "errors": []
+  },
+  {
+    "theme": "original",
+    "values": [
+      0
+    ],
+    "options": {
+      "color": "#7CB342",
+      "visualMap": null
+    },
+    "errors": []
+  },
+  {
+    "theme": "original",
+    "values": [
+      0,
+      0
+    ],
+    "options": {
+      "color": "#7CB342",
+      "visualMap": null
+    },
+    "errors": []
+  },
+  {
+    "theme": "original",
+    "values": [
+      2,
+      3
+    ],
+    "options": {
+      "color": "#7CB342",
+      "visualMap": null
+    },
+    "errors": []
+  }
+]

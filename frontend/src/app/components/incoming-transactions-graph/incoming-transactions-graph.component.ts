@@ -136,6 +136,9 @@ export class IncomingTransactionsGraphComponent implements OnInit, OnChanges, On
       zlevel: 0,
       name: 'data',
       data: this.data.series[0],
+      // A uniform color needs no visualMap: an unbounded piece has no finite
+      // gradient stops and ECharts can throw when the first sample arrives.
+      color: this.themeService.theme === 'default' ? '#c3a634' : '#7CB342',
       type: 'line',
       smooth: false,
       showSymbol: false,
@@ -277,15 +280,7 @@ export class IncomingTransactionsGraphComponent implements OnInit, OnChanges, On
         }
       },
       series: seriesGraph,
-      visualMap: {
-        show: false,
-        top: 50,
-        right: 10,
-        pieces: [{ gte: 0, color: this.themeService.theme === 'default' ? '#c3a634' : '#7CB342' }],
-        outOfRange: {
-          color: '#999'
-        }
-      },
+
     };
   }
 
