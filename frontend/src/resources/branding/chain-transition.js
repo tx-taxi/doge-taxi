@@ -53,6 +53,9 @@
     }
   }
   function requestHubSnapshot() {
+    // This isolated review hub has no snapshot bridge or chain-side consumer.
+    // Keep visual handoff local; never contact the separate owner hub.
+    if(local)return;
     const profile=profiles.find(profile=>profile.chain===source);
     if(!profile || !/^\/(?:[a-z]{2}(?:-[A-Z]{2})?\/)?$/.test(location.pathname))return;
     const hubOrigin=local?'http://127.0.0.1:4330':'https://tx.taxi';
@@ -121,7 +124,8 @@
     // Entity links remain immediate. Only explicit explorer switching opens a chain surface.
     if(url.pathname!=='/'||url.search||url.hash)return;
     event.preventDefault();
-    const band=[...document.querySelectorAll('.hub-band')].find(b=>b.querySelector('tx-native-strip')?.dataset.destination===profile.origin+'/');
+    const destination=local&&profile.port?`http://127.0.0.1:${profile.port}`:profile.origin;
+    const band=[...document.querySelectorAll('.hub-band')].find(b=>b.querySelector('tx-native-strip')?.dataset.destination===destination+'/');
     depart(url,profile,band);
   });
   window.addEventListener('pageshow',event=>{if(event.persisted)reset();});
