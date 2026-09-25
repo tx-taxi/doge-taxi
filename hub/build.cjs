@@ -3,6 +3,15 @@ const chain=path.basename(root).split('-')[0],out=process.argv[2]||path.join(__d
 
 const provenance=[{path:'hub/feed.js',sha256:require('crypto').createHash('sha256').update(fs.readFileSync(path.join(__dirname,'feed.js'))).digest('hex')}];
 esbuild.build({entryPoints:[path.join(__dirname,'entry.ts')],outfile:path.join(out,'strip.js'),bundle:true,format:'esm',minify:true,target:'es2022',nodePaths:[front+'/node_modules'],define:{ngDevMode:'false'},plugins:[{name:'native-source',setup(build){
+ build.onResolve({filter:/^native-status-template$/},()=>({path:'native-status-template',namespace:'native-status'}));
+ build.onLoad({filter:/.*/,namespace:'native-status'},()=>{
+  const htmlPath='frontend/src/app/components/master-page/master-page.component.html',scssPath='frontend/src/app/components/master-page/master-page.component.scss';
+  const html=fs.readFileSync(path.join(root,htmlPath),'utf8'),scss=fs.readFileSync(path.join(root,scssPath),'utf8');
+  const badges=[0,1].map(state=>html.match(new RegExp('<div class="badge bg-warning"[^>]*connectionState\\.val === '+state+'[^>]*>[\\s\\S]*?<\\/div>'))?.[0]);
+  const badgeStyle=scss.match(/\.badge\s*\{[^}]*\}/)?.[0];if(badges.some(x=>!x)||!badgeStyle)throw new Error('Native connection badge fragment changed; review extraction');
+  for(const file of [htmlPath,scssPath])provenance.push({path:file,sha256:require('crypto').createHash('sha256').update(fs.readFileSync(path.join(root,file))).digest('hex')});
+  return {contents:'export const nativeConnectionTemplate='+JSON.stringify('<ng-container *ngIf="{ val: state.connectionState$ | async } as connectionState">'+badges.join('\n')+'</ng-container>')+';export const nativeConnectionStyles='+JSON.stringify(sass.compileString(badgeStyle).css)+';',loader:'js'};
+ });
  build.onResolve({filter:/^@app\//},args=>{const name=args.path.slice(5);if(/services\/(state|cache|storage|theme|eta)\.service$/.test(name))return {path:path.join(__dirname,'facade.ts')};return {path:path.join(front,'src/app',name+'.ts')};});
  build.onLoad({filter:/\.ts$/},args=>{let source=fs.readFileSync(args.path,'utf8'); if(!args.path.includes('/node_modules/'))provenance.push({path:path.relative(root,args.path),sha256:require('crypto').createHash('sha256').update(source).digest('hex')});
  source=source.replace(/templateUrl:\s*['"]([^'"]+)['"]/g,(_,file)=>'template:'+JSON.stringify(fs.readFileSync(path.resolve(path.dirname(args.path),file),'utf8'))).replace(/styleUrls:\s*\[([^\]]+)\]/g,(_,files)=>'styles:['+[...files.matchAll(/['"]([^'"]+)['"]/g)].map(m=>JSON.stringify(sass.compile(path.resolve(path.dirname(args.path),m[1]),{silenceDeprecations:['legacy-js-api','import','global-builtin','color-functions']}).css)).join(',')+']');
