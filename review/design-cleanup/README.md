@@ -31,3 +31,7 @@ A sustained indexed DOGE provider budget covering historical block transaction l
 Local watch remains `http://127.0.0.1:4351`; start `bash scripts/local-start.sh`, stop `bash scripts/local-stop.sh`, from `/home/lukee/dev/doge-taxi`. No production/push/deploy.
 
 The130-second observation completed with real50-transaction snapshots and heartbeats, then the native Offline state after renewed429. `live.json` contains no product JS errors; screenshot was opened. The duplicate reconnect caption beneath the pending canvas was removed after screenshot inspection found it touched the card edge; native canvas unavailable state and Offline badge remain. Provider coverage history is retained in `review/doge/` and the existing manifest; this pass adds the exact renewed429 record without re-probing previously failed providers.
+
+## Health consistency follow-up
+
+`/healthz` now shares the same persisted cooldown/staleness calculation as `/api/provider-health`, while remaining a read-only liveness endpoint. This fixes the observed contradiction where websocket/unavailable and an active429 cooldown could report `degraded:false`. Isolated actual HTTP-route verification trapped both provider-route and fetch calls: three health reads returned200/degraded/stale with the cooldown timestamp and **zero probes**. Evidence: [health-no-probe.json](health-no-probe.json), [verification harness](verify-health-no-probe.cjs), [local runtime](health-local.json). Shared navigation files remain untouched.

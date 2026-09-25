@@ -21,6 +21,18 @@ async function fetchData(url, timeout=7000, metadata=false) {
  return metadata ? {data,headers:Object.fromEntries(['x-total-count','retry-after'].filter(h=>r.headers.has(h)).map(h=>[h,r.headers.get(h)]))} : data;
 }
 const dogecoin = require('./dogecoin.cjs');
+// Both health views read the same provider state; liveness must never probe upstream.
+function currentProviderStatus(now = Date.now()) {
+ const base = providerStatus(health, failedPaths, now);
+ const cooldownUntil = dogecoin.cooldown();
+ const limited = now < cooldownUntil;
+ const observedAt = dogecoin.liveObservedAt();
+ return {...base, source: dogecoin.health,
+  stale: limited || !observedAt || now - observedAt > 180000,
+  degraded: base.degraded || limited,
+  cooldownUntil: cooldownUntil || null, cacheEntries: cache.size};
+}
+
 async function api(path) {
  try {const data=await dogecoin.route(path);health.lastSuccess=dogecoin.liveObservedAt();return result(data,'blockcypher');}
  catch(e){health.lastFailure={at:Date.now(),message:e.message};return result({error:e.message,retryable:true},'unavailable',e.status===404?404:503);}
@@ -77,9 +89,9 @@ const server=http.createServer(async(req,res)=>{
    // An idle gateway has no observations, not evidence of an upstream outage.
    // Probe current mempool data before reporting stale health to a visitor.
    if(!health.lastSuccess || Date.now()-health.lastSuccess>120000)await api('/api/blocks/tip/height');
-   return send(res,200,{...providerStatus(health,failedPaths),source:dogecoin.health,stale:Date.now()<dogecoin.cooldown()||!dogecoin.liveObservedAt()||Date.now()-dogecoin.liveObservedAt()>180000,degraded:Date.now()<dogecoin.cooldown(),cooldownUntil:dogecoin.cooldown()||null,cacheEntries:cache.size});
+   return send(res,200,currentProviderStatus());
   }
-  if(u.pathname==='/healthz')return send(res,200,{...providerStatus(health,failedPaths),cacheEntries:cache.size});
+  if(u.pathname==='/healthz')return send(res,200,currentProviderStatus());
   if(u.pathname==='/api/local-resolve') {
    try {return send(res,200,await fetchData(ROUTER_ORIGIN+'/api/v1/resolve?value='+encodeURIComponent(u.searchParams.get('value')||''),12000));} catch {return send(res,503,{unavailable:true});}
   }
