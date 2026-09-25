@@ -24,9 +24,9 @@ export class MasterPageComponent implements OnInit, OnDestroy {
   checkProvider(): void {
     this.http.get<any>('/api/provider-health').subscribe({
       next: h => this.providerWarning = h.stale
-        ? 'Provider data has not updated recently. Displayed data may be stale.'
-        : h.degraded ? 'Some provider requests recently failed. Affected data may be unavailable or stale.' : '',
-      error: () => this.providerWarning = 'The data service is unavailable. Retrying.'
+        ? 'Data may be out of date.'
+        : h.degraded ? 'Some data is temporarily unavailable.' : '',
+      error: () => this.providerWarning = 'Unable to update. Retrying.'
     });
   }
   env: Env;

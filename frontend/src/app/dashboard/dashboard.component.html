@@ -3,7 +3,7 @@
   <div class="row row-cols-1 row-cols-md-2" *ngIf="{ value: (mempoolInfoData$ | async) } as mempoolInfoData">
     <ng-container>
       <div class="col card-wrapper">
-        <div class="main-title" title="BlockCypher fee estimates; not a confirmation guarantee">Provider fee estimates</div>
+        <div class="main-title" i18n="fees-box.transaction-fees">Transaction Fees</div>
         <div class="card">
           <div class="card-body less-padding">
             <app-fees-box class="d-block"></app-fees-box>
@@ -16,15 +16,13 @@
     </ng-container>
     <div class="col"><div class="card graph-card"><div class="card-body ps-lg-3 pe-lg-3 ps-2 pe-2">
       <a class="title-link" routerLink="/txs"><h5 class="card-title d-inline">Pending Transactions</h5></a>
-      <p class="small text-secondary mb-2">Observed sample · not a projected block</p>
       <div class="mempool-block-wrapper" *ngIf="webGlEnabled; else pendingList"><app-mempool-block-overview [observedSample]="true" [index]="0" [resolution]="goggleResolution" gradientMode="fee"></app-mempool-block-overview></div>
-      <ng-template #pendingList><p class="p-4">WebGL is unavailable. <a routerLink="/txs">View pending transactions</a></p></ng-template>
+      <ng-template #pendingList><p class="p-4">Chart unavailable. <a routerLink="/txs">View pending transactions</a></p></ng-template>
     </div></div></div>
     <div class="col"><div class="card graph-card"><div class="card-body">
-      <div class="mempool-info-data"><div class="item"><h5 class="card-title">Unconfirmed</h5><p class="card-text" *ngIf="stateService.mempoolInfo$ | async as pending; else loading">{{pending.size | number}} TXs</p></div><div class="item"><h5 class="card-title">Sample</h5><p class="card-text" *ngIf="stateService.observedPending$ | async as pending; else loading">{{pending.length | number}} TXs</p></div></div>
+      <div class="mempool-info-data"><div class="item"><h5 class="card-title">Unconfirmed</h5><p class="card-text" *ngIf="stateService.mempoolInfo$ | async as pending; else loading">{{pending.size | number}} TXs</p></div></div>
       <h5 class="card-title mt-3">Incoming Transactions</h5>
-      <p class="small text-secondary mb-0">Newly observed sample bytes/second · gaps are not zero activity</p>
-      <div class="mempool-graph observed-incoming" *ngIf="mempoolStats$ | async as stats"><app-incoming-transactions-graph [height]="incomingGraphHeight" [left]="50" [right]="20" [data]="stats.weightPerSecond || emptyIncoming" windowPreferenceOverride="2h"></app-incoming-transactions-graph><p class="small text-secondary chart-availability" *ngIf="stats.mempool?.length < 2">Insufficient consecutive observations.</p></div>
+      <div class="mempool-graph observed-incoming" *ngIf="{value: (mempoolStats$ | async)} as stats"><app-incoming-transactions-graph [height]="incomingGraphHeight" [left]="50" [right]="20" [data]="stats.value?.weightPerSecond || emptyIncoming" windowPreferenceOverride="2h"></app-incoming-transactions-graph><p class="small text-secondary chart-availability" *ngIf="!stats.value?.mempool || stats.value.mempool.length < 2">Not available</p></div>
     </div></div></div>
     <div class="col" style="max-height: 410px">
       <ng-container *ngTemplateOutlet="latestBlocks"></ng-container>

@@ -1,13 +1,13 @@
 <div class="fee-estimation-wrapper" *ngIf="(isLoading$ | async) === false && (recommendedFees$ | async) as recommendedFees; else loadingFees">
   <div class="d-flex">
     <div class="fee-progress-bar" [style.background]="noPriority">
-      <span class="fee-label" i18n="fees-box.no-priority" i18n-ngbTooltip="Transaction feerate tooltip (economy)" ngbTooltip="Public provider low-fee estimate" placement="top">No Priority</span>
+      <span class="fee-label" i18n="fees-box.no-priority" placement="top">No Priority</span>
     </div>
     <div class="band-separator fill"></div>
     <div class="fee-progress-bar priority" [style.background]="gradient">
-      <span class="fee-label prority" i18n="fees-box.low-priority" i18n-ngbTooltip="Transaction feerate tooltip (low priority)" ngbTooltip="Public provider low-fee estimate; not a confirmation guarantee" placement="top">Low Priority</span>
-      <span class="fee-label prority" i18n="fees-box.medium-priority" i18n-ngbTooltip="Transaction feerate tooltip (medium priority)" ngbTooltip="Public provider medium-fee estimate; not a confirmation guarantee" placement="top">Medium Priority</span>
-      <span class="fee-label prority" i18n="fees-box.high-priority" i18n-ngbTooltip="Transaction feerate tooltip (high priority)" ngbTooltip="Public provider high-fee estimate; not a confirmation guarantee" placement="top">High Priority</span>
+      <span class="fee-label prority" i18n="fees-box.low-priority" placement="top">Low Priority</span>
+      <span class="fee-label prority" i18n="fees-box.medium-priority" placement="top">Medium Priority</span>
+      <span class="fee-label prority" i18n="fees-box.high-priority" placement="top">High Priority</span>
     </div>
   </div>
 

@@ -1,0 +1,250 @@
+[
+  {
+    "name": "root",
+    "width": 1440,
+    "theme": "default",
+    "errors": [],
+    "intercepted": 4,
+    "text": "Offline\nTRANSACTION FEES\nNo Priority\nLow Priority\nMedium Priority\nHigh Priority\nSCRYPT MINING\nnetwork | rewards\nNot available\n—\nDifficulty\n60 s\nTarget interval\nPending Transactions\nnot available\nUnconfirmed\nIncoming Transactions\nRecent Blocks \nHeight\tMined\tTXs\tSize\t\t\t\n\t\t\t\n\t\t\t\n\t\t\t\n\t\t\t\n\t\t\t\nRecent Transactions \nTXID\tUSD\tAmount\tFee\t\t\t\n\t\t\t\n\t\t\t\n\t\t\t\n\t\t\t\n\t\t\t\n \nEnglish\nAUD\nCAD\nCHF\nEUR\nGBP\nJPY\nUSD\nUTC-7 - Mountain Standard Time (MST)\nUTC - Greenwich Mean Time (GMT)\n────\nUTC-12 - Anywhere on Earth (AoE)\nUTC-11 - Samoa Standard Time (SST)\nUTC-10 - Hawaii Standard Time (HST)\nUTC-9 - Alaska Standard Time (AKST)\nUTC-8 - Pacific Standard Time (PST)\nUTC-6 - Central Standard Time (CST)\nUTC-5 - Eastern Standard Time (EST)\nUTC-4 - Atlantic Standard Time (AST)\nUTC-3 - Argentina Time (ART)\nUTC-2 - Fernando de Noronha Time (FNT)\nUTC-1 - Azores Time (AZOT)\nUTC+1 - Central European Time (CET)\nUTC+2 - Eastern European Time (EET)\nUTC+3 - Moscow Standard Time (MSK)\nUTC+4 - Armenia Time (AMT)\nUTC+5 - Pakistan Standard Time (PKT)\nUTC+6 - Xinjiang Time (XJT)\nUTC+7 - Indochina Time (ICT)\nUTC+8 - Hong Kong Time (HKT)\nUTC+9 - Japan Standard Time (JST)\nUTC+10 - Australian Eastern Standard Time (AEST)\nUTC+11 - Norfolk Time (NFT)\nUTC+12 - New Zealand Standard Time (NZST)\nUTC+13 - Tonga Time (TOT)\nUTC+14 - Line Islands Time (LINT)\nDOGE\nkoinu\nFiat\ndoge.tx.taxi\nMempool Original\n\nDogecoin blocks, fees, and mempool activity\n\nExplore\n\nDashboard\n\nRecent Blocks\n\nTools & Docs\n\nCalculator\n\nDogecoin FAQ\n\nAPI Documentation\n\ndoge.tx.taxi\n\nAbout\n\nContact Us\n\nLegal\n\nTerms of Service\n\nPrivacy Policy\n\nTrademark & Attribution\n\nMade with 🕵️ by u.software",
+    "tooltips": [
+      "doge.tx.taxi dashboard",
+      "doge.tx.taxi dashboard",
+      "Dashboard",
+      "Recent blocks",
+      "Documentation",
+      "About doge.tx.taxi",
+      "Choose search chain",
+      "Search",
+      "Switch to displaying block sizes",
+      "Switch to displaying newest blocks on the left",
+      "Fiat price unavailable"
+    ],
+    "overflow": false
+  },
+  {
+    "name": "mining",
+    "width": 1440,
+    "theme": "default",
+    "errors": [],
+    "intercepted": 7,
+    "text": "Offline\nSCRYPT MINING\nnetwork | rewards\nNot available\n—\nDifficulty\n60 s\nTarget interval\nSCRYPT MINING\nnetwork | rewards\nNot available\n—\nDifficulty\n60 s\nTarget interval\nMining Pools\nNot available\nHashrate & Difficulty\nNot available\nEnglish\nAUD\nCAD\nCHF\nEUR\nGBP\nJPY\nUSD\nUTC-7 - Mountain Standard Time (MST)\nUTC - Greenwich Mean Time (GMT)\n────\nUTC-12 - Anywhere on Earth (AoE)\nUTC-11 - Samoa Standard Time (SST)\nUTC-10 - Hawaii Standard Time (HST)\nUTC-9 - Alaska Standard Time (AKST)\nUTC-8 - Pacific Standard Time (PST)\nUTC-6 - Central Standard Time (CST)\nUTC-5 - Eastern Standard Time (EST)\nUTC-4 - Atlantic Standard Time (AST)\nUTC-3 - Argentina Time (ART)\nUTC-2 - Fernando de Noronha Time (FNT)\nUTC-1 - Azores Time (AZOT)\nUTC+1 - Central European Time (CET)\nUTC+2 - Eastern European Time (EET)\nUTC+3 - Moscow Standard Time (MSK)\nUTC+4 - Armenia Time (AMT)\nUTC+5 - Pakistan Standard Time (PKT)\nUTC+6 - Xinjiang Time (XJT)\nUTC+7 - Indochina Time (ICT)\nUTC+8 - Hong Kong Time (HKT)\nUTC+9 - Japan Standard Time (JST)\nUTC+10 - Australian Eastern Standard Time (AEST)\nUTC+11 - Norfolk Time (NFT)\nUTC+12 - New Zealand Standard Time (NZST)\nUTC+13 - Tonga Time (TOT)\nUTC+14 - Line Islands Time (LINT)\nDOGE\nkoinu\nFiat\ndoge.tx.taxi\nMempool Original\n\nDogecoin blocks, fees, and mempool activity\n\nExplore\n\nDashboard\n\nRecent Blocks\n\nTools & Docs\n\nCalculator\n\nDogecoin FAQ\n\nAPI Documentation\n\ndoge.tx.taxi\n\nAbout\n\nContact Us\n\nLegal\n\nTerms of Service\n\nPrivacy Policy\n\nTrademark & Attribution\n\nMade with 🕵️ by u.software",
+    "tooltips": [
+      "doge.tx.taxi dashboard",
+      "doge.tx.taxi dashboard",
+      "Dashboard",
+      "Recent blocks",
+      "Documentation",
+      "About doge.tx.taxi",
+      "Choose search chain",
+      "Search",
+      "Switch to displaying block sizes",
+      "Switch to displaying newest blocks on the left"
+    ],
+    "overflow": false
+  },
+  {
+    "name": "about",
+    "width": 1440,
+    "theme": "default",
+    "errors": [],
+    "intercepted": 10,
+    "text": "Offline\ndoge.tx.taxi - Dogecoin block and mempool explorer\nA tx.taxi explorer built from mempool/mempool\nAbout doge.tx.taxi\n\ndoge.tx.taxi is the Dogecoin explorer in the tx.taxi family. Explore blocks, transactions, addresses, mining activity and transaction fees.\n\nDogecoin-native data\n\nValues are denominated in DOGE, koinu, or the selected fiat currency. Fee rates remain koinu/B, transaction sizes use bytes, and all block, address, mining, concepts shown by the interface retain their Dogecoin meaning.\n\nProject links\n\ndoge.tx.taxi documentation\n\nUpstream project and contributors\n\nContact the tx.taxi maintainer\n\nEnglish\nAUD\nCAD\nCHF\nEUR\nGBP\nJPY\nUSD\nUTC-7 - Mountain Standard Time (MST)\nUTC - Greenwich Mean Time (GMT)\n────\nUTC-12 - Anywhere on Earth (AoE)\nUTC-11 - Samoa Standard Time (SST)\nUTC-10 - Hawaii Standard Time (HST)\nUTC-9 - Alaska Standard Time (AKST)\nUTC-8 - Pacific Standard Time (PST)\nUTC-6 - Central Standard Time (CST)\nUTC-5 - Eastern Standard Time (EST)\nUTC-4 - Atlantic Standard Time (AST)\nUTC-3 - Argentina Time (ART)\nUTC-2 - Fernando de Noronha Time (FNT)\nUTC-1 - Azores Time (AZOT)\nUTC+1 - Central European Time (CET)\nUTC+2 - Eastern European Time (EET)\nUTC+3 - Moscow Standard Time (MSK)\nUTC+4 - Armenia Time (AMT)\nUTC+5 - Pakistan Standard Time (PKT)\nUTC+6 - Xinjiang Time (XJT)\nUTC+7 - Indochina Time (ICT)\nUTC+8 - Hong Kong Time (HKT)\nUTC+9 - Japan Standard Time (JST)\nUTC+10 - Australian Eastern Standard Time (AEST)\nUTC+11 - Norfolk Time (NFT)\nUTC+12 - New Zealand Standard Time (NZST)\nUTC+13 - Tonga Time (TOT)\nUTC+14 - Line Islands Time (LINT)\nDOGE\nkoinu\nFiat\ndoge.tx.taxi\nMempool Original\n\nDogecoin blocks, fees, and mempool activity\n\nExplore\n\nDashboard\n\nRecent Blocks\n\nTools & Docs\n\nCalculator\n\nDogecoin FAQ\n\nAPI Documentation\n\ndoge.tx.taxi\n\nAbout\n\nContact Us\n\nLegal\n\nTerms of Service\n\nPrivacy Policy\n\nTrademark & Attribution\n\nMade with 🕵️ by u.software",
+    "tooltips": [
+      "doge.tx.taxi dashboard",
+      "doge.tx.taxi dashboard",
+      "Dashboard",
+      "Recent blocks",
+      "Documentation",
+      "About doge.tx.taxi",
+      "Choose search chain",
+      "Search"
+    ],
+    "overflow": false
+  },
+  {
+    "name": "root",
+    "width": 1440,
+    "theme": "original",
+    "errors": [],
+    "intercepted": 4,
+    "text": "Offline\nTRANSACTION FEES\nNo Priority\nLow Priority\nMedium Priority\nHigh Priority\nSCRYPT MINING\nnetwork | rewards\nNot available\n—\nDifficulty\n60 s\nTarget interval\nPending Transactions\nnot available\nUnconfirmed\nIncoming Transactions\nRecent Blocks \nHeight\tMined\tTXs\tSize\t\t\t\n\t\t\t\n\t\t\t\n\t\t\t\n\t\t\t\n\t\t\t\nRecent Transactions \nTXID\tUSD\tAmount\tFee\t\t\t\n\t\t\t\n\t\t\t\n\t\t\t\n\t\t\t\n\t\t\t\n \nEnglish\nAUD\nCAD\nCHF\nEUR\nGBP\nJPY\nUSD\nUTC-7 - Mountain Standard Time (MST)\nUTC - Greenwich Mean Time (GMT)\n────\nUTC-12 - Anywhere on Earth (AoE)\nUTC-11 - Samoa Standard Time (SST)\nUTC-10 - Hawaii Standard Time (HST)\nUTC-9 - Alaska Standard Time (AKST)\nUTC-8 - Pacific Standard Time (PST)\nUTC-6 - Central Standard Time (CST)\nUTC-5 - Eastern Standard Time (EST)\nUTC-4 - Atlantic Standard Time (AST)\nUTC-3 - Argentina Time (ART)\nUTC-2 - Fernando de Noronha Time (FNT)\nUTC-1 - Azores Time (AZOT)\nUTC+1 - Central European Time (CET)\nUTC+2 - Eastern European Time (EET)\nUTC+3 - Moscow Standard Time (MSK)\nUTC+4 - Armenia Time (AMT)\nUTC+5 - Pakistan Standard Time (PKT)\nUTC+6 - Xinjiang Time (XJT)\nUTC+7 - Indochina Time (ICT)\nUTC+8 - Hong Kong Time (HKT)\nUTC+9 - Japan Standard Time (JST)\nUTC+10 - Australian Eastern Standard Time (AEST)\nUTC+11 - Norfolk Time (NFT)\nUTC+12 - New Zealand Standard Time (NZST)\nUTC+13 - Tonga Time (TOT)\nUTC+14 - Line Islands Time (LINT)\nDOGE\nkoinu\nFiat\ndoge.tx.taxi\nMempool Original\n\nDogecoin blocks, fees, and mempool activity\n\nExplore\n\nDashboard\n\nRecent Blocks\n\nTools & Docs\n\nCalculator\n\nDogecoin FAQ\n\nAPI Documentation\n\ndoge.tx.taxi\n\nAbout\n\nContact Us\n\nLegal\n\nTerms of Service\n\nPrivacy Policy\n\nTrademark & Attribution\n\nMade with 🕵️ by u.software",
+    "tooltips": [
+      "doge.tx.taxi dashboard",
+      "doge.tx.taxi dashboard",
+      "Dashboard",
+      "Recent blocks",
+      "Documentation",
+      "About doge.tx.taxi",
+      "Choose search chain",
+      "Search",
+      "Switch to displaying block sizes",
+      "Switch to displaying newest blocks on the left",
+      "Fiat price unavailable"
+    ],
+    "overflow": false
+  },
+  {
+    "name": "mining",
+    "width": 1440,
+    "theme": "original",
+    "errors": [],
+    "intercepted": 7,
+    "text": "Offline\nSCRYPT MINING\nnetwork | rewards\nNot available\n—\nDifficulty\n60 s\nTarget interval\nSCRYPT MINING\nnetwork | rewards\nNot available\n—\nDifficulty\n60 s\nTarget interval\nMining Pools\nNot available\nHashrate & Difficulty\nNot available\nEnglish\nAUD\nCAD\nCHF\nEUR\nGBP\nJPY\nUSD\nUTC-7 - Mountain Standard Time (MST)\nUTC - Greenwich Mean Time (GMT)\n────\nUTC-12 - Anywhere on Earth (AoE)\nUTC-11 - Samoa Standard Time (SST)\nUTC-10 - Hawaii Standard Time (HST)\nUTC-9 - Alaska Standard Time (AKST)\nUTC-8 - Pacific Standard Time (PST)\nUTC-6 - Central Standard Time (CST)\nUTC-5 - Eastern Standard Time (EST)\nUTC-4 - Atlantic Standard Time (AST)\nUTC-3 - Argentina Time (ART)\nUTC-2 - Fernando de Noronha Time (FNT)\nUTC-1 - Azores Time (AZOT)\nUTC+1 - Central European Time (CET)\nUTC+2 - Eastern European Time (EET)\nUTC+3 - Moscow Standard Time (MSK)\nUTC+4 - Armenia Time (AMT)\nUTC+5 - Pakistan Standard Time (PKT)\nUTC+6 - Xinjiang Time (XJT)\nUTC+7 - Indochina Time (ICT)\nUTC+8 - Hong Kong Time (HKT)\nUTC+9 - Japan Standard Time (JST)\nUTC+10 - Australian Eastern Standard Time (AEST)\nUTC+11 - Norfolk Time (NFT)\nUTC+12 - New Zealand Standard Time (NZST)\nUTC+13 - Tonga Time (TOT)\nUTC+14 - Line Islands Time (LINT)\nDOGE\nkoinu\nFiat\ndoge.tx.taxi\nMempool Original\n\nDogecoin blocks, fees, and mempool activity\n\nExplore\n\nDashboard\n\nRecent Blocks\n\nTools & Docs\n\nCalculator\n\nDogecoin FAQ\n\nAPI Documentation\n\ndoge.tx.taxi\n\nAbout\n\nContact Us\n\nLegal\n\nTerms of Service\n\nPrivacy Policy\n\nTrademark & Attribution\n\nMade with 🕵️ by u.software",
+    "tooltips": [
+      "doge.tx.taxi dashboard",
+      "doge.tx.taxi dashboard",
+      "Dashboard",
+      "Recent blocks",
+      "Documentation",
+      "About doge.tx.taxi",
+      "Choose search chain",
+      "Search",
+      "Switch to displaying block sizes",
+      "Switch to displaying newest blocks on the left"
+    ],
+    "overflow": false
+  },
+  {
+    "name": "about",
+    "width": 1440,
+    "theme": "original",
+    "errors": [],
+    "intercepted": 10,
+    "text": "Offline\ndoge.tx.taxi - Dogecoin block and mempool explorer\nA tx.taxi explorer built from mempool/mempool\nAbout doge.tx.taxi\n\ndoge.tx.taxi is the Dogecoin explorer in the tx.taxi family. Explore blocks, transactions, addresses, mining activity and transaction fees.\n\nDogecoin-native data\n\nValues are denominated in DOGE, koinu, or the selected fiat currency. Fee rates remain koinu/B, transaction sizes use bytes, and all block, address, mining, concepts shown by the interface retain their Dogecoin meaning.\n\nProject links\n\ndoge.tx.taxi documentation\n\nUpstream project and contributors\n\nContact the tx.taxi maintainer\n\nEnglish\nAUD\nCAD\nCHF\nEUR\nGBP\nJPY\nUSD\nUTC-7 - Mountain Standard Time (MST)\nUTC - Greenwich Mean Time (GMT)\n────\nUTC-12 - Anywhere on Earth (AoE)\nUTC-11 - Samoa Standard Time (SST)\nUTC-10 - Hawaii Standard Time (HST)\nUTC-9 - Alaska Standard Time (AKST)\nUTC-8 - Pacific Standard Time (PST)\nUTC-6 - Central Standard Time (CST)\nUTC-5 - Eastern Standard Time (EST)\nUTC-4 - Atlantic Standard Time (AST)\nUTC-3 - Argentina Time (ART)\nUTC-2 - Fernando de Noronha Time (FNT)\nUTC-1 - Azores Time (AZOT)\nUTC+1 - Central European Time (CET)\nUTC+2 - Eastern European Time (EET)\nUTC+3 - Moscow Standard Time (MSK)\nUTC+4 - Armenia Time (AMT)\nUTC+5 - Pakistan Standard Time (PKT)\nUTC+6 - Xinjiang Time (XJT)\nUTC+7 - Indochina Time (ICT)\nUTC+8 - Hong Kong Time (HKT)\nUTC+9 - Japan Standard Time (JST)\nUTC+10 - Australian Eastern Standard Time (AEST)\nUTC+11 - Norfolk Time (NFT)\nUTC+12 - New Zealand Standard Time (NZST)\nUTC+13 - Tonga Time (TOT)\nUTC+14 - Line Islands Time (LINT)\nDOGE\nkoinu\nFiat\ndoge.tx.taxi\nMempool Original\n\nDogecoin blocks, fees, and mempool activity\n\nExplore\n\nDashboard\n\nRecent Blocks\n\nTools & Docs\n\nCalculator\n\nDogecoin FAQ\n\nAPI Documentation\n\ndoge.tx.taxi\n\nAbout\n\nContact Us\n\nLegal\n\nTerms of Service\n\nPrivacy Policy\n\nTrademark & Attribution\n\nMade with 🕵️ by u.software",
+    "tooltips": [
+      "doge.tx.taxi dashboard",
+      "doge.tx.taxi dashboard",
+      "Dashboard",
+      "Recent blocks",
+      "Documentation",
+      "About doge.tx.taxi",
+      "Choose search chain",
+      "Search"
+    ],
+    "overflow": false
+  },
+  {
+    "name": "root",
+    "width": 390,
+    "theme": "default",
+    "errors": [],
+    "intercepted": 4,
+    "text": "Offline\nTRANSACTION FEES\nLow Priority\nMedium Priority\nHigh Priority\nSCRYPT MINING\nnetwork | rewards\nNot available\n—\nDifficulty\n60 s\nTarget interval\nPending Transactions\nnot available\nUnconfirmed\nIncoming Transactions\nRecent Blocks \nHeight\tMined\tTXs\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\nRecent Transactions \nTXID\tFee\t\n\t\n\t\n\t\n\t\n\t\n \n\nDogecoin blocks, fees, and mempool activity\n\nEnglish\nAUD\nCAD\nCHF\nEUR\nGBP\nJPY\nUSD\nUTC-7 - Mountain Standard Time (MST)\nUTC - Greenwich Mean Time (GMT)\n────\nUTC-12 - Anywhere on Earth (AoE)\nUTC-11 - Samoa Standard Time (SST)\nUTC-10 - Hawaii Standard Time (HST)\nUTC-9 - Alaska Standard Time (AKST)\nUTC-8 - Pacific Standard Time (PST)\nUTC-6 - Central Standard Time (CST)\nUTC-5 - Eastern Standard Time (EST)\nUTC-4 - Atlantic Standard Time (AST)\nUTC-3 - Argentina Time (ART)\nUTC-2 - Fernando de Noronha Time (FNT)\nUTC-1 - Azores Time (AZOT)\nUTC+1 - Central European Time (CET)\nUTC+2 - Eastern European Time (EET)\nUTC+3 - Moscow Standard Time (MSK)\nUTC+4 - Armenia Time (AMT)\nUTC+5 - Pakistan Standard Time (PKT)\nUTC+6 - Xinjiang Time (XJT)\nUTC+7 - Indochina Time (ICT)\nUTC+8 - Hong Kong Time (HKT)\nUTC+9 - Japan Standard Time (JST)\nUTC+10 - Australian Eastern Standard Time (AEST)\nUTC+11 - Norfolk Time (NFT)\nUTC+12 - New Zealand Standard Time (NZST)\nUTC+13 - Tonga Time (TOT)\nUTC+14 - Line Islands Time (LINT)\nDOGE\nkoinu\nFiat\ndoge.tx.taxi\nMempool Original\n\nExplore\n\nDashboard\n\nRecent Blocks\n\nTools & Docs\n\nCalculator\n\nDogecoin FAQ\n\nAPI Documentation\n\ndoge.tx.taxi\n\nAbout\n\nContact Us\n\nLegal\n\nTerms of Service\n\nPrivacy Policy\n\nTrademark & Attribution\n\nMade with 🕵️ by u.software",
+    "tooltips": [
+      "doge.tx.taxi dashboard",
+      "doge.tx.taxi dashboard",
+      "Dashboard",
+      "Recent blocks",
+      "Documentation",
+      "About doge.tx.taxi",
+      "Choose search chain",
+      "Search",
+      "Switch to displaying block sizes",
+      "Switch to displaying newest blocks on the left",
+      "Fiat price unavailable"
+    ],
+    "overflow": false
+  },
+  {
+    "name": "mining",
+    "width": 390,
+    "theme": "default",
+    "errors": [],
+    "intercepted": 7,
+    "text": "Offline\nSCRYPT MINING\nnetwork | rewards\nNot available\n—\nDifficulty\n60 s\nTarget interval\nSCRYPT MINING\nnetwork | rewards\nNot available\n—\nDifficulty\n60 s\nTarget interval\nMining Pools\nNot available\nHashrate & Difficulty\nNot available\n\nDogecoin blocks, fees, and mempool activity\n\nEnglish\nAUD\nCAD\nCHF\nEUR\nGBP\nJPY\nUSD\nUTC-7 - Mountain Standard Time (MST)\nUTC - Greenwich Mean Time (GMT)\n────\nUTC-12 - Anywhere on Earth (AoE)\nUTC-11 - Samoa Standard Time (SST)\nUTC-10 - Hawaii Standard Time (HST)\nUTC-9 - Alaska Standard Time (AKST)\nUTC-8 - Pacific Standard Time (PST)\nUTC-6 - Central Standard Time (CST)\nUTC-5 - Eastern Standard Time (EST)\nUTC-4 - Atlantic Standard Time (AST)\nUTC-3 - Argentina Time (ART)\nUTC-2 - Fernando de Noronha Time (FNT)\nUTC-1 - Azores Time (AZOT)\nUTC+1 - Central European Time (CET)\nUTC+2 - Eastern European Time (EET)\nUTC+3 - Moscow Standard Time (MSK)\nUTC+4 - Armenia Time (AMT)\nUTC+5 - Pakistan Standard Time (PKT)\nUTC+6 - Xinjiang Time (XJT)\nUTC+7 - Indochina Time (ICT)\nUTC+8 - Hong Kong Time (HKT)\nUTC+9 - Japan Standard Time (JST)\nUTC+10 - Australian Eastern Standard Time (AEST)\nUTC+11 - Norfolk Time (NFT)\nUTC+12 - New Zealand Standard Time (NZST)\nUTC+13 - Tonga Time (TOT)\nUTC+14 - Line Islands Time (LINT)\nDOGE\nkoinu\nFiat\ndoge.tx.taxi\nMempool Original\n\nExplore\n\nDashboard\n\nRecent Blocks\n\nTools & Docs\n\nCalculator\n\nDogecoin FAQ\n\nAPI Documentation\n\ndoge.tx.taxi\n\nAbout\n\nContact Us\n\nLegal\n\nTerms of Service\n\nPrivacy Policy\n\nTrademark & Attribution\n\nMade with 🕵️ by u.software",
+    "tooltips": [
+      "doge.tx.taxi dashboard",
+      "doge.tx.taxi dashboard",
+      "Dashboard",
+      "Recent blocks",
+      "Documentation",
+      "About doge.tx.taxi",
+      "Choose search chain",
+      "Search",
+      "Switch to displaying block sizes",
+      "Switch to displaying newest blocks on the left"
+    ],
+    "overflow": false
+  },
+  {
+    "name": "about",
+    "width": 390,
+    "theme": "default",
+    "errors": [],
+    "intercepted": 10,
+    "text": "Offline\ndoge.tx.taxi - Dogecoin block and mempool explorer\nA tx.taxi explorer built from mempool/mempool\nAbout doge.tx.taxi\n\ndoge.tx.taxi is the Dogecoin explorer in the tx.taxi family. Explore blocks, transactions, addresses, mining activity and transaction fees.\n\nDogecoin-native data\n\nValues are denominated in DOGE, koinu, or the selected fiat currency. Fee rates remain koinu/B, transaction sizes use bytes, and all block, address, mining, concepts shown by the interface retain their Dogecoin meaning.\n\nProject links\n\ndoge.tx.taxi documentation\n\nUpstream project and contributors\n\nContact the tx.taxi maintainer\n\nDogecoin blocks, fees, and mempool activity\n\nEnglish\nAUD\nCAD\nCHF\nEUR\nGBP\nJPY\nUSD\nUTC-7 - Mountain Standard Time (MST)\nUTC - Greenwich Mean Time (GMT)\n────\nUTC-12 - Anywhere on Earth (AoE)\nUTC-11 - Samoa Standard Time (SST)\nUTC-10 - Hawaii Standard Time (HST)\nUTC-9 - Alaska Standard Time (AKST)\nUTC-8 - Pacific Standard Time (PST)\nUTC-6 - Central Standard Time (CST)\nUTC-5 - Eastern Standard Time (EST)\nUTC-4 - Atlantic Standard Time (AST)\nUTC-3 - Argentina Time (ART)\nUTC-2 - Fernando de Noronha Time (FNT)\nUTC-1 - Azores Time (AZOT)\nUTC+1 - Central European Time (CET)\nUTC+2 - Eastern European Time (EET)\nUTC+3 - Moscow Standard Time (MSK)\nUTC+4 - Armenia Time (AMT)\nUTC+5 - Pakistan Standard Time (PKT)\nUTC+6 - Xinjiang Time (XJT)\nUTC+7 - Indochina Time (ICT)\nUTC+8 - Hong Kong Time (HKT)\nUTC+9 - Japan Standard Time (JST)\nUTC+10 - Australian Eastern Standard Time (AEST)\nUTC+11 - Norfolk Time (NFT)\nUTC+12 - New Zealand Standard Time (NZST)\nUTC+13 - Tonga Time (TOT)\nUTC+14 - Line Islands Time (LINT)\nDOGE\nkoinu\nFiat\ndoge.tx.taxi\nMempool Original\n\nExplore\n\nDashboard\n\nRecent Blocks\n\nTools & Docs\n\nCalculator\n\nDogecoin FAQ\n\nAPI Documentation\n\ndoge.tx.taxi\n\nAbout\n\nContact Us\n\nLegal\n\nTerms of Service\n\nPrivacy Policy\n\nTrademark & Attribution\n\nMade with 🕵️ by u.software",
+    "tooltips": [
+      "doge.tx.taxi dashboard",
+      "doge.tx.taxi dashboard",
+      "Dashboard",
+      "Recent blocks",
+      "Documentation",
+      "About doge.tx.taxi",
+      "Choose search chain",
+      "Search"
+    ],
+    "overflow": false
+  },
+  {
+    "name": "root",
+    "width": 390,
+    "theme": "original",
+    "errors": [],
+    "intercepted": 4,
+    "text": "Offline\nTRANSACTION FEES\nLow Priority\nMedium Priority\nHigh Priority\nSCRYPT MINING\nnetwork | rewards\nNot available\n—\nDifficulty\n60 s\nTarget interval\nPending Transactions\nnot available\nUnconfirmed\nIncoming Transactions\nRecent Blocks \nHeight\tMined\tTXs\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\nRecent Transactions \nTXID\tFee\t\n\t\n\t\n\t\n\t\n\t\n \n\nDogecoin blocks, fees, and mempool activity\n\nEnglish\nAUD\nCAD\nCHF\nEUR\nGBP\nJPY\nUSD\nUTC-7 - Mountain Standard Time (MST)\nUTC - Greenwich Mean Time (GMT)\n────\nUTC-12 - Anywhere on Earth (AoE)\nUTC-11 - Samoa Standard Time (SST)\nUTC-10 - Hawaii Standard Time (HST)\nUTC-9 - Alaska Standard Time (AKST)\nUTC-8 - Pacific Standard Time (PST)\nUTC-6 - Central Standard Time (CST)\nUTC-5 - Eastern Standard Time (EST)\nUTC-4 - Atlantic Standard Time (AST)\nUTC-3 - Argentina Time (ART)\nUTC-2 - Fernando de Noronha Time (FNT)\nUTC-1 - Azores Time (AZOT)\nUTC+1 - Central European Time (CET)\nUTC+2 - Eastern European Time (EET)\nUTC+3 - Moscow Standard Time (MSK)\nUTC+4 - Armenia Time (AMT)\nUTC+5 - Pakistan Standard Time (PKT)\nUTC+6 - Xinjiang Time (XJT)\nUTC+7 - Indochina Time (ICT)\nUTC+8 - Hong Kong Time (HKT)\nUTC+9 - Japan Standard Time (JST)\nUTC+10 - Australian Eastern Standard Time (AEST)\nUTC+11 - Norfolk Time (NFT)\nUTC+12 - New Zealand Standard Time (NZST)\nUTC+13 - Tonga Time (TOT)\nUTC+14 - Line Islands Time (LINT)\nDOGE\nkoinu\nFiat\ndoge.tx.taxi\nMempool Original\n\nExplore\n\nDashboard\n\nRecent Blocks\n\nTools & Docs\n\nCalculator\n\nDogecoin FAQ\n\nAPI Documentation\n\ndoge.tx.taxi\n\nAbout\n\nContact Us\n\nLegal\n\nTerms of Service\n\nPrivacy Policy\n\nTrademark & Attribution\n\nMade with 🕵️ by u.software",
+    "tooltips": [
+      "doge.tx.taxi dashboard",
+      "doge.tx.taxi dashboard",
+      "Dashboard",
+      "Recent blocks",
+      "Documentation",
+      "About doge.tx.taxi",
+      "Choose search chain",
+      "Search",
+      "Switch to displaying block sizes",
+      "Switch to displaying newest blocks on the left",
+      "Fiat price unavailable"
+    ],
+    "overflow": false
+  },
+  {
+    "name": "mining",
+    "width": 390,
+    "theme": "original",
+    "errors": [],
+    "intercepted": 7,
+    "text": "Offline\nSCRYPT MINING\nnetwork | rewards\nNot available\n—\nDifficulty\n60 s\nTarget interval\nSCRYPT MINING\nnetwork | rewards\nNot available\n—\nDifficulty\n60 s\nTarget interval\nMining Pools\nNot available\nHashrate & Difficulty\nNot available\n\nDogecoin blocks, fees, and mempool activity\n\nEnglish\nAUD\nCAD\nCHF\nEUR\nGBP\nJPY\nUSD\nUTC-7 - Mountain Standard Time (MST)\nUTC - Greenwich Mean Time (GMT)\n────\nUTC-12 - Anywhere on Earth (AoE)\nUTC-11 - Samoa Standard Time (SST)\nUTC-10 - Hawaii Standard Time (HST)\nUTC-9 - Alaska Standard Time (AKST)\nUTC-8 - Pacific Standard Time (PST)\nUTC-6 - Central Standard Time (CST)\nUTC-5 - Eastern Standard Time (EST)\nUTC-4 - Atlantic Standard Time (AST)\nUTC-3 - Argentina Time (ART)\nUTC-2 - Fernando de Noronha Time (FNT)\nUTC-1 - Azores Time (AZOT)\nUTC+1 - Central European Time (CET)\nUTC+2 - Eastern European Time (EET)\nUTC+3 - Moscow Standard Time (MSK)\nUTC+4 - Armenia Time (AMT)\nUTC+5 - Pakistan Standard Time (PKT)\nUTC+6 - Xinjiang Time (XJT)\nUTC+7 - Indochina Time (ICT)\nUTC+8 - Hong Kong Time (HKT)\nUTC+9 - Japan Standard Time (JST)\nUTC+10 - Australian Eastern Standard Time (AEST)\nUTC+11 - Norfolk Time (NFT)\nUTC+12 - New Zealand Standard Time (NZST)\nUTC+13 - Tonga Time (TOT)\nUTC+14 - Line Islands Time (LINT)\nDOGE\nkoinu\nFiat\ndoge.tx.taxi\nMempool Original\n\nExplore\n\nDashboard\n\nRecent Blocks\n\nTools & Docs\n\nCalculator\n\nDogecoin FAQ\n\nAPI Documentation\n\ndoge.tx.taxi\n\nAbout\n\nContact Us\n\nLegal\n\nTerms of Service\n\nPrivacy Policy\n\nTrademark & Attribution\n\nMade with 🕵️ by u.software",
+    "tooltips": [
+      "doge.tx.taxi dashboard",
+      "doge.tx.taxi dashboard",
+      "Dashboard",
+      "Recent blocks",
+      "Documentation",
+      "About doge.tx.taxi",
+      "Choose search chain",
+      "Search",
+      "Switch to displaying block sizes",
+      "Switch to displaying newest blocks on the left"
+    ],
+    "overflow": false
+  },
+  {
+    "name": "about",
+    "width": 390,
+    "theme": "original",
+    "errors": [],
+    "intercepted": 10,
+    "text": "Offline\ndoge.tx.taxi - Dogecoin block and mempool explorer\nA tx.taxi explorer built from mempool/mempool\nAbout doge.tx.taxi\n\ndoge.tx.taxi is the Dogecoin explorer in the tx.taxi family. Explore blocks, transactions, addresses, mining activity and transaction fees.\n\nDogecoin-native data\n\nValues are denominated in DOGE, koinu, or the selected fiat currency. Fee rates remain koinu/B, transaction sizes use bytes, and all block, address, mining, concepts shown by the interface retain their Dogecoin meaning.\n\nProject links\n\ndoge.tx.taxi documentation\n\nUpstream project and contributors\n\nContact the tx.taxi maintainer\n\nDogecoin blocks, fees, and mempool activity\n\nEnglish\nAUD\nCAD\nCHF\nEUR\nGBP\nJPY\nUSD\nUTC-7 - Mountain Standard Time (MST)\nUTC - Greenwich Mean Time (GMT)\n────\nUTC-12 - Anywhere on Earth (AoE)\nUTC-11 - Samoa Standard Time (SST)\nUTC-10 - Hawaii Standard Time (HST)\nUTC-9 - Alaska Standard Time (AKST)\nUTC-8 - Pacific Standard Time (PST)\nUTC-6 - Central Standard Time (CST)\nUTC-5 - Eastern Standard Time (EST)\nUTC-4 - Atlantic Standard Time (AST)\nUTC-3 - Argentina Time (ART)\nUTC-2 - Fernando de Noronha Time (FNT)\nUTC-1 - Azores Time (AZOT)\nUTC+1 - Central European Time (CET)\nUTC+2 - Eastern European Time (EET)\nUTC+3 - Moscow Standard Time (MSK)\nUTC+4 - Armenia Time (AMT)\nUTC+5 - Pakistan Standard Time (PKT)\nUTC+6 - Xinjiang Time (XJT)\nUTC+7 - Indochina Time (ICT)\nUTC+8 - Hong Kong Time (HKT)\nUTC+9 - Japan Standard Time (JST)\nUTC+10 - Australian Eastern Standard Time (AEST)\nUTC+11 - Norfolk Time (NFT)\nUTC+12 - New Zealand Standard Time (NZST)\nUTC+13 - Tonga Time (TOT)\nUTC+14 - Line Islands Time (LINT)\nDOGE\nkoinu\nFiat\ndoge.tx.taxi\nMempool Original\n\nExplore\n\nDashboard\n\nRecent Blocks\n\nTools & Docs\n\nCalculator\n\nDogecoin FAQ\n\nAPI Documentation\n\ndoge.tx.taxi\n\nAbout\n\nContact Us\n\nLegal\n\nTerms of Service\n\nPrivacy Policy\n\nTrademark & Attribution\n\nMade with 🕵️ by u.software",
+    "tooltips": [
+      "doge.tx.taxi dashboard",
+      "doge.tx.taxi dashboard",
+      "Dashboard",
+      "Recent blocks",
+      "Documentation",
+      "About doge.tx.taxi",
+      "Choose search chain",
+      "Search"
+    ],
+    "overflow": false
+  }
+]

@@ -34,7 +34,7 @@ export class HashrateChartComponent implements OnInit {
   @Input() tableOnly = false;
   @Input() capabilityUnavailable = false;
   @Input() unavailableTitle = 'Hashrate & Difficulty';
-  @Input() unavailableReason = 'Historical hashrate and difficulty series are unavailable from this provider.';
+  @Input() unavailableReason = 'Not available';
   @Input() widget = false;
   @Input() height: number = 300;
   @Input() right: number | string = 45;

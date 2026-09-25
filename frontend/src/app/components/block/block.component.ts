@@ -315,7 +315,7 @@ export class BlockComponent implements OnInit, OnDestroy {
       switchMap((block) => {
         return forkJoin([
           of(block),
-          throwError(() => new Error('Full block overview is unavailable from this provider'))
+          throwError(() => new Error('Block overview not available'))
             .pipe(
               catchError((err) => {
                 this.overviewError = err;
@@ -340,7 +340,7 @@ export class BlockComponent implements OnInit, OnDestroy {
                       return of(null);
                     })
                   ),
-                  throwError(() => new Error('Full block overview is unavailable from this provider')).pipe(
+                  throwError(() => new Error('Block overview not available')).pipe(
                     catchError((err) => {
                       console.error('Error fetching canonical transactions:', err);
                       this.overviewError = err;
@@ -593,7 +593,7 @@ export class BlockComponent implements OnInit, OnDestroy {
                 return of(null);
               })
             ),
-            throwError(() => new Error('Full block overview is unavailable from this provider')).pipe(
+            throwError(() => new Error('Block overview not available')).pipe(
               catchError((err) => {
                 console.error('Error fetching canonical transactions:', err);
                 this.overviewError = err;
