@@ -3,14 +3,14 @@
   "kitVersion": "0.1.1",
   "kitCommit": "0086d236ca6533120525c60b23e55d6d5d68d3d6",
   "chain": "dogecoin",
-  "repository": "local isolated worktree; no remote created",
+  "repository": "https://github.com/tx-taxi/doge-taxi",
   "ancestor": {
     "repository": "tx-taxi/ltc-taxi",
     "commit": "6ba310edebe7fa33f4643ff4eecdbca3d1041fc7",
     "deployedRuntime": "c131fadfe",
     "nativeHubExtraction": "2519326f9"
   },
-  "status": "local-provider-upgrade-awaiting-production-eligibility",
+  "status": "production-release-in-progress",
   "productionRequested": true,
   "local": {
     "url": "http://127.0.0.1:4451",
@@ -149,7 +149,6 @@
     }
   ],
   "unresolved": [
-    "Production eligibility/API credential pending user input; no DOGE deployment/DNS/repository existed at audit",
     "Universal live fee ranges and full historical pool dominance need additional indexed coverage/budget; ranges only shown after complete transaction verification",
     "Sustained production capacity and container deployment remain unverified"
   ],
@@ -174,7 +173,7 @@
       "blockcypherPerHour": 90,
       "blockchairWeightedPerDay": 900
     },
-    "productionPrerequisite": "Configured DOGE_BLOCKCHAIR_KEY or confirmed noncommercial eligibility; provider terms cannot be inferred",
+    "productionPrerequisite": "User confirmed tx.taxi is noncommercial; DOGE_BLOCKCHAIR_NONCOMMERCIAL=1. Upgrade to Premium before commercial use.",
     "evidence": [
       "review/doge/provider-recheck/README.md",
       "review/doge/frontend/README.md",
