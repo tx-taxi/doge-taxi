@@ -1,13 +1,13 @@
 @use "sass:color";
 
-/* Litecoin explorer theme. Keep the Mempool layout vocabulary, but carry the
- * Litecoin blue through every inherited interactive and data surface. */
-$bg: #141824;
-$active-bg: #0d1018;
-$hover-bg: #20283a;
+/* Dogecoin explorer theme. Keep the Mempool layout vocabulary, but carry the
+ * Dogecoin gold through every inherited interactive and data surface. */
+$bg: #1a1915;
+$active-bg: #12110e;
+$hover-bg: #302c22;
 $fg: #fff;
 $nav-bg: $bg;
-$title-fg: #789de0;
+$title-fg: #d2b44e;
 
 $taproot: #eba814;
 $taproot-light: #d5a90a;
@@ -21,11 +21,11 @@ $gray-700: $fg;
 
 $nav-tabs-link-active-bg: $active-bg;
 
-$primary: #789de0;
-$secondary: #263147;
-$tertiary: #345d9d;
+$primary: #d2b44e;
+$secondary: #393225;
+$tertiary: #8d762f;
 $success: #0aab2f;
-$info: #9fbcf0;
+$info: #e6cf80;
 
 $h5-font-size: 1.15rem !default;
 
@@ -110,26 +110,26 @@ $dropdown-link-active-bg: $active-bg;
   --link-color: #{$link-color};
   --link-hover-color: #{$link-hover-color};
   --icon: #f1f1f1;
-  --skeleton-bg: #27334c;
-  --skeleton-bg-light: #3c5074;
+  --skeleton-bg: #3b3426;
+  --skeleton-bg-light: #66552f;
 
-  --box-bg: #182032;
-  --stat-box-bg: #141b29;
+  --box-bg: #242118;
+  --stat-box-bg: #1c1a14;
   --border-subtle: rgba(255, 255, 255, 0.11);
-  --block-top: #28354c;
-  --block-side: #1b2538;
-  --block-goggles-overlay: #1820327f;
-  --mempool-block-top: #345681;
-  --mempool-block-side: #223957;
-  --mempool-block-loading: #46648c;
-  --alert-bg: #263c61;
-  --navbar-bg: #141b2b;
+  --block-top: #4c422a;
+  --block-side: #342c1c;
+  --block-goggles-overlay: #2421187f;
+  --mempool-block-top: #806a2e;
+  --mempool-block-side: #55431f;
+  --mempool-block-loading: #8e7634;
+  --alert-bg: #55451f;
+  --navbar-bg: #1e1b13;
   --transparent-fg: #ffffffbb;
   --footer-fg: rgba(255, 255, 255, 0.4);
   --fade-out-box-bg-start: rgba(24, 32, 50, 0);
   --fade-out-box-bg-end: rgba(24, 32, 50, 1);
   --opacity: 0.57;
-  --world-map-bg: #24314b;
+  --world-map-bg: #3c3423;
   --world-map-border: #000;
 
   --testnet: #1d486f;
@@ -138,8 +138,8 @@ $dropdown-link-active-bg: $active-bg;
   --liquid: #116761;
   --liquidtestnet: #494a4a;
 
-  --mainnet-alt: #345d9d;
-  --fiat-color: #9fbcf0;
+  --mainnet-alt: #8d762f;
+  --fiat-color: #e6cf80;
   --testnet-alt: #183550;
   --signet-alt: #471850;
   --regtest-alt: #4a4a4a;
@@ -154,18 +154,18 @@ $dropdown-link-active-bg: $active-bg;
   --yellow: #fff000;
   --grey: #7e7e7e;
   --tooltip-grey: #b1b1b1;
-  --orange: #789de0;
+  --orange: #d2b44e;
   --pink: #e83e8c;
 
-  --fee-tier-slow: #283d5e;
-  --fee-tier-normal: #426599;
-  --fee-tier-fast: #789de0;
-  --fee-tier-fastest: #b8cef5;
+  --fee-tier-slow: #51431f;
+  --fee-tier-normal: #927a2e;
+  --fee-tier-fast: #d2b44e;
+  --fee-tier-fastest: #efdc92;
 
-  --search-button: #345d9d;
-  --search-button-border: #2c4f85;
-  --search-button-focus: #456ead;
-  --search-button-shadow: #789de080;
+  --search-button: #8d762f;
+  --search-button-border: #897128;
+  --search-button-focus: #b39839;
+  --search-button-shadow: #d2b44e80;
   
   --bs-body-color: var(--fg);
   --bs-body-bg: var(--active-bg);

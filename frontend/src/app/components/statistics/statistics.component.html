@@ -4,7 +4,7 @@
       <div class="card mb-3">
         <div class="card-header">
           <div class="d-flex d-md-block align-items-baseline">
-            <span i18n="statistics.memory-by-vBytes">Mempool by vBytes (lit/vByte)</span>
+            <span i18n="statistics.memory-by-bytes">Mempool by bytes (koinu/Byte)</span>
             <button class="btn p-0 ps-2" style="margin: 0 0 4px 0px" (click)="onSaveChart('mempool')">
               <fa-icon [icon]="['fas', 'download']" [fixedWidth]="true"></fa-icon>
             </button>
@@ -92,9 +92,9 @@
     <div>
       <div class="card mb-3">
         <div class="card-header">
-          <div class="vbytes-title">
+          <div class="bytes-title">
             <div>
-              <span i18n="statistics.transaction-vbytes-per-second">Transaction vBytes per second (vB/s)</span>
+              <span i18n="statistics.transaction-bytes-per-second">Transaction bytes per second (B/s)</span>
               <button class="btn p-0 ps-2" style="margin: 0 0 4px 0px" (click)="onSaveChart('incoming')">
                 <fa-icon [icon]="['fas', 'download']" [fixedWidth]="true"></fa-icon>
               </button>

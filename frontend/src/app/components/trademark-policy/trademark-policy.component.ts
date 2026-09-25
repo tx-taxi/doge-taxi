@@ -14,6 +14,6 @@ export class TrademarkPolicyComponent {
 
   ngOnInit(): void {
     this.seoService.setTitle('Trademark & Attribution');
-    this.seoService.setDescription('Trademark and attribution notes for ltc.tx.taxi, including upstream mempool/mempool attribution and project independence.');
+    this.seoService.setDescription('Trademark and attribution notes for doge.tx.taxi, including upstream mempool/mempool attribution and project independence.');
   }
 }

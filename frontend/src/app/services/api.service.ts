@@ -144,6 +144,10 @@ export class ApiService {
     return this.httpClient.get<any[]>(this.apiBaseUrl + '/api/v1/contributors');
   }
 
+  getCurrentDogePrice$(): Observable<Record<string, number>> {
+    return this.httpClient.get<Record<string, number>>(this.apiBaseUrl + '/api/v1/prices');
+  }
+
   getInitData$(): Observable<WebsocketResponse> {
     return this.httpClient.get<WebsocketResponse>(this.apiBaseUrl + this.apiBasePath + '/api/v1/init-data');
   }

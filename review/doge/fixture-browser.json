@@ -1,0 +1,114 @@
+[
+  {
+    "name": "root",
+    "theme": "default",
+    "viewport": {
+      "name": "desktop",
+      "width": 1440,
+      "height": 900
+    },
+    "mode": "captured-real-data-ui-fixture-not-live",
+    "source": "initial-live.json + historical-block.json",
+    "errors": [],
+    "overflow": false,
+    "title": "doge.tx.taxi - Dogecoin Explorer"
+  },
+  {
+    "name": "root",
+    "theme": "original",
+    "viewport": {
+      "name": "desktop",
+      "width": 1440,
+      "height": 900
+    },
+    "mode": "captured-real-data-ui-fixture-not-live",
+    "source": "initial-live.json + historical-block.json",
+    "errors": [],
+    "overflow": false,
+    "title": "doge.tx.taxi - Dogecoin Explorer"
+  },
+  {
+    "name": "historical-tx",
+    "theme": "default",
+    "viewport": {
+      "name": "desktop",
+      "width": 1440,
+      "height": 900
+    },
+    "mode": "captured-real-data-ui-fixture-not-live",
+    "source": "initial-live.json + historical-block.json",
+    "errors": [],
+    "overflow": false,
+    "title": "Transaction: 19220173c151925d493a25dbe67798fa11e6e4db01b927b1c04cddead85d3d12 - doge.tx.taxi - Dogecoin Explorer"
+  },
+  {
+    "name": "historical-tx",
+    "theme": "original",
+    "viewport": {
+      "name": "desktop",
+      "width": 1440,
+      "height": 900
+    },
+    "mode": "captured-real-data-ui-fixture-not-live",
+    "source": "initial-live.json + historical-block.json",
+    "errors": [],
+    "overflow": false,
+    "title": "Transaction: 19220173c151925d493a25dbe67798fa11e6e4db01b927b1c04cddead85d3d12 - doge.tx.taxi - Dogecoin Explorer"
+  },
+  {
+    "name": "root",
+    "theme": "default",
+    "viewport": {
+      "name": "mobile",
+      "width": 390,
+      "height": 844
+    },
+    "mode": "captured-real-data-ui-fixture-not-live",
+    "source": "initial-live.json + historical-block.json",
+    "errors": [],
+    "overflow": false,
+    "title": "doge.tx.taxi - Dogecoin Explorer"
+  },
+  {
+    "name": "root",
+    "theme": "original",
+    "viewport": {
+      "name": "mobile",
+      "width": 390,
+      "height": 844
+    },
+    "mode": "captured-real-data-ui-fixture-not-live",
+    "source": "initial-live.json + historical-block.json",
+    "errors": [],
+    "overflow": false,
+    "title": "doge.tx.taxi - Dogecoin Explorer"
+  },
+  {
+    "name": "historical-tx",
+    "theme": "default",
+    "viewport": {
+      "name": "mobile",
+      "width": 390,
+      "height": 844
+    },
+    "mode": "captured-real-data-ui-fixture-not-live",
+    "source": "initial-live.json + historical-block.json",
+    "errors": [],
+    "overflow": false,
+    "title": "Transaction: 19220173c151925d493a25dbe67798fa11e6e4db01b927b1c04cddead85d3d12 - doge.tx.taxi - Dogecoin Explorer"
+  },
+  {
+    "name": "historical-tx",
+    "theme": "original",
+    "viewport": {
+      "name": "mobile",
+      "width": 390,
+      "height": 844
+    },
+    "mode": "captured-real-data-ui-fixture-not-live",
+    "source": "initial-live.json + historical-block.json",
+    "errors": [],
+    "overflow": false,
+    "title": "Transaction: 19220173c151925d493a25dbe67798fa11e6e4db01b927b1c04cddead85d3d12 - doge.tx.taxi - Dogecoin Explorer"
+  }
+]

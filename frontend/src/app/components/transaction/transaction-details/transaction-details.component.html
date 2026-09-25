@@ -198,7 +198,7 @@
   @if (!isLoadingTx) {
     <tr>
       <td class="td-width" i18n="transaction.fee|Transaction fee">Fee</td>
-      <td class="text-wrap">{{ (tx.fee | number) ?? '-' }} <span class="symbol" i18n="shared.sats">lits</span>
+      <td class="text-wrap">{{ (tx.fee | number) ?? '-' }} <span class="symbol" i18n="shared.sats">koinu</span>
         <span class="fiat"><app-fiat *ngIf="tx.fee >= 0" [blockConversion]="tx.price" [value]="tx.fee"></app-fiat></span>
       </td>
     </tr>
@@ -241,9 +241,9 @@
         </div>
         <ng-template #clusterPreviewTooltip>
           @if (clusterPreviewStats.chunkSize === 1) {
-            <p i18n="cluster.preview.chunk-line-one">This transaction belongs to a chunk of 1 transaction, with combined effective fee rate <strong>{{ clusterPreviewStats.chunkFeerate | feeRounding }} lit/vB</strong>.</p>
+            <p i18n="cluster.preview.chunk-line-one">This transaction belongs to a chunk of 1 transaction, with combined effective fee rate <strong>{{ clusterPreviewStats.chunkFeerate | feeRounding }} koinu/B</strong>.</p>
           } @else {
-            <p i18n="cluster.preview.chunk-line-many">This transaction belongs to a chunk of {{ clusterPreviewStats.chunkSize }} transactions, with combined effective fee rate <strong>{{ clusterPreviewStats.chunkFeerate | feeRounding }} lit/vB</strong>.</p>
+            <p i18n="cluster.preview.chunk-line-many">This transaction belongs to a chunk of {{ clusterPreviewStats.chunkSize }} transactions, with combined effective fee rate <strong>{{ clusterPreviewStats.chunkFeerate | feeRounding }} koinu/B</strong>.</p>
           }
           @if (clusterPreviewStats.otherChunks === 1) {
             <p i18n="cluster.preview.cluster-line-one">In a mempool cluster containing 1 other chunk.</p>

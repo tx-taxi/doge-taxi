@@ -1,396 +1,155 @@
 {
   "schemaVersion": 1,
-  "kitVersion": "0.1.0",
-  "kitCommit": "6f9b34e",
-  "chain": "litecoin",
-  "repository": "tx-taxi/ltc-taxi",
+  "kitVersion": "0.1.1",
+  "kitCommit": "0086d236ca6533120525c60b23e55d6d5d68d3d6",
+  "chain": "dogecoin",
+  "repository": "local isolated worktree; no remote created",
   "ancestor": {
-    "repository": "tx-taxi/btc-taxi",
-    "commit": "fc701ad10391b08c67fb63ea490b192aa57a1562"
+    "repository": "tx-taxi/ltc-taxi",
+    "commit": "6ba310edebe7fa33f4643ff4eecdbca3d1041fc7",
+    "deployedRuntime": "c131fadfe",
+    "nativeHubExtraction": "2519326f9"
   },
-  "visualReference": {
-    "repository": "tx-taxi/xmr-taxi",
-    "commit": "ea7e0189b3cbc9dc40aa442d779c369e47c7bca5"
-  },
-  "status": "deployed-core-verified-provider-chart-limitations",
+  "status": "incomplete-local-candidate-provider-limits",
+  "productionRequested": false,
   "local": {
-    "url": "http://127.0.0.1:4310",
+    "url": "http://127.0.0.1:4351",
     "ports": [
-      4310,
-      4311,
-      4312,
-      9332
+      4350,
+      4351
     ],
     "startCommands": [
-      "./scripts/local-start.sh"
+      "bash scripts/local-start.sh"
     ],
     "stopCommands": [
-      "./scripts/local-stop.sh"
+      "bash scripts/local-stop.sh"
     ],
     "incrementalCommands": [
-      "Angular watches frontend/src automatically; node --watch watches adapter/server.cjs"
+      "Angular watches frontend/src on4350; node --watch adapter/server.cjs on4351"
     ]
   },
   "capabilities": [
     {
-      "component": "dashboard blocks and pending strip",
+      "component": "Root native blocks",
       "route": "/",
-      "meaning": "blocks + fee projection + node mempool",
-      "source": "WebSocket /api/v1/ws",
-      "availability": "observed; see per-case review/acceptance.md for verified scope and failures",
-      "units": "LTC, litoshis, lit/vB, weight",
-      "cadence": "stream",
-      "loading": "existing component skeleton",
-      "failure": "503 distinguish from 404 and empty; provider banner",
-      "stale": "retained cache at most 1 hour with observed-at header and live banner"
+      "source": "BlockCypher tip/blocks",
+      "availability": "observed real snapshots",
+      "units": "DOGE/koinu/bytes",
+      "cadence": "120s live;86400s immutable cache",
+      "loading": "native skeleton",
+      "failure": "explicit503;404 only confirmed absence",
+      "stale": "native offline/reconnect; no invented zero"
     },
     {
-      "component": "difficulty / halving widget",
-      "route": "/",
-      "meaning": "2016-block epoch, 840000-block halvings, 150-second target",
-      "source": "difficulty-adjustment + blocks",
-      "availability": "observed; see per-case review/acceptance.md for verified scope and failures",
-      "units": "percent, blocks, timestamp",
-      "cadence": "stream",
-      "loading": "existing component skeleton",
-      "failure": "503 distinguish from 404 and empty; provider banner",
-      "stale": "retained cache at most 1 hour with observed-at header and live banner"
-    },
-    {
-      "component": "dashboard charts / graphs",
-      "route": "/graphs/**",
-      "meaning": "provider time series",
-      "source": "statistics and mining endpoints",
-      "availability": "observed; see per-case review/acceptance.md for verified scope and failures",
-      "units": "vB, lit/vB, H/s, LTC",
-      "cadence": "60 seconds",
-      "loading": "existing component skeleton",
-      "failure": "503 distinguish from 404 and empty; provider banner",
-      "stale": "retained cache at most 1 hour with observed-at header and live banner"
-    },
-    {
-      "component": "transaction / flow / status",
-      "route": "/tx/:id",
-      "meaning": "transparent UTXO inputs and outputs; MWEB scope notice",
-      "source": "/api/tx/:id + status + outspends",
-      "availability": "observed; see per-case review/acceptance.md for verified scope and failures",
-      "units": "integer litoshis, LTC, USD",
-      "cadence": "5 seconds / stream",
-      "loading": "existing component skeleton",
-      "failure": "503 distinguish from 404 and empty; provider banner",
-      "stale": "retained cache at most 1 hour with observed-at header and live banner"
-    },
-    {
-      "component": "block details / list / paging",
-      "route": "/block/:id, /blocks/:page",
-      "meaning": "transparent block and transactions",
-      "source": "v1/block and block/txs/:offset",
-      "availability": "observed; see per-case review/acceptance.md for verified scope and failures",
-      "units": "height, WU, bytes, LTC",
-      "cadence": "5 minutes immutable detail",
-      "loading": "existing component skeleton",
-      "failure": "503 distinguish from 404 and empty; provider banner",
-      "stale": "retained cache at most 1 hour with observed-at header and live banner"
-    },
-    {
-      "component": "address history / paging",
-      "route": "/address/:id",
-      "meaning": "indexed transparent-chain history",
-      "source": "address/:id + txs/chain/:cursor",
-      "availability": "observed; see per-case review/acceptance.md for verified scope and failures",
-      "units": "integer litoshis, LTC",
-      "cadence": "5 seconds / stream",
-      "loading": "existing component skeleton",
-      "failure": "503 distinguish from 404 and empty; provider banner",
-      "stale": "retained cache at most 1 hour with observed-at header and live banner"
-    },
-    {
-      "component": "pending treemap / RBF",
-      "route": "/mempool-block/:id, /rbf, /txs",
-      "meaning": "provider node pending pool",
-      "source": "WebSocket projected-block-transactions, rbf, recent",
-      "availability": "observed; see per-case review/acceptance.md for verified scope and failures",
-      "units": "vB, lit/vB",
-      "cadence": "stream",
-      "loading": "existing component skeleton",
-      "failure": "503 distinguish from 404 and empty; provider banner",
-      "stale": "retained cache at most 1 hour with observed-at header and live banner"
-    },
-    {
-      "component": "mining / pools",
-      "route": "/mining, /mining/pool/:slug",
-      "meaning": "Scrypt merged mining provider statistics",
-      "source": "mining/pools, hashrate, blocks",
-      "availability": "observed; see per-case review/acceptance.md for verified scope and failures",
-      "units": "H/s, LTC, blocks",
-      "cadence": "60 seconds",
-      "loading": "existing component skeleton",
-      "failure": "503 distinguish from 404 and empty; provider banner",
-      "stale": "retained cache at most 1 hour with observed-at header and live banner"
-    },
-    {
-      "component": "calculator",
-      "route": "/tools/calculator",
-      "meaning": "LTC fiat/atomic conversion; 84M max",
-      "source": "prices",
-      "availability": "observed; see per-case review/acceptance.md for verified scope and failures",
-      "units": "LTC, litoshis, fiat",
-      "cadence": "60 seconds",
-      "loading": "existing component skeleton",
-      "failure": "503 distinguish from 404 and empty; provider banner",
-      "stale": "retained cache at most 1 hour with observed-at header and live banner"
-    },
-    {
-      "component": "docs / about / legal",
-      "route": "/docs/**, /about, /terms-of-service, /privacy-policy, /trademark-policy",
-      "meaning": "chain-specific guidance and retained attribution",
-      "source": "local templates",
-      "availability": "observed; see per-case review/acceptance.md for verified scope and failures",
-      "units": "none",
-      "cadence": "static",
-      "loading": "existing component skeleton",
-      "failure": "503 distinguish from 404 and empty; provider banner",
-      "stale": "retained cache at most 1 hour with observed-at header and live banner"
-    },
-    {
-      "component": "search / cab",
-      "route": "search, /cab/:chain/:kind/:value",
-      "meaning": "query-aware router choices and source confirmation",
-      "source": "local router 4312: f9b5fe3 + local registration 584c29b",
-      "availability": "observed; see per-case review/acceptance.md for verified scope and failures",
-      "units": "identifier",
-      "cadence": "debounce 250ms",
-      "loading": "existing component skeleton",
-      "failure": "503 distinguish from 404 and empty; provider banner",
-      "stale": "retained cache at most 1 hour with observed-at header and live banner"
-    },
-    {
-      "component": "social cards",
-      "route": "/og.png",
-      "meaning": "server-visible entity data and 1200x630 PNG",
-      "source": "same entity API",
-      "availability": "observed; see per-case review/acceptance.md for verified scope and failures",
-      "units": "LTC",
-      "cadence": "bounded entity cache",
-      "loading": "existing component skeleton",
-      "failure": "503 distinguish from 404 and empty; provider banner",
-      "stale": "retained cache at most 1 hour with observed-at header and live banner"
-    }
-  ],
-  "routes": [
-    {
-      "route": "/",
-      "evidence": "pages.json",
-      "result": "observed"
-    },
-    {
-      "route": "/tx/b066e321a2ed9a7e302384537713840b9b2a9b5b22a7730cb24d2b32531b6849",
-      "evidence": "pages.json",
-      "result": "observed"
-    },
-    {
-      "route": "/block/e11049dfa5858be3809f285685e12a5d6f84b936b0f8e8272b5363bf3946ce60",
-      "evidence": "pages.json",
-      "result": "observed"
-    },
-    {
-      "route": "/block/4570be978b76861fef442a05a624e6145e06aa5f88fb00efd4e27e1d9fb19333",
-      "evidence": "pages.json",
-      "result": "observed"
-    },
-    {
-      "route": "/address/LaDAdDQUuCxeLxGiPazAY879sJxs1TVwYQ",
-      "evidence": "pages.json",
-      "result": "observed"
-    },
-    {
-      "route": "/mempool-block/0",
-      "evidence": "pages.json",
-      "result": "observed"
-    },
-    {
-      "route": "/mining",
-      "evidence": "pages.json",
-      "result": "observed"
-    },
-    {
-      "route": "/graphs",
-      "evidence": "pages.json",
-      "result": "observed"
-    },
-    {
-      "route": "/tools/calculator",
-      "evidence": "pages.json",
-      "result": "observed"
-    },
-    {
-      "route": "/docs/faq",
-      "evidence": "pages.json",
-      "result": "observed"
-    },
-    {
-      "route": "/about",
-      "evidence": "pages.json",
-      "result": "observed"
-    },
-    {
-      "route": "/terms-of-service",
-      "evidence": "pages.json",
-      "result": "observed"
-    },
-    {
-      "route": "/privacy-policy",
-      "evidence": "pages.json",
-      "result": "observed"
-    },
-    {
-      "route": "/trademark-policy",
-      "evidence": "pages.json",
-      "result": "observed"
-    },
-    {
-      "route": "/blocks/1",
-      "evidence": "pages.json",
-      "result": "observed"
-    },
-    {
-      "route": "/rbf",
-      "evidence": "pages.json",
-      "result": "observed"
-    },
-    {
+      "component": "Pending sample",
       "route": "/txs",
-      "evidence": "pages.json",
-      "result": "observed"
+      "source": "BlockCypher /txs",
+      "availability": "observed; not full global mempool",
+      "units": "DOGE/koinu/B",
+      "cadence": "120s live;86400s immutable cache",
+      "loading": "native skeleton",
+      "failure": "explicit503;404 only confirmed absence",
+      "stale": "native offline/reconnect; no invented zero"
     },
     {
-      "route": "/graphs/mining/hashrate-difficulty",
-      "evidence": "secondary.json",
-      "result": "observed"
+      "component": "Historical transaction",
+      "route": "/tx/:id",
+      "source": "BlockCypher /txs/:id",
+      "availability": "verified exact representative quantities",
+      "units": "DOGE/koinu",
+      "cadence": "120s live;86400s immutable cache",
+      "loading": "native skeleton",
+      "failure": "explicit503;404 only confirmed absence",
+      "stale": "native offline/reconnect; no invented zero"
     },
     {
-      "route": "/graphs/mining/pools-dominance",
-      "evidence": "secondary.json",
-      "result": "observed"
+      "component": "Historical block",
+      "route": "/block/:id",
+      "source": "BlockCypher /blocks/:id",
+      "availability": "observed2014 history; page transaction collection pending",
+      "units": "physical bytes",
+      "cadence": "120s live;86400s immutable cache",
+      "loading": "native skeleton",
+      "failure": "explicit503;404 only confirmed absence",
+      "stale": "native offline/reconnect; no invented zero"
     },
     {
-      "route": "/graphs/mining/pools",
-      "evidence": "secondary.json",
-      "result": "observed"
+      "component": "Indexed address",
+      "route": "/address/:id",
+      "source": "BlockCypher /addrs/:id/full",
+      "availability": "first page observed; exact balance display verified; documented same-height pagination mapped; live second page blocked",
+      "units": "DOGE/koinu",
+      "cadence": "120s live;86400s immutable cache",
+      "loading": "native skeleton",
+      "failure": "explicit503;404 only confirmed absence",
+      "stale": "native offline/reconnect; no invented zero"
     },
     {
-      "route": "/graphs/mining/block-fees",
-      "evidence": "secondary.json",
-      "result": "observed"
+      "component": "Mining/dashboard graphs",
+      "route": "/mining, /graphs/**",
+      "source": "BlockCypher actual block difficulty/reward/fees; no aggregate index",
+      "availability": "current block mining data observed; aggregate charts unavailable",
+      "units": "H/s,difficulty,DOGE",
+      "cadence": "120s live;86400s immutable cache",
+      "loading": "native skeleton",
+      "failure": "explicit503;404 only confirmed absence",
+      "stale": "native offline/reconnect; no invented zero"
     },
     {
-      "route": "/graphs/mining/block-rewards",
-      "evidence": "secondary.json",
-      "result": "observed"
+      "component": "Fiat/calculator",
+      "route": "/tools/calculator",
+      "source": "Kraken XDGUSD current ticker",
+      "availability": "verified current USD; historical unavailable",
+      "units": "DOGE/fiat",
+      "cadence": "60s cache with fetchedAt/expiresAt",
+      "loading": "native skeleton",
+      "failure": "explicit503;404 only confirmed absence",
+      "stale": "native offline/reconnect; no invented zero"
     },
     {
-      "route": "/graphs/mining/block-fees-subsidy",
-      "evidence": "secondary.json",
-      "result": "provider-failure"
+      "component": "Search",
+      "route": "header",
+      "source": "router local4340",
+      "availability": "candidate inherited approved components; direct-routing gap patched",
+      "units": "identifiers",
+      "cadence": "120s live;86400s immutable cache",
+      "loading": "native skeleton",
+      "failure": "explicit503;404 only confirmed absence",
+      "stale": "native offline/reconnect; no invented zero"
     },
     {
-      "route": "/graphs/mining/block-fee-rates",
-      "evidence": "secondary.json",
-      "result": "provider-failure"
+      "component": "Metadata/social",
+      "route": "entity routes,/og.png",
+      "source": "local native template + entity API",
+      "availability": "raw route metadata and 1200x630 cards observed; root and transaction cards opened",
+      "units": "DOGE",
+      "cadence": "120s live;86400s immutable cache",
+      "loading": "native skeleton",
+      "failure": "explicit503;404 only confirmed absence",
+      "stale": "native offline/reconnect; no invented zero"
     },
     {
-      "route": "/graphs/mining/block-sizes-weights",
-      "evidence": "secondary.json",
-      "result": "provider-failure"
-    },
-    {
-      "route": "/graphs/price",
-      "evidence": "secondary.json",
-      "result": "observed"
-    },
-    {
-      "route": "/mining/pool/f2pool",
-      "evidence": "secondary.json",
-      "result": "provider-failure"
-    },
-    {
-      "route": "/blocks/stale",
-      "evidence": "secondary.json",
-      "result": "observed"
-    },
-    {
-      "route": "/clock",
-      "evidence": "secondary.json",
-      "result": "observed"
-    },
-    {
-      "route": "/view/blocks",
-      "evidence": "secondary.json",
-      "result": "observed"
-    }
-  ],
-  "providers": [
-    {
-      "name": "Litecoin Space",
-      "critical": [
-        "history",
-        "indexed address pagination",
-        "pending",
-        "mining"
-      ],
-      "deadlineMs": 7000,
-      "limits": "No guaranteed SLA / rate budget published; request coalescing, bounded 500-entry cache, TTL 5s live / 60s graphs / 5m blocks",
-      "CORS": "same-origin server proxy"
-    },
-    {
-      "name": "BlockCypher",
-      "scope": "independent chain-tip fallback only; does not substitute full indexer",
-      "deadlineMs": 4000,
-      "limits": "public unauthenticated rate limits; fallback only"
-    }
-  ],
-  "acceptance": [
-    {
-      "report": "review/acceptance.md",
-      "status": "partial",
-      "evidence": [
-        "review/search-checks.json",
-        "review/final-behavior.json",
-        "review/provider-verification.json",
-        "review/comparison.json",
-        "review/social.json",
-        "review/router-tests.log"
-      ]
+      "component": "Hub band",
+      "route": "isolated router4340",
+      "source": "chain-owned extracted native components",
+      "availability": "candidate; parent integrator verification",
+      "units": "DOGE/bytes",
+      "cadence": "120s live;86400s immutable cache",
+      "loading": "native skeleton",
+      "failure": "explicit503;404 only confirmed absence",
+      "stale": "native offline/reconnect; no invented zero"
     }
   ],
   "unresolved": [
-    "Three historical mining chart endpoints exceed bounded provider deadlines",
-    "No independent full indexed fallback; retained cache and explicit outage only",
-    "MWEB private amounts and recipient histories are inherently not public"
+    "Observed REST429 and websocket event limit prevent sustained live acceptance; honor persisted cooldown",
+    "Historical focus, complete address second page and block transaction page acceptance require reachable indexing budget",
+    "AuxPoW block size differs between providers; raw-node serialization reconciliation required",
+    "Long-range mining aggregation and historical fiat unsupported; bounded block difficulty/reward/fees exist"
   ],
-  "productionRequested": true,
-  "latencyBudgets": {
-    "warmApiMs": 1000,
-    "primaryDeadlineMs": 7000,
-    "fallbackTotalMs": 11000,
-    "routerMs": 12000,
-    "liveStaleMs": 90000
-  },
-  "reconciliation": {
-    "initialKitCommit": "3497634889f3303634c192e66749641831107d5e",
-    "deployedBtcVisualReference": "6d67eec8da026056bf8fd980c438eef63d296167",
-    "searchSource": "5a8b8009170b919719d26d0949e2a97e604640be",
-    "searchStatus": "user relayed owner authorization for local integration; frontend production verification pending",
-    "routerSource": "f9b5fe3",
-    "report": "review/source-reconciliation.md",
-    "localRouterCommit": "584c29b"
-  },
-  "production": {
-    "url": "https://ltc.tx.taxi",
-    "branch": "main",
-    "coolifyApplication": "azyfbztrruy9eoxscgum54ux",
-    "server": "game-1",
-    "autoDeploy": true,
-    "report": "review/deployment/README.md"
-  }
+  "acceptance": [
+    {
+      "report": "review/doge/acceptance.md",
+      "status": "incomplete"
+    }
+  ]
 }

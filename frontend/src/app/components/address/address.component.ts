@@ -23,6 +23,8 @@ class AddressStats implements ChainStats {
   spent_txo_count: number;
   spent_txo_sum: number;
   tx_count: number;
+  funded_txo_sum_exact?: string;
+  spent_txo_sum_exact?: string;
 
   constructor (stats: ChainStats, address: string, scriptpubkey?: string) {
     Object.assign(this, stats);
@@ -59,35 +61,39 @@ class AddressStats implements ChainStats {
   }
 
   private fundTxo(value: number): void {
+    this.funded_txo_sum_exact = (BigInt(this.funded_txo_sum_exact || this.funded_txo_sum || 0) + BigInt(value)).toString();
     this.funded_txo_sum += value;
     this.funded_txo_count++;
   }
 
   private unfundTxo(value: number): void {
+    this.funded_txo_sum_exact = (BigInt(this.funded_txo_sum_exact || this.funded_txo_sum || 0) - BigInt(value)).toString();
     this.funded_txo_sum -= value;
     this.funded_txo_count--;
   }
 
   private spendTxo(value: number): void {
+    this.spent_txo_sum_exact = (BigInt(this.spent_txo_sum_exact || this.spent_txo_sum || 0) + BigInt(value)).toString();
     this.spent_txo_sum += value;
     this.spent_txo_count++;
   }
 
   private unspendTxo(value: number): void {
+    this.spent_txo_sum_exact = (BigInt(this.spent_txo_sum_exact || this.spent_txo_sum || 0) - BigInt(value)).toString();
     this.spent_txo_sum -= value;
     this.spent_txo_count--;
   }
 
-  get balance(): number {
-    return this.funded_txo_sum - this.spent_txo_sum;
+  get balance(): any {
+    return (BigInt(this.funded_txo_sum_exact || this.funded_txo_sum || 0) - BigInt(this.spent_txo_sum_exact || this.spent_txo_sum || 0)).toString();
   }
 
-  get totalReceived(): number {
-    return this.funded_txo_sum;
+  get totalReceived(): any {
+    return this.funded_txo_sum_exact || this.funded_txo_sum;
   }
 
   get utxos(): number {
-    return this.funded_txo_count - this.spent_txo_count;
+    return this.funded_txo_count == null || this.spent_txo_count == null ? undefined : this.funded_txo_count - this.spent_txo_count;
   }
 }
 
@@ -202,7 +208,7 @@ export class AddressComponent implements OnInit, OnDestroy {
             this.addressString = this.addressString.toLowerCase();
           }
           this.seoService.setTitle($localize`:@@address.component.browser-title:Address: ${this.addressString}:INTERPOLATION:`);
-          this.seoService.setDescription($localize`:@@meta.description.bitcoin.address:See mempool transactions, confirmed transactions, balance, and more for ${this.stateService.network==='liquid'||this.stateService.network==='liquidtestnet'?'Liquid':'Litecoin'}${seoDescriptionNetwork(this.stateService.network)} address ${this.addressString}:INTERPOLATION:.`);
+          this.seoService.setDescription($localize`:@@meta.description.bitcoin.address:See mempool transactions, confirmed transactions, balance, and more for ${this.stateService.network==='liquid'||this.stateService.network==='liquidtestnet'?'Liquid':'Dogecoin'}${seoDescriptionNetwork(this.stateService.network)} address ${this.addressString}:INTERPOLATION:.`);
 
           this.addressTypeInfo = new AddressTypeInfo(this.stateService.network || 'mainnet', this.addressString);
 

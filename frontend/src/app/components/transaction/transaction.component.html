@@ -181,21 +181,13 @@
                 <td i18n="block.size">Size</td>
                 <td [innerHTML]="'&lrm;' + (tx.size | bytes: 2)"></td>
               </tr>
-              <tr>
-                <td i18n="transaction.vsize|Transaction Virtual Size">Virtual size</td>
-                <td [innerHTML]="'&lrm;' + (tx.weight / 4 | vbytes: 2)"></td>
-              </tr>
               <tr *ngIf="adjustedVsize != null">
                 <td><ng-container i18n="transaction.adjusted-vsize|Transaction Adjusted VSize">Adjusted vsize</ng-container>
                   <a class="info-link" [routerLink]="['/docs/faq/' | relativeUrl]" fragment="what-is-adjusted-vsize">
                     <fa-icon [icon]="['fas', 'info-circle']" [fixedWidth]="true"></fa-icon>
                   </a>
                 </td>
-                <td [innerHTML]="'&lrm;' + (adjustedVsize | vbytes: 2)"></td>
-              </tr>
-              <tr>
-                <td i18n="block.weight">Weight</td>
-                <td [innerHTML]="'&lrm;' + (tx.weight | wuBytes: 2)"></td>
+                <td [innerHTML]="'&lrm;' + (adjustedVsize | bytes: 2)"></td>
               </tr>
             </tbody>
           </table>

@@ -19,7 +19,7 @@
     <div *ngIf="(unbackedMonths$ | async) as unbackedMonths; else loadingData" class="card-text">
       <ng-container *ngIf="unbackedMonths.historyComplete; else loadingData">
         <div class="fee-text">
-          {{ unbackedMonths.delta1m > 0 ? '+' : ''}}{{ unbackedMonths.delta1m | number: '1.2-2' }} <span i18n="shared.btc|BTC">LTC</span>
+          {{ unbackedMonths.delta1m > 0 ? '+' : ''}}{{ unbackedMonths.delta1m | number: '1.2-2' }} <span i18n="shared.btc|BTC">DOGE</span>
         </div>
       </ng-container>
     </div>

@@ -98,6 +98,7 @@ interface Issuance {
 }
 
 export interface Vout {
+  valueExact?: string;
   scriptpubkey: string;
   scriptpubkey_asm: string;
   scriptpubkey_type: string;
@@ -175,6 +176,8 @@ export interface AddressTxSummary {
 }
 
 export interface ChainStats {
+  funded_txo_sum_exact?: string;
+  spent_txo_sum_exact?: string;
   funded_txo_count: number;
   funded_txo_sum: number;
   spent_txo_count: number;

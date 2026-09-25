@@ -45,7 +45,7 @@ export class DocsComponent implements OnInit {
     if (url[0].path === 'faq' ) {
       this.activeTab = 0;
       this.seoService.setTitle($localize`:@@meta.title.docs.faq:FAQ`);
-      this.seoService.setDescription($localize`:@@meta.description.docs.faq:Get answers to common Litecoin questions, including mempool behavior, transaction confirmation, fees, and self-hosted explorers.`);
+      this.seoService.setDescription($localize`:@@meta.description.docs.faq:Get answers to common Dogecoin questions, including mempool behavior, transaction confirmation, fees, and self-hosted explorers.`);
       this.ogService.setManualOgImage('faq.jpg');
     } else if( url[1].path === 'rest' ) {
       this.activeTab = 1;
@@ -53,7 +53,7 @@ export class DocsComponent implements OnInit {
       if (this.stateService.network === 'liquid' || this.stateService.network === 'liquidtestnet' ) {
         this.seoService.setDescription($localize`:@@meta.description.docs.rest-liquid:Documentation for the liquid.network REST API service: get info on addresses, transactions, assets, blocks, and more.`);
       } else {
-        this.seoService.setDescription($localize`:@@meta.description.docs.rest-bitcoin:Documentation for the ltc.tx.taxi REST API: query Litecoin addresses, transactions, blocks, fees, mining, and network data.`);
+        this.seoService.setDescription($localize`:@@meta.description.docs.rest-bitcoin:Documentation for the doge.tx.taxi REST API: query Dogecoin addresses, transactions, blocks, fees, mining, and network data.`);
       }
     } else if( url[1].path === 'websocket' ) {
       this.activeTab = 2;
@@ -61,7 +61,7 @@ export class DocsComponent implements OnInit {
       if( this.stateService.network === 'liquid' || this.stateService.network === 'liquidtestnet' ) {
         this.seoService.setDescription($localize`:@@meta.description.docs.websocket-liquid:Documentation for the liquid.network WebSocket API service: get real-time info on blocks, mempools, transactions, addresses, and more.`);
       } else {
-        this.seoService.setDescription($localize`:@@meta.description.docs.websocket-bitcoin:Documentation for the ltc.tx.taxi WebSocket API: receive real-time Litecoin block, mempool, transaction, and address updates.`);
+        this.seoService.setDescription($localize`:@@meta.description.docs.websocket-bitcoin:Documentation for the doge.tx.taxi WebSocket API: receive real-time Dogecoin block, mempool, transaction, and address updates.`);
       }
     } else {
       this.activeTab = 3;

@@ -12,19 +12,19 @@
         }
         @if (!enterpriseInfo || enterpriseInfo.dualLogo) {
           <a [routerLink]="['/' | relativeUrl]">
-            <img *ngIf="!officialMempoolSpace" src="/resources/branding/ltc-dark-navbar.svg" alt="ltc.tx.taxi Litecoin explorer" class="btc-brand-navbar">
+            <img *ngIf="!officialMempoolSpace" src="/resources/branding/doge-dark-navbar.svg" alt="doge.tx.taxi Dogecoin explorer" class="btc-brand-navbar">
             <app-svg-images *ngIf="officialMempoolSpace" name="officialMempoolSpace" style="width: 144px; height: 36px" width="500" height="126" viewBox="0 0 500 126"></app-svg-images>
           </a>
         }
 
         @if (!enterpriseInfo || !enterpriseInfo.dualLogo) {
           <div [ngSwitch]="network" class="network-label" [class.hide-name]="enterpriseInfo?.header_img">
-            <span *ngSwitchCase="'signet'" class="network signet"><span class="name">Litecoin Signet</span><app-svg-images name="signet" width="35" height="35" viewBox="0 0 65 65" style="display: inline-block" class="mainnet ms-2"></app-svg-images></span>
-            <span *ngSwitchCase="'testnet'" class="network testnet"><span class="name">Litecoin Testnet3</span><app-svg-images name="testnet" width="35" height="35" viewBox="0 0 65 65" style="display: inline-block" class="mainnet ms-2"></app-svg-images></span>
-            <span *ngSwitchCase="'testnet4'" class="network testnet"><span class="name">Litecoin Testnet4</span><app-svg-images name="testnet4" width="35" height="35" viewBox="0 0 65 65" style="display: inline-block" class="mainnet ms-2"></app-svg-images></span>
+            <span *ngSwitchCase="'signet'" class="network signet"><span class="name">Dogecoin Signet</span><app-svg-images name="signet" width="35" height="35" viewBox="0 0 65 65" style="display: inline-block" class="mainnet ms-2"></app-svg-images></span>
+            <span *ngSwitchCase="'testnet'" class="network testnet"><span class="name">Dogecoin Testnet3</span><app-svg-images name="testnet" width="35" height="35" viewBox="0 0 65 65" style="display: inline-block" class="mainnet ms-2"></app-svg-images></span>
+            <span *ngSwitchCase="'testnet4'" class="network testnet"><span class="name">Dogecoin Testnet4</span><app-svg-images name="testnet4" width="35" height="35" viewBox="0 0 65 65" style="display: inline-block" class="mainnet ms-2"></app-svg-images></span>
             <span *ngSwitchCase="'liquid'" class="network liquid"><span class="name">Liquid</span><app-svg-images name="liquid" width="35" height="35" viewBox="0 0 125 125" style="display: inline-block" class="mainnet ms-2"></app-svg-images></span>
             <span *ngSwitchCase="'liquidtestnet'" class="network liquidtestnet"><span class="name">Liquid Testnet</span><app-svg-images name="liquidtestnet" width="35" height="35" viewBox="0 0 125 125" style="display: inline-block" class="mainnet ms-2"></app-svg-images></span>
-            <span *ngSwitchDefault class="network mainnet"><span class="name">Litecoin</span><img src="/resources/chains/litecoin.png" width="35" height="35" alt="Litecoin" class="ms-2"></span>
+            <span *ngSwitchDefault class="network mainnet"><span class="name">Dogecoin</span><img src="/resources/chains/dogecoin.png" width="35" height="35" alt="Dogecoin" class="ms-2"></span>
           </div>
         }
       </div>

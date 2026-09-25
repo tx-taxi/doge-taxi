@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-@Component({selector:'app-cross-chain-redirect',standalone:false,template:`<div class="container-xl py-5"><h1>Continue to {{chain}}</h1><p>You are leaving the Litecoin explorer.</p><p style="overflow-wrap:anywhere">{{value}}</p><label><input type="checkbox" (change)="remember=$any($event.target).checked"> Never ask again when leaving Litecoin</label><p class="mt-4"><button class="btn btn-primary" [style.backgroundColor]="accents[chain]" [style.borderColor]="accents[chain]" (click)="confirm()">Continue</button> <a class="btn btn-secondary" routerLink="/">Back to Litecoin</a></p></div>`})
+@Component({selector:'app-cross-chain-redirect',standalone:false,template:`<div class="container-xl py-5"><h1>Continue to {{chain}}</h1><p>You are leaving the Dogecoin explorer.</p><p style="overflow-wrap:anywhere">{{value}}</p><label><input type="checkbox" (change)="remember=$any($event.target).checked"> Never ask again when leaving Dogecoin</label><p class="mt-4"><button class="btn btn-primary" [style.backgroundColor]="accents[chain]" [style.borderColor]="accents[chain]" (click)="confirm()">Continue</button> <a class="btn btn-secondary" routerLink="/">Back to Dogecoin</a></p></div>`})
 export class CrossChainRedirectComponent {
  accents:any={bitcoin:'#f7931a',ethereum:'#627eea',monero:'#ff6600'};
  chain='';value='';kind='';remember=false;

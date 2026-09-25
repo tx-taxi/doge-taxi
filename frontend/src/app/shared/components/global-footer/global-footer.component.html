@@ -6,11 +6,11 @@
           @if (enterpriseInfo?.footer_img) {
             <img [src]="enterpriseInfo?.footer_img" [alt]="enterpriseInfo.title" height="60px" class="enterprise-logo">
           } @else {
-            <img src="/resources/branding/ltc-dark-navbar.svg" alt="ltc.tx.taxi Litecoin explorer" class="btc-brand-navbar">
+            <img src="/resources/branding/doge-dark-navbar.svg" alt="doge.tx.taxi Dogecoin explorer" class="btc-brand-navbar">
           }
         </div>
         @if (!enterpriseInfo?.footer_img) {
-          <p class="explore-tagline-mobile">Litecoin blocks, fees, and mempool activity</p>
+          <p class="explore-tagline-mobile">Dogecoin blocks, fees, and mempool activity</p>
         }
         <div class="site-options language-selector d-flex justify-content-center align-items-center" [class]="{'services': isServicesPage}">
           <div class="selector">
@@ -38,7 +38,7 @@
           }
         </div>
         @if (!enterpriseInfo?.footer_img) {
-          <p class="explore-tagline-desktop">Litecoin blocks, fees, and mempool activity</p>
+          <p class="explore-tagline-desktop">Dogecoin blocks, fees, and mempool activity</p>
         }
       </div>
     </div>
@@ -50,7 +50,7 @@
         <p><a [routerLink]="['/blocks' | relativeUrl]">Recent Blocks</a></p>
         <p><a [routerLink]="['/mempool-block/0' | relativeUrl]">Mempool Wall</a></p>
         <p><a *ngIf="env.MINING_DASHBOARD" [routerLink]="['/mining' | relativeUrl]">Mining Dashboard</a></p>
-        <p><a [routerLink]="['/graphs' | relativeUrl]">Litecoin Graphs</a></p>
+        <p><a [routerLink]="['/graphs' | relativeUrl]">Dogecoin Graphs</a></p>
       </div>
       <div class="links">
         <p class="category">Tools &amp; Docs</p>
@@ -58,15 +58,14 @@
 
 
         <p><a [routerLink]="['/tools/calculator' | relativeUrl]">Calculator</a></p>
-        <p><a [routerLink]="['/docs/faq' | relativeUrl]">Litecoin FAQ</a></p>
+        <p><a [routerLink]="['/docs/faq' | relativeUrl]">Dogecoin FAQ</a></p>
         <p><a [routerLink]="['/docs/api' | relativeUrl]">API Documentation</a></p>
       </div>
       <div class="links">
-        <p class="category">ltc.tx.taxi</p>
+        <p class="category">doge.tx.taxi</p>
         <p><a [routerLink]="['/about']">About</a></p>
         <p><a href="https://t.me/hiss" target="_blank" rel="noopener noreferrer">Contact Us</a></p>
         <p><a href="https://github.com/mempool/mempool" target="_blank" rel="noopener noreferrer">Upstream project</a></p>
-        <p><button class="btn btn-link p-0" (click)="resetLeavingPreference()">Ask before leaving Litecoin</button></p>
       </div>
       <div class="links">
         <p class="category">Legal</p>

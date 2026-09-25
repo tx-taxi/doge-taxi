@@ -8,7 +8,7 @@ import { Price } from '@app/services/price.service';
 import { WebsocketService } from '@app/services/websocket.service';
 import { NgbDateStruct } from '@ng-bootstrap/ng-bootstrap';
 
-const MAX_BTC_SUPPLY = 84000000;
+const MAX_BTC_SUPPLY = Number.MAX_SAFE_INTEGER / 100000000;
 const MAX_SATOSHI_SUPPLY = MAX_BTC_SUPPLY * 100_000_000;
 
 @Component({
@@ -149,7 +149,7 @@ export class CalculatorComponent implements OnInit {
       this.form.get('bitcoin').setValue(bitcoinRate, { emitEvent: false });
     });
 
-    // Default form with 1 LTC
+    // Default form with 1 DOGE
     this.form.get('bitcoin').setValue(1, { emitEvent: true });
   }
 

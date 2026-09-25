@@ -40,7 +40,7 @@
       </tr>
       <tr>
         <td class="label" i18n="transaction.fee|Transaction fee">Fee</td>
-        <td class="value">{{ fee | number }} <span class="symbol" [style.color]="'#ffffff66'" i18n="shared.sats">lits</span> &nbsp; <span class="fiat"><app-fiat [blockConversion]="blockConversion" [value]="fee"></app-fiat></span>
+        <td class="value">{{ fee | number }} <span class="symbol" [style.color]="'#ffffff66'" i18n="shared.sats">koinu</span> &nbsp; <span class="fiat"><app-fiat [blockConversion]="blockConversion" [value]="fee"></app-fiat></span>
       </tr>
       <tr>
         <td class="label" i18n="transaction.fee-rate|Transaction fee rate">Fee rate</td>
@@ -56,7 +56,7 @@
       </tr>
       <tr *only-vsize>
         <td class="label" i18n="transaction.vsize|Transaction Virtual Size">Virtual size</td>
-        <td class="value fixed-unit-color" [innerHTML]="'&lrm;' + (vsize | vbytes: 2)"></td>
+        <td class="value fixed-unit-color" [innerHTML]="'&lrm;' + (vsize | bytes: 2)"></td>
       </tr>
       <tr *only-weight>
         <td class="label" i18n="transaction.weight|Transaction Weight">Weight</td>

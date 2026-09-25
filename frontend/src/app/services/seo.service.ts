@@ -9,9 +9,9 @@ import { StateService } from '@app/services/state.service';
 })
 export class SeoService {
   network = '';
-  baseTitle = 'ltc.tx.taxi';
-  baseDescription = 'Explore Litecoin blocks, transactions, addresses, fees and mining activity.';
-  baseDomain = 'ltc.tx.taxi';
+  baseTitle = 'doge.tx.taxi';
+  baseDescription = 'Explore Dogecoin blocks, transactions, addresses, fees and mining activity.';
+  baseDomain = 'doge.tx.taxi';
 
   canonicalLink: HTMLLinkElement = document.getElementById('canonical') as HTMLLinkElement;
 
@@ -104,7 +104,7 @@ export class SeoService {
       {return this.baseTitle + ' - Liquid Network';}
     if (this.network === 'liquidtestnet')
       {return this.baseTitle + ' - Liquid Testnet';}
-    return this.baseTitle + ' - ' + (this.network ? this.ucfirst(this.network) : 'Litecoin') + ' Explorer';
+    return this.baseTitle + ' - ' + (this.network ? this.ucfirst(this.network) : 'Dogecoin') + ' Explorer';
   }
 
   getDescription(): string {

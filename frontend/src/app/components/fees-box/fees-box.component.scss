@@ -44,7 +44,7 @@
       border-bottom: 1px solid var(--border-subtle);
       width: fit-content;
       margin: auto;
-      font-size: 20px;
+      font-size: clamp(11px, 1.05vw, 16px);
     }
     .fiat {
       display: block;
@@ -127,3 +127,4 @@
     width: 33%;
   }
 }
+.fee-text { font-size: 0.9rem; white-space: nowrap; }

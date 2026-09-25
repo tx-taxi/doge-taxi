@@ -80,7 +80,7 @@ export class RbfTimelineComponent implements OnInit, OnChanges {
     tree.tx.fullRbf = fullRbf;
   }
 
-  // splits a tree into N leaf-to-root paths
+  // spkoinu a tree into N leaf-to-root paths
   splitTimelines(tree: RbfTree, tail: RbfTree[] = []): RbfTree[][] {
     const replacements = [...tail, tree];
     if (tree.replaces.length) {

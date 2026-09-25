@@ -155,7 +155,7 @@
                     <th class="table-cell-height" i18n="dashboard.latest-blocks.height">Height</th>
                     <th class="table-cell-mined" i18n="dashboard.latest-blocks.mined">Mined</th>
                     <th class="table-cell-transaction-count" i18n="dashboard.latest-blocks.transaction-count">TXs</th>
-                    <th class="table-cell-size" i18n="dashboard.latest-blocks.size">Size</th>
+                    <th class="table-cell-size" title="Provider-reported size; AuxPoW serialization unresolved">Size*</th>
                   </thead>
                   <tbody *ngIf="blocks$ | async as blocks; else blocksSkeleton">
                     <tr *ngFor="let block of blocks; let i = index; trackBy: trackByBlock">
@@ -164,7 +164,7 @@
                       <td class="table-cell-transaction-count">{{ block.tx_count | number }}</td>
                       <td class="table-cell-size">
                         <div class="progress">
-                          <div class="progress-bar progress-mempool {{ network$ | async }}" role="progressbar" [ngStyle]="{'width': (block.weight / stateService.env.BLOCK_WEIGHT_UNITS)*100 + '%' }">&nbsp;</div>
+                          <div title="Provider-reported size; capacity unavailable" class="progress-bar progress-mempool {{ network$ | async }}" role="progressbar" [ngStyle]="{'width': '0%'  }">&nbsp;</div>
                           <div class="progress-text" [innerHTML]="block.size | bytes: 2"></div>
                         </div>
                       </td>

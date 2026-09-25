@@ -74,8 +74,8 @@ export class PriceChartComponent implements OnInit {
     } else if (this.widget) {
       this.miningWindowPreference = '1y';
     } else {
-      this.seoService.setTitle($localize`:@@price-chart.title:Litecoin Price`);
-      this.seoService.setDescription($localize`:@@price-chart.description:See the Litecoin price in USD visualized over time.`);
+      this.seoService.setTitle($localize`:@@price-chart.title:Dogecoin Price`);
+      this.seoService.setDescription($localize`:@@price-chart.description:See the Dogecoin price in USD visualized over time.`);
       this.miningWindowPreference = this.miningService.getDefaultTimespan('1m');
     }
     this.radioGroupForm = this.formBuilder.group({ dateSpan: this.miningWindowPreference });
@@ -230,7 +230,7 @@ export class PriceChartComponent implements OnInit {
           // legendHoverLink: false,
           zlevel: 0,
           yAxisIndex: 0,
-          name: `LTC${this.currency}`,
+          name: `DOGE${this.currency}`,
           data: data.priceData,
           type: 'line',
           smooth: 0.25,

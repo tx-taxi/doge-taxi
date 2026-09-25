@@ -1,0 +1,11 @@
+{
+  "txid": "19220173c151925d493a25dbe67798fa11e6e4db01b927b1c04cddead85d3d12",
+  "block": 100000,
+  "inputKoinu": "388939772619250",
+  "outputKoinu": "388939672619250",
+  "feeKoinu": 100000000,
+  "feeDoge": 1,
+  "balanced": true,
+  "bytes": 226,
+  "weightCompatibility": 904
+}

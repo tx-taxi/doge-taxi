@@ -292,12 +292,12 @@
 
 <ng-template #utxoRow>
   <td i18n="address.confirmed-utxos">Confirmed UTXOs</td>
-  <td class="wrap-cell">{{ chainStats.utxos }}</td>
+  <td class="wrap-cell">{{ chainStats.utxos ?? '—' }}</td>
 </ng-template>
 
 <ng-template #pendingUtxoRow>
   <td i18n="address.pending-utxos" class="fst-italic">Pending UTXOs</td>
-  <td class="fst-italic wrap-cell">{{ mempoolStats.utxos > 0 ? '+' : ''}}{{ mempoolStats.utxos }}</td>
+  <td class="fst-italic wrap-cell">{{ mempoolStats.utxos > 0 ? '+' : ''}}{{ mempoolStats.utxos ?? '—' }}</td>
 </ng-template>
 
 <ng-template #volumeRow>

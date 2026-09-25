@@ -31,7 +31,7 @@ export class BlockchainComponent implements OnInit, OnDestroy, OnChanges {
   blockDisplayMode: 'size' | 'fees';
 
   dividerOffset: number | null = null;
-  mempoolOffset: number | null = null;
+  mempoolOffset: number | null = 0;
   positionStyle = {
     transform: 'translateX(1280px)',
   };
@@ -101,7 +101,7 @@ export class BlockchainComponent implements OnInit, OnDestroy, OnChanges {
     if (this.flipping) {
       return;
     }
-    this.mempoolOffset = Math.max(0, width - (this.dividerOffset || 0));
+    this.mempoolOffset = 0; // no projected-block provider for DOGE
     this.updateStyle();
     this.mempoolOffsetChange.emit(this.mempoolOffset);
   }
@@ -128,20 +128,9 @@ export class BlockchainComponent implements OnInit, OnDestroy, OnChanges {
   }
 
   onResize(): void {
-    const width = this.containerWidth || window.innerWidth;
-    if (width >= 768) {
-      if (this.stateService.isLiquid()) {
-        this.dividerOffset = 420;
-      } else {
-        this.dividerOffset = width * 0.5;
-      }
-    } else {
-      if (this.stateService.isLiquid()) {
-        this.dividerOffset = width * 0.5;
-      } else {
-        this.dividerOffset = width * 0.95;
-      }
-    }
+    // DOGE has no supported projected-block feed. Keep the actual mined strip
+    // visible from the first block instead of reserving an empty pending half.
+    this.dividerOffset = 40;
     this.updateStyle();
   }
 }

@@ -14,9 +14,9 @@
   "ACCELERATOR_BUTTON": false,
   "PUBLIC_ACCELERATIONS": false,
   "STRATUM_ENABLED": false,
-  "MEMPOOL_WEBSITE_URL": "http://127.0.0.1:4310",
-  "NGINX_PORT": "9332",
+  "MEMPOOL_WEBSITE_URL": "http://127.0.0.1:4351",
+  "NGINX_PORT": "4351",
   "HISTORICAL_PRICE": true,
-  "TX_TAXI_ROUTER_URL": "/local-router",
+  "TX_TAXI_ROUTER_URL": "http://127.0.0.1:4340",
   "ITEMS_PER_PAGE": 25
 }

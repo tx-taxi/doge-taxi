@@ -18,7 +18,7 @@
   </ng-container>
 
   <!-- Large screen -->
-  <a class="navbar-brand d-none d-md-flex" [ngClass]="{'dual-logos': enterpriseInfo?.dualLogo}" [routerLink]="['/' | relativeUrl]" (click)="brandClick($event)" aria-label="ltc.tx.taxi dashboard" title="ltc.tx.taxi dashboard">
+  <a class="navbar-brand d-none d-md-flex" [ngClass]="{'dual-logos': enterpriseInfo?.dualLogo}" [routerLink]="['/' | relativeUrl]" (click)="brandClick($event)" aria-label="doge.tx.taxi dashboard" title="doge.tx.taxi dashboard">
     <ng-container *ngIf="{ val: connectionState$ | async } as connectionState">
       @if (enterpriseInfo) {
         <div class="subdomain_container">
@@ -29,7 +29,7 @@
         }
       }
       @if (!enterpriseInfo || enterpriseInfo.dualLogo) {
-        <img *ngIf="!officialMempoolSpace" src="/resources/branding/ltc-dark-navbar.svg" alt="ltc.tx.taxi Litecoin explorer" class="btc-brand-navbar" [style.opacity]="connectionState.val === 2 ? 1 : 0.5">
+        <img *ngIf="!officialMempoolSpace" src="/resources/branding/doge-dark-navbar.svg" alt="doge.tx.taxi Dogecoin explorer" class="btc-brand-navbar" [style.opacity]="connectionState.val === 2 ? 1 : 0.5">
         <app-svg-images *ngIf="officialMempoolSpace" name="officialMempoolSpace" viewBox="0 0 500 126"></app-svg-images>
       }
       <div class="connection-badge">
@@ -39,7 +39,7 @@
     </ng-container>
   </a>
   <!-- Mobile -->
-  <a class="navbar-brand d-flex d-md-none justify-content-center" [ngClass]="{'dual-logos': enterpriseInfo?.dualLogo, 'me-0': enterpriseInfo?.dualLogo}" [routerLink]="['/' | relativeUrl]" (click)="brandClick($event)" aria-label="ltc.tx.taxi dashboard" title="ltc.tx.taxi dashboard">
+  <a class="navbar-brand d-flex d-md-none justify-content-center" [ngClass]="{'dual-logos': enterpriseInfo?.dualLogo, 'me-0': enterpriseInfo?.dualLogo}" [routerLink]="['/' | relativeUrl]" (click)="brandClick($event)" aria-label="doge.tx.taxi dashboard" title="doge.tx.taxi dashboard">
     <ng-container *ngIf="{ val: connectionState$ | async } as connectionState">
       @if (enterpriseInfo) {
         <div class="subdomain_container">
@@ -50,7 +50,7 @@
         }
       }
       @if (!enterpriseInfo || enterpriseInfo.dualLogo) {
-        <img *ngIf="!officialMempoolSpace" src="/resources/branding/ltc-dark-navbar.svg" alt="ltc.tx.taxi Litecoin explorer" class="btc-brand-navbar" [style.opacity]="connectionState.val === 2 ? 1 : 0.5">
+        <img *ngIf="!officialMempoolSpace" src="/resources/branding/doge-dark-navbar.svg" alt="doge.tx.taxi Dogecoin explorer" class="btc-brand-navbar" [style.opacity]="connectionState.val === 2 ? 1 : 0.5">
         <app-svg-images *ngIf="officialMempoolSpace" name="officialMempoolSpace" viewBox="0 0 500 126"></app-svg-images>
       }
       <div class="connection-badge">
@@ -99,7 +99,7 @@
         </a>
       </li>
       <li class="nav-item" routerLinkActive="active" id="btn-graphs">
-        <a class="nav-link" [routerLink]="['/graphs' | relativeUrl]" (click)="collapse()" aria-label="Litecoin graphs" title="Litecoin graphs">
+        <a class="nav-link" [routerLink]="['/graphs' | relativeUrl]" (click)="collapse()" aria-label="Dogecoin graphs" title="Dogecoin graphs">
           <div class="svg-wrapper"><app-svg-images name="nav-chart-area" width="21.59" height="100%"></app-svg-images></div>
         </a>
       </li>
@@ -119,7 +119,7 @@
         </a>
       </li>
       <li class="nav-item" routerLinkActive="active" id="btn-about">
-        <a class="nav-link" [routerLink]="['/about']" (click)="collapse()" aria-label="About ltc.tx.taxi" title="About ltc.tx.taxi">
+        <a class="nav-link" [routerLink]="['/about']" (click)="collapse()" aria-label="About doge.tx.taxi" title="About doge.tx.taxi">
           <div class="svg-wrapper"><app-svg-images name="nav-info-circle" width="21.59" height="100%"></app-svg-images></div>
         </a>
       </li>

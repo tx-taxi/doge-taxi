@@ -210,6 +210,7 @@ export interface PoolStat {
 export interface BlockExtension {
   totalFees?: number;
   medianFee?: number;
+  avgFeeRate?: number; // DOGE total block fees per serialized byte, not median transaction rate
   minFee?: number;
   maxFee?: number;
   feeRange?: number[];

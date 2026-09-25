@@ -53,6 +53,13 @@ export class WebsocketService {
     private transferState: TransferState,
     private cacheService: CacheService,
   ) {
+    if (this.stateService.isBrowser) {
+      const refreshQuote=()=>this.apiService.getCurrentDogePrice$().subscribe({
+        next: quote => this.stateService.conversions$.next({USD:quote.USD}),
+        error: () => this.stateService.conversions$.next({})
+      });
+      refreshQuote(); setInterval(refreshQuote,60000);
+    }
     if (!this.stateService.isBrowser) {
       // @ts-ignore
       this.websocketSubject = { next: () => {}};

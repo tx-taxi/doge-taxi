@@ -1,0 +1,7 @@
+{
+  "source": "BlockCypher and Blockchair original 01:29 observed address, manually retained exact integer lexical value",
+  "koinu": "185458827448319109",
+  "expectedDoge": "1,854,588,274.48319109",
+  "displayed": true,
+  "mode": "recorded-summary-UI-only; synthetic empty history to isolate exact balance formatting, not indexing verification"
+}

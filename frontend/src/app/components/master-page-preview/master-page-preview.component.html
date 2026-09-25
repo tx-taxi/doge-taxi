@@ -6,7 +6,7 @@
         <img [src]="enterpriseInfo.logoUrl" [alt]="enterpriseInfo.title" class="subdomain_logo" [style.height]="!enterpriseInfo?.dualLogo ? '60px' : null" [class.rounded]="enterpriseInfo.rounded_corner">
       }
       @if (!enterpriseInfo || enterpriseInfo.dualLogo) {
-        <img *ngIf="!officialMempoolSpace" src="/resources/branding/ltc-dark-full.svg" alt="ltc.tx.taxi Litecoin explorer" class="btc-brand-preview">
+        <img *ngIf="!officialMempoolSpace" src="/resources/branding/doge-dark-full.svg" alt="doge.tx.taxi Dogecoin explorer" class="btc-brand-preview">
         <app-svg-images *ngIf="officialMempoolSpace" name="officialMempoolSpace" style="width: 200px; height: 50px" width="500" height="126" viewBox="0 0 500 126"></app-svg-images>
       }
     </span>

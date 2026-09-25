@@ -51,7 +51,7 @@
           <app-amount *ngIf="(network$ | async) !== 'liquidtestnet'; else liquidAmount" [satoshis]="transaction.value" digitsInfo="1.2-4" [noFiat]="true"></app-amount>
           <ng-template #liquidAmount i18n="shared.confidential">Confidential</ng-template>
         </td>
-        <td class="table-cell-vsize" *ngIf="!widget" [innerHTML]="'&lrm;' + (transaction.vsize | vbytes: 2)"></td>
+        <td class="table-cell-vsize" *ngIf="!widget" [innerHTML]="'&lrm;' + (transaction.vsize | bytes: 2)"></td>
         <td class="table-cell-fees">
           <app-fee-rate [fee]="transaction.fee" [weight]="transaction.vsize * 4"></app-fee-rate>
         </td>

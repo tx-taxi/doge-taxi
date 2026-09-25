@@ -1,0 +1,3 @@
+const {chromium}=require('/home/lukee/dev/usoftware-landing/node_modules/playwright');
+const fs=require('fs');
+(async()=>{const browser=await chromium.launch({headless:true,args:['--no-sandbox','--enable-webgl','--use-gl=angle','--use-angle=swiftshader']});const page=await browser.newPage({viewport:{width:1440,height:900}});const errors=[];page.on('pageerror',e=>errors.push(e.message));await page.goto('http://127.0.0.1:4351',{waitUntil:'networkidle',timeout:45000});await page.waitForTimeout(5000);await page.screenshot({path:'review/doge/root-desktop.png',fullPage:true});fs.writeFileSync('review/doge/browser.json',JSON.stringify({errors,text:await page.locator('body').innerText()},null,2));await browser.close();})();

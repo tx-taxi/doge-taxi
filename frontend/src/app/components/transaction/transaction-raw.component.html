@@ -188,7 +188,7 @@
               <tr>
                 <td i18n="transaction.vsize|Transaction Virtual Size">Virtual size</td>
                 <td>
-                  <span [innerHTML]="'&lrm;' + ((transaction.weight + weightFromMissingSig) / 4 | vbytes: 2)"></span>
+                  <span [innerHTML]="'&lrm;' + ((transaction.weight + weightFromMissingSig) / 4 | bytes: 2)"></span>
                   <fa-icon *ngIf="tooltipVsize" [ngbTooltip]="tooltipVsize" class="icon-symbol" [icon]="['fas', 'info-circle']" [fixedWidth]="true"></fa-icon>
                 </td>
               </tr>
@@ -198,7 +198,7 @@
                     <fa-icon [icon]="['fas', 'info-circle']" [fixedWidth]="true"></fa-icon>
                   </a>
                 </td>
-                <td [innerHTML]="'&lrm;' + (adjustedVsize | vbytes: 2)"></td>
+                <td [innerHTML]="'&lrm;' + (adjustedVsize | bytes: 2)"></td>
               </tr>
               <tr>
                 <td i18n="block.weight">Weight</td>

@@ -34,10 +34,10 @@ interface SearchTarget {
 })
 export class SearchFormComponent implements OnInit {
   @Input() hamburgerOpen = false;
-  readonly sourceChainId = 'litecoin';
-  readonly defaultChainIconUrl = '/resources/chains/litecoin.png';
-  readonly defaultChainIconAlt = 'Litecoin explorer';
-  readonly defaultChainAccent = '#345d9d';
+  readonly sourceChainId = 'dogecoin';
+  readonly defaultChainIconUrl = '/resources/chains/dogecoin.png';
+  readonly defaultChainIconAlt = 'Dogecoin explorer';
+  readonly defaultChainAccent = '#8d762f';
   readonly defaultSearchPlaceholder = 'Wave a taxi, paste anything here.';
   env: Env;
   network = '';
@@ -53,7 +53,7 @@ export class SearchFormComponent implements OnInit {
   activeTarget$ = new BehaviorSubject<SearchTarget>({
     kind: 'explorer',
     chainId: this.sourceChainId,
-    name: 'Litecoin',
+    name: 'Dogecoin',
     accentColor: this.defaultChainAccent,
     iconUrl: this.defaultChainIconUrl,
     iconAlt: this.defaultChainIconAlt,
@@ -460,7 +460,7 @@ export class SearchFormComponent implements OnInit {
 
   private searchSourceChain(searchText: string): void {
     this.isSearching = true;
-    // Litecoin block hashes have no Bitcoin proof-of-work prefix pattern.
+    // Dogecoin block hashes have no Bitcoin proof-of-work prefix pattern.
     if (/^[a-fA-F0-9]{64}$/.test(searchText)) {
       this.electrsApiService.getBlock$(searchText).subscribe({
         next: block => this.navigate('/block/', searchText, {state: {data: {block}}}),
@@ -528,8 +528,8 @@ export class SearchFormComponent implements OnInit {
       const entity = destination.pathname.match(/^\/(tx|block|address)\/([a-zA-Z0-9]+)$/);
       if (target.chainId === this.sourceChainId && entity) {
         this.navigate('/' + entity[1] + '/', entity[2]);
-      } else if (entity && ['bitcoin', 'ethereum', 'monero'].includes(target.chainId || '') && destination.protocol === 'https:' && ['btc.tx.taxi', 'eth.tx.taxi', 'xmr.tx.taxi'].includes(destination.hostname)) {
-        this.router.navigate(['/cab', target.chainId, entity[1], entity[2]]);
+      } else if (entity && ['bitcoin', 'ethereum', 'monero', 'litecoin', 'dogecoin', 'bitcoin-cash', 'dash'].includes(target.chainId || '') && destination.protocol === 'https:' && ['btc.tx.taxi', 'eth.tx.taxi', 'xmr.tx.taxi', 'ltc.tx.taxi', 'doge.tx.taxi', 'bch.tx.taxi', 'dash.tx.taxi'].includes(destination.hostname)) {
+        window.location.assign(this.explorerRegistry.localDestination(target.chainId, destination.toString()));
         this.isSearching = false;
       } else {
         this.searchRouter(searchText);
@@ -621,7 +621,7 @@ export class SearchFormComponent implements OnInit {
     return explorer ? this.targetForExplorer(explorer) : {
       kind: 'explorer',
       chainId: this.sourceChainId,
-      name: 'Litecoin',
+      name: 'Dogecoin',
       accentColor: this.defaultChainAccent,
       iconUrl: this.defaultChainIconUrl,
       iconAlt: this.defaultChainIconAlt,

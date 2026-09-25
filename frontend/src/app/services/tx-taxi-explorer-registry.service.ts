@@ -12,6 +12,7 @@ interface RouterBrandAsset {
 }
 
 interface RouterExplorerSite {
+  localReviewOrigin?: string;
   origin: string;
   host: string;
   searchPlaceholder?: string;
@@ -111,6 +112,14 @@ export class TxTaxiExplorerRegistryService {
   readonly explorers$: Observable<TxTaxiExplorer[]>;
 
   private readonly routerOrigin: string;
+  private readonly localOrigins = new Map<string,string>();
+
+  localDestination(chainId:string, canonical:string): string {
+    const url=new URL(canonical);
+    const expected:Record<string,string>={dogecoin:"doge.tx.taxi", "bitcoin-cash":"bch.tx.taxi", dash:"dash.tx.taxi"};
+    if(url.protocol!=="https:" || url.hostname!==expected[chainId])return canonical;
+    const origin=this.localOrigins.get(chainId);return origin ? origin+url.pathname+url.search : canonical;
+  }
 
   constructor(
     private http: HttpClient,
@@ -177,6 +186,9 @@ export class TxTaxiExplorerRegistryService {
       .map((chain) => {
         const site = chain.site!;
         const logo = site.switcherLogo!;
+        const allowed:Record<string,string>={dogecoin:'http://127.0.0.1:4351','bitcoin-cash':'http://127.0.0.1:4361',dash:'http://127.0.0.1:4370'};
+        const local=this.routerOrigin==='http://127.0.0.1:4340' && site.localReviewOrigin===allowed[chain.id] ? site.localReviewOrigin : undefined;
+        if(local)this.localOrigins.set(chain.id,local);
         const health = healthSnapshots.find((snapshot) =>
           snapshot.chainId === chain.id && this.sameOrigin(snapshot.baseUrl, site.origin),
         ) ?? healthSnapshots.find((snapshot) => snapshot.chainId === chain.id);
@@ -187,11 +199,11 @@ export class TxTaxiExplorerRegistryService {
           chainId: chain.id,
           name: chain.name,
           symbol: chain.nativeSymbol,
-          origin: site.origin,
+          origin: local || site.origin,
           host: site.host,
           accentColor: chain.brand.accentColor,
           searchPlaceholder: site.searchPlaceholder || `Search ${chain.name}`,
-          iconUrl: logo.url,
+          iconUrl: this.absoluteRouterUrl(logo.url),
           iconAlt: logo.alt,
           status,
           statusLabel: status === 'live' ? 'Live' : status === 'unavailable' ? 'Unavailable' : 'Checking',

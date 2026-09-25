@@ -482,8 +482,8 @@ export class TransactionsListComponent implements OnInit, OnChanges, OnDestroy {
     return tx.vout.some((v: any) => v.value === undefined);
   }
 
-  getTotalTxOutput(tx: Transaction): number {
-    return tx.vout.map((v: Vout) => v.value || 0).reduce((a: number, b: number) => a + b);
+  getTotalTxOutput(tx: Transaction): any {
+    return tx.vout.reduce((total, v) => total + BigInt(v.valueExact || v.value || 0), 0n).toString();
   }
 
   switchCurrency(): void {

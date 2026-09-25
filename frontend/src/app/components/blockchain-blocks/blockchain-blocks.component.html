@@ -36,7 +36,7 @@
         <div class="block-body">
           <ng-container *ngIf="!minimal">
             <div *ngIf="block?.extras; else emptyfees" [attr.data-cy]="'bitcoin-block-offset=' + offset + '-index-' + i + '-fees'" class="fees">
-              ~<app-fee-rate [fee]="block?.extras?.medianFee" unitClass="" rounding="1.0-0"></app-fee-rate>
+              <app-fee-rate [fee]="block?.extras?.medianFee" title="Median transaction fee rate unavailable" unitClass="" rounding="1.0-0"></app-fee-rate>
             </div>
             <ng-template #emptyfees>
               <div [attr.data-cy]="'bitcoin-block-offset=' + offset + '-index-' + i + '-fees'" class="fees">
@@ -60,7 +60,7 @@
             </div>
             <ng-template #noMiningInfo>
             <div [attr.data-cy]="'bitcoin-block-' + offset + '-index-' + i + 'block-size'"
-              class="block-size" [innerHTML]="'&lrm;' + (block.size | bytes: 2)"></div>
+              class="block-size" title="Provider-reported size; AuxPoW serialization not reconciled" [innerHTML]="'&lrm;' + (block.size | bytes: 2)"></div>
             </ng-template>
             <div [attr.data-cy]="'bitcoin-block-' + i + '-transactions'" class="transaction-count">
               <ng-container

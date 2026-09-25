@@ -1,5 +1,5 @@
 <ng-container *ngIf="!noFiat && ignoreViewMode === false && (viewAmountMode$ | async) === 'fiat'; else viewFiatVin">
- <ng-container *ngIf="!forceBlockConversion || blockConversion; else priceUnavailable"><app-fiat [value]="satoshis" [blockConversion]="blockConversion" [digitsInfo]="digitsInfo"></app-fiat></ng-container>
+ <ng-container *ngIf="!forceBlockConversion || blockConversion; else priceUnavailable"><app-fiat [value]="+satoshis" [blockConversion]="blockConversion" [digitsInfo]="digitsInfo"></app-fiat></ng-container>
  <ng-template #priceUnavailable><span title="Historical price unavailable">—</span></ng-template>
 </ng-container>
 
@@ -9,18 +9,14 @@
   </ng-template>
   <ng-template #default>
     @if ((viewAmountMode$ | async) === 'btc' || (viewAmountMode$ | async) === 'fiat' || ignoreViewMode === true) {
-      &lrm;{{ addPlus && satoshis >= 0 ? '+' : '' }}{{ satoshis / 100000000 | number : (satoshis !== 0 && satoshis < 100000 && satoshis > -100000 ? '1.0-8' : digitsInfo) }}
+      &lrm;{{ exactAmount() }}
       <span class="symbol" [style]="unitStyle">
-        <ng-container *ngTemplateOutlet="prefix"></ng-container>LTC
+        <ng-container *ngTemplateOutlet="prefix"></ng-container>DOGE
       </span>
     } @else {
-      @if (digitsInfo === '1.8-8') {
-        &lrm;{{ addPlus && satoshis >= 0 ? '+' : '' }}{{ satoshis | number }}
-      } @else { 
-        &lrm;{{ addPlus && satoshis >= 0 ? '+' : '' }}{{ satoshis | amountShortener : (satoshis < 1000 && satoshis > -1000 ? 0 : 1) : undefined : true }}
-      }
+      {{ exactAmount(true) }}
       <span class="symbol" [style]="unitStyle">
-        <ng-container *ngTemplateOutlet="prefix"></ng-container>lits
+        <ng-container *ngTemplateOutlet="prefix"></ng-container>koinu
       </span>
     }
   </ng-template>

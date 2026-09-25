@@ -71,7 +71,7 @@ export class BlockFeeRatesGraphComponent implements OnInit {
       this.miningWindowPreference = '1m';
     } else {
       this.seoService.setTitle($localize`:@@ed8e33059967f554ff06b4f5b6049c465b92d9b3:Block Fee Rates`);
-      this.seoService.setDescription($localize`:@@meta.description.bitcoin.graphs.block-fee-rates:See Litecoin feerates visualized over time, including minimum and maximum feerates per block along with feerates at various percentiles.`);
+      this.seoService.setDescription($localize`:@@meta.description.bitcoin.graphs.block-fee-rates:See Dogecoin feerates visualized over time, including minimum and maximum feerates per block along with feerates at various percentiles.`);
       this.miningWindowPreference = this.miningService.getDefaultTimespan('24h');
     }
     this.radioGroupForm = this.formBuilder.group({ dateSpan: this.miningWindowPreference });
@@ -246,9 +246,9 @@ export class BlockFeeRatesGraphComponent implements OnInit {
 
           for (const rate of data.reverse()) {
             if (weightMode) {
-              tooltip += `${rate.marker} ${rate.seriesName}: ${(rate.data[1] / 4).toFixed(2)} lits/WU<br>`;
+              tooltip += `${rate.marker} ${rate.seriesName}: ${(rate.data[1] / 4).toFixed(2)} koinu/WU<br>`;
             } else {
-              tooltip += `${rate.marker} ${rate.seriesName}: ${rate.data[1].toFixed(2)} lit/vB<br>`;
+              tooltip += `${rate.marker} ${rate.seriesName}: ${rate.data[1].toFixed(2)} koinu/B<br>`;
             }
           }
 

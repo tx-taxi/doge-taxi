@@ -36,10 +36,10 @@ export class BtcComponent implements OnInit, OnChanges {
   ngOnChanges(changes: SimpleChanges): void {
     if (this.satoshis >= 1_000_000) {
       this.value = (this.satoshis / 100_000_000);
-      this.unit = 'LTC';
+      this.unit = 'DOGE';
     } else {
       this.value = Math.round(this.satoshis);
-      this.unit = 'lits';
+      this.unit = 'koinu';
     }
   }
 }

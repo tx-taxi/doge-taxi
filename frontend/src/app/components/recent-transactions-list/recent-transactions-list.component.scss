@@ -110,3 +110,10 @@
     }
   }
 }
+
+.widget .latest-transactions {
+  .table-cell-fiat { width: 14%; }
+  .table-cell-satoshis { width: 34%; font-size: 12px; }
+  .table-cell-fees { width: 28%; font-size: 12px; }
+  .table-cell-txid { width: 24%; }
+}

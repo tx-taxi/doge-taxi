@@ -19,7 +19,7 @@ export class AmountComponent implements OnInit, OnDestroy {
   stateSubscription: Subscription;
   currencySubscription: Subscription;
 
-  @Input() satoshis: number;
+  @Input() satoshis: number | string;
   @Input() digitsInfo = '1.8-8';
   @Input() noFiat = false;
   @Input() addPlus = false;
@@ -37,6 +37,25 @@ export class AmountComponent implements OnInit, OnDestroy {
       this.currency = fiat;
       this.cd.markForCheck();
     });
+  }
+
+  exactAmount(atomic = false): string {
+    if(this.satoshis == null) return '—';
+    try {
+      const value = BigInt(this.satoshis);
+      const negative=value<0n; const absolute=negative?-value:value;
+      const prefix=negative?'-':this.addPlus&&value>=0n?'+':'';
+      if(atomic)return prefix+absolute.toLocaleString('en-US');
+      const match=this.digitsInfo?.match(/\.(\d+)-(\d+)$/);
+      const min=Number(match?.[1] ?? 8), max=Math.min(8,Number(match?.[2] ?? 8));
+      const factor=10n ** BigInt(8-max);
+      const rounded=(absolute+factor/2n)/factor;
+      const scale=10n ** BigInt(max);
+      const integer=(rounded/scale).toLocaleString('en-US');
+      let fraction=(rounded%scale).toString().padStart(max,'0');
+      while(fraction.length>min && fraction.endsWith('0'))fraction=fraction.slice(0,-1);
+      return prefix+integer+(fraction?'.'+fraction:'');
+    } catch{return '—';}
   }
 
   ngOnInit() {

@@ -68,7 +68,7 @@ export class BlockFeesGraphComponent implements OnInit {
 
   ngOnInit(): void {
     this.seoService.setTitle($localize`:@@6c453b11fd7bd159ae30bc381f367bc736d86909:Block Fees`);
-    this.seoService.setDescription($localize`:@@meta.description.bitcoin.graphs.block-fees:See the average mining fees earned per Litecoin block visualized in LTC and USD over time.`);
+    this.seoService.setDescription($localize`:@@meta.description.bitcoin.graphs.block-fees:See the average mining fees earned per Dogecoin block visualized in DOGE and USD over time.`);
     this.miningWindowPreference = this.miningService.getDefaultTimespan('1m');
     this.radioGroupForm = this.formBuilder.group({ dateSpan: this.miningWindowPreference });
     this.radioGroupForm.controls.dateSpan.setValue(this.miningWindowPreference);
@@ -110,7 +110,7 @@ export class BlockFeesGraphComponent implements OnInit {
   }
 
   prepareChartOptions(data) {
-    const feesBtcLabel = $localize`:@@graphs.blockFees.feesBtc:Fees LTC`;
+    const feesBtcLabel = $localize`:@@graphs.blockFees.feesBtc:Fees DOGE`;
     const feesFiatLabel = $localize`:@@graphs.blockFees.feesFiat:Fees ${this.currency}:currency:`;
 
     let title: object;
@@ -168,7 +168,7 @@ export class BlockFeesGraphComponent implements OnInit {
 
           for (const tick of data) {
             if (tick.seriesIndex === 0) {
-              tooltip += `${tick.marker} ${feesBtcLabel}: ${formatNumber(tick.data[1], this.locale, '1.3-3')} LTC<br>`;
+              tooltip += `${tick.marker} ${feesBtcLabel}: ${formatNumber(tick.data[1], this.locale, '1.3-3')} DOGE<br>`;
             } else if (tick.seriesIndex === 1) {
               tooltip += `${tick.marker} ${feesFiatLabel}: ${this.fiatCurrencyPipe.transform(tick.data[1], null, this.currency) }<br>`;
             }
@@ -212,7 +212,7 @@ export class BlockFeesGraphComponent implements OnInit {
           axisLabel: {
             color: 'rgb(110, 112, 121)',
             formatter: (val) => {
-              return `${val} LTC`;
+              return `${val} DOGE`;
             }
           },
           splitLine: {

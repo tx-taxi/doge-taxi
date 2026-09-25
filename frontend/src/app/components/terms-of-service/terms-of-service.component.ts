@@ -13,6 +13,6 @@ export class TermsOfServiceComponent {
 
   ngOnInit(): void {
     this.seoService.setTitle('Terms of Service');
-    this.seoService.setDescription('Terms for using ltc.tx.taxi as an informational Bitcoin block and mempool explorer.');
+    this.seoService.setDescription('Terms for using doge.tx.taxi as an informational Bitcoin block and mempool explorer.');
   }
 }

@@ -351,7 +351,7 @@ export class StartComponent implements OnInit, AfterViewChecked, OnDestroy {
     this.scrollLeft = this.blockchainContainer?.nativeElement?.scrollLeft;
     const middlePage = this.pageIndex === 0 ? this.pages[0] : this.pages[1];
     // compensate for css transform
-    const translation = (this.isMobile ? this.chainWidth * 0.95 : this.chainWidth * 0.5);
+    const translation = 40;
     const backThreshold = middlePage.offset + (this.pageWidth * 0.5) + translation;
     const forwardThreshold = middlePage.offset - (this.pageWidth * 0.5) + translation;
     this.scrollLeft = this.blockchainContainer.nativeElement.scrollLeft;
@@ -468,7 +468,7 @@ export class StartComponent implements OnInit, AfterViewChecked, OnDestroy {
 
   blockInViewport(height: number): boolean {
     const firstHeight = this.pages[0].height;
-    const translation = (this.isMobile ? this.chainWidth * 0.95 : this.chainWidth * 0.5);
+    const translation = 40;
     const firstX = this.pages[0].offset - this.getConvertedScrollOffset(this.scrollLeft) + translation;
     const xPos = firstX + ((firstHeight - height) * 155);
     return xPos > -55 && xPos < (this.chainWidth - 100);

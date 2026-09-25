@@ -24,10 +24,10 @@ export type AddressType = 'fee'
 const ADDRESS_PREFIXES = {
   mainnet: {
     base58: {
-      pubkey: ['L'],
-      script: ['M', '3'],
+      pubkey: ['D'],
+      script: ['9', 'A'],
     },
-    bech32: 'ltc1',
+    bech32: 'unsupported-bech32' ,
   },
   testnet: {
     base58: {
