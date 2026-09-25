@@ -1,0 +1,293 @@
+{
+  "blocks": [
+    {
+      "id": "e63f58252f658d812e8590ceb8dfe7cc33e269496b111ed38f7ab24f7e23eb6e",
+      "height": 6389397,
+      "version": 6422788,
+      "timestamp": 1790368982,
+      "tx_count": 3,
+      "size": 1184,
+      "weight": 4736,
+      "merkle_root": "8356fb8d867c0e7f33475e1b1bedbaa23dd3e1dc0810ea7df092996e27396a6d",
+      "previousblockhash": "1f6c408afc5f3b8dcfa4c7182d7e5f3baf3fac7f16d74122841c427291e7f9e3",
+      "nonce": 0,
+      "bits": 425966474,
+      "difficulty": 43064182.22060522,
+      "extras": {
+        "totalFees": 13200000,
+        "avgFee": 6600000,
+        "medianFee": 32253.968253968254,
+        "feeRange": [
+          14285.714285714286,
+          50222.22222222222
+        ],
+        "reward": 1000013200000,
+        "pool": {
+          "id": 0,
+          "name": "",
+          "slug": "",
+          "address": "DEFnXEd7mkqi6Pn81ytshqupbX2JF9xiqx"
+        },
+        "matchRate": null
+      },
+      "doge": {
+        "isAuxPow": true,
+        "sizeSource": "raw-block",
+        "feeSource": "atomicwallet-index+verified-raw-block"
+      }
+    },
+    {
+      "id": "1f6c408afc5f3b8dcfa4c7182d7e5f3baf3fac7f16d74122841c427291e7f9e3",
+      "height": 6389396,
+      "version": 6422788,
+      "timestamp": 1790368971,
+      "tx_count": 8,
+      "size": 2332,
+      "weight": 9328,
+      "merkle_root": "b5f5efff2c77e027a7e29ba06a5e323580baa169e29f99c4a28766f139679037",
+      "previousblockhash": "82a1d850d84f26634c551b90fbf4acc3a7f5258bd930e7aa0f9507a379c05aa1",
+      "nonce": 0,
+      "bits": 426433337,
+      "difficulty": 40193233.45952705,
+      "extras": {
+        "totalFees": 122535220,
+        "avgFee": 17505031.42857143,
+        "medianFee": 14285.714285714286,
+        "feeRange": [
+          100.52083333333333,
+          404166.6666666667
+        ],
+        "reward": 1000122535220,
+        "pool": {
+          "id": 0,
+          "name": "",
+          "slug": "",
+          "address": "DEFnXEd7mkqi6Pn81ytshqupbX2JF9xiqx"
+        },
+        "matchRate": null
+      },
+      "doge": {
+        "isAuxPow": true,
+        "sizeSource": "raw-block",
+        "feeSource": "atomicwallet-index+verified-raw-block"
+      }
+    },
+    {
+      "id": "82a1d850d84f26634c551b90fbf4acc3a7f5258bd930e7aa0f9507a379c05aa1",
+      "height": 6389395,
+      "version": 6422788,
+      "timestamp": 1790368947,
+      "tx_count": 46,
+      "size": 38421,
+      "weight": 153684,
+      "merkle_root": "fc5bcacad8bcd659dd9d777d2f66e3e7d422df6837c091423a71baae4f9dbd77",
+      "previousblockhash": "242a36c4e73305f012e7ba62078dac1f55045f5be4c0e8347773cde9afb5a733",
+      "nonce": 0,
+      "bits": 427069968,
+      "difficulty": 36843795.58416916,
+      "extras": {
+        "totalFees": 2336749933,
+        "avgFee": 51927776.28888889,
+        "medianFee": 9058.602603231599,
+        "feeRange": [
+          1000,
+          1154734.4110854503
+        ],
+        "reward": 1002336749933,
+        "pool": {
+          "id": 0,
+          "name": "AntPool",
+          "slug": "antpool",
+          "address": "DTZSTXecLmSXpRGSfht4tAMyqra1wsL7xb"
+        },
+        "matchRate": null
+      },
+      "doge": {
+        "isAuxPow": true,
+        "sizeSource": "raw-block",
+        "feeSource": "atomicwallet-index+verified-raw-block"
+      }
+    },
+    {
+      "id": "242a36c4e73305f012e7ba62078dac1f55045f5be4c0e8347773cde9afb5a733",
+      "height": 6389394,
+      "version": 6422788,
+      "timestamp": 1790368931,
+      "tx_count": 6,
+      "size": 2394,
+      "weight": 9576,
+      "merkle_root": "bf4af443ca3fb6a30a2f06f1ee2dc64a7ab882c97174cbbbd9c8a4e45af28bac",
+      "previousblockhash": "705079141ae3449c01c6ebd63e5f4b9b626a506a6110678abec65133a1d00693",
+      "nonce": 0,
+      "bits": 427472051,
+      "difficulty": 35001603.74323133,
+      "extras": {
+        "totalFees": 679960000,
+        "avgFee": 135992000,
+        "medianFee": 60266.666666666664,
+        "feeRange": [
+          50000,
+          1152073.732718894
+        ],
+        "reward": 1000679960000,
+        "pool": {
+          "id": 0,
+          "name": "F2Pool",
+          "slug": "f2pool",
+          "address": "D8AXXiGEZeZnMKTKnC9AWB3YUU4jfMAmYU"
+        },
+        "matchRate": null
+      },
+      "doge": {
+        "isAuxPow": true,
+        "sizeSource": "raw-block",
+        "feeSource": "atomicwallet-index+verified-raw-block"
+      }
+    },
+    {
+      "id": "705079141ae3449c01c6ebd63e5f4b9b626a506a6110678abec65133a1d00693",
+      "height": 6389393,
+      "version": 6422788,
+      "timestamp": 1790368899,
+      "tx_count": 3,
+      "size": 1638,
+      "weight": 6552,
+      "merkle_root": "88a6a710584efb558fc8a8f36a666b245702360f3570bc0eaa9d7307837a06cd",
+      "previousblockhash": "f444d9eed37528d68a869b37c987acd9204408778f4f3fc84bfa918aaec2bacc",
+      "nonce": 0,
+      "bits": 436240682,
+      "difficulty": 33251522.72908728,
+      "extras": {
+        "totalFees": 41780000,
+        "avgFee": 20890000,
+        "medianFee": 74925.92225553106,
+        "feeRange": [
+          60165.74585635359,
+          89686.09865470852
+        ],
+        "reward": 1000041780000,
+        "pool": {
+          "id": 0,
+          "name": "F2Pool",
+          "slug": "f2pool",
+          "address": "D8AXXiGEZeZnMKTKnC9AWB3YUU4jfMAmYU"
+        },
+        "matchRate": null
+      },
+      "doge": {
+        "isAuxPow": true,
+        "sizeSource": "raw-block",
+        "feeSource": "atomicwallet-index+verified-raw-block"
+      }
+    },
+    {
+      "id": "f444d9eed37528d68a869b37c987acd9204408778f4f3fc84bfa918aaec2bacc",
+      "height": 6389392,
+      "version": 6422788,
+      "timestamp": 1790368866,
+      "tx_count": 13,
+      "size": 4302,
+      "weight": 17208,
+      "merkle_root": "30bbc9d968f38ddb01d8a597feab26a5b568adaa91e78f15dc49eb8df0102273",
+      "previousblockhash": "91067fc550b5a783274e79bf8e3c8d9dc4a3479b0ad50fd97b0421ccd8611e6c",
+      "nonce": 0,
+      "bits": 427756608,
+      "difficulty": 33805386.76710454,
+      "extras": {
+        "totalFees": 787663566,
+        "avgFee": 65638630.5,
+        "medianFee": 202043.25691051356,
+        "feeRange": [
+          50000,
+          552444.4444444445
+        ],
+        "reward": 1000787663566,
+        "pool": {
+          "id": 0,
+          "name": "F2Pool",
+          "slug": "f2pool",
+          "address": "D8AXXiGEZeZnMKTKnC9AWB3YUU4jfMAmYU"
+        },
+        "matchRate": null
+      },
+      "doge": {
+        "isAuxPow": true,
+        "sizeSource": "raw-block",
+        "feeSource": "atomicwallet-index+verified-raw-block"
+      }
+    },
+    {
+      "id": "91067fc550b5a783274e79bf8e3c8d9dc4a3479b0ad50fd97b0421ccd8611e6c",
+      "height": 6389391,
+      "version": 6422788,
+      "timestamp": 1790368791,
+      "tx_count": 1,
+      "size": 1021,
+      "weight": 4084,
+      "merkle_root": "adb001305b33fd77f8d367522a4b751ac132928b43aafff7241a16c742ef3f58",
+      "previousblockhash": "bb96726e005191bb27f7aa6cc7061d55d695e7d82046e59ca14dd8e057a63125",
+      "nonce": 0,
+      "bits": 436243097,
+      "difficulty": 30988271.20317917,
+      "extras": {
+        "totalFees": 0,
+        "avgFee": 0,
+        "medianFee": 0,
+        "feeRange": [
+          0,
+          0
+        ],
+        "reward": 1000000000000,
+        "pool": {
+          "id": 0,
+          "name": "F2Pool",
+          "slug": "f2pool",
+          "address": "D8AXXiGEZeZnMKTKnC9AWB3YUU4jfMAmYU"
+        },
+        "matchRate": null
+      },
+      "doge": {
+        "isAuxPow": true,
+        "sizeSource": "raw-block",
+        "feeSource": "atomicwallet-index+verified-raw-block"
+      }
+    },
+    {
+      "id": "bb96726e005191bb27f7aa6cc7061d55d695e7d82046e59ca14dd8e057a63125",
+      "height": 6389390,
+      "version": 6422788,
+      "timestamp": 1790368778,
+      "tx_count": 5,
+      "size": 1887,
+      "weight": 7548,
+      "merkle_root": "6fb2e74c96355ef524f2d020892ad709010d9b7307228519e9ae4e4fe8057c90",
+      "previousblockhash": "be82d5ac778638d5b21e78c3ce68566e3163f213891a34329adcaea0d34f0ade",
+      "nonce": 0,
+      "bits": 436245632,
+      "difficulty": 28921897.37373737,
+      "extras": {
+        "totalFees": 79149945,
+        "avgFee": 19787486.25,
+        "medianFee": 81126.73876569164,
+        "feeRange": [
+          50894.98952879581,
+          152564.8088888889
+        ],
+        "reward": 1000079149945,
+        "pool": {
+          "id": 0,
+          "name": "F2Pool",
+          "slug": "f2pool",
+          "address": "D8AXXiGEZeZnMKTKnC9AWB3YUU4jfMAmYU"
+        },
+        "matchRate": null
+      },
+      "doge": {
+        "isAuxPow": true,
+        "sizeSource": "raw-block",
+        "feeSource": "atomicwallet-index+verified-raw-block"
+      }
+    }
+  ],
+  "observedAt": 1790369145774
+}

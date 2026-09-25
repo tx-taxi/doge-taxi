@@ -3,18 +3,19 @@
 const fs=require('node:fs'),path=require('node:path');
 const cache=new Map(), inflight=new Map();
 const chair=require('./blockchair.cjs');
+const atomic=require('./atomic.cjs');
 const {prune,setBounded}=require('./cache-limits.cjs');
 const queue=require('./provider-queue.cjs').createQueue();
 const root=process.env.DOGE_BLOCKCYPHER_URL||'https://api.blockcypher.com/v1/doge/main';
 const token=process.env.BLOCKCYPHER_TOKEN;
-const health={lastSuccess:null,lastFailure:null,source:'blockcypher+blockchair',requests:0};
+const health={lastSuccess:null,lastFailure:null,source:'atomicwallet+blockcypher+blockchair',requests:0};
 const dataDir=process.env.DOGE_DATA_DIR||path.join(__dirname,'../.local');
 const disk=path.join(dataDir,'provider-cache');fs.mkdirSync(disk,{recursive:true});
 const pruneCache=()=>prune(disk,{matches:name=>/^[A-Za-z0-9_-]+\.json$/.test(name)});pruneCache();
 const cooldownFile=path.join(disk,'../provider-cooldown.json');
 let cooldownUntil=0;try{cooldownUntil=JSON.parse(fs.readFileSync(cooldownFile)).until;}catch{}
 const budget=require('./request-budget.cjs').createBudget(path.join(dataDir,'request-budget.json'),{collector:36,detail:54});
-const refreshInterval=240000;
+const refreshInterval=240000,collectorInterval=60000;
 let next=0;
 async function fetchJson(p,ttl=120000,lane='detail'){
  const fresh=entry=>entry&&Date.now()-entry.at<(typeof ttl==='function'?ttl(entry.data):ttl);
@@ -40,6 +41,7 @@ const scriptType=t=>({'pay-to-pubkey-hash':'p2pkh','pay-to-script-hash':'p2sh','
 function tx(t){if(!Array.isArray(t.inputs)||!Array.isArray(t.outputs)||t.inputs.length!==t.vin_sz||t.outputs.length!==t.vout_sz)throw Object.assign(new Error('Incomplete transaction inputs or outputs'),{status:503});return {txid:t.hash,version:t.ver,locktime:t.lock_time||0,size:t.size,weight:t.size*4,fee:t.fees,status:{confirmed:t.block_height>=0,block_height:t.block_height>=0?t.block_height:undefined,block_hash:t.block_hash,block_time:t.block_height>=0?knownBlockTime(t.block_hash):undefined},vin:t.inputs.map(i=>({txid:i.prev_hash||'0'.repeat(64),vout:i.output_index,scriptsig:i.script||'',scriptsig_asm:'',is_coinbase:i.output_index===-1,sequence:i.sequence,prevout:i.output_index===-1?null:{scriptpubkey:'',scriptpubkey_asm:'',scriptpubkey_type:scriptType(i.script_type),scriptpubkey_address:i.addresses?.[0],value:Number(i.output_value),valueExact:String(i.output_value)}})),vout:t.outputs.map(o=>({scriptpubkey:o.script||'',scriptpubkey_asm:'',scriptpubkey_type:scriptType(o.script_type),scriptpubkey_address:o.addresses?.[0],value:Number(o.value),valueExact:String(o.value)})),doge:{value:t.total}};}
 function block(b){const exponent=b.bits>>>24,mantissa=b.bits&0xffffff;const difficulty=0xffff*Math.pow(2,8*(0x1d-exponent))/mantissa;return {id:b.hash,height:b.height,version:b.ver,timestamp:timestamp(b.time),tx_count:b.n_tx,size:b.size,weight:b.size*4,merkle_root:b.mrkl_root,previousblockhash:b.prev_block,nonce:b.nonce,bits:b.bits,difficulty,extras:{totalFees:b.fees,avgFee:b.n_tx>1?b.fees/(b.n_tx-1):0,avgFeeRate:null,medianFee:null,feeRange:[],reward:b.height>=600000?10000e8+b.fees:null,pool:{id:0,name:'Unknown',slug:'unknown'},matchRate:null}};}
 async function getBlock(id,lane='detail'){
+ const known=/^[a-f0-9]{64}$/.test(String(id))?atomic.cached(id):latest?.blocks.find(b=>b.height===Number(id));if(known)return known;
  try{return chair.block((await chair.blockPage(id)).block);}catch(e){if(!chair.allowed())throw e;return block(await fetchJson('/blocks/'+id+'?txstart=0&limit=500',/^\d+$/.test(String(id))?30000:86400000,lane));}
 }
 // Pending/recent transactions must be observed again to discover confirmation or reorg.
@@ -67,23 +69,26 @@ async function snapshot(){
 }
 async function collectSnapshot(){
  if(!chair.allowed())throw Object.assign(new Error('Production provider configuration required'),{status:503});
- if(Date.now()<cooldownUntil)throw Object.assign(new Error('Temporarily unavailable'),{status:503});
- if(latest&&Date.now()-snapshotAt<refreshInterval)return latest;
+ if(latest&&Date.now()-snapshotAt<collectorInterval)return latest;
  if(!chair.allowed())throw Object.assign(new Error('Production provider configuration required'),{status:503});
  const collectionStarted=Date.now();
- const tip=await fetchJson('',refreshInterval,'collector');
- const heights=Array.from({length:Math.min(8,tip.height+1)},(_,i)=>tip.height-i);
+ let tip;try{tip=await fetchJson('',refreshInterval,'collector');}catch(e){tip=latest?.doge?.tip;}
  let blocks,blocksObservedAt;
- const strip=await chair.blocks(heights,'collector');blocks=strip.blocks;blocksObservedAt=strip.observedAt;
- // A complete contiguous strip is mandatory; no sampled/skipped heights.
- if(blocks[0].id!==tip.hash)throw new Error('Providers disagree on canonical tip');
- blocks[0].previousblockhash=tip.previous_hash;
- const pending=await fetchJson('/txs?limit=50',refreshInterval,'collector');
- const txs=pending.map(t=>({txid:t.hash,size:t.size,fee:t.fees,doge:{value:t.total}}));recordPending(txs,cache.get('/txs?limit=50')?.at);const fees={fastestFee:tip.high_fee_per_kb/1000,halfHourFee:tip.medium_fee_per_kb/1000,hourFee:tip.low_fee_per_kb/1000,economyFee:tip.low_fee_per_kb/1000,minimumFee:1000};
+ try{const strip=await atomic.strip();blocks=strip.blocks;blocksObservedAt=strip.observedAt;}
+ catch(e){
+  if(!tip)throw e;
+  const heights=Array.from({length:Math.min(8,tip.height+1)},(_,i)=>tip.height-i);
+  const strip=await chair.blocks(heights,'collector');blocks=strip.blocks.map(b=>atomic.cached(b.id)||b);blocksObservedAt=strip.observedAt;
+  if(blocks[0].id!==tip.hash)throw new Error('Providers disagree on canonical tip');
+  blocks[0].previousblockhash=tip.previous_hash;
+ }
+ let pending,pendingObservedAt;try{pending=await fetchJson('/txs?limit=50',refreshInterval,'collector');pendingObservedAt=cache.get('/txs?limit=50')?.at;}catch(e){if(!latest)throw e;pending=latest.transactions.map(t=>({hash:t.txid,size:t.vsize,fees:t.fee,total:t.value}));pendingObservedAt=latest.doge.pendingObservedAt||latest.doge.observedAt;}
+ if(!tip)throw new Error('Fee estimate source unavailable');
+ const txs=pending.map(t=>({txid:t.hash,size:t.size,fee:t.fees,doge:{value:t.total}}));recordPending(txs,pendingObservedAt);const fees={fastestFee:tip.high_fee_per_kb/1000,halfHourFee:tip.medium_fee_per_kb/1000,hourFee:tip.low_fee_per_kb/1000,economyFee:tip.low_fee_per_kb/1000,minimumFee:1000};
  const ordered=[...txs].sort((a,b)=>b.fee/b.size-a.fee/a.size),packed=[];let sampleBytes=0;for(const t of ordered){if(sampleBytes+t.size<=1000000){packed.push(t);sampleBytes+=t.size;}}
  const rates=packed.map(t=>t.fee/t.size).sort((a,b)=>a-b);const middle=Math.floor(rates.length/2);
  const projection=packed.length?[{blockSize:sampleBytes,blockVSize:sampleBytes,nTx:packed.length,totalFees:packed.reduce((n,t)=>n+t.fee,0),medianFee:rates.length%2?rates[middle]:(rates[middle-1]+rates[middle])/2,feeRange:[rates[0],rates.at(-1)],transactionIds:packed.map(t=>t.txid),sampled:true}]:[];
- latest={da:{adjustedTimeAvg:60000,timeOffset:0},'live-2h-chart':observations.points.at(-1),blocks,fees,transactions:txs.map(t=>({txid:t.txid,fee:t.fee,vsize:t.size,value:t.doge.value})),mempoolInfo:{loaded:true,size:tip.unconfirmed_count},backend:'esplora',loadingIndicators:{mempool:100},backendInfo:{gitCommit:'doge-candidate',version:'0.1'},doge:{targetBlockTime:60,subsidy:10000e8,pendingSample:txs.length,observedAt:Math.min(cache.get('')?.at||collectionStarted,blocksObservedAt),tip},'mempool-blocks':projection};snapshotAt=collectionStarted;fs.writeFileSync(snapshotFile,JSON.stringify({schema:3,at:snapshotAt,data:latest}));return latest;
+ latest={da:{adjustedTimeAvg:60000,timeOffset:0},'live-2h-chart':observations.points.at(-1),blocks,fees,transactions:txs.map(t=>({txid:t.txid,fee:t.fee,vsize:t.size,value:t.doge.value})),mempoolInfo:{loaded:true,size:tip.unconfirmed_count},backend:'esplora',loadingIndicators:{mempool:100},backendInfo:{gitCommit:'doge-candidate',version:'0.1'},doge:{targetBlockTime:60,subsidy:10000e8,pendingSample:txs.length,observedAt:Math.min(pendingObservedAt,blocksObservedAt),blocksObservedAt,pendingObservedAt,tip},'mempool-blocks':projection};snapshotAt=collectionStarted;fs.writeFileSync(snapshotFile,JSON.stringify({schema:3,at:snapshotAt,data:latest}));return latest;
 }
 async function route(p){let m;const pathname=p.split('?')[0];
  if(/^\/api\/v1\/mining\/hashrate(?:\/1m)?$/.test(pathname))return require('./mining.cjs').history();
@@ -102,6 +107,7 @@ async function route(p){let m;const pathname=p.split('?')[0];
   return txs.map(t=>({txid:t.txid,fee:t.fee,vsize:t.size,value:Number(t.doge.value),rate:t.fee/t.size,flags:0}));
  }
  if(m=pathname.match(/^\/api\/(?:v1\/)?block\/([a-f0-9]{64}|\d+)(?:\/(txids|txs)(?:\/(\d+))?)?$/)){
+  if(!m[2]){const known=/^[a-f0-9]{64}$/.test(m[1])?atomic.cached(m[1]):latest?.blocks.find(b=>b.height===Number(m[1]));if(known)return known;}
   const item=await chair.blockPage(m[1],Number(m[3]||0),m[2]==='txids'?10000:25);
   if(m[2]==='txids'){if(item.transactions.length!==item.block.transaction_count)throw new Error('Complete block transaction list unavailable');return item.transactions;}
   if(m[2]==='txs'){const expected=Math.max(0,Math.min(25,item.block.transaction_count-Number(m[3]||0)));if(item.transactions.length!==expected)throw new Error('Incomplete block transaction page');const txs=await chair.transactions(item.transactions);return txs.map(t=>({...t,status:{...t.status,block_hash:item.block.hash}}));}
@@ -127,4 +133,4 @@ async function route(p){let m;const pathname=p.split('?')[0];
  if(pathname==='/api/v1/doge/network')return (await snapshot()).doge;
  throw Object.assign(new Error('Required provider capability unavailable: '+pathname),{status:503});
 }
-module.exports={route,snapshot,health,tx,block,refreshInterval,budget:()=>({blockcypher:budget.status(),blockchair:chair.status()}),cooldown:()=>cooldownUntil,liveObservedAt:()=>latest?.doge?.observedAt||null};
+module.exports={route,snapshot,health,tx,block,refreshInterval,collectorInterval,budget:()=>({blockcypher:budget.status(),blockchair:chair.status(),atomic:atomic.status()}),cooldown:()=>cooldownUntil,liveObservedAt:()=>latest?.doge?.observedAt||null};

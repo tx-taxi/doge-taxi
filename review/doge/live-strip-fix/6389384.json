@@ -1,0 +1,36 @@
+{
+  "id": "5b98912f95e01e9beb9edc35c9fe405b9ebd5b9bf0921af1ed7ef485529d910a",
+  "height": 6389384,
+  "version": 6422788,
+  "timestamp": 1790368474,
+  "tx_count": 11,
+  "size": 3335,
+  "weight": 13340,
+  "merkle_root": "bc495e1cb5fdd61603fc3b25ff8735595ac1d7561dbdb471eacef4a36180c1b7",
+  "previousblockhash": "d16e3b9fa2a24d3388fdfa27dfba589f78dc50ebe344047a68924bb8ed3d77ae",
+  "nonce": 0,
+  "bits": 427642643,
+  "difficulty": 34274519.36619021,
+  "extras": {
+    "totalFees": 477559928,
+    "avgFee": 47755992.8,
+    "medianFee": 91071.62802768167,
+    "feeRange": [
+      50628,
+      550000
+    ],
+    "reward": 1000477559928,
+    "pool": {
+      "id": 0,
+      "name": "F2Pool",
+      "slug": "f2pool",
+      "address": "D8AXXiGEZeZnMKTKnC9AWB3YUU4jfMAmYU"
+    },
+    "matchRate": null
+  },
+  "doge": {
+    "isAuxPow": true,
+    "sizeSource": "raw-block",
+    "feeSource": "atomicwallet-index+verified-raw-block"
+  }
+}

@@ -185,7 +185,7 @@ wss.on('connection',client=>{
   if(m['track-mempool-block']!==undefined){client.pendingSample=m['track-mempool-block']===0;if(client.pendingSample){if(!lastSnapshot)await collect();if(lastSnapshot)emit(client,pendingFrame(lastSnapshot));}}
  });
 });
-setInterval(collect,dogecoin.refreshInterval).unref();
+setInterval(collect,dogecoin.collectorInterval).unref();
 setInterval(()=>{for(const client of wss.clients)emit(client,{heartbeat:Date.now(),'provider-freshness':{state:currentProviderStatus().stale?'stale':'live',observedAt:dogecoin.liveObservedAt()}});},20000).unref();
 collect();
 server.listen(Number(process.env.PORT||4351),process.env.DOGE_HOST||'127.0.0.1',()=>console.log('DOGE adapter on 127.0.0.1:'+ (process.env.PORT||4351)));

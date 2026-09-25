@@ -1,0 +1,6 @@
+const {test}=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),os=require('node:os'),path=require('node:path');
+process.env.DOGE_DATA_DIR=fs.mkdtempSync(path.join(os.tmpdir(),'doge-atomic-test-'));
+const {verifiedBlock}=require('./atomic.cjs');
+const b=JSON.parse(fs.readFileSync(path.join(__dirname,'../review/doge/raw-block/block-6389384-indexed.json'))),raw=JSON.parse(fs.readFileSync(path.join(__dirname,'../review/doge/raw-block/block-6389384-raw.json')));
+test('live block fee range reconciles every indexed fee with independently serialized transactions',()=>{const out=verifiedBlock(b,raw);assert.equal(out.extras.totalFees,477559928);assert.deepEqual(out.extras.feeRange,[50628,550000]);assert.equal(out.extras.pool.name,'F2Pool');assert.equal(out.extras.pool.address,'D8AXXiGEZeZnMKTKnC9AWB3YUU4jfMAmYU');});
+test('partial, reordered and fee-inconsistent provider data cannot become live block metrics',()=>{const partial=structuredClone(b);partial.txs.pop();assert.throws(()=>verifiedBlock(partial,raw));const reordered=structuredClone(b);[reordered.txs[1],reordered.txs[2]]=[reordered.txs[2],reordered.txs[1]];assert.throws(()=>verifiedBlock(reordered,raw));const wrong=structuredClone(b);wrong.txs[1].fees='1';assert.throws(()=>verifiedBlock(wrong,raw));});
