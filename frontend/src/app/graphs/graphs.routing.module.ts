@@ -59,7 +59,7 @@ const routes: Routes = [
         children: [
           {
             path: '',
-            component: DashboardComponent,
+            component: MempoolBlockComponent,
           },
         ]
       },

@@ -1,0 +1,20 @@
+ frontend/async-native-styles.cjs                   |  19 ++
+ frontend/package.json                              |   2 +-
+ .../blockchain/blockchain.component.html           |   1 +
+ .../blockchain/blockchain.component.scss           |  10 +-
+ .../master-page/master-page.component.ts           |  20 +-
+ .../search-form/search-form.component.html         |  44 +++-
+ .../search-form/search-form.component.scss         |   2 +
+ .../search-form/search-form.component.ts           |   2 +
+ frontend/src/app/interfaces/websocket.interface.ts |   2 +
+ frontend/src/app/services/hub-snapshot.ts          |  33 +++
+ frontend/src/app/services/state.service.ts         |   1 +
+ .../services/tx-taxi-explorer-registry.service.ts  |  15 +-
+ frontend/src/app/services/websocket.service.ts     |  55 ++++-
+ frontend/src/index.mempool.html                    | 223 ++++++++++++++++++++-
+ .../src/resources/branding/bitcoin-divider.png     | Bin 0 -> 4918 bytes
+ .../src/resources/branding/chain-transition.js     | 218 ++++++++++++++++++++
+ .../src/resources/branding/ethereum-divider.png    | Bin 0 -> 2984 bytes
+ .../src/resources/branding/litecoin-divider.png    | Bin 0 -> 2557 bytes
+ frontend/src/resources/branding/monero-divider.png | Bin 0 -> 6768 bytes
+ 19 files changed, 635 insertions(+), 12 deletions(-)

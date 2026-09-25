@@ -4,6 +4,8 @@ import { Transaction } from '@interfaces/electrs.interface';
 import { Acceleration, BlockExtended, DifficultyAdjustment, RbfTree, TransactionStripped } from '@interfaces/node-api.interface';
 
 export interface WebsocketResponse {
+  'provider-freshness'?: {state: 'live' | 'stale' | 'unavailable'; observedAt: number | null};
+  'tracking-unavailable'?: {reason: string; retryable: boolean};
   backend?: 'esplora' | 'electrum' | 'none';
   block?: BlockExtended;
   blocks?: BlockExtended[];
@@ -58,6 +60,7 @@ export interface ReplacementInfo {
   newVsize: number;
 }
 export interface MempoolBlock {
+  sampled?: boolean;
   blink?: boolean;
   height?: number;
   blockSize: number;

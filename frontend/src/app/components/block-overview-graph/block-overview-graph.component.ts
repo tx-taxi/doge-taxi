@@ -136,6 +136,8 @@ export class BlockOverviewGraphComponent implements AfterViewInit, OnDestroy, On
           }
           this.loadedTheme = state.theme;
           this.scene.setColorFunction(this.getColorFunction());
+          // Repaint settled canvases immediately after changing theme.
+          this.start();
         });
       }
     }

@@ -23,6 +23,7 @@ export class FeeDistributionGraphComponent implements OnInit, OnChanges, OnDestr
   @Input() left: number | string = 30;
   @Input() numSamples: number = 200;
   @Input() numLabels: number = 10;
+  @Input() sampled = false;
 
   simple: boolean = false;
   data: number[][];
@@ -111,7 +112,7 @@ export class FeeDistributionGraphComponent implements OnInit, OnChanges, OnDestr
       xAxis: {
         type: 'category',
         boundaryGap: false,
-        name: '% Weight',
+        name: this.sampled ? '% Sampled bytes' : '% Bytes',
         nameLocation: 'middle',
         nameGap: 0,
         nameTextStyle: {
@@ -182,17 +183,17 @@ export class FeeDistributionGraphComponent implements OnInit, OnChanges, OnDestr
         showAllSymbol: false,
         smooth: true,
         lineStyle: {
-          color: '#D81B60',
+          color: 'var(--fee-distribution-line, #D81B60)',
           width: 1,
         },
         itemStyle: {
-          color: '#b71c1c',
+          color: 'var(--fee-distribution-mark, #b71c1c)',
           borderWidth: 10,
           borderMiterLimit: 10,
           opacity: 1,
         },
         areaStyle: {
-          color: '#D81B60',
+          color: 'var(--fee-distribution-line, #D81B60)',
           opacity: 1,
         }
       }]

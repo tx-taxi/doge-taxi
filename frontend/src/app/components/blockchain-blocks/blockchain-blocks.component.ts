@@ -84,6 +84,11 @@ export class BlockchainBlocksComponent implements OnInit, OnChanges, OnDestroy {
   ) {
   }
 
+  hasAttributedPool(block: any): boolean {
+    const name = block?.extras?.pool?.name?.trim();
+    return !!name && !/^(unknown|unattributed)$/i.test(name);
+  }
+
   ngOnInit() {
     this.dynamicBlocksAmount = Math.min(8, this.stateService.env.KEEP_BLOCKS_AMOUNT);
 

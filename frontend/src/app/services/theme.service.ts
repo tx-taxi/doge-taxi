@@ -40,7 +40,9 @@ export class ThemeService {
   }
 
   private apply(theme: string): void {
-    if (this.theme === theme) {
+    document.documentElement.dataset.theme = theme;
+    this.style ||= document.getElementById('mempool-original-theme') as HTMLLinkElement | null;
+    if (this.theme === theme && !this.style) {
       return;
     }
 
@@ -64,13 +66,14 @@ export class ThemeService {
       if (!this.style) {
         this.style = document.createElement('link');
         this.style.rel = 'stylesheet';
+        this.style.id = 'mempool-original-theme';
         if (this.initialLoad) {
           this.style.media = 'print'; // Prevent white flash and other CSS issues when using custom theme on initial app load in Safari
         }
         document.head.appendChild(this.style); // load the css now
       }
 
-      this.style.onload = () => {
+      const finishLoading = () => {
         if (this.initialLoad) {
           this.style.media = 'all';
           this.initialLoad = false;
@@ -78,8 +81,16 @@ export class ThemeService {
         this.mempoolFeeColors = this.getMempoolFeeColors(theme);
         this.themeState$.next({ theme, loading: false });
       };
+      this.style.onload = finishLoading;
       this.style.onerror = () => this.apply('default');
-      this.style.href = this.getThemeFile(theme);
+      // Preserve framework specificity; place the adopted Original layer after native CSS.
+      document.head.appendChild(this.style);
+      const themeFile = this.getThemeFile(theme);
+      if (this.style.getAttribute('href') === themeFile && this.style.sheet) {
+        finishLoading();
+      } else {
+        this.style.href = themeFile;
+      }
 
       if (!this.stateService.env.customize?.theme) {
         this.storageService.setValue('theme-preference', theme);
@@ -92,7 +103,7 @@ export class ThemeService {
 
   private getThemeFile(theme: string): string {
     if (theme === 'original') {
-      return '/resources/mempool-original.css?v=20260925-palette';
+      return '/resources/mempool-original.css?v=20260925-complete';
     }
     const themeFiles = (window as any).__env?.THEME_FILES;
     if (themeFiles?.[theme]) {

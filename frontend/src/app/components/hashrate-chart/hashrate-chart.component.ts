@@ -1,7 +1,8 @@
 import { ChangeDetectionStrategy, Component, Inject, Input, LOCALE_ID, OnInit, HostBinding } from '@angular/core';
 import { echarts, EChartsOption } from '@app/graphs/echarts';
 import { combineLatest, fromEvent, merge, Observable, of } from 'rxjs';
-import { map, mergeMap, share, startWith, switchMap, tap } from 'rxjs/operators';
+import { catchError, map, mergeMap, share, startWith, switchMap, tap } from 'rxjs/operators';
+import { ThemeService } from '@app/services/theme.service';
 import { ApiService } from '@app/services/api.service';
 import { SeoService } from '@app/services/seo.service';
 import { formatNumber } from '@angular/common';
@@ -59,6 +60,7 @@ export class HashrateChartComponent implements OnInit {
 
   constructor(
     @Inject(LOCALE_ID) public locale: string,
+    private themeService: ThemeService,
     private seoService: SeoService,
     private apiService: ApiService,
     private formBuilder: UntypedFormBuilder,
@@ -77,11 +79,11 @@ export class HashrateChartComponent implements OnInit {
     let firstRun = true;
 
     if (this.widget) {
-      this.miningWindowPreference = '1y';
+      this.miningWindowPreference = '1m';
     } else {
       this.seoService.setTitle($localize`:@@3510fc6daa1d975f331e3a717bdf1a34efa06dff:Hashrate & Difficulty`);
-      this.seoService.setDescription($localize`:@@meta.description.bitcoin.graphs.hashrate:See hashrate and difficulty for the Bitcoin${seoDescriptionNetwork(this.network)} network visualized over time.`);
-      this.miningWindowPreference = this.miningService.getDefaultTimespan('3m');
+      this.seoService.setDescription($localize`:@@meta.description.bitcoin.graphs.hashrate:See estimated daily Dogecoin hashrate and daily-average difficulty over the latest 30 complete days.`);
+      this.miningWindowPreference = '1m';
     }
     this.radioGroupForm = this.formBuilder.group({ dateSpan: this.miningWindowPreference });
     this.radioGroupForm.controls.dateSpan.setValue(this.miningWindowPreference);
@@ -89,7 +91,7 @@ export class HashrateChartComponent implements OnInit {
     this.route
       .fragment
       .subscribe((fragment) => {
-        if (['1m', '3m', '6m', '1y', '2y', '3y', 'all'].indexOf(fragment) > -1) {
+        if (fragment === '1m') {
           this.radioGroupForm.controls.dateSpan.setValue(fragment, { emitEvent: false });
         }
       });
@@ -107,66 +109,25 @@ export class HashrateChartComponent implements OnInit {
               firstRun = false;
               this.miningWindowPreference = timespan;
               this.isLoading = true;
-              return this.apiService.getHistoricalHashrate$(this.timespan);
+              return this.apiService.getHistoricalHashrate$(this.timespan).pipe(catchError(() => { this.isLoading = false; this.prepareChartOptions({hashrates: [], difficulty: [], hashrateMa: []}); return of({body:{hashrates:[],difficulty:[],currentDifficulty:null,currentHashrate:null},headers:{get:()=> '0'}}); }));
             })
           ),
           this.stateService.chainTip$
             .pipe(
               switchMap(() => {
-                return this.apiService.getHistoricalHashrate$(this.timespan);
+                return this.apiService.getHistoricalHashrate$(this.timespan).pipe(catchError(() => { this.isLoading = false; this.prepareChartOptions({hashrates: [], difficulty: [], hashrateMa: []}); return of({body:{hashrates:[],difficulty:[],currentDifficulty:null,currentHashrate:null},headers:{get:()=> '0'}}); }));
               })
             )
         ),
         fromEvent(window, 'resize').pipe(startWith(null)),
+        this.themeService.themeState$,
       ).pipe(
         map(([response, _]) => response),
         tap((response: any) => {
           const data = response.body;
 
-          // always include the latest difficulty
-          if (data.difficulty.length && data.difficulty[data.difficulty.length - 1].difficulty !== data.currentDifficulty) {
-            data.difficulty.push({
-              timestamp: Date.now() / 1000,
-              difficulty: data.currentDifficulty
-            });
-          }
-
-          // We generate duplicated data point so the tooltip works nicely
-          const diffFixed = [];
-          let diffIndex = 1;
-          let hashIndex = 0;
-          while (hashIndex < data.hashrates.length) {
-            if (diffIndex >= data.difficulty.length) {
-              while (hashIndex < data.hashrates.length) {
-                diffFixed.push({
-                  timestamp: data.hashrates[hashIndex].timestamp,
-                  difficulty: data.difficulty.length > 0 ?  data.difficulty[data.difficulty.length - 1].difficulty : null
-                });
-                ++hashIndex;
-              }
-              diffIndex++;
-              break;
-            }
-
-            while (hashIndex < data.hashrates.length && diffIndex < data.difficulty.length &&
-              data.hashrates[hashIndex].timestamp <= data.difficulty[diffIndex].time
-            ) {
-              diffFixed.push({
-                timestamp: data.hashrates[hashIndex].timestamp,
-                difficulty: data.difficulty[diffIndex - 1].difficulty
-              });
-              ++hashIndex;
-            }
-            ++diffIndex;
-          }
-
-          while (diffIndex <= data.difficulty.length) {
-            diffFixed.push({
-              timestamp: data.difficulty[diffIndex - 1].time,
-              difficulty: data.difficulty[diffIndex - 1].difficulty
-            });
-            diffIndex++;
-          }
+          // Daily average observations are not retarget events or current-point estimates.
+          const diffFixed = data.difficulty.map(point => ({timestamp: point.time, difficulty: point.difficulty}));
 
           const maResolution = 15;
           const hashrateMa = [];
@@ -215,7 +176,7 @@ export class HashrateChartComponent implements OnInit {
     this.chartOptions = {
       title: title,
       animation: false,
-      color: [
+      color: this.themeService.theme === 'default' ? ['#d2b44e99', '#8d762f', '#efdc92'] : [
         new echarts.graphic.LinearGradient(0, 0, 0, 0.65, [
           { offset: 0, color: '#F4511E99' },
           { offset: 0.25, color: '#FB8C0099' },
@@ -234,7 +195,7 @@ export class HashrateChartComponent implements OnInit {
       ],
       grid: {
         height: (this.widget && this.height) ? this.height - 30 : undefined,
-        top: this.widget ? 20 : 40,
+        top: this.widget ? 20 : (this.isMobile() ? 95 : 40),
         bottom: this.widget ? 30 : 70,
         right: this.right,
         left: this.left,
@@ -245,7 +206,7 @@ export class HashrateChartComponent implements OnInit {
         axisPointer: {
           type: 'line'
         },
-        backgroundColor: 'rgba(17, 19, 31, 1)',
+        backgroundColor: this.themeService.theme === 'default' ? '#1a1915' : '#11131f',
         borderRadius: 4,
         shadowColor: 'rgba(0, 0, 0, 0.5)',
         textStyle: {
@@ -293,18 +254,18 @@ export class HashrateChartComponent implements OnInit {
       legend: (this.widget || data.hashrates.length === 0) ? undefined : {
         data: [
           {
-            name: $localize`:@@79a9dc5b1caca3cbeb1733a19515edacc5fc7920:Hashrate`,
+            name: $localize`Estimated hashrate`,
             inactiveColor: 'rgb(110, 112, 121)',
             textStyle: {
               color: 'var(--fg)',
             },
             icon: 'roundRect',
             itemStyle: {
-              color: '#FFB300',
+              color: this.themeService.theme === 'default' ? '#d2b44e' : '#FFB300',
             },
           },
           {
-            name: $localize`:@@25148835d92465353fc5fe8897c27d5369978e5a:Difficulty`,
+            name: $localize`Difficulty (daily average)`,
             inactiveColor: 'rgb(110, 112, 121)',
             textStyle: {
               color: 'var(--fg)',
@@ -312,21 +273,21 @@ export class HashrateChartComponent implements OnInit {
             icon: 'roundRect',
           },
           {
-            name: $localize`Hashrate (MA)`,
+            name: $localize`Hashrate (15-day average)`,
             inactiveColor: 'rgb(110, 112, 121)',
             textStyle: {
               color: 'var(--fg)',
             },
             icon: 'roundRect',
             itemStyle: {
-              color: '#FFB300',
+              color: this.themeService.theme === 'default' ? '#d2b44e' : '#FFB300',
             },
           },
         ],
         selected: JSON.parse(this.storageService?.getValue('hashrate_difficulty_legend') || 'null') ?? {
           '$localize`:@@79a9dc5b1caca3cbeb1733a19515edacc5fc7920:Hashrate`': true,
           '$localize`::Difficulty`': this.network === '',
-          '$localize`Hashrate (MA)`': true,
+          '$localize`Hashrate (15-day average)`': true,
         },
       },
       yAxis: data.hashrates.length === 0 ? undefined : [
@@ -393,7 +354,7 @@ export class HashrateChartComponent implements OnInit {
         {
           zlevel: 0,
           yAxisIndex: 0,
-          name: $localize`:@@79a9dc5b1caca3cbeb1733a19515edacc5fc7920:Hashrate`,
+          name: $localize`Estimated hashrate`,
           showSymbol: false,
           symbol: 'none',
           data: data.hashrates,
@@ -405,7 +366,7 @@ export class HashrateChartComponent implements OnInit {
         {
           zlevel: 1,
           yAxisIndex: 1,
-          name: $localize`:@@25148835d92465353fc5fe8897c27d5369978e5a:Difficulty`,
+          name: $localize`Difficulty (daily average)`,
           showSymbol: false,
           symbol: 'none',
           data: data.difficulty,
@@ -416,7 +377,7 @@ export class HashrateChartComponent implements OnInit {
         },
         {
           zlevel: 2,
-          name: $localize`Hashrate (MA)`,
+          name: $localize`Hashrate (15-day average)`,
           showSymbol: false,
           symbol: 'none',
           data: data.hashrateMa,

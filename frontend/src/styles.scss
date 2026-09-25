@@ -88,8 +88,8 @@ $dropdown-link-active-bg: $active-bg;
 );
 
 .input-group-text {
-  background-color: #1c2031 !important;
-  border: 1px solid #20263e !important;
+  background-color: #242118 !important;
+  border: 1px solid #393225 !important;
 }
 
 :root {
@@ -126,8 +126,8 @@ $dropdown-link-active-bg: $active-bg;
   --navbar-bg: #1e1b13;
   --transparent-fg: #ffffffbb;
   --footer-fg: rgba(255, 255, 255, 0.4);
-  --fade-out-box-bg-start: rgba(24, 32, 50, 0);
-  --fade-out-box-bg-end: rgba(24, 32, 50, 1);
+  --fade-out-box-bg-start: rgba(36, 33, 24, 0);
+  --fade-out-box-bg-end: rgba(36, 33, 24, 1);
   --opacity: 0.57;
   --world-map-bg: #3c3423;
   --world-map-border: #000;
@@ -157,6 +157,8 @@ $dropdown-link-active-bg: $active-bg;
   --orange: #d2b44e;
   --pink: #e83e8c;
 
+  --fee-distribution-line: #d2b44e;
+  --fee-distribution-mark: #efdc92;
   --fee-tier-slow: #51431f;
   --fee-tier-normal: #927a2e;
   --fee-tier-fast: #d2b44e;

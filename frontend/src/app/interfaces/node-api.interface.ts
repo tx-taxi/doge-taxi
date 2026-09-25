@@ -226,6 +226,7 @@ export interface BlockExtension {
     name: string;
     slug: string;
     minerNames: string[] | null;
+    address?: string; // Verified payout address, when supplied by the chain adapter.
   }
   orphans?: {
     height: number;

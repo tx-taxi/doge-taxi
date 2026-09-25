@@ -168,7 +168,7 @@ export class MempoolBlocksComponent implements OnInit, OnChanges, OnDestroy {
         .pipe(
           map((mempoolBlocks) => {
             if (!mempoolBlocks.length) {
-              return [{ index: 0, blockSize: 0, blockVSize: 0, feeRange: [0, 0], medianFee: 0, nTx: 0, totalFees: 0 }];
+              return [];
             }
             return mempoolBlocks;
           }),
@@ -399,7 +399,7 @@ export class MempoolBlocksComponent implements OnInit, OnChanges, OnDestroy {
   getStyleForMempoolBlock(mempoolBlock: MempoolBlock, index: number) {
     const emptyBackgroundSpacePercentage = Math.max(100 - mempoolBlock.blockVSize / this.stateService.blockVSize * 100, 0);
     const usedBlockSpace = 100 - emptyBackgroundSpacePercentage;
-    const backgroundGradients = [`repeating-linear-gradient(to right,  var(--mempool-block-loading), var(--mempool-block-loading) ${emptyBackgroundSpacePercentage}%`];
+    const backgroundGradients = [`repeating-linear-gradient(to right,  var(--mempool-block-empty, var(--secondary)), var(--mempool-block-empty, var(--secondary)) ${emptyBackgroundSpacePercentage}%`];
     const gradientColors = [];
 
     const trimmedFeeRange = index === 0 ? mempoolBlock.feeRange.slice(0, -1) : mempoolBlock.feeRange;

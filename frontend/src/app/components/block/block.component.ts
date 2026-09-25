@@ -129,6 +129,11 @@ export class BlockComponent implements OnInit, OnDestroy {
     return this.showAudit || this.block?.stale;
   }
 
+  hasAttributedPool(block: any): boolean {
+    const name = block?.extras?.pool?.name?.trim();
+    return !!name && !/^(unknown|unattributed)$/i.test(name);
+  }
+
   ngOnInit(): void {
     this.websocketService.want(['blocks', 'mempool-blocks']);
     this.network = this.stateService.network;

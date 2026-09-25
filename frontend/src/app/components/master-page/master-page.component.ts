@@ -19,14 +19,17 @@ export class MasterPageComponent implements OnInit, OnDestroy {
   @Input() headerVisible = true;
   @Input() footerVisibleOverride: boolean | null = null;
 
-  providerWarning = '';
+  providerHttpWarning = '';
+  providerFeedWarning = '';
+  providerFeedSubscription: Subscription;
+  get providerWarning(): string { return this.providerHttpWarning || this.providerFeedWarning; }
   providerTimer: any;
   checkProvider(): void {
     this.http.get<any>('/api/provider-health').subscribe({
-      next: h => this.providerWarning = h.stale
+      next: h => this.providerHttpWarning = h.stale
         ? 'Data may be out of date.'
         : h.degraded ? 'Some data is temporarily unavailable.' : '',
-      error: () => this.providerWarning = 'Unable to update. Retrying.'
+      error: () => this.providerHttpWarning = 'Unable to update. Retrying.'
     });
   }
   env: Env;
@@ -63,6 +66,7 @@ export class MasterPageComponent implements OnInit, OnDestroy {
   ) { }
 
   ngOnInit(): void {
+    this.providerFeedSubscription = this.stateService.providerFeedWarning$.subscribe(warning => this.providerFeedWarning = warning);
     this.checkProvider(); this.providerTimer = setInterval(() => this.checkProvider(), 15000);
     this.env = this.stateService.env;
     this.connectionState$ = this.stateService.connectionState$;
@@ -148,6 +152,7 @@ export class MasterPageComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
+    this.providerFeedSubscription?.unsubscribe();
     clearInterval(this.providerTimer);
     if (this.enterpriseInfo$) {
       this.enterpriseInfo$.unsubscribe();

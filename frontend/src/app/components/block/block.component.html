@@ -180,10 +180,10 @@
           <td><span class="skeleton-loader"></span></td>
         </tr>
       </ng-template>
-      <tr *ngIf="network !== 'liquid' && network !== 'liquidtestnet'">
+      <tr *ngIf="network !== 'liquid' && network !== 'liquidtestnet' && (hasAttributedPool(block) || block.extras?.pool?.address)">
         <td i18n="block.miner">Miner</td>
-        <td *ngIf="stateService.env.MINING_DASHBOARD">
-          <a placement="bottom" [routerLink]="['/mining/pool' | relativeUrl, block.extras.pool.slug]" class="badge" style="color: #FFF;padding:0;">
+        <td *ngIf="stateService.env.MINING_DASHBOARD && hasAttributedPool(block)">
+          <span placement="bottom" class="badge" style="color: #FFF;padding:0;">
             <span class="miner-name" *ngIf="block.extras.pool.minerNames?.length > 1 && block.extras.pool.minerNames[1] != ''">
               @if (block.extras.pool.minerNames[1].length > 16) {
                 {{ block.extras.pool.minerNames[1].slice(0, 15) }}…
@@ -192,14 +192,15 @@
               }
             </span>
             <app-mining-pool [slug]="block.extras.pool.slug" [name]="block.extras.pool.name"></app-mining-pool>
-          </a>
+          </span>
         </td>
-        <td *ngIf="!stateService.env.MINING_DASHBOARD && stateService.env.BASE_MODULE === 'mempool'">
+        <td *ngIf="!stateService.env.MINING_DASHBOARD && stateService.env.BASE_MODULE === 'mempool' && hasAttributedPool(block)">
           <span placement="bottom" class="badge"
             [class]="block.extras.pool.slug === 'unknown' ? 'bg-secondary' : 'bg-primary'">
             {{ block.extras.pool.name }}
         </span>
         </td>
+        <td *ngIf="!hasAttributedPool(block) && block.extras?.pool?.address"><a [routerLink]="['/address' | relativeUrl, block.extras.pool.address]" [title]="block.extras.pool.address">{{ block.extras.pool.address | slice:0:8 }}…{{ block.extras.pool.address | slice:-6 }}</a></td>
       </tr>
     </ng-container>
     <ng-template #loadingRest>

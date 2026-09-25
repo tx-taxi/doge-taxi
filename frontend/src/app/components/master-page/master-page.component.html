@@ -88,6 +88,16 @@
           <div class="svg-wrapper"><app-svg-images name="nav-bolt" width="21.59" height="100%"></app-svg-images></div>
         </a>
       </li>
+      <li class="nav-item mining" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" id="btn-pools" *ngIf="stateService.env.MINING_DASHBOARD">
+        <a class="nav-link" [routerLink]="['/mining' | relativeUrl]" (click)="collapse()" aria-label="Mining dashboard" title="Mining dashboard">
+          <div class="svg-wrapper"><app-svg-images name="nav-pickaxe" width="21.59" height="100%"></app-svg-images></div>
+        </a>
+      </li>
+      <li class="nav-item" routerLinkActive="active" id="btn-graphs">
+        <a class="nav-link" [routerLink]="['/graphs' | relativeUrl]" (click)="collapse()" aria-label="Litecoin graphs" title="Litecoin graphs">
+          <div class="svg-wrapper"><app-svg-images name="nav-chart-area" width="21.59" height="100%"></app-svg-images></div>
+        </a>
+      </li>
       <li class="nav-item" routerLinkActive="active" id="btn-blocks">
         <a class="nav-link" [routerLink]="['/blocks' | relativeUrl]" (click)="collapse()" aria-label="Recent blocks" title="Recent blocks">
           <div class="svg-wrapper"><app-svg-images name="nav-cubes" width="21.59" height="100%"></app-svg-images></div>

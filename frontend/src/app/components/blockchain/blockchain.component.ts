@@ -101,7 +101,7 @@ export class BlockchainComponent implements OnInit, OnDestroy, OnChanges {
     if (this.flipping) {
       return;
     }
-    this.mempoolOffset = 0; // no projected-block provider for DOGE
+    this.mempoolOffset = Math.max(0, width - (this.dividerOffset || 0));
     this.updateStyle();
     this.mempoolOffsetChange.emit(this.mempoolOffset);
   }
