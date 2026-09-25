@@ -1,9 +1,9 @@
 {
   "chain": "doge",
-  "commit": "d943a57eb1edfe0912bc662262cc8a824fcadd84",
+  "commit": "d6632ff2e101d8e35b55f413148c06fa99af0991",
   "approvedBaseline": "6ba310ede",
   "extractionAncestor": "2519326f9",
-  "reconciliation": "Exact native DOGE candidate components at pinned source commit; parent matched-data desktop/mobile appearance, links and lifecycle pass. Recorded-data UI verification only; sustained live/provider acceptance incomplete.",
+  "reconciliation": "Actual final native DOGE components exported after provider, pending capacity, palette, Original theme, and production transition corrections.",
   "hubWrapper": "Owner-approved centered divider and native Offline/Reconnecting export-only adaptation; isolated controlled renderer verified desktop/mobile.",
-  "status": "Independent recheck corrected local candidate; review/recheck-fixes and provider limits apply"
+  "status": "Production candidate; router integration verified separately in router review/doge-release."
 }

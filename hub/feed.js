@@ -1,6 +1,8 @@
 /** Chain-owned native explorer transport; snapshot age and stream liveness are distinct. */
 export function startFeed({onSnapshot,onStatus,signal}) {
- const endpoint='ws://127.0.0.1:4351/api/v1/ws';
+ const local=['localhost','127.0.0.1'].includes(location.hostname);
+ const endpoint=local?'ws://127.0.0.1:4351/api/v1/ws':'wss://doge.tx.taxi/api/v1/ws';
+ let providerState='stale';
  let socket,retry,watchdog,initial,lastMessage=0,lastData=0,attempt=0,stopped=false,haveData=false;
  const status=(state,error)=>onStatus?.({state,updatedAt:lastData||null,error});
  const block=value=>value && typeof value==='object' && Number.isSafeInteger(value.height) && typeof value.id==='string';
@@ -16,6 +18,10 @@ export function startFeed({onSnapshot,onStatus,signal}) {
    let data;try{data=JSON.parse(event.data)}catch{return;}
    if(!data || typeof data!=='object' || Array.isArray(data))return;
    lastMessage=Date.now();
+   const freshness=data['provider-freshness'];
+   const observedAt=Number(freshness?.observedAt || data.doge?.observedAt);
+   if(Number.isFinite(observedAt) && observedAt>0){lastData=observedAt;providerState=freshness?.state || (lastMessage-observedAt<=480000?'live':'stale');}
+   else if(freshness)providerState='stale';
    const snapshot={};
    if(Array.isArray(data.blocks) && data.blocks.every(block))snapshot.blocks=[...data.blocks].reverse();
    else if(block(data.block))snapshot.block=data.block;
@@ -23,11 +29,11 @@ export function startFeed({onSnapshot,onStatus,signal}) {
    if(data.da && typeof data.da==='object')snapshot.difficultyAdjustment=data.da;
    const hasData=Object.hasOwn(snapshot,'blocks') || Object.hasOwn(snapshot,'block') || Object.hasOwn(snapshot,'mempoolBlocks');
    if(hasData){
-    haveData=true;receivedData=true;lastData=lastMessage;attempt=0;clearTimeout(initial);
+    haveData=true;receivedData=true;attempt=0;clearTimeout(initial);
     onSnapshot(snapshot);
    }
-   // Regular stats keep a loaded, quiet chain live; they cannot initialize an empty view.
-   status(haveData && receivedData?'live':haveData?'stale':'loading');
+   // Transport heartbeats cannot make an old provider observation fresh.
+   status(haveData && receivedData && providerState==='live' && lastData && Date.now()-lastData<=480000?'live':haveData?'stale':'loading');
   };
   current.onerror=()=>{};
   current.onclose=()=>{
