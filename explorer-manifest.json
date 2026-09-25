@@ -10,22 +10,19 @@
     "deployedRuntime": "c131fadfe",
     "nativeHubExtraction": "2519326f9"
   },
-  "status": "incomplete-local-candidate-provider-limits",
-  "productionRequested": false,
+  "status": "local-provider-upgrade-awaiting-production-eligibility",
+  "productionRequested": true,
   "local": {
-    "url": "http://127.0.0.1:4351",
+    "url": "http://127.0.0.1:4451",
     "ports": [
-      4350,
-      4351
+      4450,
+      4451
     ],
     "startCommands": [
       "bash scripts/local-start.sh"
     ],
     "stopCommands": [
       "bash scripts/local-stop.sh"
-    ],
-    "incrementalCommands": [
-      "Angular watches frontend/src on4350; node --watch adapter/server.cjs on4351"
     ]
   },
   "capabilities": [
@@ -152,10 +149,9 @@
     }
   ],
   "unresolved": [
-    "Observed REST429 and websocket event limit prevent sustained live acceptance; honor persisted cooldown",
-    "Historical focus, complete address second page and block transaction page acceptance require reachable indexing budget",
-    "AuxPoW block size differs between providers; raw-node serialization reconciliation required",
-    "Long-range mining aggregation and historical fiat unsupported; bounded block difficulty/reward/fees exist"
+    "Production eligibility/API credential pending user input; no DOGE deployment/DNS/repository existed at audit",
+    "Universal live fee ranges and full historical pool dominance need additional indexed coverage/budget; ranges only shown after complete transaction verification",
+    "Sustained production capacity and container deployment remain unverified"
   ],
   "acceptance": [
     {
@@ -166,5 +162,23 @@
       "report": "review/design-cleanup/README.md",
       "status": "Design fixes verified within bounded cases; provider completeness unresolved"
     }
-  ]
+  ],
+  "providerUpgrade": {
+    "sourceRevision": "33cd9e230",
+    "collectorIntervalMs": 240000,
+    "providers": [
+      "BlockCypher: tip/pending/indexed address",
+      "Blockchair: contiguous blocks, transaction bodies, daily history"
+    ],
+    "budget": {
+      "blockcypherPerHour": 90,
+      "blockchairWeightedPerDay": 900
+    },
+    "productionPrerequisite": "Configured DOGE_BLOCKCHAIR_KEY or confirmed noncommercial eligibility; provider terms cannot be inferred",
+    "evidence": [
+      "review/doge/provider-recheck/README.md",
+      "review/doge/frontend/README.md",
+      "review/doge/gateway/README.md"
+    ]
+  }
 }

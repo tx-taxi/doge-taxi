@@ -1,0 +1,13 @@
+{
+  "controlled": true,
+  "lateSubscriptionIgnored": true,
+  "detailIsolation": true,
+  "confirmationRefresh": true,
+  "addressScopedUpdates": true,
+  "addressConfirmation": true,
+  "addressUnsubscribe": true,
+  "pendingFrame": true,
+  "outageRecovery": true,
+  "frames": 40,
+  "otherFrames": 16
+}

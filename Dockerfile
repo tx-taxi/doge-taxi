@@ -13,14 +13,16 @@ RUN apt-get update && apt-get install -y --no-install-recommends fonts-dejavu-co
 COPY adapter/package.json adapter/package-lock.json ./adapter/
 RUN cd adapter && npm ci --omit=dev
 COPY adapter ./adapter
-COPY frontend/src/resources/branding/ltc-dark-navbar.svg ./frontend/src/resources/branding/ltc-dark-navbar.svg
+COPY frontend/src/resources/branding/doge-dark-navbar.svg ./frontend/src/resources/branding/doge-dark-navbar.svg
 COPY --from=frontend-builder /app/frontend/dist/mempool/browser ./public
 COPY --from=frontend-builder /app/frontend/src/resources ./public/resources
-ENV LTC_HOST=0.0.0.0
-ENV LTC_STATIC_ROOT=/app/public
-ENV LTC_SITE_ORIGIN=https://ltc.tx.taxi
-ENV LTC_ROUTER_ORIGIN=https://tx.taxi
+ENV DOGE_HOST=0.0.0.0
+ENV DOGE_STATIC_ROOT=/app/public
+ENV DOGE_SITE_ORIGIN=https://doge.tx.taxi
+ENV DOGE_ROUTER_ORIGIN=https://tx.taxi
 ENV PORT=8080
+RUN mkdir -p /app/data && chown node:node /app/data
+ENV DOGE_DATA_DIR=/app/data
 USER node
 EXPOSE 8080
 HEALTHCHECK --interval=15s --timeout=5s --start-period=15s --retries=3 CMD node -e "fetch('http://127.0.0.1:8080/healthz').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"
