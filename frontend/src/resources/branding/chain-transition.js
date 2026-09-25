@@ -68,7 +68,7 @@
   if (!source && location.pathname === '/') {
     let handoff;
     try { handoff = JSON.parse(decodeURIComponent(document.cookie.split('; ').find(c => c.startsWith(cookieName + '='))?.slice(cookieName.length + 1) || '')); } catch {}
-    const profile = profiles.find(p => p.chain === handoff?.chain);
+    const profile = profiles.find(p => p.chain === handoff?.chain && (!p.localOnly || local));
     if (profile && handoff?.direction === 'hub' && Date.now() - handoff.at >= 0 && Date.now() - handoff.at < 15000) {
       cookie('');
       layer = surface(profile);
@@ -143,7 +143,7 @@
     },true);
   }
   function requestHubSnapshot() {
-    const profile=profiles.find(profile=>profile.chain===source);
+    const profile=profiles.find(profile=>profile.chain===source && (!profile.localOnly || local));
     if(!profile || !/^\/(?:[a-z]{2}(?:-[A-Z]{2})?\/)?$/.test(location.pathname))return;
     const hubOrigin=local?'http://127.0.0.1:4340':'https://tx.taxi';
     const nonce=crypto.randomUUID();
