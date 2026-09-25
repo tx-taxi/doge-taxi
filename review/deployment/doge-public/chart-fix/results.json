@@ -1,0 +1,30 @@
+[
+  {
+    "theme": "default",
+    "name": "root",
+    "errors": [],
+    "overflow": false,
+    "graphLabel": "Dogecoin graphs"
+  },
+  {
+    "theme": "default",
+    "name": "pending",
+    "errors": [],
+    "overflow": false,
+    "graphLabel": "Dogecoin graphs"
+  },
+  {
+    "theme": "original",
+    "name": "root",
+    "errors": [],
+    "overflow": false,
+    "graphLabel": "Dogecoin graphs"
+  },
+  {
+    "theme": "original",
+    "name": "pending",
+    "errors": [],
+    "overflow": false,
+    "graphLabel": "Dogecoin graphs"
+  }
+]

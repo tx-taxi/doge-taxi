@@ -31,3 +31,9 @@ The shared collector runs every 240 seconds. Persistent ceilings are 90 BlockCyp
 
 DOGE http://127.0.0.1:4451/ (frontend 4450), router http://127.0.0.1:4461/.
 From `/home/lukee/dev/doge-completion`: `bash scripts/local-start.sh`; stop with `bash scripts/local-stop.sh`. Review servers remain running.
+
+## Final corrective rollout
+
+Final deployed DOGE revision: `d2ac2f3e27f38f1a9771daca43d85b107a3eceaf`; Coolify deployment `ugctujlnzne3unnkhxbzes9a` finished. The initial public matrix exposed an intermittent ECharts `coord` error when observations arrived. `../doge/frontend/coord-fix.md` records the exact dependency reproduction and actual Angular checks. Replacing an unbounded single-color visualMap with the identical direct line color fixes the first-sample failure. Initial failing evidence is retained; the affected public checks are recorded separately under `doge-public/chart-fix/`.
+
+Post-deployment affected checks passed: default/Original root and pending, no browser exceptions or horizontal overflow, corrected graph label present. Final default root screenshot opened and inspected. Fresh provider-health remained live, nondegraded and nonstale.

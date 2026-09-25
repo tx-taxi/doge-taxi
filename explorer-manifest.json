@@ -188,6 +188,8 @@
     "statusUrl": "https://status.tx.taxi",
     "monitorId": 64,
     "hubRevision": "02301b73d860f397da0f167c69819fd8e6f6dced",
-    "evidence": "review/deployment/README-doge-launch.md"
+    "evidence": "review/deployment/README-doge-launch.md",
+    "revision": "d2ac2f3e27f38f1a9771daca43d85b107a3eceaf",
+    "deploymentId": "ugctujlnzne3unnkhxbzes9a"
   }
 }
