@@ -1,7 +1,7 @@
 const dogecoin = [''];
 
 const example = (path: string, response: string) => ({
-  codeTemplate: { curl: 'curl -s %{1}' },
+  codeTemplate: { curl: path },
   codeSampleMainnet: { curl: [path], response },
   codeSampleTestnet: { curl: [path], response },
   codeSampleSignet: { curl: [path], response },
