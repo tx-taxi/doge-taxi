@@ -6,11 +6,13 @@ const path = require('node:path');
 const {WebSocket, WebSocketServer} = require('ws');
 const sharp = require('sharp');
 const {providerStatus} = require('./provider-health.cjs');
+const {createPoolLogoLoader} = require('./pool-logo.cjs');
 const STATIC_ROOT = process.env.DOGE_STATIC_ROOT && path.resolve(process.env.DOGE_STATIC_ROOT);
 const FRONTEND_ORIGIN = process.env.DOGE_FRONTEND_ORIGIN || 'http://127.0.0.1:4350';
 const ROUTER_ORIGIN = process.env.DOGE_ROUTER_ORIGIN || 'http://127.0.0.1:4340';
 const SITE_ORIGIN = process.env.DOGE_SITE_ORIGIN || 'http://127.0.0.1:4351';
 const PRIMARY = process.env.DOGE_BLOCKCYPHER_URL || 'https://api.blockcypher.com/v1/doge/main';
+const loadPoolLogo = createPoolLogoLoader(STATIC_ROOT ? path.join(STATIC_ROOT, 'resources/mining-pools/default.svg') : path.join(__dirname, '../frontend/src/resources/mining-pools/default.svg'));
 const cache = new Map(), inflight = new Map(), failedPaths = new Map();
 const health = {primary: PRIMARY, lastSuccess: null, lastFailure: null, websocket: 'connecting'};
 const MAX_CACHE = 500;
@@ -99,7 +101,7 @@ const server=http.createServer(async(req,res)=>{
    const r=await api(u.pathname+u.search);
    return send(res,r.status,r.data,typeof r.data==='string'?'text/plain':'application/json',{...r.headers,'X-DOGE-Source':r.source,...(r.at?{'X-DOGE-Stale':String(r.stale),'X-DOGE-Observed-At':String(r.at)}:{})});
   }
-  if(u.pathname.startsWith('/resources/mining-pools/')) return send(res,200,fs.readFileSync(STATIC_ROOT?path.join(STATIC_ROOT,'resources/mining-pools/default.svg'):path.join(__dirname,'../frontend/src/resources/mining-pools/default.svg')),'image/svg+xml');
+  if(u.pathname.startsWith('/resources/mining-pools/')) return send(res,200,await loadPoolLogo(u.pathname.slice('/resources/mining-pools/'.length)),'image/svg+xml',{'Cache-Control':'public, max-age=3600'});
   if(u.pathname==='/og.png') return send(res,200,await card(u.searchParams.get('path')||'/'),'image/png');
   if(u.pathname.startsWith('/source/')||u.pathname.endsWith('.map'))return send(res,404,{error:'Not found'});
   let r;
