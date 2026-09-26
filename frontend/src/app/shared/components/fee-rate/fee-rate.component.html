@@ -1,1 +1,1 @@
-<ng-container *ngIf="fee !== undefined && fee !== null; else unavailable">{{ fee / (weight / 4) | feeRounding:rounding:dp }} <span *ngIf="showUnit" [class]="unitClass" [style]="unitStyle">koinu/B</span></ng-container><ng-template #unavailable>—</ng-template>
+<ng-container *ngIf="fee !== undefined && fee !== null; else unavailable">{{ compactBlock ? compactBlockNumber(fee / (weight / 4)) : (fee / (weight / 4) | feeRounding:rounding:dp) }} <span *ngIf="showUnit" [class]="unitClass" [style]="unitStyle">koinu/B</span></ng-container><ng-template #unavailable>—</ng-template>

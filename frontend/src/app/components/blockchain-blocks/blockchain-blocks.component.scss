@@ -280,3 +280,8 @@
   z-index: -1;
 }
 .height-gap {position:absolute;left:calc(100% + 4px);top:35%;width:calc(var(--block-size) * .24 - 8px);text-align:center;color:var(--fg);font-size:18px;line-height:14px;z-index:12;small{display:block;font-size:10px;}}
+
+// Compact strip values keep the native fixed-height rows aligned.
+.fees, .fee-span, .block-size, .transaction-count, .time-difference {
+  white-space: nowrap;
+}
