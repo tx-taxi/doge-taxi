@@ -1,38 +1,63 @@
-# The Mempool Open Source Project® [![mempool](https://img.shields.io/endpoint?url=https://dashboard.cypress.io/badge/simple/ry4br7/master&style=flat-square)](https://dashboard.cypress.io/projects/ry4br7/runs)
+<p align="center">
+  <img src="frontend/src/resources/branding/doge-favicon.svg" width="88" height="88" alt="doge.tx.taxi logo">
+</p>
 
-https://user-images.githubusercontent.com/93150691/226236121-375ea64f-b4a1-4cc0-8fad-a6fb33226840.mp4
+<h1 align="center">Dogecoin Explorer · doge.tx.taxi</h1>
 
-<br>
+<p align="center">
+  A public Dogecoin block explorer and API.<br>
+  <a href="https://doge.tx.taxi">Open doge.tx.taxi</a>
+</p>
 
-Mempool is the fully-featured mempool visualizer, explorer, and API service running at [mempool.space](https://mempool.space/). 
+## Overview
 
-It is an open-source project developed and operated for the benefit of the Bitcoin community, with a focus on the emerging transaction fee market that is evolving Bitcoin into a multi-layer ecosystem.
+[doge.tx.taxi](https://doge.tx.taxi) is a Dogecoin explorer in the [tx.taxi](https://tx.taxi) network. It combines a branded Angular frontend with a read-only Dogecoin API adapter and a native bridge to the hub.
 
-# Installation Methods
+## Features
 
-Mempool can be self-hosted on a wide variety of your own hardware, ranging from a simple one-click installation on a Raspberry Pi full-node distro all the way to a robust production instance on a powerful FreeBSD server. 
+- Look up Dogecoin blocks, transactions, and indexed address history.
+- Browse recent blocks, fee estimates, and an observed pending-transaction sample. The sample is not a complete global mempool.
+- View Dogecoin mining and network history, including difficulty and estimated hashrate where provider data is available.
+- Use current DOGE/USD pricing in the calculator and move between supported chains through the tx.taxi search interface.
+- Return explicit unavailable states when a provider cannot supply complete data; cached data retains its provider observation time.
 
-Most people should use a <a href="#one-click-installation">one-click install method</a>.
+## Development
 
-Other install methods are meant for developers and others with experience managing servers. If you want support for your own production instance of Mempool, or if you'd like to have your own instance of Mempool run by the mempool.space team on their own global ISP infrastructure—check out <a href="https://mempool.space/enterprise" target="_blank">Mempool Enterprise®</a>.
+Use Node.js `v24.13.0` (see [.nvmrc](.nvmrc)), then install the frontend and adapter dependencies:
 
-<a id="one-click-installation"></a>
-## One-Click Installation
+```bash
+npm ci --prefix frontend
+npm ci --prefix adapter
+```
 
-Mempool can be conveniently installed on the following full-node distros: 
-- [Umbrel](https://github.com/getumbrel/umbrel)
-- [RaspiBlitz](https://github.com/rootzoll/raspiblitz)
-- [RoninDojo](https://code.samourai.io/ronindojo/RoninDojo)
-- [myNode](https://github.com/mynodebtc/mynode)
-- [StartOS](https://github.com/Start9Labs/start-os)
-- [nix-bitcoin](https://github.com/fort-nix/nix-bitcoin/blob/a1eacce6768ca4894f365af8f79be5bbd594e1c3/examples/configuration.nix#L129)
+Start the local explorer at `http://127.0.0.1:4451`:
 
-**We highly recommend you deploy your own Mempool instance this way.** No matter which option you pick, you'll be able to get your own fully-sovereign instance of Mempool up quickly without needing to fiddle with any settings.
+```bash
+bash scripts/local-start.sh
+```
 
-## Advanced Installation Methods
+Stop it with:
 
-Mempool can be installed in other ways too, but we only recommend doing so if you're a developer, have experience managing servers, or otherwise know what you're doing.
+```bash
+bash scripts/local-stop.sh
+```
 
-- See the [`docker/`](./docker/) directory for instructions on deploying Mempool with Docker.
-- See the [`backend/`](./backend/) and [`frontend/`](./frontend/) directories for manual install instructions oriented for developers.
-- See the [`production/`](./production/) directory for guidance on setting up a more serious Mempool instance designed for high performance at scale.
+Build the production container locally:
+
+```bash
+docker build -t doge-taxi .
+```
+
+The adapter needs outbound access to the Atomic Wallet Dogecoin API, BlockCypher’s Dogecoin API, Blockchair’s Dogecoin API, and Kraken’s public ticker API. Local development can use the public-provider configuration. A containerized runtime requires either `DOGE_BLOCKCHAIR_KEY` or an explicit `DOGE_BLOCKCHAIR_NONCOMMERCIAL=1` eligibility setting for Blockchair; `BLOCKCYPHER_TOKEN` is optional for higher BlockCypher allowance. Supply provider values through the runtime environment and never commit them.
+
+## Attribution and license
+
+This repository adapts the [Mempool Open Source Project](https://github.com/mempool/mempool) for Dogecoin in the tx.taxi network. The inherited root README is retained in [UPSTREAM_README.md](UPSTREAM_README.md) for provenance.
+
+The code is distributed under the terms in [LICENSE](LICENSE) and [COPYING.md](COPYING.md), including the GNU Affero General Public License v3 text and applicable trademark notices.
+
+## Links
+
+- [Live explorer](https://doge.tx.taxi)
+- [tx.taxi hub](https://tx.taxi)
+- [Telegram channel](https://t.me/txtaxi)
