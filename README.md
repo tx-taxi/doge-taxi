@@ -1,5 +1,8 @@
 <p align="center">
-  <img src="frontend/src/resources/branding/doge-favicon.svg" width="88" height="88" alt="doge.tx.taxi logo">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="frontend/src/resources/branding/doge-dark-full.svg">
+    <img src="frontend/src/resources/branding/doge-light-full.svg" width="360" alt="doge.tx.taxi banner logo">
+  </picture>
 </p>
 
 <h1 align="center">Dogecoin Explorer · doge.tx.taxi</h1>
