@@ -1,27 +1,26 @@
 <div class="container-xl about-page">
-  <div class="intro">
-    <h1 class="visually-hidden">About doge.tx.taxi</h1>
-    <img src="/resources/branding/doge-dark-full.svg" alt="doge.tx.taxi Dogecoin explorer" class="mempool-logo">
-    <div class="version">
-      <span>doge.tx.taxi - Dogecoin block and mempool explorer</span>
-      <span class="version-sub">A tx.taxi explorer built from <a href="https://github.com/mempool/mempool" target="_blank" rel="noopener noreferrer">mempool/mempool</a></span>
-    </div>
-  </div>
-
-  <div class="about-text">
-    <h5>About doge.tx.taxi</h5>
+  <app-tx-taxi-docs-intro chainName="Dogecoin" chainHost="doge.tx.taxi" context="explorer"></app-tx-taxi-docs-intro>
+  <div class="about-layout">
+    <aside class="about-identity">
+      <img src="/resources/branding/doge-dark-full.svg" alt="doge.tx.taxi" class="about-logo">
+      <h1>About doge.tx.taxi</h1>
+      <p>The Dogecoin explorer in the tx.taxi family.</p>
+      <nav class="about-links" aria-label="Project links">
+        <a routerLink="/docs">Dogecoin documentation</a>
+        <a href="https://github.com/tx-taxi/doge-taxi" target="_blank" rel="noopener noreferrer">Explorer source</a>
+        <a href="https://t.me/hiss" target="_blank" rel="noopener noreferrer">Contact the maintainer</a>
+      </nav>
+    </aside>
+    <main class="about-text">
+      <h2>About doge.tx.taxi</h2>
     <p>doge.tx.taxi is the Dogecoin explorer in the tx.taxi family. Explore blocks, transactions, addresses, mining activity and transaction fees.</p>
 
-    <h5>Dogecoin-native data</h5>
-    <p>Values are denominated in DOGE, koinu, or the selected fiat currency. Fee rates remain koinu/B, transaction sizes use bytes, and all block, address, mining, concepts shown by the interface retain their Dogecoin meaning.</p>
-
-
-  </div>
-
-  <div class="contributors" id="links">
-    <h5>Project links</h5>
-    <p><a [routerLink]="['/docs']">doge.tx.taxi documentation</a></p>
-    <p><a href="https://github.com/mempool/mempool" target="_blank" rel="noopener noreferrer">Upstream project and contributors</a></p>
-    <p><a href="https://t.me/hiss" target="_blank" rel="noopener noreferrer">Contact the tx.taxi maintainer</a></p>
+    <h2>Dogecoin-native data</h2>
+    <p>Values are denominated in DOGE, koinu, or the selected fiat currency. Fee rates remain koinu/B, transaction sizes use bytes, and all block, address, and mining concepts shown by the interface retain their Dogecoin meaning.</p>
+      <div class="about-attribution">
+        <h2>Built on open source</h2>
+        <p>This explorer builds on the <a href="https://github.com/mempool/mempool" target="_blank" rel="noopener noreferrer">Mempool Open Source Project</a>. See the explorer source for its license and <a href="/3rdpartylicenses.txt">third-party attribution</a>.</p>
+      </div>
+    </main>
   </div>
 </div>
