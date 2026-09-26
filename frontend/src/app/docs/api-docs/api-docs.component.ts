@@ -3,7 +3,7 @@ import { Env, StateService } from '@app/services/state.service';
 import { Observable, merge, of, Subject, Subscription } from 'rxjs';
 import { tap, takeUntil } from 'rxjs/operators';
 import { ActivatedRoute } from '@angular/router';
-import { faqData, restApiDocsData, wsApiDocsData, electrumApiDocsData } from '@app/docs/api-docs/api-docs-data';
+import { faqData, restApiDocsData, wsApiDocsData } from '@app/docs/api-docs/api-docs-data';
 import { FaqTemplateDirective } from '@app/docs/faq-template/faq-template.component';
 
 @Component({
@@ -23,17 +23,11 @@ export class ApiDocsComponent implements OnInit, AfterViewInit {
   code: any;
   baseNetworkUrl = '';
   @Input() whichTab: string;
-  desktopDocsNavPosition = 'relative';
   faq: any[];
   restDocs: any[];
   wsDocs: any;
-  electrumDocs: any[];
   screenWidth: number;
-  officialMempoolInstance: boolean;
-  runningElectrs: boolean;
-  auditEnabled: boolean;
   mobileViewport: boolean = false;
-  showMobileEnterpriseUpsell: boolean = true;
   timeLtrSubscription: Subscription;
   timeLtr: boolean = this.stateService.timeLtr.value;
   isMempoolSpaceBuild = this.stateService.isMempoolSpaceBuild;
@@ -50,7 +44,6 @@ export class ApiDocsComponent implements OnInit, AfterViewInit {
     if (this.faqTemplates) {
       this.faqTemplates.forEach((x) => this.dict[x.type] = x.template);
     }
-    this.desktopDocsNavPosition = ( window.pageYOffset > 115 ) ? 'fixed' : 'relative';
     this.mobileViewport = window.innerWidth <= 992;
   }
 
@@ -66,17 +59,11 @@ export class ApiDocsComponent implements OnInit, AfterViewInit {
           });
         }
       }
-      window.addEventListener('scroll', that.onDocScroll, { passive: true });
     }, 1 );
   }
 
   ngOnInit(): void {
     this.env = this.stateService.env;
-    this.officialMempoolInstance = this.env.OFFICIAL_MEMPOOL_SPACE;
-    this.stateService.backend$.pipe(takeUntil(this.destroy$)).subscribe((backend) => {
-      this.runningElectrs = !!(backend == 'esplora');
-    });
-    this.auditEnabled = this.env.AUDIT;
     this.network$ = merge(of(''), this.stateService.networkChanged$).pipe(
       tap((network: string) => {
         if (this.env.BASE_MODULE === 'mempool' && network !== '' && this.env.ROOT_NETWORK === '') {
@@ -99,7 +86,6 @@ export class ApiDocsComponent implements OnInit, AfterViewInit {
     this.faq = faqData;
     this.restDocs = restApiDocsData;
     this.wsDocs = wsApiDocsData;
-    this.electrumDocs = electrumApiDocsData;
 
     this.network$.pipe(takeUntil(this.destroy$)).subscribe((network) => {
       this.active = (network === 'liquid' || network === 'liquidtestnet') ? 2 : 0;
@@ -129,13 +115,9 @@ export class ApiDocsComponent implements OnInit, AfterViewInit {
   ngOnDestroy(): void {
     this.destroy$.next(true);
     this.destroy$.complete();
-    window.removeEventListener('scroll', this.onDocScroll);
     this.timeLtrSubscription.unsubscribe();
   }
 
-  onDocScroll() {
-    this.desktopDocsNavPosition = ( window.pageYOffset > 115 ) ? 'fixed' : 'relative';
-  }
 
   anchorLinkClick( e ) {
     const targetId = e.fragment;
@@ -239,4 +221,3 @@ export class ApiDocsComponent implements OnInit, AfterViewInit {
   }
 
 }
-

@@ -17,7 +17,6 @@ export class DocsComponent implements OnInit {
   env: Env;
   showWebSocketTab = true;
   showFaqTab = true;
-  showElectrsTab = true;
 
   @HostBinding('attr.dir') dir = 'ltr';
 
@@ -32,8 +31,7 @@ export class DocsComponent implements OnInit {
   ngOnInit(): void {
     this.websocket.want(['blocks']);
     this.env = this.stateService.env;
-    this.showFaqTab = ( this.env.BASE_MODULE === 'mempool' ) ? true : false;
-    this.showElectrsTab = this.stateService.env.OFFICIAL_MEMPOOL_SPACE;
+    this.showFaqTab = true;
 
     document.querySelector<HTMLElement>( 'html' ).style.scrollBehavior = 'smooth';
   }
@@ -42,31 +40,19 @@ export class DocsComponent implements OnInit {
 
     const url = this.route.snapshot.url;
 
-    if (url[0].path === 'faq' ) {
+    if (url[0]?.path === 'faq' ) {
       this.activeTab = 0;
       this.seoService.setTitle($localize`:@@meta.title.docs.faq:FAQ`);
-      this.seoService.setDescription($localize`:@@meta.description.docs.faq:Get answers to common Dogecoin questions, including mempool behavior, transaction confirmation, fees, and self-hosted explorers.`);
+      this.seoService.setDescription($localize`:@@meta.description.docs.faq:Get answers to common Dogecoin questions, including block timing, AuxPoW, fees, pending observations, transactions, and available explorer data.`);
       this.ogService.setManualOgImage('faq.jpg');
-    } else if( url[1].path === 'rest' ) {
+    } else if( url[1]?.path === 'rest' ) {
       this.activeTab = 1;
       this.seoService.setTitle($localize`:@@meta.title.docs.rest:REST API`);
-      if (this.stateService.network === 'liquid' || this.stateService.network === 'liquidtestnet' ) {
-        this.seoService.setDescription($localize`:@@meta.description.docs.rest-liquid:Documentation for the liquid.network REST API service: get info on addresses, transactions, assets, blocks, and more.`);
-      } else {
-        this.seoService.setDescription($localize`:@@meta.description.docs.rest-bitcoin:Documentation for the doge.tx.taxi REST API: query Dogecoin addresses, transactions, blocks, fees, mining, and network data.`);
-      }
-    } else if( url[1].path === 'websocket' ) {
+      this.seoService.setDescription($localize`:@@meta.description.docs.rest-bitcoin:Documentation for the doge.tx.taxi REST API: query available Dogecoin block, transaction, address, fee, and network data.`);
+    } else if( url[1]?.path === 'websocket' ) {
       this.activeTab = 2;
       this.seoService.setTitle($localize`:@@meta.title.docs.websocket:WebSocket API`);
-      if( this.stateService.network === 'liquid' || this.stateService.network === 'liquidtestnet' ) {
-        this.seoService.setDescription($localize`:@@meta.description.docs.websocket-liquid:Documentation for the liquid.network WebSocket API service: get real-time info on blocks, mempools, transactions, addresses, and more.`);
-      } else {
-        this.seoService.setDescription($localize`:@@meta.description.docs.websocket-bitcoin:Documentation for the doge.tx.taxi WebSocket API: receive real-time Dogecoin block, mempool, transaction, and address updates.`);
-      }
-    } else {
-      this.activeTab = 3;
-      this.seoService.setTitle($localize`:@@meta.title.docs.electrum:Electrum RPC`);
-      this.seoService.setDescription($localize`:@@meta.description.docs.electrumrpc:Documentation for our Electrum RPC interface: get instant, convenient, and reliable access to an Esplora instance.`);
+      this.seoService.setDescription($localize`:@@meta.description.docs.websocket-bitcoin:Documentation for the doge.tx.taxi WebSocket API: receive current Dogecoin block, transaction, address, pending-sample, and provider-freshness updates.`);
     }
   }
 

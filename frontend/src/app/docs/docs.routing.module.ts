@@ -43,7 +43,6 @@ if (browserWindowEnv.BASE_MODULE && browserWindowEnv.BASE_MODULE === 'liquid') {
     },
     {
       path: 'faq',
-      data: { networks: ['bitcoin'] },
       component: DocsComponent
     },
     {

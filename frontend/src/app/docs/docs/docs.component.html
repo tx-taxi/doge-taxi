@@ -1,10 +1,12 @@
-<div class="container-xl py-4">
- <h1>Dogecoin explorer documentation</h1>
- <div class="card p-4 my-4"><h2>Blocks, transactions and addresses</h2><p>Search a block height, block hash, transaction ID, transparent Dogecoin address, or supported explorer URL. A 64-character hash may belong to several chains; manual chain selection stays available.</p><p>Dogecoin targets one block per minute, uses per-block DigiShield difficulty adjustment and supports Scrypt merged mining through AuxPoW. Since block 600,000 the block subsidy is 10,000 DOGE, with no further halvings.</p><p>1 DOGE = 100,000,000 koinu. Fee rates use koinu/B. Fiat values show the current-price equivalent.</p></div>
- <div class="card p-4 my-4"><h2>Read-only API</h2><p>Look up Dogecoin blocks, transactions and addresses.</p><pre>GET /api/blocks/tip/height
-GET /api/block-height/100000
-GET /api/block/100000/txs
-GET /api/tx/19220173c151925d493a25dbe67798fa11e6e4db01b927b1c04cddead85d3d12
-GET /api/address/DDogepartyxxxxxxxxxxxxxxxxxxw1dfzr/txs
-GET /api/address/:address/txs/chain/:last-confirmed-txid</pre><p>Live updates: WebSocket /api/v1/ws with action init, followed by action want and data [blocks, stats, mempool-blocks].</p></div>
+<div class="container-xl">
+  <div class="text-center">
+    <app-tx-taxi-docs-intro chainName="Dogecoin" chainHost="doge.tx.taxi"></app-tx-taxi-docs-intro>
+    <h2 i18n="documentation.title">Documentation</h2>
+    <ul ngbNav #nav="ngbNav" [animation]="false" [(activeId)]="activeTab" class="nav-tabs" role="tablist">
+      <li [ngbNavItem]="0" role="presentation"><a ngbNavLink [routerLink]="['/docs/faq' | relativeUrl]" role="tab">FAQ</a><ng-template ngbNavContent><app-api-docs [whichTab]="'faq'"></app-api-docs></ng-template></li>
+      <li [ngbNavItem]="1" role="presentation"><a ngbNavLink [routerLink]="['/docs/api/rest' | relativeUrl]" role="tab">API - REST</a><ng-template ngbNavContent><app-api-docs [whichTab]="'rest'"></app-api-docs></ng-template></li>
+      <li [ngbNavItem]="2" role="presentation"><a ngbNavLink [routerLink]="['/docs/api/websocket' | relativeUrl]" role="tab">API - WebSocket</a><ng-template ngbNavContent><app-api-docs [whichTab]="'websocket'"></app-api-docs></ng-template></li>
+    </ul>
+    <div id="main-tab-content" [ngbNavOutlet]="nav"></div>
+  </div>
 </div>

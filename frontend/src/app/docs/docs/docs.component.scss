@@ -5,6 +5,8 @@
   margin-bottom: 20px;
 }
 
+:host ::ng-deep .taxi-docs-intro { margin-top: 1rem; }
+
 #footer {
   clear: both;
 }
