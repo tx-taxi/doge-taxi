@@ -1,0 +1,166 @@
+{
+  "host": "doge.tx.taxi",
+  "chain": "Dogecoin",
+  "symbol": "DOGE",
+  "description": "Explore Dogecoin blocks, transactions, addresses, fees and mining activity.",
+  "coverage": "Dogecoin blocks, transactions and indexed standard addresses are supported. Pending data is a bounded sample, and historical depth depends on the indexed provider. Fee suggestions are observations, not confirmation guarantees. Current fiat conversion and bounded observed mining history are distinct from historical prices.",
+  "poolPages": false,
+  "aliases": {
+    "/docs": "/docs/faq",
+    "/docs/api": "/docs/api/rest",
+    "/api": "/docs/api/rest",
+    "/api/api/rest": "/docs/api/rest",
+    "/api/api/websocket": "/docs/api/websocket",
+    "/api/faq": "/docs/faq",
+    "/blocks": "/blocks/1",
+    "/mining/blocks": "/blocks/1",
+    "/graphs": "/graphs/mempool",
+    "/llm.txt": "/llms.txt",
+    "/index.html": "/",
+    "/tx": "/",
+    "/tx/preview": "/docs/faq"
+  },
+  "routes": [
+    {
+      "path": "/",
+      "kind": "home",
+      "label": "Dogecoin explorer",
+      "description": "Explore Dogecoin blocks, transactions, addresses, fees and mining activity.",
+      "source": "src/app/components/about/about.component.html"
+    },
+    {
+      "path": "/about",
+      "kind": "document",
+      "label": "About doge.tx.taxi",
+      "description": "Learn about doge.tx.taxi, the Dogecoin explorer in the tx.taxi family.",
+      "source": "src/app/components/about/about.component.html"
+    },
+    {
+      "path": "/privacy-policy",
+      "kind": "document",
+      "label": "Privacy policy",
+      "description": "Privacy notes for doge.tx.taxi, including public Dogecoin data, browser preferences, server logs, and independent verification.",
+      "source": "src/app/components/privacy-policy/privacy-policy.component.html"
+    },
+    {
+      "path": "/terms-of-service",
+      "kind": "document",
+      "label": "Terms of service",
+      "description": "Terms for using doge.tx.taxi as an informational Dogecoin block and mempool explorer.",
+      "source": "src/app/components/terms-of-service/terms-of-service.component.html"
+    },
+    {
+      "path": "/trademark-policy",
+      "kind": "document",
+      "label": "Trademark and attribution",
+      "description": "Trademark and attribution notes for doge.tx.taxi, including upstream mempool/mempool attribution and project independence.",
+      "source": "src/app/components/trademark-policy/trademark-policy.component.html"
+    },
+    {
+      "path": "/docs/faq",
+      "kind": "docs-faq",
+      "label": "Dogecoin explorer guide",
+      "description": "Dogecoin explorer coverage, amounts, fees, confirmations and data limits."
+    },
+    {
+      "path": "/docs/api/rest",
+      "kind": "docs-rest",
+      "label": "Dogecoin REST API",
+      "description": "Read-only REST API documentation for doge.tx.taxi: blocks, transactions, addresses and supported observations."
+    },
+    {
+      "path": "/docs/api/websocket",
+      "kind": "docs-ws",
+      "label": "Dogecoin WebSocket API",
+      "description": "WebSocket documentation for observed Dogecoin explorer updates and supported subscriptions."
+    },
+    {
+      "path": "/blocks/1",
+      "kind": "live",
+      "label": "Dogecoin blocks",
+      "description": "See the most recent Dogecoin blocks along with basic stats such as block height, block reward, block size, and more.",
+      "context": "Dogecoin blocks, transactions and indexed standard addresses are supported. Pending data is a bounded sample, and historical depth depends on the indexed provider. Fee suggestions are observations, not confirmation guarantees. Current fiat conversion and bounded observed mining history are distinct from historical prices.",
+      "source": "src/app/components/blocks-list/blocks-list.component.ts"
+    },
+    {
+      "path": "/txs",
+      "kind": "live",
+      "label": "Dogecoin recent transactions",
+      "description": "Recent pending Dogecoin transaction observations shown by the explorer.",
+      "context": "Dogecoin blocks, transactions and indexed standard addresses are supported. Pending data is a bounded sample, and historical depth depends on the indexed provider. Fee suggestions are observations, not confirmation guarantees. Current fiat conversion and bounded observed mining history are distinct from historical prices.",
+      "source": "src/app/components/recent-transactions-list/recent-transactions-list.component.ts"
+    },
+    {
+      "path": "/mining",
+      "kind": "live",
+      "label": "Dogecoin mining dashboard",
+      "description": "Dogecoin mining observations: recent blocks, rewards, available fee data and supported difficulty or hashrate measurements.",
+      "context": "Dogecoin blocks, transactions and indexed standard addresses are supported. Pending data is a bounded sample, and historical depth depends on the indexed provider. Fee suggestions are observations, not confirmation guarantees. Current fiat conversion and bounded observed mining history are distinct from historical prices.",
+      "source": "src/app/components/mining-dashboard/mining-dashboard.component.ts"
+    },
+    {
+      "path": "/tools/calculator",
+      "kind": "live",
+      "label": "Dogecoin calculator",
+      "description": "Convert DOGE and its smallest units, with fiat conversion when the current price observation is available.",
+      "context": "Dogecoin blocks, transactions and indexed standard addresses are supported. Pending data is a bounded sample, and historical depth depends on the indexed provider. Fee suggestions are observations, not confirmation guarantees. Current fiat conversion and bounded observed mining history are distinct from historical prices.",
+      "source": "src/app/components/calculator/calculator.component.ts"
+    },
+    {
+      "path": "/mempool-block/0",
+      "kind": "live",
+      "label": "Dogecoin pending transaction sample",
+      "description": "Inspect the explorer\u2019s observed Dogecoin pending transaction sample and available fee-rate data.",
+      "context": "Dogecoin blocks, transactions and indexed standard addresses are supported. Pending data is a bounded sample, and historical depth depends on the indexed provider. Fee suggestions are observations, not confirmation guarantees. Current fiat conversion and bounded observed mining history are distinct from historical prices.",
+      "source": "src/app/components/mempool-block/mempool-block.component.ts"
+    },
+    {
+      "path": "/graphs/mempool",
+      "kind": "live",
+      "label": "Dogecoin mempool observations",
+      "description": "See the explorer\u2019s locally observed Dogecoin pending-data measurements over the available observation window.",
+      "context": "Dogecoin blocks, transactions and indexed standard addresses are supported. Pending data is a bounded sample, and historical depth depends on the indexed provider. Fee suggestions are observations, not confirmation guarantees. Current fiat conversion and bounded observed mining history are distinct from historical prices.",
+      "source": "src/app/components/statistics/statistics.component.ts"
+    },
+    {
+      "path": "/graphs/mining/hashrate-difficulty",
+      "kind": "live",
+      "label": "Dogecoin hashrate and difficulty",
+      "description": "See Dogecoin hashrate and difficulty estimates from the available observed block history.",
+      "context": "Dogecoin blocks, transactions and indexed standard addresses are supported. Pending data is a bounded sample, and historical depth depends on the indexed provider. Fee suggestions are observations, not confirmation guarantees. Current fiat conversion and bounded observed mining history are distinct from historical prices.",
+      "source": "src/app/components/hashrate-chart/hashrate-chart.component.ts"
+    }
+  ],
+  "docsData": "src/app/docs/api-docs/api-docs-data.ts",
+  "docsExports": {
+    "faq": "faqData",
+    "rest": "restApiDocsData",
+    "ws": "wsApiDocsData"
+  },
+  "socialScreenshot": {
+    "url": "https://tx.taxi/assets/screenshots/hub-c0f1a521a7ad.jpg",
+    "width": 1440,
+    "height": 2611,
+    "alt": "The tx.taxi hub showing its native blockchain explorer strips and external explorer blocks.",
+    "source": "https://tx.taxi/",
+    "capturedFrom": "https://tx.taxi/",
+    "capturedAt": "2026-09-27T22:31:45.077Z",
+    "fullPage": true,
+    "sha256": "c0f1a521a7adcba14748a0a3d0fb3bf67e3e9008b365422a15fe57322fe361ba",
+    "bytes": 405004,
+    "mime": "image/jpeg",
+    "key": "hub"
+  },
+  "noindexRoutes": [
+    "/blocks/stale",
+    "/rbf",
+    "/graphs/mining/pools-dominance",
+    "/graphs/mining/pools",
+    "/graphs/mining/block-fees",
+    "/graphs/mining/block-fees-subsidy",
+    "/graphs/mining/block-rewards",
+    "/graphs/mining/block-fee-rates",
+    "/graphs/mining/block-sizes-weights",
+    "/graphs/price"
+  ]
+}

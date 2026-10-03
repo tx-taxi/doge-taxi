@@ -1,0 +1,60 @@
+{
+  "observedAt": "2026-10-03T19:10:04.466440+00:00",
+  "baseCommit": "da3368804b67bf4d152f0723d0c1698cec4e83d4",
+  "preservedCriticalFiles": [
+    {
+      "path": "adapter/dogecoin.cjs",
+      "sha256": "edb8be0a908524c4de6b6b5ef9d5ca49da086888c09d88587ea9b5479a314dc7",
+      "identicalToBase": "da3368804b67bf4d152f0723d0c1698cec4e83d4"
+    },
+    {
+      "path": "adapter/blockchair.cjs",
+      "sha256": "272120d9cfb15f0795d690cb2cef1c79b190fd89db612ae1f90e565d52cc7071",
+      "identicalToBase": "da3368804b67bf4d152f0723d0c1698cec4e83d4"
+    },
+    {
+      "path": "adapter/mining.cjs",
+      "sha256": "e6065ce6b52668a82f7865f279032e9193155fd5b3ef2e61fa4710de9218c8c3",
+      "identicalToBase": "da3368804b67bf4d152f0723d0c1698cec4e83d4"
+    },
+    {
+      "path": "adapter/price.cjs",
+      "sha256": "8d12cb381a30d4a1f8336cd7e7aedaf20a613864ee38e73d1afec3e1baaadfc8",
+      "identicalToBase": "da3368804b67bf4d152f0723d0c1698cec4e83d4"
+    },
+    {
+      "path": "frontend/src/app/app-routing.module.ts",
+      "sha256": "6dedc618f9fee6a50d628727630d4ebbe967db98ace7257c44ea88aeb87b38f4",
+      "identicalToBase": "da3368804b67bf4d152f0723d0c1698cec4e83d4"
+    },
+    {
+      "path": "frontend/src/app/master-page.module.ts",
+      "sha256": "ceaea84c91a684c50b901256517abdc3cb668414c02561b279e519f9c48e6b45",
+      "identicalToBase": "da3368804b67bf4d152f0723d0c1698cec4e83d4"
+    },
+    {
+      "path": "frontend/src/app/graphs/graphs.routing.module.ts",
+      "sha256": "7af56b0df76f6c7426025be45401adce590f2932d952a8caa277aa0305a39bbe",
+      "identicalToBase": "da3368804b67bf4d152f0723d0c1698cec4e83d4"
+    },
+    {
+      "path": "frontend/src/app/previews.routing.module.ts",
+      "sha256": "b9d0990268d078e54bd3138b6e35752cd03124ac24c02bf2d36f6c477473b457",
+      "identicalToBase": "da3368804b67bf4d152f0723d0c1698cec4e83d4"
+    },
+    {
+      "path": "frontend/src/app/docs/docs.routing.module.ts",
+      "sha256": "1e1b10bf4eb2862140f21efb5a940b1c8c76e2507f22d5b67f7789549e8e01e4",
+      "identicalToBase": "da3368804b67bf4d152f0723d0c1698cec4e83d4"
+    },
+    {
+      "path": "adapter/frontend-production-config.json",
+      "sha256": "c0918e1261615bbb179fe9c0355f01a9259c2835bf68538098661a201b0c756b",
+      "identicalToBase": "da3368804b67bf4d152f0723d0c1698cec4e83d4"
+    }
+  ],
+  "trackedFrontendScssUnchangedExceptRequestedSearchHint": true,
+  "scssException": "frontend/src/app/components/search-form/search-form.component.scss",
+  "trackedScssCount": 191,
+  "dockerRuntimePreserved": "Node 24; same /app/public root, adapter/server.cjs command, runtime env and port. Source generation added before the existing Angular build."
+}

@@ -1,0 +1,159 @@
+{
+  "chain": "doge",
+  "routeCount": 15,
+  "priorBehavior": {
+    "docsRestCanonical": "https://doge.tx.taxi/",
+    "docsRootEmpty": true
+  },
+  "crawled": [
+    {
+      "path": "/",
+      "status": 200,
+      "canonical": "https://doge.tx.taxi/",
+      "title": "doge.tx.taxi - Dogecoin Explorer",
+      "description": "Explore Dogecoin blocks, transactions, addresses, fees and mining activity.",
+      "semanticBytes": 1282,
+      "markdownBytes": 367
+    },
+    {
+      "path": "/about",
+      "status": 200,
+      "canonical": "https://doge.tx.taxi/about",
+      "title": "About doge.tx.taxi - doge.tx.taxi",
+      "description": "Learn about doge.tx.taxi, the Dogecoin explorer in the tx.taxi family.",
+      "semanticBytes": 3054,
+      "markdownBytes": 1257
+    },
+    {
+      "path": "/privacy-policy",
+      "status": 200,
+      "canonical": "https://doge.tx.taxi/privacy-policy",
+      "title": "Privacy policy - doge.tx.taxi",
+      "description": "Privacy notes for doge.tx.taxi, including public Dogecoin data, browser preferences, server logs, and independent verification.",
+      "semanticBytes": 2825,
+      "markdownBytes": 1496
+    },
+    {
+      "path": "/terms-of-service",
+      "status": 200,
+      "canonical": "https://doge.tx.taxi/terms-of-service",
+      "title": "Terms of service - doge.tx.taxi",
+      "description": "Terms for using doge.tx.taxi as an informational Dogecoin block and mempool explorer.",
+      "semanticBytes": 3023,
+      "markdownBytes": 1590
+    },
+    {
+      "path": "/trademark-policy",
+      "status": 200,
+      "canonical": "https://doge.tx.taxi/trademark-policy",
+      "title": "Trademark and attribution - doge.tx.taxi",
+      "description": "Trademark and attribution notes for doge.tx.taxi, including upstream mempool/mempool attribution and project independence.",
+      "semanticBytes": 2389,
+      "markdownBytes": 1061
+    },
+    {
+      "path": "/docs/faq",
+      "status": 200,
+      "canonical": "https://doge.tx.taxi/docs/faq",
+      "title": "Dogecoin explorer guide - doge.tx.taxi",
+      "description": "Dogecoin explorer coverage, amounts, fees, confirmations and data limits.",
+      "semanticBytes": 3760,
+      "markdownBytes": 2447
+    },
+    {
+      "path": "/docs/api/rest",
+      "status": 200,
+      "canonical": "https://doge.tx.taxi/docs/api/rest",
+      "title": "Dogecoin REST API - doge.tx.taxi",
+      "description": "Read-only REST API documentation for doge.tx.taxi: blocks, transactions, addresses and supported observations.",
+      "semanticBytes": 9338,
+      "markdownBytes": 6112
+    },
+    {
+      "path": "/docs/api/websocket",
+      "status": 200,
+      "canonical": "https://doge.tx.taxi/docs/api/websocket",
+      "title": "Dogecoin WebSocket API - doge.tx.taxi",
+      "description": "WebSocket documentation for observed Dogecoin explorer updates and supported subscriptions.",
+      "semanticBytes": 2327,
+      "markdownBytes": 1123
+    },
+    {
+      "path": "/blocks/1",
+      "status": 200,
+      "canonical": "https://doge.tx.taxi/blocks/1",
+      "title": "Dogecoin blocks - doge.tx.taxi",
+      "description": "See the most recent Dogecoin blocks along with basic stats such as block height, block reward, block size, and more.",
+      "semanticBytes": 1340,
+      "markdownBytes": 503
+    },
+    {
+      "path": "/txs",
+      "status": 200,
+      "canonical": "https://doge.tx.taxi/txs",
+      "title": "Dogecoin recent transactions - doge.tx.taxi",
+      "description": "Recent pending Dogecoin transaction observations shown by the explorer.",
+      "semanticBytes": 1308,
+      "markdownBytes": 466
+    },
+    {
+      "path": "/mining",
+      "status": 200,
+      "canonical": "https://doge.tx.taxi/mining",
+      "title": "Dogecoin mining dashboard - doge.tx.taxi",
+      "description": "Dogecoin mining observations: recent blocks, rewards, available fee data and supported difficulty or hashrate measurements.",
+      "semanticBytes": 1357,
+      "markdownBytes": 518
+    },
+    {
+      "path": "/tools/calculator",
+      "status": 200,
+      "canonical": "https://doge.tx.taxi/tools/calculator",
+      "title": "Dogecoin calculator - doge.tx.taxi",
+      "description": "Convert DOGE and its smallest units, with fiat conversion when the current price observation is available.",
+      "semanticBytes": 1334,
+      "markdownBytes": 505
+    },
+    {
+      "path": "/mempool-block/0",
+      "status": 200,
+      "canonical": "https://doge.tx.taxi/mempool-block/0",
+      "title": "Dogecoin pending transaction sample - doge.tx.taxi",
+      "description": "Inspect the explorer’s observed Dogecoin pending transaction sample and available fee-rate data.",
+      "semanticBytes": 1342,
+      "markdownBytes": 512
+    },
+    {
+      "path": "/graphs/mempool",
+      "status": 200,
+      "canonical": "https://doge.tx.taxi/graphs/mempool",
+      "title": "Dogecoin mempool observations - doge.tx.taxi",
+      "description": "See the explorer’s locally observed Dogecoin pending-data measurements over the available observation window.",
+      "semanticBytes": 1349,
+      "markdownBytes": 518
+    },
+    {
+      "path": "/graphs/mining/hashrate-difficulty",
+      "status": 200,
+      "canonical": "https://doge.tx.taxi/graphs/mining/hashrate-difficulty",
+      "title": "Dogecoin hashrate and difficulty - doge.tx.taxi",
+      "description": "See Dogecoin hashrate and difficulty estimates from the available observed block history.",
+      "semanticBytes": 1330,
+      "markdownBytes": 518
+    }
+  ],
+  "client": {
+    "constructorBaseTitle": "doge.tx.taxi",
+    "constructorBaseDescription": "Explore Dogecoin blocks, transactions, addresses, fees and mining activity.",
+    "allStaticRouteMetadataConsistent": true,
+    "docsToAboutToHomeDefaultsPreserved": true,
+    "genuineScreenshotAfterClientNavigation": true
+  },
+  "staticProviderCalls": 0,
+  "handlerChecks": "passed",
+  "boundaries": [
+    "Actual server callback and metadata functions evaluated with static-file and response mocks",
+    "No providers, listeners, screenshots or images read",
+    "Entity response fixtures are fake and establish behavior only, not live chain data"
+  ]
+}
