@@ -42,11 +42,12 @@ function tx(t){if(!Array.isArray(t.inputs)||!Array.isArray(t.outputs)||t.inputs.
 function block(b){const exponent=b.bits>>>24,mantissa=b.bits&0xffffff;const difficulty=0xffff*Math.pow(2,8*(0x1d-exponent))/mantissa;return {id:b.hash,height:b.height,version:b.ver,timestamp:timestamp(b.time),tx_count:b.n_tx,size:b.size,weight:b.size*4,merkle_root:b.mrkl_root,previousblockhash:b.prev_block,nonce:b.nonce,bits:b.bits,difficulty,extras:{totalFees:b.fees,avgFee:b.n_tx>1?b.fees/(b.n_tx-1):0,avgFeeRate:null,medianFee:null,feeRange:[],reward:b.height>=600000?10000e8+b.fees:null,pool:{id:0,name:'Unknown',slug:'unknown'},matchRate:null}};}
 async function getBlock(id,lane='detail'){
  const known=/^[a-f0-9]{64}$/.test(String(id))?atomic.cached(id):latest?.blocks.find(b=>b.height===Number(id));if(known)return known;
+ try{return await atomic.block(id,'detail');}catch{}
  try{return chair.block((await chair.blockPage(id)).block);}catch(e){if(!chair.allowed())throw e;return block(await fetchJson('/blocks/'+id+'?txstart=0&limit=500',/^\d+$/.test(String(id))?30000:86400000,lane));}
 }
 // Pending/recent transactions must be observed again to discover confirmation or reorg.
 const transactionTTL=t=>t.block_height>=0&&t.confirmations>=6?86400000:30000;
-async function getTx(id){try{return (await chair.transactions([id]))[0];}catch(e){if(!chair.allowed())throw e;return tx(await fetchJson('/txs/'+id+'?limit=10000',transactionTTL));}}
+async function getTx(id){try{return await atomic.transaction(id);}catch(e){if(e.status===404)throw e;}try{return (await chair.transactions([id]))[0];}catch(e){if(!chair.allowed())throw e;return tx(await fetchJson('/txs/'+id+'?limit=10000',transactionTTL));}}
 async function getAddress(id,before){return fetchJson('/addrs/'+id+'/full?limit=25&txlimit=10000'+(before?'&before='+before:''),120000);}
 let latest=null, snapshotAt=0;
 const snapshotFile=path.join(dataDir,'live-snapshot.json');

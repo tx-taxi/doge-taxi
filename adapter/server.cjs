@@ -34,14 +34,14 @@ function currentProviderStatus(now = Date.now()) {
  const budget = dogecoin.budget();
  const eligible = budget.blockchair?.allowed !== false;
  return {...base, source: dogecoin.health,
-  stale: !eligible || limited || !observedAt || now - observedAt > dogecoin.refreshInterval * 2,
+  stale: !eligible || !observedAt || now - observedAt > dogecoin.refreshInterval * 2,
   degraded: !eligible || base.degraded || limited,
   cooldownUntil: cooldownUntil || null, budget, cacheEntries: cache.size};
 }
 
 async function api(path) {
  try {const data=await dogecoin.route(path);health.lastSuccess=dogecoin.liveObservedAt();const r=result(data,dogecoin.health.source);if(data?.doge?.observedAt){r.at=data.doge.observedAt;r.stale=Date.now()-r.at>dogecoin.refreshInterval*2;}return r;}
- catch(e){health.lastFailure={at:Date.now(),message:e.message};return result({error:e.message,retryable:true},'unavailable',e.status===404?404:503);}
+ catch(e){if(e.status!==404)health.lastFailure={at:Date.now(),message:e.message};return result({error:e.message,retryable:true},'unavailable',e.status===404?404:503);}
 }
 
 function send(res,status,data,type='application/json',headers={}) {
