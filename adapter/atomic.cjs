@@ -33,15 +33,41 @@ function verifiedBlock(b,raw){
  const marker=parsed.parentCoinbase||'';const match=pools.find(([name])=>marker.toLowerCase().includes(name.toLowerCase()));
  return {id:b.hash,height:b.height,version:b.version,timestamp:b.time,tx_count:b.txCount,size:b.size,weight:b.size*4,merkle_root:b.merkleRoot,previousblockhash:b.previousBlockHash,nonce:Number(b.nonce),bits:parseInt(b.bits,16),difficulty:Number(b.difficulty),extras:{summaryAvailable:b.txCount<=500,totalFees:Number(sum),avgFee:rates.length?Number(sum)/rates.length:0,medianFee:median,feeRange:rates.length?[rates[0],rates.at(-1)]:[0,0],reward:Number(reward),pool:{id:0,name:match?.[0]||'',slug:match?.[1]||'',...(payout?{address:payout}:{})},matchRate:null},doge:{isAuxPow:true,sizeSource:'raw-block',feeSource:'atomicwallet-index+verified-raw-block'}};
 }
+// The decoded working set is bounded independently of the persisted payloads.
+const collectedPages=new Map(),collectedTransactions=new Map();
+let collectedPageBytes=0;
+const maxCollectedPageBytes=1024*1024,maxCollectedBytes=8*1024*1024;
+function evictCollectedPage(hash){
+ const old=collectedPages.get(hash);if(!old)return;
+ collectedPageBytes-=old.bytes;collectedPages.delete(hash);
+ for(const tx of old.page.txs)if(collectedTransactions.get(tx.txid)===hash)collectedTransactions.delete(tx.txid);
+}
+function primeCollectedPage(b,raw,at){
+ if(!Number.isFinite(at)||Date.now()-at>=10*60000||at>Date.now()||!Number.isInteger(b.confirmations)||b.confirmations<1||!Array.isArray(b.txs)||b.txs.length>200)return;
+ const existing=collectedPages.get(b.hash);if(existing&&Date.now()-existing.at<10*60000)return;if(existing)evictCollectedPage(b.hash);
+ const page=mapBlockPage(b,raw),bytes=Buffer.byteLength(JSON.stringify(page));
+ if(bytes>maxCollectedPageBytes)return;
+ while(collectedPages.size>=8||collectedPageBytes+bytes>maxCollectedBytes)evictCollectedPage(collectedPages.keys().next().value);
+ collectedPages.set(b.hash,{at,page,bytes});collectedPageBytes+=bytes;
+ for(const tx of page.txs)collectedTransactions.set(tx.txid,b.hash);
+}
+function rehydrateCollectedPage(hash){
+ const existing=collectedPages.get(hash);if(existing&&Date.now()-existing.at<10*60000)return;if(existing)evictCollectedPage(hash);
+ try{const item=JSON.parse(fs.readFileSync(path.join(dir,'collector-'+hash+'.json')));if(item.block.hash===hash)primeCollectedPage(item.block,item.raw,item.at);}catch{}
+}
 function cached(hash){try{const saved=JSON.parse(fs.readFileSync(path.join(dir,hash+'.json')));saved.extras.summaryAvailable=saved.tx_count<=500;return saved;}catch{return null;}}
 async function block(id,lane='collector'){
- if(/^[a-f0-9]{64}$/.test(String(id))){const saved=cached(id);if(saved)return saved;}
+ if(/^[a-f0-9]{64}$/.test(String(id))){const saved=cached(id);if(saved){if(lane==='collector')rehydrateCollectedPage(id);return saved;}}
  const b=await request('/block/'+id+'?pageSize=1000',lane);
  if(!/^[a-f0-9]{64}$/.test(b.hash)||!Number.isInteger(b.txCount)||b.txCount<1||b.txCount>10000)throw new Error('Invalid block envelope');
- const saved=cached(b.hash);if(saved)return saved;
+ const saved=cached(b.hash);if(saved){if(lane==='collector')rehydrateCollectedPage(b.hash);return saved;}
  const pages=b.totalPages||1;if(pages>10)throw new Error('Block pagination exceeds bound');
  for(let page=2;page<=pages;page++){const part=await request('/block/'+b.hash+'?pageSize=1000&page='+page,lane);if(part.hash!==b.hash||part.txCount!==b.txCount)throw new Error('Block pagination changed');b.txs.push(...part.txs);}
- const out=verifiedBlock(b,await request('/rawblock/'+b.hash,lane));
+ const raw=await request('/rawblock/'+b.hash,lane);
+ const out=verifiedBlock(b,raw);
+ // Reuse the already fetched, verified collector payload for recent block pages.
+ // Cache failure must never prevent live collection.
+ if(lane==='collector'&&b.txs.length<=200)try{const at=Date.now();primeCollectedPage(b,raw,at);if(collectedPages.has(b.hash)){const file=path.join(dir,'collector-'+b.hash+'.json');fs.writeFileSync(file+'.tmp',JSON.stringify({at,block:b,raw}));fs.renameSync(file+'.tmp',file);prune(dir,{matches:name=>/^collector-[a-f0-9]{64}\.json$/.test(name),maxAge:10*60000,maxFiles:16,maxBytes:32*1024*1024});}}catch{}
  fs.writeFileSync(path.join(dir,b.hash+'.json'),JSON.stringify(out));prune(dir,{matches:name=>/^[a-f0-9]{64}\.json$/.test(name)});return out;
 }
 async function strip(){
@@ -85,10 +111,24 @@ async function address(id,cursor,history=false){
 }
 module.exports.rawTransaction=rawTransaction;module.exports.address=address;
 
-async function blockPage(id){
+async function blockPage(id,allowCollected=false){
+ // Reuse only pages prepared once during collection and attested by the gateway.
+ const saved=allowCollected?collectedPages.get(String(id)):null;
+ if(saved&&Date.now()-saved.at<10*60000)return saved.page;
  const b=await detail('/block/'+id+'?pageSize=1000',60000);if(!Number.isInteger(b.txCount)||b.txCount<1||b.txCount>10000||(/^\d+$/.test(String(id))?b.height!==Number(id):b.hash!==id))throw Error('Block identity mismatch');
  const txs=[...b.txs];for(let page=2;page<=b.totalPages;page++){if(page>10)throw Error('Block page bound');const part=await detail('/block/'+b.hash+'?pageSize=1000&page='+page,3600000);if(part.hash!==b.hash||part.txCount!==b.txCount)throw Error('Block page identity mismatch');txs.push(...part.txs);}
- const raw=await detail('/rawblock/'+b.hash,86400000),header=verifiedBlock({...b,txs},raw),wire=require('./doge-raw-block.cjs').parseBlock(raw.hex);
- return{block:header,txs:txs.map((t,i)=>{const decoded=require('./legacy-transaction.cjs').decode(wire.transactions[i].hex);const vin=t.vin.map((v,j)=>({...v,txid:decoded.vin[j].txid,vout:decoded.vin[j].vout}));return require('./blockbook-transaction.cjs').transaction({...t,vin,hex:wire.transactions[i].hex,blockHeight:b.height,blockHash:b.hash,blockTime:b.time,confirmations:b.confirmations},t.txid);})};
+ const raw=await detail('/rawblock/'+b.hash,86400000);
+ return mapBlockPage({...b,txs},raw);
+}
+function mapBlockPage(b,raw){
+ const header=verifiedBlock(b,raw),wire=require('./doge-raw-block.cjs').parseBlock(raw.hex);
+ return{block:header,txs:b.txs.map((t,i)=>{const decoded=require('./legacy-transaction.cjs').decode(wire.transactions[i].hex);const vin=t.vin.map((v,j)=>({...v,txid:decoded.vin[j].txid,vout:decoded.vin[j].vout}));return require('./blockbook-transaction.cjs').transaction({...t,vin,hex:wire.transactions[i].hex,blockHeight:b.height,blockHash:b.hash,blockTime:b.time,confirmations:b.confirmations},t.txid);})};
 }
 module.exports.blockPage=blockPage;
+function collectedTransaction(id,canonicalHashes){
+ if(!/^[a-f0-9]{64}$/.test(String(id)))return null;
+ const hash=collectedTransactions.get(id),saved=collectedPages.get(hash);
+ if(!saved||Date.now()-saved.at>=10*60000||!canonicalHashes.includes(hash))return null;
+ return saved.page.txs.find(t=>t.txid===id)||null;
+}
+module.exports.collectedTransaction=collectedTransaction;

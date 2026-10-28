@@ -47,9 +47,9 @@ async function getBlock(id,lane='detail'){
 }
 // Pending/recent transactions must be observed again to discover confirmation or reorg.
 const transactionTTL=t=>t.block_height>=0&&t.confirmations>=6?86400000:30000;
-async function getTx(id){try{return await atomic.transaction(id);}catch(e){if(e.status===404)throw e;}try{return (await chair.transactions([id]))[0];}catch(e){if(!chair.allowed())throw e;return tx(await fetchJson('/txs/'+id+'?limit=10000',transactionTTL));}}
+async function getTx(id){const cached=atomic.collectedTransaction(id,recentCanonicalHashes());if(cached)return cached;try{return await atomic.transaction(id);}catch(e){if(e.status===404)throw e;}try{return (await chair.transactions([id]))[0];}catch(e){if(!chair.allowed())throw e;return tx(await fetchJson('/txs/'+id+'?limit=10000',transactionTTL));}}
 async function getAddress(id,before){return fetchJson('/addrs/'+id+'/full?limit=25&txlimit=10000'+(before?'&before='+before:''),120000);}
-let latest=null, snapshotAt=0;
+let latest=null, snapshotAt=0,canonicalObservation=null;
 const snapshotFile=path.join(dataDir,'live-snapshot.json');
 try{const saved=JSON.parse(fs.readFileSync(snapshotFile));if(saved.schema===3&&Array.isArray(saved.data?.blocks)&&saved.data.blocks.length===8){latest=saved.data;snapshotAt=saved.at;}}catch{}
 const observationsFile=path.join(disk,'../pending-observations.json');
@@ -75,8 +75,9 @@ async function collectSnapshot(){
  const collectionStarted=Date.now();
  let tip;try{tip=await fetchJson('',refreshInterval,'collector');}catch(e){tip=latest?.doge?.tip;}
  let blocks,blocksObservedAt;
- try{const strip=await atomic.strip();blocks=strip.blocks;blocksObservedAt=strip.observedAt;}
+ try{const strip=await atomic.strip();blocks=strip.blocks;blocksObservedAt=strip.observedAt;canonicalObservation={at:strip.observedAt,hashes:strip.blocks.map(block=>block.id)};}
  catch(e){
+  canonicalObservation=null;
   if(!tip)throw e;
   const heights=Array.from({length:Math.min(8,tip.height+1)},(_,i)=>tip.height-i);
   const strip=await chair.blocks(heights,'collector');blocks=strip.blocks.map(b=>atomic.cached(b.id)||b);blocksObservedAt=strip.observedAt;
@@ -92,6 +93,8 @@ async function collectSnapshot(){
  const projection=packed.length?[{blockSize:sampleBytes,blockVSize:sampleBytes,nTx:packed.length,totalFees:packed.reduce((n,t)=>n+t.fee,0),medianFee:rates.length%2?rates[middle]:(rates[middle-1]+rates[middle])/2,feeRange:[rates[0],rates.at(-1)],transactionIds:packed.map(t=>t.txid),sampled:true}]:[];
  latest={da:{adjustedTimeAvg:60000,timeOffset:0},'live-2h-chart':observations.points.at(-1),blocks,fees,transactions:txs.map(t=>({txid:t.txid,fee:t.fee,vsize:t.size,value:t.doge.value})),mempoolInfo:{loaded:true,size:tip.unconfirmed_count},backend:'esplora',loadingIndicators:{mempool:100},backendInfo:{gitCommit:'doge-candidate',version:'0.1'},doge:{targetBlockTime:60,subsidy:10000e8,pendingSample:txs.length,observedAt:Math.min(pendingObservedAt,blocksObservedAt),blocksObservedAt,pendingObservedAt,tip},'mempool-blocks':projection};snapshotAt=collectionStarted;fs.writeFileSync(snapshotFile,JSON.stringify({schema:3,at:snapshotAt,data:latest}));return latest;
 }
+function recentCanonicalHashes(){return canonicalObservation&&Date.now()-canonicalObservation.at<90000&&Date.now()>=canonicalObservation.at?canonicalObservation.hashes:[];}
+function isRecentCanonical(hash){return recentCanonicalHashes().includes(hash);}
 async function route(p){let m;const pathname=p.split('?')[0];
  if(/^\/api\/v1\/mining\/hashrate(?:\/1m)?$/.test(pathname))return require('./mining.cjs').history();
  if(pathname==='/api/v1/prices')return require('./price.cjs').current();
@@ -102,7 +105,7 @@ async function route(p){let m;const pathname=p.split('?')[0];
  if(m=pathname.match(/^\/api\/block-height\/(\d+)$/))return (await getBlock(m[1])).id;
  if(m=pathname.match(/^\/api\/(?:v1\/)?blocks(?:\/(\d+))?$/)){if(!m[1])return (await snapshot()).blocks;const h=Number(m[1]),heights=Array.from({length:Math.min(10,h+1)},(_,i)=>h-i);try{const rows=[];for(const height of heights)rows.push(await getBlock(String(height)));return rows;}catch{return(await chair.blocks(heights,'history')).blocks.map(b=>atomic.cached(b.id)||b);}}
  if(m=pathname.match(/^\/api\/v1\/block\/([a-f0-9]{64})\/summary$/)){
-  try{const data=await atomic.blockPage(m[1]);if(data.txs.length>500)throw Error('Block overview exceeds bounded display capacity');return data.txs.map(t=>({txid:t.txid,fee:t.fee,vsize:t.size,value:t.doge.value,rate:t.fee/t.size,flags:0}));}catch(e){if(e.status===404)throw e;}
+  try{const data=await atomic.blockPage(m[1],isRecentCanonical(m[1]));if(data.txs.length>500)throw Error('Block overview exceeds bounded display capacity');return data.txs.map(t=>({txid:t.txid,fee:t.fee,vsize:t.size,value:t.doge.value,rate:t.fee/t.size,flags:0}));}catch(e){if(e.status===404)throw e;}
   const item=await chair.blockPage(m[1],0,100);
   if(item.block.transaction_count>100||item.transactions.length!==item.block.transaction_count)throw Object.assign(new Error('Complete block visualization is unavailable within the provider budget'),{status:503});
   const txs=await chair.transactions(item.transactions);
@@ -110,7 +113,7 @@ async function route(p){let m;const pathname=p.split('?')[0];
  }
  if(m=pathname.match(/^\/api\/(?:v1\/)?block\/([a-f0-9]{64}|\d+)(?:\/(txids|txs)(?:\/(\d+))?)?$/)){
   if(!m[2]){const known=/^[a-f0-9]{64}$/.test(m[1])?atomic.cached(m[1]):latest?.blocks.find(b=>b.height===Number(m[1]));if(known)return known;}
-  try{if(!m[2])return await atomic.block(m[1],'detail');const data=await atomic.blockPage(m[1]);if(m[2]==='txids')return data.txs.map(t=>t.txid);return data.txs.slice(Number(m[3]||0),Number(m[3]||0)+25);}catch(e){if(e.status===404)throw e;}
+  try{if(!m[2])return await atomic.block(m[1],'detail');const data=await atomic.blockPage(m[1],isRecentCanonical(m[1]));if(m[2]==='txids')return data.txs.map(t=>t.txid);return data.txs.slice(Number(m[3]||0),Number(m[3]||0)+25);}catch(e){if(e.status===404)throw e;}
   const item=await chair.blockPage(m[1],Number(m[3]||0),m[2]==='txids'?10000:25);
   if(m[2]==='txids'){if(item.transactions.length!==item.block.transaction_count)throw new Error('Complete block transaction list unavailable');return item.transactions;}
   if(m[2]==='txs'){const expected=Math.max(0,Math.min(25,item.block.transaction_count-Number(m[3]||0)));if(item.transactions.length!==expected)throw new Error('Incomplete block transaction page');const txs=await chair.transactions(item.transactions);return txs.map(t=>({...t,status:{...t.status,block_hash:item.block.hash}}));}
