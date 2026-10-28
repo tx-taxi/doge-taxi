@@ -8,3 +8,7 @@ test('confirmed Blockbook transaction preserves exact public fields and reconcil
  const fee=structuredClone(fixture);fee.fees='1';assert.throws(()=>transaction(fee,fee.txid),/reconcile/);
  assert.throws(()=>transaction(fixture,'0'.repeat(64)),/identity/);
 });
+test('Blockbook omits a zero previous-output index, but other omitted indices cannot pass raw-byte verification',()=>{
+ const raw=require('./legacy-transaction.cjs').decode(fixture.hex),copy=structuredClone(fixture);
+ const index=raw.vin.findIndex(v=>v.vout!==0);delete copy.vin[index].vout;assert.throws(()=>transaction(copy,copy.txid),/input mismatch/);
+});

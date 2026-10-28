@@ -60,3 +60,35 @@ async function transaction(id){
  try{return await work;}finally{transactionInflight.delete(id);}
 }
 module.exports={strip,cached,verifiedBlock,block,transaction,health,status:()=>({...budget.status(),cooldownUntil:cooldown})};
+
+const detailInflight=new Map();
+async function detail(p,ttl=30000){
+ const key=require('node:crypto').createHash('sha256').update(p).digest('hex'),file=path.join(dir,'detail-'+key+'.json');
+ try{const saved=JSON.parse(fs.readFileSync(file));if(Date.now()-saved.at<ttl)return saved.data;}catch{}
+ if(detailInflight.has(p))return detailInflight.get(p);
+ const work=request(p,'detail').then(data=>{fs.writeFileSync(file,JSON.stringify({at:Date.now(),data}));prune(dir,{matches:name=>/^(?:tx-|detail-)?[a-f0-9]{64}\.json$/.test(name)});return data;}).finally(()=>detailInflight.delete(p));detailInflight.set(p,work);return work;
+}
+async function rawTransaction(id,spending=false){const raw=await detail('/tx/'+id+(spending?'?spending=true':''),15000);require('./blockbook-transaction.cjs').transaction(raw,id);return raw;}
+const addressCursors=new Map();
+async function address(id,cursor,history=false){
+ const first=cursor?(addressCursors.get(id+':'+cursor)||1):1;let rows=[],a;
+ for(let page=first;page<=first+1;page++){
+  a=await detail('/address/'+id+'?details=txs&pageSize=25&page='+page,30000);if(a.address!==id||!Array.isArray(a.transactions))throw Error('Incomplete address data');
+  rows.push(...a.transactions.map(t=>require('./blockbook-transaction.cjs').transaction(t,t.txid)));
+  const offset=cursor?rows.findIndex(t=>t.txid===cursor)+1:0;
+  if(!cursor||offset>0){const selected=rows.slice(offset,offset+25);if(selected.length>=25||page>=a.totalPages){if(selected.length){addressCursors.set(id+':'+selected.at(-1).txid,page);while(addressCursors.size>500)addressCursors.delete(addressCursors.keys().next().value);}if(history)return selected;break;}}
+  if(page>=a.totalPages)break;
+ }
+ if(history)throw Object.assign(Error('Address history changed; reload the first page'),{status:503});
+ const received=BigInt(a.totalReceived),sent=BigInt(a.totalSent),unconfirmed=BigInt(a.unconfirmedBalance??'0');if([received,sent,unconfirmed<0n?-unconfirmed:unconfirmed].some(v=>v<0n||v>BigInt(Number.MAX_SAFE_INTEGER)))throw Error('Address values exceed safe display precision');
+ return{address:id,chain_stats:{funded_txo_sum:Number(received),funded_txo_sum_exact:String(received),spent_txo_sum:Number(sent),spent_txo_sum_exact:String(sent),tx_count:a.txs},mempool_stats:{tx_count:a.unconfirmedTxs||0,funded_txo_sum:Number(unconfirmed>0n?unconfirmed:0n),spent_txo_sum:Number(unconfirmed<0n?-unconfirmed:0n)}};
+}
+module.exports.rawTransaction=rawTransaction;module.exports.address=address;
+
+async function blockPage(id){
+ const b=await detail('/block/'+id+'?pageSize=1000',60000);if(!Number.isInteger(b.txCount)||b.txCount<1||b.txCount>10000||(/^\d+$/.test(String(id))?b.height!==Number(id):b.hash!==id))throw Error('Block identity mismatch');
+ const txs=[...b.txs];for(let page=2;page<=b.totalPages;page++){if(page>10)throw Error('Block page bound');const part=await detail('/block/'+b.hash+'?pageSize=1000&page='+page,3600000);if(part.hash!==b.hash||part.txCount!==b.txCount)throw Error('Block page identity mismatch');txs.push(...part.txs);}
+ const raw=await detail('/rawblock/'+b.hash,86400000),header=verifiedBlock({...b,txs},raw),wire=require('./doge-raw-block.cjs').parseBlock(raw.hex);
+ return{block:header,txs:txs.map((t,i)=>{const decoded=require('./legacy-transaction.cjs').decode(wire.transactions[i].hex);const vin=t.vin.map((v,j)=>({...v,txid:decoded.vin[j].txid,vout:decoded.vin[j].vout}));return require('./blockbook-transaction.cjs').transaction({...t,vin,hex:wire.transactions[i].hex,blockHeight:b.height,blockHash:b.hash,blockTime:b.time,confirmations:b.confirmations},t.txid);})};
+}
+module.exports.blockPage=blockPage;

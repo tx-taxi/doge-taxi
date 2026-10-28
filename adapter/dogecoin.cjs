@@ -102,6 +102,7 @@ async function route(p){let m;const pathname=p.split('?')[0];
  if(m=pathname.match(/^\/api\/block-height\/(\d+)$/))return (await getBlock(m[1])).id;
  if(m=pathname.match(/^\/api\/(?:v1\/)?blocks(?:\/(\d+))?$/)){if(!m[1])return (await snapshot()).blocks;const h=Number(m[1]);return(await chair.blocks(Array.from({length:Math.min(10,h+1)},(_,i)=>h-i))).blocks;}
  if(m=pathname.match(/^\/api\/v1\/block\/([a-f0-9]{64})\/summary$/)){
+  try{const data=await atomic.blockPage(m[1]);return data.txs.map(t=>({txid:t.txid,fee:t.fee,vsize:t.size,value:t.doge.value,rate:t.fee/t.size,flags:0}));}catch(e){if(e.status===404)throw e;}
   const item=await chair.blockPage(m[1],0,100);
   if(item.block.transaction_count>100||item.transactions.length!==item.block.transaction_count)throw Object.assign(new Error('Complete block visualization is unavailable within the provider budget'),{status:503});
   const txs=await chair.transactions(item.transactions);
@@ -109,6 +110,7 @@ async function route(p){let m;const pathname=p.split('?')[0];
  }
  if(m=pathname.match(/^\/api\/(?:v1\/)?block\/([a-f0-9]{64}|\d+)(?:\/(txids|txs)(?:\/(\d+))?)?$/)){
   if(!m[2]){const known=/^[a-f0-9]{64}$/.test(m[1])?atomic.cached(m[1]):latest?.blocks.find(b=>b.height===Number(m[1]));if(known)return known;}
+  try{if(!m[2])return await atomic.block(m[1],'detail');const data=await atomic.blockPage(m[1]);if(m[2]==='txids')return data.txs.map(t=>t.txid);return data.txs.slice(Number(m[3]||0),Number(m[3]||0)+25);}catch(e){if(e.status===404)throw e;}
   const item=await chair.blockPage(m[1],Number(m[3]||0),m[2]==='txids'?10000:25);
   if(m[2]==='txids'){if(item.transactions.length!==item.block.transaction_count)throw new Error('Complete block transaction list unavailable');return item.transactions;}
   if(m[2]==='txs'){const expected=Math.max(0,Math.min(25,item.block.transaction_count-Number(m[3]||0)));if(item.transactions.length!==expected)throw new Error('Incomplete block transaction page');const txs=await chair.transactions(item.transactions);return txs.map(t=>({...t,status:{...t.status,block_hash:item.block.hash}}));}
@@ -116,12 +118,13 @@ async function route(p){let m;const pathname=p.split('?')[0];
  }
  if(pathname==='/api/txs/outspends'){const ids=new URL(p,'http://localhost').searchParams.get('txids')?.split(',')||[];return Promise.all(ids.map(id=>route('/api/tx/'+id+'/outspends')));}
  if(m=pathname.match(/^\/api\/tx\/([a-f0-9]{64})(?:\/(status|outspends|hex))?$/)){
-  if(m[2]==='outspends')return chair.outspends(m[1]);
-  if(m[2]==='hex')return(await fetchJson('/txs/'+m[1]+'?includeHex=true',transactionTTL)).hex;
+  if(m[2]==='outspends'){try{const t=await atomic.rawTransaction(m[1],true);return t.vout.map(o=>({spent:o.spent===true,...(o.spentTxId?{txid:o.spentTxId,vin:o.spentIndex,status:{confirmed:!!o.spentHeight,block_height:o.spentHeight}}:{})}));}catch(e){if(e.status===404)throw e;return chair.outspends(m[1]);}}
+  if(m[2]==='hex'){try{return(await atomic.rawTransaction(m[1])).hex;}catch(e){if(e.status===404)throw e;return(await fetchJson('/txs/'+m[1]+'?includeHex=true',transactionTTL)).hex;}}
   const t=await getTx(m[1]);if(t.status.confirmed&&(!t.status.block_hash||!t.status.block_time)){const header=await getBlock(t.status.block_height);t.status.block_hash=header.id;t.status.block_time=header.timestamp;}
   return m[2]==='status'?t.status:t;
  }
  if(m=pathname.match(/^\/api\/address\/([A-Za-z0-9]+)(?:\/txs(?:\/chain(?:\/([a-f0-9]{64}))?)?)?$/)){
+  try{return await atomic.address(m[1],m[2],pathname.includes('/txs'));}catch(e){if(e.status===404)throw e;}
   let before;if(m[2])before=(await getTx(m[2])).status.block_height;
   const a=await getAddress(m[1],before);
   if(pathname.includes('/txs'))return a.txs.map(tx);

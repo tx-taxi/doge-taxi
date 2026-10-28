@@ -27,7 +27,7 @@ function parseBlock(hex){
     // transactions below are strictly legacy. Txids never include witness.
     const compactInputs=bytes.subarray(inputStart-(inputs<253?1:inputs<=65535?3:5),inputStart);
     const txbytes=witness?Buffer.concat([version,compactInputs,bytes.subarray(inputStart,inputEnd),bytes.subarray(outputStart,outputEnd),locktime]):serialized;
-    return {txid:hash(txbytes),size:serialized.length,coinbaseScript};
+    return {txid:hash(txbytes),size:serialized.length,coinbaseScript,hex:serialized.toString('hex')};
   }
   const header=take(80),version=header.readUInt32LE();let parentCoinbase=null,auxpow=null;
   if(version&0x100){
@@ -38,7 +38,7 @@ function parseBlock(hex){
     const parentHeader=take(80);parentCoinbase=coinbase.coinbaseScript.toString('utf8');auxpow={parentHash,parentHeaderHash:hash(parentHeader),coinbaseTxid:coinbase.txid,coinbaseScriptHex:coinbase.coinbaseScript.toString('hex')};
   }
   const txCount=count(10);if(!txCount)fail('empty block');const transactions=[];
-  for(let i=0;i<txCount;i++){const tx=transaction();if((i===0)!==(tx.coinbaseScript!==null))fail('invalid coinbase position');transactions.push({txid:tx.txid,size:tx.size});}
+  for(let i=0;i<txCount;i++){const tx=transaction();if((i===0)!==(tx.coinbaseScript!==null))fail('invalid coinbase position');transactions.push({txid:tx.txid,size:tx.size,hex:tx.hex});}
   if(offset!==bytes.length)fail('trailing bytes');
   let merkle=transactions.map(tx=>Buffer.from(tx.txid,'hex').reverse());while(merkle.length>1){const next=[];for(let i=0;i<merkle.length;i+=2)next.push(sha256d(Buffer.concat([merkle[i],merkle[i+1]||merkle[i]])));merkle=next;}
   if(!merkle[0].equals(header.subarray(36,68)))fail('transaction merkle root mismatch');
