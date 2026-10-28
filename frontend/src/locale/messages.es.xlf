@@ -11780,6 +11780,7 @@
       <trans-unit id="tx-taxi.doge.sample-description" datatype="html"><source>Observed pending transactions. Fill shows sampled bytes out of the 1 MB block capacity; this is not a predicted block.</source><target>Transacciones pendientes observadas. El relleno muestra los bytes de la muestra respecto a la capacidad de 1 MB del bloque; no es un bloque previsto.</target></trans-unit>
       <trans-unit id="tx-taxi.doge.strip.details" datatype="html"><source>Total fees: <x id="amount"/> <x id="symbol"/>. Median fee rate: <x id="median"/> <x id="unit"/>. Fee range: <x id="min"/>–<x id="max"/> <x id="unit2"/>.</source><target>Comisiones totales: <x id="amount"/> <x id="symbol"/>. Tasa mediana: <x id="median"/> <x id="unit"/>. Rango de comisión: <x id="min"/>–<x id="max"/> <x id="unit2"/>.</target></trans-unit>
       <trans-unit id="tx-taxi.doge.strip.fees-unavailable" datatype="html"><source>Total transaction fees unavailable</source><target>Comisiones totales de transacciones no disponibles</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.strip.height-gap-one" datatype="html"><source><x id="count"/> blocks between <x id="high"/> and <x id="low"/></source><target><x id="count"/> bloque entre <x id="high"/> y <x id="low"/></target></trans-unit>
       <trans-unit id="tx-taxi.doge.strip.height-gap" datatype="html"><source><x id="count"/> blocks between <x id="high"/> and <x id="low"/></source><target><x id="count"/> bloques entre <x id="high"/> y <x id="low"/></target></trans-unit>
     </body>
   </file>
