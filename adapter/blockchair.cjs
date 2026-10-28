@@ -65,3 +65,11 @@ async function enrichBlock(item){
 }
 function cachedEnrichment(b){try{const saved=JSON.parse(fs.readFileSync(path.join(dir,'enriched-'+b.id+'.json')));return{...b,extras:saved.extras,previousblockhash:saved.previousblockhash};}catch{return b;}}
 module.exports={enrichBlock,request,status,health,allowed,block,blocks,blockPage,transaction,transactions,outspends};
+
+async function pending(){
+ const rows=await request('/mempool/transactions?limit=50',{ttl:300000,cost:1,lane:'collector'}),stats=await request('/stats',{ttl:300000,cost:1,lane:'collector'});
+ if(!Array.isArray(rows.data)||rows.data.length>50||!Number.isSafeInteger(stats.data?.mempool_transactions)||stats.data.mempool_transactions<0)throw Error('Incomplete pending observation');
+ const transactions=rows.data.map(t=>{if(t.block_id!==-1||!/^[a-f0-9]{64}$/.test(t.hash)||!Number.isSafeInteger(t.size)||t.size<=0||!Number.isSafeInteger(t.fee)||t.fee<0||!Number.isSafeInteger(t.output_total)||t.output_total<0)throw Error('Invalid pending transaction');return{hash:t.hash,size:t.size,fees:t.fee,total:t.output_total};});
+ return{transactions,count:stats.data.mempool_transactions,observedAt:Math.min(rows.observedAt,stats.observedAt)};
+}
+module.exports.pending=pending;

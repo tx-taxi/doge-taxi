@@ -83,7 +83,8 @@ async function collectSnapshot(){
   if(blocks[0].id!==tip.hash)throw new Error('Providers disagree on canonical tip');
   blocks[0].previousblockhash=tip.previous_hash;
  }
- let pending,pendingObservedAt;try{pending=await fetchJson('/txs?limit=50',refreshInterval,'collector');pendingObservedAt=cache.get('/txs?limit=50')?.at;}catch(e){if(!latest)throw e;pending=latest.transactions.map(t=>({hash:t.txid,size:t.vsize,fees:t.fee,total:t.value}));pendingObservedAt=latest.doge.pendingObservedAt||latest.doge.observedAt;}
+ let pending,pendingObservedAt,pendingFallback;try{pending=await fetchJson('/txs?limit=50',refreshInterval,'collector');pendingObservedAt=cache.get('/txs?limit=50')?.at;}catch(e){try{pendingFallback=await chair.pending();pending=pendingFallback.transactions;pendingObservedAt=pendingFallback.observedAt;}catch{if(!latest)throw e;pending=latest.transactions.map(t=>({hash:t.txid,size:t.vsize,fees:t.fee,total:t.value}));pendingObservedAt=latest.doge.pendingObservedAt||latest.doge.observedAt;}}
+ if(pendingFallback){const rates=pending.map(t=>t.fees/t.size).sort((a,b)=>a-b);const rate=q=>rates.length?rates[Math.min(rates.length-1,Math.floor((rates.length-1)*q))]:1000;tip={...(tip||{}),height:blocks[0].height,hash:blocks[0].id,previous_hash:blocks[0].previousblockhash,unconfirmed_count:pendingFallback.count,high_fee_per_kb:rate(.9)*1000,medium_fee_per_kb:rate(.5)*1000,low_fee_per_kb:rate(.1)*1000};}
  if(!tip)throw new Error('Fee estimate source unavailable');
  const txs=pending.map(t=>({txid:t.hash,size:t.size,fee:t.fees,doge:{value:t.total}}));recordPending(txs,pendingObservedAt);const fees={fastestFee:tip.high_fee_per_kb/1000,halfHourFee:tip.medium_fee_per_kb/1000,hourFee:tip.low_fee_per_kb/1000,economyFee:tip.low_fee_per_kb/1000,minimumFee:1000};
  const ordered=[...txs].sort((a,b)=>b.fee/b.size-a.fee/a.size),packed=[];let sampleBytes=0;for(const t of ordered){if(sampleBytes+t.size<=1000000){packed.push(t);sampleBytes+=t.size;}}
