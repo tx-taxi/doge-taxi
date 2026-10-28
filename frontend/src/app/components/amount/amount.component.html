@@ -7,7 +7,7 @@
 } @else {
 <ng-container *ngIf="!noFiat && ignoreViewMode === false && (viewAmountMode$ | async) === 'fiat'; else viewFiatVin">
  <ng-container *ngIf="!forceBlockConversion || blockConversion; else priceUnavailable"><app-fiat [value]="+satoshis" [blockConversion]="blockConversion" [digitsInfo]="digitsInfo"></app-fiat></ng-container>
- <ng-template #priceUnavailable><span title="Historical price unavailable">—</span></ng-template>
+ <ng-template #priceUnavailable><span title="Historical price unavailable" i18n-title="@@tx-taxi.doge.historical-price-unavailable">—</span></ng-template>
 </ng-container>
 
   <ng-template #viewFiatVin>

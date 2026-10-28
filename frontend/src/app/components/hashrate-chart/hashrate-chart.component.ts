@@ -34,8 +34,8 @@ import { AmountShortenerPipe } from '@app/shared/pipes/amount-shortener.pipe';
 export class HashrateChartComponent implements OnInit {
   @Input() tableOnly = false;
   @Input() capabilityUnavailable = false;
-  @Input() unavailableTitle = 'Hashrate & Difficulty';
-  @Input() unavailableReason = 'Not available';
+  @Input() unavailableTitle = $localize`:@@tx-taxi.doge.hashrate-difficulty:Hashrate & Difficulty`;
+  @Input() unavailableReason = $localize`:@@tx-taxi.doge.not-available:Not available`;
   @Input() widget = false;
   @Input() height: number = 300;
   @Input() right: number | string = 45;

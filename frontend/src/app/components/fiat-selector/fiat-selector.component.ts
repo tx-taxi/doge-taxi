@@ -13,6 +13,8 @@ import { writeSharedPreference } from '@app/services/shared-preferences';
   standalone: false,
 })
 export class FiatSelectorComponent implements OnInit {
+  readonly staleReferenceLabel = $localize`:@@tx-taxi.doge.fiat.stale-title:ECB reference rate; update unavailable`;
+  readonly referenceLabel = $localize`:@@tx-taxi.doge.fiat.reference-title:ECB reference rate`;
   fiatForm: UntypedFormGroup;
   reference$ = this.stateService.fiatReference$.asObservable();
   currencies = Object.entries(fiatCurrencies).sort((a: any, b: any) => {

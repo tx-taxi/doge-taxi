@@ -28,7 +28,7 @@
       <form [formGroup]="form" class="calculator-form">
         <div class="input-group input-group-lg mb-1">
           <span class="input-group-text">{{ currency$ | async }}</span>
-          <input type="text" inputmode="decimal" class="form-control" formControlName="fiat" [readOnly]="!(currentPrice > 0)" placeholder="Unavailable" (input)="transformInput('fiat')" (click)="selectAll($event)">
+          <input type="text" inputmode="decimal" class="form-control" formControlName="fiat" [readOnly]="!(currentPrice > 0)" placeholder="Unavailable" i18n-placeholder="@@tx-taxi.doge.unavailable" (input)="transformInput('fiat')" (click)="selectAll($event)">
           <app-clipboard [button]="true" [text]="form.get('fiat').value" [class]="'btn btn-lg btn-secondary ms-1'"></app-clipboard>
         </div>
 
@@ -75,7 +75,7 @@
         } @else if (priceData.value > 0) {
           <span>Fiat daily closing price <app-time kind="since" [time]="timestamp$ | async" [fastRender]="true"></app-time>: {{ priceData.value | fiatCurrency : '1.0-0' : (currency$ | async) }}</span>
         } @else {
-          <span>Fiat price not available for the selected date</span>
+          <span i18n="@@tx-taxi.doge.fiat-date-unavailable">Fiat price not available for the selected date</span>
         }
       </div>
     </div>

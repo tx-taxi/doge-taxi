@@ -3690,7 +3690,7 @@
       </trans-unit>
       <trans-unit id="07193288a0312875e18f38c3a2486b927a15520a" datatype="html">
         <source>Timestamp</source>
-        <target>Timestamp</target>
+        <target>Fecha y hora</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/block/block-preview.component.html</context>
           <context context-type="linenumber">26</context>
@@ -11782,6 +11782,131 @@
       <trans-unit id="tx-taxi.doge.strip.fees-unavailable" datatype="html"><source>Total transaction fees unavailable</source><target>Comisiones totales de transacciones no disponibles</target></trans-unit>
       <trans-unit id="tx-taxi.doge.strip.height-gap-one" datatype="html"><source><x id="count"/> blocks between <x id="high"/> and <x id="low"/></source><target><x id="count"/> bloque entre <x id="high"/> y <x id="low"/></target></trans-unit>
       <trans-unit id="tx-taxi.doge.strip.height-gap" datatype="html"><source><x id="count"/> blocks between <x id="high"/> and <x id="low"/></source><target><x id="count"/> bloques entre <x id="high"/> y <x id="low"/></target></trans-unit>
+      <trans-unit id="8d185fc2da0f9a99918c99a874e3d059a3a7d5ee" datatype="html"><source>Size in bytes of this transaction (including unconfirmed ancestors)</source>
+        <target>Tamaño en bytes de esta transacción (incluidos los antecesores sin confirmar)</target>
+        </trans-unit>
+      <trans-unit id="7af8cba6646f8c9de5351a05976188876d00d58e" datatype="html"><source>sat/B</source>
+        <target>sat/B</target></trans-unit>
+      <trans-unit id="b1046d5d7d997498195647aee8059b9109836f1d" datatype="html"><source>Accelerate to ~<x id="INTERPOLATION" equiv-text="{{ x | number : '1.0-0' }}" /> sat/B</source>
+        <target>Acelerar a ~<x id="INTERPOLATION" equiv-text="{{ x | number : '1.0-0' }}" /> sat/B</target></trans-unit>
+      <trans-unit id="6693ca41dea3f8a2b1747ba08e3f780c52d074bf" datatype="html"><source>Using partner code</source>
+        <target>Usando código de colaborador</target></trans-unit>
+      <trans-unit id="1ac50ef21ed21d7f6b6dcb0bc74ad5c0ba6c144e" datatype="html"><source>DOGE</source>
+        <target>DOGE</target>
+        </trans-unit>
+      <trans-unit id="806c6ccce363f1fdd06d9323210a9248bd7b4b6b" datatype="html"><source>koinu</source>
+        <target>koinu</target>
+        </trans-unit>
+      <trans-unit id="e0f4283c19259f2bd53940324cb490f797b9aae4" datatype="html"><source>select filter categories to highlight matching pending transactions</source>
+        <target>Selecciona categorías de filtros para destacar las transacciones pendientes coincidentes</target></trans-unit>
+      <trans-unit id="c367d621ea109d20c3b45e0b50d80e1f46c7dbce" datatype="html"><source>Based on average legacy transaction of 226 bytes</source>
+        <target>Basado en una transacción heredada promedio de 226 bytes</target>
+        </trans-unit>
+      <trans-unit id="9ac770e80167f5788ad8be04cfc09d2f0087e204" datatype="html"><source> Values were capped at the calculator’s safe precision limit </source>
+        <target> Los valores se limitaron a la precisión segura de la calculadora </target>
+        </trans-unit>
+      <trans-unit id="1cdb643999eb6d66bcd839aeaa381b62b8be8cd4" datatype="html"><source>mempool chunk</source>
+        <target>grupo de la mempool</target></trans-unit>
+      <trans-unit id="36028650a60cba9aa7f034ae34643c72f5364f1d" datatype="html"><source>this transaction</source>
+        <target>esta transacción</target></trans-unit>
+      <trans-unit id="32fba724df729afb840693b40e3f8869356f4e33" datatype="html"><source>Size</source>
+        <target>Tamaño</target></trans-unit>
+      <trans-unit id="1eb8a98f68c1c98884c6436650f5ad80f4b3d5bf" datatype="html"><source>parents</source>
+        <target>antecesoras</target></trans-unit>
+      <trans-unit id="94c4e242e055d9521e1a0bfc7f1d165bbb37b94a" datatype="html"><source>children</source>
+        <target>descendientes</target></trans-unit>
+      <trans-unit id="d1ca10f0337c02e631f15b7da5d57dddc1954704" datatype="html"><source>parent</source>
+        <target>antecesora</target></trans-unit>
+      <trans-unit id="016d2ff8ad4b04f08717b98b5bc61eb122fb1ac8" datatype="html"><source>child</source>
+        <target>descendiente</target></trans-unit>
+      <trans-unit id="8c6defd0c344c0ad2386cd4a6d4566f8d91601e5" datatype="html"><source>Estimated hashrate (1d)</source>
+        <target>Tasa de hash estimada (1 día)</target>
+        </trans-unit>
+      <trans-unit id="ecc54dd307f136f1571fbd194e5f68b663a1154f" datatype="html"><source>Difficulty (daily average)</source>
+        <target>Dificultad (promedio diario)</target>
+        </trans-unit>
+      <trans-unit id="4ce06818b8fe60a7c040ce7bfecc10b11397401b" datatype="html"><source>24h Volume</source>
+        <target>Volumen de 24 h</target></trans-unit>
+      <trans-unit id="7729adad4cbe5f490e393a925fae8a9b90f8ac08" datatype="html"><source>Reserve Deficit</source>
+        <target>Déficit de reservas</target></trans-unit>
+      <trans-unit id="489277af67abab02f1de98f4a7930fc611471eda" datatype="html"><source>occurrence</source>
+        <target>ocurrencia</target></trans-unit>
+      <trans-unit id="850e39efd95e6090598e13a01b7825f6b71b1017" datatype="html"><source>occurrences</source>
+        <target>ocurrencias</target></trans-unit>
+      <trans-unit id="57d63f33e6e6f3d4716fab5381cff30d517d5c4e" datatype="html"><source>usages</source>
+        <target>usos</target></trans-unit>
+      <trans-unit id="5983c6a2299b646b3aecc5795ed51573d7cd235a" datatype="html"><source>The overall luck of all mining pools over the past week. A luck bigger than 100% means the average block time for the current epoch is less than 2.5 minutes.</source>
+        <target>La suerte total de todos los grupos de minería durante la última semana. Una suerte superior al 100 % significa que el tiempo medio por bloque en la época actual es inferior a 2,5 minutos.</target></trans-unit>
+      <trans-unit id="a801fe3f17b8dfe256ec628aaa6910a84df6d519" datatype="html"><source>Dogecoin Price</source>
+        <target>Precio de Dogecoin</target>
+        </trans-unit>
+      <trans-unit id="fe3ae146eddf4db4c2d60bdf79b1a8a0210157f0" datatype="html"><source>Maximum fee rate (koinu/B)</source>
+        <target>Tasa máxima de comisión (koinu/B)</target>
+        </trans-unit>
+      <trans-unit id="6d1c8856044cc923fc70f32cb4be360d200cfa82" datatype="html"><source>1 new transaction</source>
+        <target>1 transacción nueva</target></trans-unit>
+      <trans-unit id="a5c3bb57620832141bf6c51d7344e69af366c7e8" datatype="html"><source><x id="INTERPOLATION" equiv-text="new transactions&lt;/span&gt; &lt;/button&gt;  &lt;div [class.container-xl]=&quot;!widget&quot; [cla" /> new transactions</source>
+        <target><x id="INTERPOLATION" equiv-text="new transactions&lt;/span&gt; &lt;/button&gt;  &lt;div [class.container-xl]=&quot;!widget&quot; [cla" /> transacciones nuevas</target></trans-unit>
+      <trans-unit id="487bebf9352332c5e7f5bd00a78371cacff0fd95" datatype="html"><source>Pause/Resume</source>
+        <target>Pausar/Reanudar</target></trans-unit>
+      <trans-unit id="88f27d579752fd40ef53cfff5e936c293ca19221" datatype="html"><source>Pause/Resume</source>
+        <target>Pausar/Reanudar</target></trans-unit>
+      <trans-unit id="bba7a55b8bcbfd50a697f8cf0a7b917836f453f0" datatype="html"><source>vSize</source>
+        <target>Tamaño virtual</target></trans-unit>
+      <trans-unit id="494659c51693e937884c9a0ddbd588d2ff4563dc" datatype="html"><source>DOGE/block</source>
+        <target>DOGE/bloque</target>
+        </trans-unit>
+      <trans-unit id="055c54ed5f836870d20d1b85c45c56d9864d7281" datatype="html"><source>koinu/tx</source>
+        <target>koinu/tx</target>
+        </trans-unit>
+      <trans-unit id="73b176feaf76de1c430603d4d34819b69d84b953" datatype="html"><source>Mempool by bytes (koinu/Byte)</source>
+        <target>Mempool por bytes (koinu/byte)</target>
+        </trans-unit>
+      <trans-unit id="bded26fa86be9eac71bc27b9ca6d652b340b24d2" datatype="html"><source>Transaction bytes per second (B/s)</source>
+        <target>Bytes de transacciones por segundo (B/s)</target>
+        </trans-unit>
+      <trans-unit id="af6627251e98f2ee627f2f8c84f135b65c3fffee" datatype="html"><source>This transaction belongs to a chunk of 1 transaction, with combined effective fee rate <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;" /><x id="INTERPOLATION" equiv-text="s.chunkFeerate | feeRounding }}" /> koinu/B<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;" />.</source>
+        <target>Esta transacción pertenece a un grupo de 1 transacción, con una tasa de comisión efectiva combinada de <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;" /><x id="INTERPOLATION" equiv-text="s.chunkFeerate | feeRounding }}" /> koinu/B<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;" />.</target>
+        </trans-unit>
+      <trans-unit id="ae0a475bfce03fadb87c9090e64081a9310beea2" datatype="html"><source>This transaction belongs to a chunk of <x id="INTERPOLATION" equiv-text="{{ clusterPreviewStats.chunkSize }}" /> transactions, with combined effective fee rate <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;" /><x id="INTERPOLATION_1" equiv-text="s.chunkFeerate | feeRounding }}" /> koinu/B<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;" />.</source>
+        <target>Esta transacción pertenece a un grupo de <x id="INTERPOLATION" equiv-text="{{ clusterPreviewStats.chunkSize }}" /> transacciones, con una tasa de comisión efectiva combinada de <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;" /><x id="INTERPOLATION_1" equiv-text="s.chunkFeerate | feeRounding }}" /> koinu/B<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;" />.</target>
+        </trans-unit>
+      <trans-unit id="c7678f3be45eefaebe9bda75a0a30f97204433b5" datatype="html"><source>In a mempool cluster containing 1 other chunk.</source>
+        <target>En un clúster de la mempool que contiene otro grupo.</target></trans-unit>
+      <trans-unit id="acf9470007b6c76f037bf8aec23fc8d2ba2267a4" datatype="html"><source>In a mempool cluster containing <x id="INTERPOLATION" equiv-text="{{ clusterPreviewStats.otherChunks }}" /> other chunks.</source>
+        <target>En un clúster de la mempool que contiene <x id="INTERPOLATION" equiv-text="{{ clusterPreviewStats.otherChunks }}" /> otros grupos.</target></trans-unit>
+      <trans-unit id="92626adb4b7e2aff0d35c2db5e023aac29d27f0f" datatype="html"><source>Cluster</source>
+        <target>Clúster</target></trans-unit>
+      <trans-unit id="719f62092a6b4142d8fa32d09bb8a72d9e613aa7" datatype="html"><source>Only ~<x id="INTERPOLATION" equiv-text="{{ medianFeeNeeded | feeRounding }}" /> koinu/B was needed to get into this block</source>
+        <target>Solo se necesitaron ~<x id="INTERPOLATION" equiv-text="{{ medianFeeNeeded | feeRounding }}" /> koinu/B para entrar en este bloque</target>
+        </trans-unit>
+      <trans-unit id="c19bde6e194e95b60145a4e312fc31941197d90c" datatype="html"><source>LBTC Supply vs. BTC Holdings</source>
+        <target>Oferta de LBTC frente a tenencias de BTC</target></trans-unit>
+      <trans-unit id="c3c520c2bccb5da8e432dd5f282a72b05e12b7e0" datatype="html"><source>Your balance is too low.</source>
+        <target>Tu saldo es demasiado bajo.</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.strip.dashboard" datatype="html"><source>Dogecoin explorer dashboard</source><target>Panel del explorador de Dogecoin</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.strip.display-size" datatype="html"><source>Switch to displaying block sizes</source><target>Mostrar el tamaño de los bloques</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.strip.display-fees" datatype="html"><source>Switch to displaying total fees per block</source><target>Mostrar las comisiones totales por bloque</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.strip.newest-right" datatype="html"><source>Switch to displaying newest blocks on the right</source><target>Mostrar los bloques más recientes a la derecha</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.strip.newest-left" datatype="html"><source>Switch to displaying newest blocks on the left</source><target>Mostrar los bloques más recientes a la izquierda</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.provider.stale" datatype="html"><source>Data may be out of date.</source><target>Es posible que los datos no estén actualizados.</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.provider.degraded" datatype="html"><source>Some data is temporarily unavailable.</source><target>Algunos datos no están disponibles temporalmente.</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.provider.retry" datatype="html"><source>Unable to update. Retrying.</source><target>No se pudo actualizar. Reintentando.</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.provider.tracking" datatype="html"><source>Live detail tracking is temporarily unavailable. Displayed details may be stale.</source><target>El seguimiento de detalles en directo no está disponible temporalmente. Los detalles mostrados pueden estar desactualizados.</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.miner.logo" datatype="html"><source>Logo of <x id="NAME" equiv-text="this.name"/> mining pool</source><target>Logotipo del grupo de minería <x id="NAME" equiv-text="this.name"/></target></trans-unit>
+      <trans-unit id="tx-taxi.doge.miner.unknown-logo" datatype="html"><source>Mining pool logo</source><target>Logotipo del grupo de minería</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.mining-pools" datatype="html"><source>Mining Pools</source><target>Grupos de minería</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.not-available" datatype="html"><source>Not available</source><target>No disponible</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.hashrate-difficulty" datatype="html"><source>Hashrate &amp; Difficulty</source><target>Tasa de hash y dificultad</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.block-interval" datatype="html"><source>Block interval · <x id="INTERPOLATION" equiv-text="{{ (block.timestamp - blocks[1].timestamp) / (block.height - blocks[1].height) | number:'1.0-0' }}"/> s</source><target>Intervalo entre bloques · <x id="INTERPOLATION" equiv-text="{{ (block.timestamp - blocks[1].timestamp) / (block.height - blocks[1].height) | number:'1.0-0' }}"/> s</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.historical-price-unavailable" datatype="html"><source>Historical price unavailable</source><target>Precio histórico no disponible</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.unavailable" datatype="html"><source>Unavailable</source><target>No disponible</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.fiat-date-unavailable" datatype="html"><source>Fiat price not available for the selected date</source><target>El precio en moneda fiduciaria no está disponible para la fecha seleccionada</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.fiat.stale-title" datatype="html"><source>ECB reference rate; update unavailable</source><target>Tipo de referencia del BCE; actualización no disponible</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.fiat.reference-title" datatype="html"><source>ECB reference rate</source><target>Tipo de referencia del BCE</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.fiat.stale" datatype="html"><source> · stale</source><target> · desactualizado</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.nav.home-label" datatype="html"><source>doge.tx.taxi dashboard</source><target>Panel principal de doge.tx.taxi</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.nav.recent-blocks" datatype="html"><source>Recent blocks</source><target>Bloques recientes</target></trans-unit>
     </body>
   </file>
 </xliff>

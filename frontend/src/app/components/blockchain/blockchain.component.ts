@@ -11,6 +11,11 @@ import { StorageService } from '@app/services/storage.service';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class BlockchainComponent implements OnInit, OnDestroy, OnChanges {
+  readonly blockSizeLabel = $localize`:@@tx-taxi.doge.strip.display-size:Switch to displaying block sizes`;
+  readonly blockFeesLabel = $localize`:@@tx-taxi.doge.strip.display-fees:Switch to displaying total fees per block`;
+  readonly newestRightLabel = $localize`:@@tx-taxi.doge.strip.newest-right:Switch to displaying newest blocks on the right`;
+  readonly newestLeftLabel = $localize`:@@tx-taxi.doge.strip.newest-left:Switch to displaying newest blocks on the left`;
+
   @Input() pages: any[] = [];
   @Input() pageIndex: number;
   @Input() blocksPerPage: number = 8;
