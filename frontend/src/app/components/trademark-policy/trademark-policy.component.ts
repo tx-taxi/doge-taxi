@@ -13,7 +13,7 @@ export class TrademarkPolicyComponent {
   ) { }
 
   ngOnInit(): void {
-    this.seoService.setTitle('Trademark & Attribution');
-    this.seoService.setDescription('Trademark and attribution notes for doge.tx.taxi, including upstream mempool/mempool attribution and project independence.');
+    this.seoService.setTitle($localize`:@@tx-taxi.doge.legal.meta.title.3:Trademark & Attribution`);
+    this.seoService.setDescription($localize`:@@tx-taxi.doge.legal.meta.desc.3:Trademark and attribution notes for doge.tx.taxi, including upstream mempool/mempool attribution and project independence.`);
   }
 }

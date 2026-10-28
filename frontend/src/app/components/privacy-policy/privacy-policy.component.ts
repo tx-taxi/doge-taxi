@@ -13,7 +13,7 @@ export class PrivacyPolicyComponent {
   ) { }
 
   ngOnInit(): void {
-    this.seoService.setTitle('Privacy Policy');
-    this.seoService.setDescription('Privacy notes for doge.tx.taxi, including public Bitcoin data, browser preferences, server logs, and independent verification.');
+    this.seoService.setTitle($localize`:@@tx-taxi.doge.legal.meta.title.1:Privacy Policy`);
+    this.seoService.setDescription($localize`:@@tx-taxi.doge.legal.meta.desc.1:Privacy notes for doge.tx.taxi, including public Dogecoin data, browser preferences, server logs, and independent verification.`);
   }
 }

@@ -12,7 +12,7 @@ export class TermsOfServiceComponent {
   ) { }
 
   ngOnInit(): void {
-    this.seoService.setTitle('Terms of Service');
-    this.seoService.setDescription('Terms for using doge.tx.taxi as an informational Bitcoin block and mempool explorer.');
+    this.seoService.setTitle($localize`:@@tx-taxi.doge.legal.meta.title.2:Terms of Service`);
+    this.seoService.setDescription($localize`:@@tx-taxi.doge.legal.meta.desc.2:Terms for using doge.tx.taxi as an informational Dogecoin block and mempool explorer.`);
   }
 }
