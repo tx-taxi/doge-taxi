@@ -11907,6 +11907,10 @@
       <trans-unit id="tx-taxi.doge.fiat.stale" datatype="html"><source> · stale</source><target> · desactualizado</target></trans-unit>
       <trans-unit id="tx-taxi.doge.nav.home-label" datatype="html"><source>doge.tx.taxi dashboard</source><target>Panel principal de doge.tx.taxi</target></trans-unit>
       <trans-unit id="tx-taxi.doge.nav.recent-blocks" datatype="html"><source>Recent blocks</source><target>Bloques recientes</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.footer.faq" datatype="html"><source>Dogecoin FAQ</source><target>Preguntas frecuentes de Dogecoin</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.footer.telegram" datatype="html"><source>Join the tx.taxi Telegram channel</source><target>Únete al canal de Telegram de tx.taxi</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.footer.made-with" datatype="html"><source>Made with</source><target>Hecho con</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.footer.by" datatype="html"><source>by</source><target>por</target></trans-unit>
     </body>
   </file>
 </xliff>

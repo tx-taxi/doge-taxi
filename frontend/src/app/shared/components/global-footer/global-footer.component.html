@@ -55,7 +55,7 @@
 
 
         <p><a [routerLink]="['/tools/calculator' | relativeUrl]" i18n="@@tx-taxi.global.calculator">Calculator</a></p>
-        <p><a [routerLink]="['/docs/faq' | relativeUrl]">Dogecoin FAQ</a></p>
+        <p><a [routerLink]="['/docs/faq' | relativeUrl]" i18n="@@tx-taxi.doge.footer.faq">Dogecoin FAQ</a></p>
         <p><a [routerLink]="['/docs/api' | relativeUrl]" i18n="@@tx-taxi.global.api-docs">API Documentation</a></p>
       </div>
       <div class="links">
@@ -63,7 +63,7 @@
         <p><a [routerLink]="['/about']" i18n="@@tx-taxi.global.about">About</a></p>
         <p><a href="https://github.com/tx-taxi/doge-taxi" target="_blank" rel="noopener noreferrer" i18n="@@tx-taxi.global.source-code">Source code</a></p>
         <p><a href="https://status.tx.taxi/" target="_blank" rel="noopener noreferrer" i18n="@@tx-taxi.global.status">Status</a></p>
-        <p><a href="https://t.me/txtaxi" target="_blank" rel="noopener noreferrer" aria-label="Join the tx.taxi Telegram channel">Telegram</a></p>
+        <p><a href="https://t.me/txtaxi" target="_blank" rel="noopener noreferrer" aria-label="Join the tx.taxi Telegram channel" i18n-aria-label="@@tx-taxi.doge.footer.telegram">Telegram</a></p>
         <p><a href="https://t.me/hiss" target="_blank" rel="noopener noreferrer" i18n="@@tx-taxi.global.contact">Contact Us</a></p>
       </div>
       <div class="links">
@@ -77,7 +77,7 @@
     <div class="row footer-credit" [style]="{'background-color': isServicesPage ? 'var(--bg)' : ''}">
       <div class="col-sm-12">
         <p>
-          Made with <span class="footer-credit-emoji" aria-hidden="true">🚕</span> by
+          <span i18n="@@tx-taxi.doge.footer.made-with">Made with</span> <span class="footer-credit-emoji" aria-hidden="true">🚕</span> <span i18n="@@tx-taxi.doge.footer.by">by</span>
           <a class="footer-credit-link" href="https://u.software" target="_blank" rel="noopener noreferrer">u.software</a>
         </p>
       </div>
