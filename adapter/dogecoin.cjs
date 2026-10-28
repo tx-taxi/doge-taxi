@@ -96,7 +96,7 @@ async function route(p){let m;const pathname=p.split('?')[0];
  if(pathname==='/api/v1/prices')return require('./price.cjs').current();
  if(pathname==='/api/v1/historical-price'&&!new URL(p,'http://localhost').searchParams.has('timestamp')){const q=await require('./price.cjs').current();return {prices:[{time:Math.floor(q.fetchedAt/1000),USD:q.USD}],exchangeRates:{}};}
  if(pathname==='/api/v1/statistics/2h')return observations.points.filter(p=>p.added>Date.now()/1000-7200).slice().reverse();
- if(pathname==='/api/v1/init-data')return snapshot();
+ if(pathname==='/api/v1/init-data')return publicSnapshot(await snapshot());
  if(pathname==='/api/blocks/tip/height')return String((await fetchJson('',refreshInterval,'collector')).height);
  if(pathname==='/api/blocks/tip/hash')return (await fetchJson('',refreshInterval,'collector')).hash;
  if(m=pathname.match(/^\/api\/block-height\/(\d+)$/))return (await getBlock(m[1])).id;
@@ -130,11 +130,13 @@ async function route(p){let m;const pathname=p.split('?')[0];
   if(pathname.includes('/txs'))return a.txs.map(tx);
   return {address:a.address,chain_stats:{funded_txo_sum:Number(a.total_received),funded_txo_sum_exact:String(a.total_received),spent_txo_sum:Number(a.total_sent),spent_txo_sum_exact:String(a.total_sent),tx_count:a.n_tx},mempool_stats:{tx_count:a.unconfirmed_n_tx,funded_txo_sum:Math.max(0,a.unconfirmed_balance),spent_txo_sum:Math.max(0,-a.unconfirmed_balance)}};
  }
- if(pathname==='/api/v1/fees/recommended')return (await snapshot()).fees;
- if(pathname==='/api/mempool/recent')return (await snapshot()).transactions;
- if(pathname==='/api/v1/fees/mempool-blocks')return (await snapshot())['mempool-blocks'];
+ if(['/api/v1/fees/recommended','/api/mempool/recent','/api/v1/fees/mempool-blocks'].includes(pathname)){const d=await snapshot();if(!pendingFresh(d))throw Object.assign(Error('Pending data temporarily unavailable'),{status:503});return pathname.includes('recommended')?d.fees:pathname.includes('recent')?d.transactions:d['mempool-blocks'];}
  if(m=pathname.match(/^\/api\/v1\/validate-address\/(.+)$/)){return {isvalid:/^[DA9][1-9A-HJ-NP-Za-km-z]{25,34}$/.test(m[1]),address:m[1]};}
  if(pathname==='/api/v1/doge/network')return (await snapshot()).doge;
  throw Object.assign(new Error('Required provider capability unavailable: '+pathname),{status:503});
 }
-module.exports={route,snapshot,health,tx,block,refreshInterval,collectorInterval,budget:()=>({blockcypher:budget.status(),blockchair:chair.status(),atomic:atomic.status()}),cooldown:()=>cooldownUntil,liveObservedAt:()=>latest?.doge?.observedAt||null};
+module.exports={route,snapshot,health,tx,block,refreshInterval,collectorInterval,budget:()=>({blockcypher:budget.status(),blockchair:chair.status(),atomic:atomic.status()}),cooldown:()=>cooldownUntil,liveObservedAt:()=>latest?.doge?.blocksObservedAt||null};
+
+function pendingFresh(d){return !!d.doge.pendingObservedAt&&Date.now()-d.doge.pendingObservedAt<=refreshInterval*2;}
+function publicSnapshot(d){if(pendingFresh(d))return d;const out={...d,loadingIndicators:{...d.loadingIndicators,mempool:0},doge:{...d.doge,pendingUnavailable:true}};for(const key of ['fees','transactions','mempoolInfo','mempool-blocks','live-2h-chart'])delete out[key];return out;}
+module.exports.publicSnapshot=publicSnapshot;module.exports.pendingFresh=pendingFresh;

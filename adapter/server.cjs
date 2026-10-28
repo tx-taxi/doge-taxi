@@ -40,7 +40,7 @@ function currentProviderStatus(now = Date.now()) {
 }
 
 async function api(path) {
- try {const data=await dogecoin.route(path);health.lastSuccess=dogecoin.liveObservedAt();const r=result(data,dogecoin.health.source);if(data?.doge?.observedAt){r.at=data.doge.observedAt;r.stale=Date.now()-r.at>dogecoin.refreshInterval*2;}return r;}
+ try {const data=await dogecoin.route(path);health.lastSuccess=dogecoin.liveObservedAt();const r=result(data,dogecoin.health.source);if(data?.doge?.observedAt){r.at=data.doge.blocksObservedAt||data.doge.observedAt;r.stale=Date.now()-r.at>dogecoin.refreshInterval*2;}return r;}
  catch(e){if(e.status!==404)health.lastFailure={at:Date.now(),message:e.message};return result({error:e.message,retryable:true},'unavailable',e.status===404?404:503);}
 }
 
@@ -187,8 +187,8 @@ async function collect(){
  if(collection)return collection;
  collection=(async()=>{
   try{
-   const d=await dogecoin.snapshot();lastSnapshot=d;sequence++;health.lastSuccess=dogecoin.liveObservedAt();health.websocket='live';
-   for(const client of wss.clients){emit(client,{...d,blocks:[...d.blocks].reverse(),'provider-freshness':{state:currentProviderStatus().stale?'stale':'live',observedAt:dogecoin.liveObservedAt()}});if(client.pendingSample)emit(client,pendingFrame(d));}
+   const d=dogecoin.publicSnapshot(await dogecoin.snapshot());lastSnapshot=d;sequence++;health.lastSuccess=dogecoin.liveObservedAt();health.websocket='live';
+   for(const client of wss.clients){emit(client,{...d,blocks:[...d.blocks].reverse(),'provider-freshness':{state:currentProviderStatus().stale?'stale':'live',observedAt:dogecoin.liveObservedAt()}});if(client.pendingSample&&dogecoin.pendingFresh(d))emit(client,pendingFrame(d));}
    await Promise.allSettled([...wss.clients].flatMap(client=>[updateDetail(client),updateAddress(client)]));
   }catch(e){health.websocket='unavailable';health.lastFailure={at:Date.now(),message:e.message};for(const client of wss.clients)emit(client,{'provider-freshness':{state:'stale',observedAt:dogecoin.liveObservedAt()}});}
  })();try{await collection;}finally{collection=null;}
@@ -203,7 +203,7 @@ wss.on('connection',client=>{
   }
   if(m['track-tx']!==undefined){client.generation++;client.trackedTx=/^[a-f0-9]{64}$/.test(m['track-tx'])?m['track-tx']:null;await updateDetail(client);}
   if(m['track-address']!==undefined){client.addressGeneration++;client.trackedAddress=/^[DA9][1-9A-HJ-NP-Za-km-z]{25,34}$/.test(m['track-address'])?m['track-address']:null;client.addressSeen=null;await updateAddress(client);}
-  if(m['track-mempool-block']!==undefined){client.pendingSample=m['track-mempool-block']===0;if(client.pendingSample){if(!lastSnapshot)await collect();if(lastSnapshot)emit(client,pendingFrame(lastSnapshot));}}
+  if(m['track-mempool-block']!==undefined){client.pendingSample=m['track-mempool-block']===0;if(client.pendingSample){if(!lastSnapshot)await collect();if(lastSnapshot&&dogecoin.pendingFresh(lastSnapshot))emit(client,pendingFrame(lastSnapshot));}}
  });
 });
 setInterval(collect,dogecoin.collectorInterval).unref();
