@@ -49,11 +49,14 @@ export class SearchFormComponent implements OnInit {
   openExplorerLabel(name: string): string { return $localize`:@@tx-taxi.search.open-explorer:Open ${name}:name:`; }
   openExplorerInNewTabLabel(name: string): string { return $localize`:@@tx-taxi.search.open-new-tab:Open ${name}:name: in a new tab`; }
   switchExplorerLabel(name: string): string { return $localize`:@@tx-taxi.search.switch-explorer:Switch to ${name}:name:`; }
-  additionalExplorersLabel(name: string): string { return $localize`:@@tx-taxi.search.additional-explorers:Additional ${name}:name: explorers`; }
+  additionalExplorersLabel(name: string): string { return $localize`:@@tx-taxi.search.additional-explorers:${name}:name: additional explorers`; }
   additionalOptionsLabel(name: string, count: number, expanded: boolean): string {
-    return expanded
-      ? $localize`:@@tx-taxi.search.hide-options:Hide ${count}:count: additional options for ${name}:name:`
-      : $localize`:@@tx-taxi.search.show-options:Show ${count}:count: additional options for ${name}:name:`;
+    if (expanded) return count === 1
+      ? $localize`:@@tx-taxi.search.hide-one:Hide ${count}:count: additional ${name}:name: option`
+      : $localize`:@@tx-taxi.search.hide-many:Hide ${count}:count: additional ${name}:name: options`;
+    return count === 1
+      ? $localize`:@@tx-taxi.search.show-one:Show ${count}:count: additional ${name}:name: option`
+      : $localize`:@@tx-taxi.search.show-many:Show ${count}:count: additional ${name}:name: options`;
   }
 
   readonly defaultChainIconUrl = '/resources/chains/dogecoin.png';

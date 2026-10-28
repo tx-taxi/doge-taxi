@@ -11703,9 +11703,7 @@
       <trans-unit id="tx-taxi.search.open-explorer" datatype="html"><source>Open <x id="name"/></source><target>Abrir <x id="name"/></target></trans-unit>
       <trans-unit id="tx-taxi.search.open-new-tab" datatype="html"><source>Open <x id="name"/> in a new tab</source><target>Abrir <x id="name"/> en una pestaña nueva</target></trans-unit>
       <trans-unit id="tx-taxi.search.switch-explorer" datatype="html"><source>Switch to <x id="name"/></source><target>Cambiar a <x id="name"/></target></trans-unit>
-      <trans-unit id="tx-taxi.search.additional-explorers" datatype="html"><source>Additional <x id="name"/> explorers</source><target>Exploradores adicionales de <x id="name"/></target></trans-unit>
-      <trans-unit id="tx-taxi.search.hide-options" datatype="html"><source>Hide <x id="count"/> additional options for <x id="name"/></source><target>Ocultar <x id="count"/> opciones adicionales de <x id="name"/></target></trans-unit>
-      <trans-unit id="tx-taxi.search.show-options" datatype="html"><source>Show <x id="count"/> additional options for <x id="name"/></source><target>Mostrar <x id="count"/> opciones adicionales de <x id="name"/></target></trans-unit>
+      <trans-unit id="tx-taxi.search.additional-explorers" datatype="html"><source><x id="name"/> additional explorers</source><target>Exploradores adicionales de <x id="name"/></target></trans-unit>
       <trans-unit id="tx-taxi.search.direct-hint" datatype="html"><source>Or go straight to</source><target>O ve directamente a</target></trans-unit>
       <trans-unit id="tx-taxi.doge.nav.1" datatype="html"><source>doge.tx.taxi dashboard</source><target>Panel de doge.tx.taxi</target></trans-unit>
       <trans-unit id="tx-taxi.doge.nav.2" datatype="html"><source>Dashboard</source><target>Panel principal</target></trans-unit>
@@ -11772,6 +11770,10 @@
       <trans-unit id="tx-taxi.doge.legal.meta.desc.2" datatype="html"><source>Terms for using doge.tx.taxi as an informational Dogecoin block and mempool explorer.</source><target>Términos de uso de doge.tx.taxi como explorador informativo de bloques y mempool de Dogecoin.</target></trans-unit>
       <trans-unit id="tx-taxi.doge.legal.meta.title.3" datatype="html"><source>Trademark &amp; Attribution</source><target>Marcas y atribuciones</target></trans-unit>
       <trans-unit id="tx-taxi.doge.legal.meta.desc.3" datatype="html"><source>Trademark and attribution notes for doge.tx.taxi, including upstream mempool/mempool attribution and project independence.</source><target>Notas sobre marcas y atribuciones de doge.tx.taxi, incluida la atribución a mempool/mempool y la independencia del proyecto.</target></trans-unit>
+      <trans-unit id="tx-taxi.search.hide-one" datatype="html"><source>Hide <x id="count"/> additional <x id="name"/> option</source><target>Ocultar <x id="count"/> opción adicional de <x id="name"/></target></trans-unit>
+      <trans-unit id="tx-taxi.search.hide-many" datatype="html"><source>Hide <x id="count"/> additional <x id="name"/> options</source><target>Ocultar <x id="count"/> opciones adicionales de <x id="name"/></target></trans-unit>
+      <trans-unit id="tx-taxi.search.show-one" datatype="html"><source>Show <x id="count"/> additional <x id="name"/> option</source><target>Mostrar <x id="count"/> opción adicional de <x id="name"/></target></trans-unit>
+      <trans-unit id="tx-taxi.search.show-many" datatype="html"><source>Show <x id="count"/> additional <x id="name"/> options</source><target>Mostrar <x id="count"/> opciones adicionales de <x id="name"/></target></trans-unit>
     </body>
   </file>
 </xliff>
