@@ -11539,6 +11539,7 @@
       <trans-unit id="tx-taxi.doge.strip.newest-left" datatype="html"><source>Switch to displaying newest blocks on the left</source><target>Afficher les blocs les plus récents à gauche</target></trans-unit>
       <trans-unit id="tx-taxi.doge.miner.logo" datatype="html"><source>Logo of <x id="NAME" equiv-text="this.name" /> mining pool</source><target>Logo du groupe de minage <x id="NAME" equiv-text="this.name" /></target></trans-unit>
       <trans-unit id="tx-taxi.doge.miner.unknown-logo" datatype="html"><source>Mining pool logo</source><target>Logo du groupe de minage</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.historical-price-unavailable" datatype="html"><source>Historical price unavailable</source><target>Cours historique indisponible</target></trans-unit>
     </body>
   </file>
 </xliff>
