@@ -39,7 +39,13 @@ function markdown(html) {
 let docs;
 if (config.docsData) {
   const source = stripTypeScriptTypes(read(config.docsData), {mode: 'strip'}).replace(/\bexport\s+/g, '');
-  docs = JSON.parse(vm.runInNewContext(source + `\nJSON.stringify({faq:${config.docsExports.faq},rest:${config.docsExports.rest},ws:${config.docsExports.ws}})`, {}, {timeout: 1000}));
+  // SEO documents are canonical English. Evaluate Angular's localized strings
+  // as their source text without loading a translation runtime in the build VM.
+  const sourceLanguage = (parts, ...values) => {
+    const stripMetadata = part => part.replace(/^:[^:]*:/, '');
+    return values.reduce((result, value, index) => result + value + stripMetadata(parts[index + 1]), stripMetadata(parts[0]));
+  };
+  docs = JSON.parse(vm.runInNewContext(source + `\nJSON.stringify({faq:${config.docsExports.faq},rest:${config.docsExports.rest},ws:${config.docsExports.ws}})`, {$localize: sourceLanguage}, {timeout: 1000}));
 }
 const apiTemplate = config.docsData ? read('src/app/docs/api-docs/api-docs.component.html') : '';
 function documentBody(kind) {
@@ -57,7 +63,7 @@ function documentBody(kind) {
     if (kind === 'faq' && !description) {
       const match = apiTemplate.match(new RegExp(`<ng-template\\s+type="${item.fragment}">([\\s\\S]*?)<\\/ng-template>`));
       if (!match) throw Error(`Missing FAQ body: ${item.fragment}`);
-      description = match[1];
+      description = sanitize(match[1]);
     }
     const endpointPath = item.path || (item.urlString ? '/api' + item.urlString : '');
     const request = item.request || (endpointPath ? `curl ${origin}${endpointPath}` : item.payload || '');
