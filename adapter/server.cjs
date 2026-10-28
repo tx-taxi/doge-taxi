@@ -87,6 +87,8 @@ async function card(path) {
 }
 const server=http.createServer(async(req,res)=>{
  const u=new URL(req.url,'http://localhost');
+ const spanish = /^\/es(?:\/|$)/.test(u.pathname);
+ const routePath = spanish ? u.pathname.slice(3) || '/' : u.pathname;
  try {
   if(req.method!=='GET' && req.method!=='HEAD')return send(res,405,{error:'Read-only local explorer'});
   const crawl = staticSeo.endpoint(u.pathname);
@@ -94,8 +96,8 @@ const server=http.createServer(async(req,res)=>{
    res.writeHead(crawl.status || 200, {'Content-Type':crawl.type || 'text/plain; charset=utf-8','Cache-Control':'public, max-age=3600','X-Content-Type-Options':'nosniff',...crawl.headers});
    return res.end(req.method === 'HEAD' ? undefined : crawl.body);
   }
-  const canonicalRedirect = staticSeo.redirect(u.pathname);
-  if (canonicalRedirect) {res.writeHead(308,{Location:'https://doge.tx.taxi'+canonicalRedirect});return res.end();}
+  const canonicalRedirect = staticSeo.redirect(routePath);
+  if (canonicalRedirect) {res.writeHead(308,{Location:'https://doge.tx.taxi'+(spanish ? '/es' : '')+canonicalRedirect+(spanish ? u.search : '')});return res.end();}
   if(u.pathname.startsWith('/local-router/')) {
    const path=u.pathname.slice('/local-router'.length)+u.search;
    if(!/^\/(api|assets)\//.test(path)) {res.writeHead(302,{location:ROUTER_ORIGIN+path});return res.end();}
@@ -122,23 +124,25 @@ const server=http.createServer(async(req,res)=>{
    const relative=decodeURIComponent(u.pathname).replace(/^\/+/, '');
    let file=path.resolve(STATIC_ROOT,relative);
    if(file!==STATIC_ROOT&&!file.startsWith(STATIC_ROOT+path.sep))return send(res,404,{error:'Not found'});
-   if(!path.extname(relative))file=path.join(STATIC_ROOT,'index.html');
+   if(!path.extname(relative))file=path.join(STATIC_ROOT,spanish ? 'es/index.html' : 'index.html');
    let bytes;try{bytes=await fs.promises.readFile(file);}catch{return send(res,404,{error:'Not found'});}
    const types={'.html':'text/html; charset=utf-8','.js':'application/javascript','.css':'text/css','.json':'application/json','.svg':'image/svg+xml','.png':'image/png','.jpg':'image/jpeg','.webp':'image/webp','.ico':'image/x-icon','.woff':'font/woff','.woff2':'font/woff2','.ttf':'font/ttf','.webmanifest':'application/manifest+json','.txt':'text/plain','.wasm':'application/wasm'};
    r=new Response(bytes,{headers:{'content-type':types[path.extname(file)]||'application/octet-stream'}});
   } else r=await fetch(FRONTEND_ORIGIN+req.url,{headers:{accept:req.headers.accept||'*/*'},signal:AbortSignal.timeout(15000)});
   const type=r.headers.get('content-type')||'text/plain';
   if(type.includes('text/html')) {
-   let html=await r.text();const m=await metadata(u.pathname),origin=SITE_ORIGIN;
+   let html=await r.text();const m=await metadata(routePath),origin=SITE_ORIGIN;
+   if(spanish) {m.title=`Explorador de Dogecoin - doge.tx.taxi`;m.description='Explora bloques, transacciones, direcciones, comisiones y actividad de minería de Dogecoin.';m.path='/es'+(m.path==='/' ? '/' : m.path);}
    const preview = staticSeo.data.socialScreenshot;
    html=html.replace(/<title>[\s\S]*?<\/title>/,'').replace(/<meta[^>]+(?:name|property)=["'](?:description|og:[^"']+|twitter:[^"']+)["'][^>]*>/g,'').replace(/<link[^>]+rel=["']canonical["'][^>]*>/g,'');
-   html=html.replace('</head>',`<title>${escape(m.title)}</title><meta name="description" content="${escape(m.description)}"><link id="canonical" rel="canonical" href="https://doge.tx.taxi${escape(m.path)}"><meta property="og:title" content="${escape(m.title)}"><meta property="og:description" content="${escape(m.description)}"><meta property="og:type" content="website"><meta property="og:site_name" content="doge.tx.taxi"><meta property="og:locale" content="en_US"><meta property="og:image" content="${escape(preview.url)}"><meta property="og:url" content="https://doge.tx.taxi${escape(m.path)}"><meta property="og:image:type" content="${preview.mime}"><meta property="og:image:alt" content="${escape(preview.alt)}"><meta property="og:image:width" content="${preview.width}"><meta property="og:image:height" content="${preview.height}"><meta name="twitter:domain" content="doge.tx.taxi"><meta name="twitter:image:alt" content="${escape(preview.alt)}"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="${escape(m.title)}"><meta name="twitter:description" content="${escape(m.description)}"><meta name="twitter:image" content="${escape(preview.url)}"></head>`);
-   const documentPage = staticSeo.page(u.pathname);
-   const semanticPage = documentPage || (staticSeo.entity(u.pathname) ? {...m,label:m.title,html:`<p>${escape(m.description)}</p>`} : null);
+   html=html.replace('</head>',`<title>${escape(m.title)}</title><meta name="description" content="${escape(m.description)}"><link id="canonical" rel="canonical" href="https://doge.tx.taxi${escape(m.path)}"><meta property="og:title" content="${escape(m.title)}"><meta property="og:description" content="${escape(m.description)}"><meta property="og:type" content="website"><meta property="og:site_name" content="doge.tx.taxi"><meta property="og:locale" content="${spanish ? 'es_ES' : 'en_US'}"><meta property="og:image" content="${escape(preview.url)}"><meta property="og:url" content="https://doge.tx.taxi${escape(m.path)}"><meta property="og:image:type" content="${preview.mime}"><meta property="og:image:alt" content="${escape(preview.alt)}"><meta property="og:image:width" content="${preview.width}"><meta property="og:image:height" content="${preview.height}"><meta name="twitter:domain" content="doge.tx.taxi"><meta name="twitter:image:alt" content="${escape(preview.alt)}"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="${escape(m.title)}"><meta name="twitter:description" content="${escape(m.description)}"><meta name="twitter:image" content="${escape(preview.url)}"></head>`);
+   const documentPage = spanish ? null : staticSeo.page(routePath);
+   const semanticPage = documentPage || (!spanish && staticSeo.entity(routePath) ? {...m,label:m.title,html:`<p>${escape(m.description)}</p>`} : null);
    html = staticSeo.render(html, semanticPage).replace('</head>',staticSeo.headLinks(documentPage)+'</head>');
-   const noindex = m.entityStatus === 404 || staticSeo.nonIndexable(u.pathname);
+   const routeNoindex = staticSeo.nonIndexable(routePath);
+   const noindex = spanish || m.entityStatus === 404 || routeNoindex;
    if (noindex) html = html.replace(/<meta\b[^>]*name=["']robots["'][^>]*>/gi, '').replace('</head>', '<meta name="robots" content="noindex, follow"></head>');
-   return send(res,m.entityStatus || (noindex && !staticSeo.existingNonIndexable(u.pathname) ? 404 : r.status),req.method === 'HEAD' ? undefined : html,type,{...(noindex ? {'X-Robots-Tag':'noindex, follow'} : {}), ...(m.entityStatus === 503 ? {'Retry-After':'60'} : {})});
+   return send(res,m.entityStatus || (routeNoindex && !staticSeo.existingNonIndexable(routePath) ? 404 : r.status),req.method === 'HEAD' ? undefined : html,type,{...(noindex ? {'X-Robots-Tag':'noindex, follow'} : {}), ...(m.entityStatus === 503 ? {'Retry-After':'60'} : {})});
   }
   return send(res,r.status,Buffer.from(await r.arrayBuffer()),type);
  }catch(e){send(res,503,{error:'Local service unavailable',message:e.message});}

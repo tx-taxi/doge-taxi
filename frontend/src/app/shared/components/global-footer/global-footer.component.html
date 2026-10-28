@@ -10,11 +10,11 @@
           }
         </div>
         @if (!enterpriseInfo?.footer_img) {
-          <p class="explore-tagline-mobile">Dogecoin blocks, fees, and mempool activity</p>
+          <p class="explore-tagline-mobile" i18n="@@tx-taxi.global.tagline">Dogecoin blocks, fees, and mempool activity</p>
         }
         <div class="site-options language-selector d-flex justify-content-center align-items-center" [class]="{'services': isServicesPage}">
           <div class="selector">
-            <span>English</span>
+            <app-language-selector></app-language-selector>
           </div>
           <div class="selector">
             <app-fiat-selector></app-fiat-selector>
@@ -38,39 +38,39 @@
           }
         </div>
         @if (!enterpriseInfo?.footer_img) {
-          <p class="explore-tagline-desktop">Dogecoin blocks, fees, and mempool activity</p>
+          <p class="explore-tagline-desktop" i18n="@@tx-taxi.global.tagline">Dogecoin blocks, fees, and mempool activity</p>
         }
       </div>
     </div>
 
     <div class="row col-md-12 link-tree" [class]="{'services': isServicesPage}">
       <div class="links">
-        <p class="category">Explore</p>
-        <p><a [routerLink]="['/' | relativeUrl]">Dashboard</a></p>
-        <p><a [routerLink]="['/blocks' | relativeUrl]">Recent Blocks</a></p>
+        <p class="category" i18n="@@tx-taxi.global.explore">Explore</p>
+        <p><a [routerLink]="['/' | relativeUrl]" i18n="@@tx-taxi.global.dashboard">Dashboard</a></p>
+        <p><a [routerLink]="['/blocks' | relativeUrl]" i18n="@@tx-taxi.global.recent-blocks">Recent Blocks</a></p>
       </div>
       <div class="links">
-        <p class="category">Tools &amp; Docs</p>
+        <p class="category" i18n="@@tx-taxi.global.tools-docs">Tools &amp; Docs</p>
 
 
 
-        <p><a [routerLink]="['/tools/calculator' | relativeUrl]">Calculator</a></p>
+        <p><a [routerLink]="['/tools/calculator' | relativeUrl]" i18n="@@tx-taxi.global.calculator">Calculator</a></p>
         <p><a [routerLink]="['/docs/faq' | relativeUrl]">Dogecoin FAQ</a></p>
-        <p><a [routerLink]="['/docs/api' | relativeUrl]">API Documentation</a></p>
+        <p><a [routerLink]="['/docs/api' | relativeUrl]" i18n="@@tx-taxi.global.api-docs">API Documentation</a></p>
       </div>
       <div class="links">
         <p class="category">doge.tx.taxi</p>
-        <p><a [routerLink]="['/about']">About</a></p>
-        <p><a href="https://github.com/tx-taxi/doge-taxi" target="_blank" rel="noopener noreferrer">Source code</a></p>
-        <p><a href="https://status.tx.taxi/" target="_blank" rel="noopener noreferrer">Status</a></p>
+        <p><a [routerLink]="['/about']" i18n="@@tx-taxi.global.about">About</a></p>
+        <p><a href="https://github.com/tx-taxi/doge-taxi" target="_blank" rel="noopener noreferrer" i18n="@@tx-taxi.global.source-code">Source code</a></p>
+        <p><a href="https://status.tx.taxi/" target="_blank" rel="noopener noreferrer" i18n="@@tx-taxi.global.status">Status</a></p>
         <p><a href="https://t.me/txtaxi" target="_blank" rel="noopener noreferrer" aria-label="Join the tx.taxi Telegram channel">Telegram</a></p>
-        <p><a href="https://t.me/hiss" target="_blank" rel="noopener noreferrer">Contact Us</a></p>
+        <p><a href="https://t.me/hiss" target="_blank" rel="noopener noreferrer" i18n="@@tx-taxi.global.contact">Contact Us</a></p>
       </div>
       <div class="links">
-        <p class="category">Legal</p>
-        <p><a [routerLink]="['/terms-of-service']">Terms of Service</a></p>
-        <p><a [routerLink]="['/privacy-policy']">Privacy Policy</a></p>
-        <p><a [routerLink]="['/trademark-policy']">Trademark &amp; Attribution</a></p>
+        <p class="category" i18n="@@tx-taxi.global.legal">Legal</p>
+        <p><a [routerLink]="['/terms-of-service']" i18n="@@tx-taxi.global.terms">Terms of Service</a></p>
+        <p><a [routerLink]="['/privacy-policy']" i18n="@@tx-taxi.global.privacy">Privacy Policy</a></p>
+        <p><a [routerLink]="['/trademark-policy']" i18n="@@tx-taxi.global.trademark">Trademark &amp; Attribution</a></p>
       </div>
     </div>
 

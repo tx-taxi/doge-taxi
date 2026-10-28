@@ -13,7 +13,7 @@ import { LanguageService } from '@app/services/language.service';
 })
 export class LanguageSelectorComponent implements OnInit {
   languageForm: UntypedFormGroup;
-  languages = languages;
+  languages = languages.filter(language => language.code === 'en' || language.code === 'es');
 
   constructor(
     @Inject(DOCUMENT) private document: Document,
@@ -31,7 +31,7 @@ export class LanguageSelectorComponent implements OnInit {
   changeLanguage() {
     const newLang = this.languageForm.get('language').value;
     this.languageService.setLanguage(newLang);
-    const rawUrlPath = this.languageService.stripLanguageFromUrl(null);
-    this.document.location.href = (newLang !== 'en' ? `/${newLang}` : '') + rawUrlPath;
+    const rawUrlPath = this.languageService.stripLanguageFromUrl(null) || '/';
+    this.document.location.href = (newLang !== 'en' ? `/${newLang}` : '') + rawUrlPath + this.document.location.search + this.document.location.hash;
   }
 }

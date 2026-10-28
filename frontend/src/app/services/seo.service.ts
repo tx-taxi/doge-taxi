@@ -50,6 +50,7 @@ export class SeoService {
   }
 
   private documentMetadata() {
+    if (window.location.pathname === '/es' || window.location.pathname.startsWith('/es/')) return undefined;
     let path = this.router.url.split('?')[0].split('#')[0];
     try { path = decodeURIComponent(path); } catch {}
     return nativeSeoPages[path.replace(/\/$/, '') || '/'];
@@ -102,12 +103,14 @@ export class SeoService {
   updateCanonical(path) {
     try { path = decodeURIComponent(path); } catch {}
     path = path.replace(/\/$/, '') || '/';
-    const canonicalUrl = 'https://' + this.baseDomain + path;
+    const localized = window.location.pathname === '/es' || window.location.pathname.startsWith('/es/');
+    const canonicalUrl = 'https://' + this.baseDomain + (localized ? '/es' : '') + path;
     this.canonicalLink.setAttribute('href', canonicalUrl);
     this.metaService.updateTag({ property: 'og:url', content: canonicalUrl });
   }
 
   getTitle(): string {
+    if ((window.location.pathname === '/es' || window.location.pathname.startsWith('/es/')) && !this.network) return this.baseTitle + ' - Explorador de Dogecoin';
     if (this.network === 'testnet')
       {return this.baseTitle + ' - Bitcoin Testnet3';}
     if (this.network === 'testnet4')
@@ -122,6 +125,7 @@ export class SeoService {
   }
 
   getDescription(): string {
+    if (window.location.pathname === '/es' || window.location.pathname.startsWith('/es/')) return 'Explora bloques, transacciones, direcciones, comisiones y actividad de minería de Dogecoin.';
     return this.documentMetadata()?.description || this.baseDescription;
   }
 
