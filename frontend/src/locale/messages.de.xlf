@@ -11526,6 +11526,19 @@
       <trans-unit id="tx-taxi.global.privacy" datatype="html"><source>Privacy Policy</source>
         <target>Datenschutzbestimmungen</target>
       </trans-unit>
+      <trans-unit id="tx-taxi.doge.strip.sample-link" datatype="html"><source> Observed pending transactions only; fill represents observed bytes. The expected next-block time is about 1 minute, not a promise of inclusion.</source><target> Nur beobachtete ausstehende Transaktionen; die Füllung zeigt beobachtete Bytes. Der nächste Block wird in etwa einer Minute erwartet; die Aufnahme ist nicht garantiert.</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.strip.sample-body" datatype="html"><source>Observed pending transactions; fill shows observed bytes out of the 1 MB block capacity. Timing estimates the next block, not guaranteed inclusion.</source><target>Beobachtete ausstehende Transaktionen; die Füllung zeigt beobachtete Bytes der Blockkapazität von 1 MB. Die Zeit schätzt den nächsten Block und garantiert keine Aufnahme.</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.strip.details" datatype="html"><source>Total fees: <x id="amount" /> <x id="symbol" />. Median fee rate: <x id="median" /> <x id="unit" />. Fee range: <x id="min" />–<x id="max" /> <x id="unit2" />.</source><target>Gesamtgebühren: <x id="amount" /> <x id="symbol" />. Medianer Gebührensatz: <x id="median" /> <x id="unit" />. Gebührenspanne: <x id="min" />–<x id="max" /> <x id="unit2" />.</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.strip.fees-unavailable" datatype="html"><source>Total transaction fees unavailable</source><target>Gesamte Transaktionsgebühren nicht verfügbar</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.strip.height-gap-one" datatype="html"><source><x id="count" /> blocks between <x id="high" /> and <x id="low" /></source><target><x id="count" /> Block zwischen <x id="high" /> und <x id="low" /></target></trans-unit>
+      <trans-unit id="tx-taxi.doge.strip.height-gap" datatype="html"><source><x id="count" /> blocks between <x id="high" /> and <x id="low" /></source><target><x id="count" /> Blöcke zwischen <x id="high" /> und <x id="low" /></target></trans-unit>
+      <trans-unit id="tx-taxi.doge.strip.dashboard" datatype="html"><source>Dogecoin explorer dashboard</source><target>Dogecoin-Explorerübersicht</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.strip.display-size" datatype="html"><source>Switch to displaying block sizes</source><target>Blockgrößen anzeigen</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.strip.display-fees" datatype="html"><source>Switch to displaying total fees per block</source><target>Gesamtgebühren pro Block anzeigen</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.strip.newest-right" datatype="html"><source>Switch to displaying newest blocks on the right</source><target>Neueste Blöcke rechts anzeigen</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.strip.newest-left" datatype="html"><source>Switch to displaying newest blocks on the left</source><target>Neueste Blöcke links anzeigen</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.miner.logo" datatype="html"><source>Logo of <x id="NAME" equiv-text="this.name" /> mining pool</source><target>Logo des Mining-Pools <x id="NAME" equiv-text="this.name" /></target></trans-unit>
+      <trans-unit id="tx-taxi.doge.miner.unknown-logo" datatype="html"><source>Mining pool logo</source><target>Logo des Mining-Pools</target></trans-unit>
     </body>
   </file>
 </xliff>
