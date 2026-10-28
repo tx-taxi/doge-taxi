@@ -21,6 +21,7 @@ interface BlockchainBlock extends BlockExtended {
 })
 export class BlockchainBlocksComponent implements OnInit, OnChanges, OnDestroy {
   blockValueDetails = blockValueDetails;
+  heightGapLabel(count: number, high: number, low: number): string { return $localize`:@@tx-taxi.doge.strip.height-gap:${count}:count: blocks between ${high}:high: and ${low}:low:`; }
   @Input() static: boolean = false;
   @Input() offset: number = 0;
   @Input() height: number = 0; // max height of blocks in chunk (dynamic blocks only)
