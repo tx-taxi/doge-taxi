@@ -11707,6 +11707,21 @@
       <trans-unit id="tx-taxi.search.hide-options" datatype="html"><source>Hide <x id="count"/> additional options for <x id="name"/></source><target>Ocultar <x id="count"/> opciones adicionales de <x id="name"/></target></trans-unit>
       <trans-unit id="tx-taxi.search.show-options" datatype="html"><source>Show <x id="count"/> additional options for <x id="name"/></source><target>Mostrar <x id="count"/> opciones adicionales de <x id="name"/></target></trans-unit>
       <trans-unit id="tx-taxi.search.direct-hint" datatype="html"><source>Or go straight to</source><target>O ve directamente a</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.nav.1" datatype="html"><source>doge.tx.taxi dashboard</source><target>Panel de doge.tx.taxi</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.nav.2" datatype="html"><source>Dashboard</source><target>Panel principal</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.nav.3" datatype="html"><source>Mining dashboard</source><target>Panel de minería</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.nav.4" datatype="html"><source>Dogecoin graphs</source><target>Gráficos de Dogecoin</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.nav.5" datatype="html"><source>Recent blocks</source><target>Bloques recientes</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.nav.6" datatype="html"><source>Documentation</source><target>Documentación</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.nav.7" datatype="html"><source>About doge.tx.taxi</source><target>Acerca de doge.tx.taxi</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.docs.category.1" datatype="html"><source>connection</source><target>conexión</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.docs.category.2" datatype="html"><source>network</source><target>red</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.docs.category.3" datatype="html"><source>blocks</source><target>bloques</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.docs.category.4" datatype="html"><source>transactions</source><target>transacciones</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.docs.category.5" datatype="html"><source>addresses</source><target>direcciones</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.docs.category.6" datatype="html"><source>fees</source><target>comisiones</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.docs.category.7" datatype="html"><source>about</source><target>acerca de</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.docs.category.8" datatype="html"><source>explorer</source><target>explorador</target></trans-unit>
     </body>
   </file>
 </xliff>

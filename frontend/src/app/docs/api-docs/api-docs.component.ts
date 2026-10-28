@@ -23,6 +23,20 @@ export class ApiDocsComponent implements OnInit, AfterViewInit {
   code: any;
   baseNetworkUrl = '';
   @Input() whichTab: string;
+  categoryLabel(category: string): string {
+    const labels: Record<string, string> = {
+      'connection': $localize`:@@tx-taxi.doge.docs.category.1:connection`,
+      'network': $localize`:@@tx-taxi.doge.docs.category.2:network`,
+      'blocks': $localize`:@@tx-taxi.doge.docs.category.3:blocks`,
+      'transactions': $localize`:@@tx-taxi.doge.docs.category.4:transactions`,
+      'addresses': $localize`:@@tx-taxi.doge.docs.category.5:addresses`,
+      'fees': $localize`:@@tx-taxi.doge.docs.category.6:fees`,
+      'about': $localize`:@@tx-taxi.doge.docs.category.7:about`,
+      'explorer': $localize`:@@tx-taxi.doge.docs.category.8:explorer`,
+    };
+    return labels[category] || category;
+  }
+
   faq: any[];
   restDocs: any[];
   wsDocs: any;
