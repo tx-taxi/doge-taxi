@@ -18,6 +18,7 @@ import { WebsocketService } from '@app/services/websocket.service';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class MempoolBlockComponent implements OnInit, OnDestroy {
+  readonly pendingSampleLabel = $localize`:@@tx-taxi.doge.pending-sample:Pending sample`;
   network$: Observable<string>;
   mempoolBlockIndex: number;
   mempoolBlock$: Observable<MempoolBlock>;

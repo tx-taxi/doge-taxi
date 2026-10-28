@@ -28,6 +28,8 @@ import { ThemeService } from '@app/services/theme.service';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class MempoolBlocksComponent implements OnInit, OnChanges, OnDestroy {
+  readonly sampledLinkDetails = $localize`:@@tx-taxi.doge.strip.sample-link: Observed pending transactions only; fill represents observed bytes. The expected next-block time is about 1 minute, not a promise of inclusion.`;
+  readonly sampledBodyDetails = $localize`:@@tx-taxi.doge.strip.sample-body:Observed pending transactions; fill shows observed bytes out of the 1 MB block capacity. Timing estimates the next block, not guaranteed inclusion.`;
   blockValueDetails = blockValueDetails;
   @Input() minimal: boolean = false;
   @Input() blockWidth: number = 125;

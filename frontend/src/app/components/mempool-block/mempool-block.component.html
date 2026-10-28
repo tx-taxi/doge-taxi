@@ -1,12 +1,12 @@
 <div class="container-xl" *ngIf="mempoolBlock$ | async as mempoolBlock; else unavailable">
 
   <div class="title-block">
-    <h1>{{ mempoolBlock.sampled ? 'Pending sample' : (ordinal$ | async) }}</h1>
+    <h1>{{ mempoolBlock.sampled ? pendingSampleLabel : (ordinal$ | async) }}</h1>
     <button [routerLink]="['/' | relativeUrl]" class="btn btn-sm float-end">&#10005;</button>
   </div>
 
   <div class="clearfix"></div>
-  <p *ngIf="mempoolBlock.sampled" class="text-muted">Observed pending transactions. Fill shows sampled bytes out of the 1 MB block capacity; this is not a predicted block.</p>
+  <p *ngIf="mempoolBlock.sampled" class="text-muted" i18n="@@tx-taxi.doge.sample-description">Observed pending transactions. Fill shows sampled bytes out of the 1 MB block capacity; this is not a predicted block.</p>
 
   <div class="box">
     <div class="row">

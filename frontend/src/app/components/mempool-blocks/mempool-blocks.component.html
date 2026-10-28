@@ -9,8 +9,8 @@
         ></div>
         <div @blockEntryTrigger [@.disabled]="i > 0 || !animateEntry" [attr.data-cy]="'mempool-block-' + i" class="bitcoin-block text-center mempool-block" [class.hide-block]="count && i >= count" id="mempool-block-{{ i }}" [ngStyle]="mempoolBlockStyles[i]" [class.blink-bg]="projectedBlock.blink" [style]="blockTransformation">
           <a draggable="false" [routerLink]="[getHref(i) | relativeUrl]"
-            [attr.title]="blockValueDetails(projectedBlock.totalFees, projectedBlock.medianFee, projectedBlock.feeRange?.[0], projectedBlock.feeRange?.[projectedBlock.feeRange.length - 1]) + (projectedBlock.sampled ? ' Observed pending transactions only; fill represents observed bytes. The expected next-block time is about 1 minute, not a promise of inclusion.' : '')" class="blockLink" [ngClass]="{'disabled': (this.stateService.blockScrolling$ | async)}">&nbsp;</a>
-          <div class="block-body" [attr.title]="projectedBlock.sampled ? 'Observed pending transactions; fill shows observed bytes out of the 1 MB block capacity. Timing estimates the next block, not guaranteed inclusion.' : null">
+            [attr.title]="blockValueDetails(projectedBlock.totalFees, projectedBlock.medianFee, projectedBlock.feeRange?.[0], projectedBlock.feeRange?.[projectedBlock.feeRange.length - 1]) + (projectedBlock.sampled ? sampledLinkDetails : '')" class="blockLink" [ngClass]="{'disabled': (this.stateService.blockScrolling$ | async)}">&nbsp;</a>
+          <div class="block-body" [attr.title]="projectedBlock.sampled ? sampledBodyDetails : null">
             <ng-container *ngIf="!minimal">
               <div [attr.data-cy]="'mempool-block-' + i + '-fees'" class="fees">
                 ~<app-fee-rate [compactBlock]="true" [fee]="projectedBlock.medianFee" unitClass="" rounding="1.0-0"></app-fee-rate>
