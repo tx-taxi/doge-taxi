@@ -102,7 +102,7 @@ async function route(p){let m;const pathname=p.split('?')[0];
  if(m=pathname.match(/^\/api\/block-height\/(\d+)$/))return (await getBlock(m[1])).id;
  if(m=pathname.match(/^\/api\/(?:v1\/)?blocks(?:\/(\d+))?$/)){if(!m[1])return (await snapshot()).blocks;const h=Number(m[1]);return(await chair.blocks(Array.from({length:Math.min(10,h+1)},(_,i)=>h-i))).blocks;}
  if(m=pathname.match(/^\/api\/v1\/block\/([a-f0-9]{64})\/summary$/)){
-  try{const data=await atomic.blockPage(m[1]);return data.txs.map(t=>({txid:t.txid,fee:t.fee,vsize:t.size,value:t.doge.value,rate:t.fee/t.size,flags:0}));}catch(e){if(e.status===404)throw e;}
+  try{const data=await atomic.blockPage(m[1]);if(data.txs.length>500)throw Error('Block overview exceeds bounded display capacity');return data.txs.map(t=>({txid:t.txid,fee:t.fee,vsize:t.size,value:t.doge.value,rate:t.fee/t.size,flags:0}));}catch(e){if(e.status===404)throw e;}
   const item=await chair.blockPage(m[1],0,100);
   if(item.block.transaction_count>100||item.transactions.length!==item.block.transaction_count)throw Object.assign(new Error('Complete block visualization is unavailable within the provider budget'),{status:503});
   const txs=await chair.transactions(item.transactions);

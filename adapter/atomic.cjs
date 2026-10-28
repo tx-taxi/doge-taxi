@@ -31,9 +31,9 @@ function verifiedBlock(b,raw){
  rates.sort((a,b)=>a-b);const mid=Math.floor(rates.length/2),median=rates.length?(rates.length%2?rates[mid]:(rates[mid-1]+rates[mid])/2):0;
  const payout=b.txs[0].vout.filter(o=>o.isAddress&&o.addresses?.length===1).sort((a,b)=>BigInt(a.value)>BigInt(b.value)?-1:1)[0]?.addresses[0];
  const marker=parsed.parentCoinbase||'';const match=pools.find(([name])=>marker.toLowerCase().includes(name.toLowerCase()));
- return {id:b.hash,height:b.height,version:b.version,timestamp:b.time,tx_count:b.txCount,size:b.size,weight:b.size*4,merkle_root:b.merkleRoot,previousblockhash:b.previousBlockHash,nonce:Number(b.nonce),bits:parseInt(b.bits,16),difficulty:Number(b.difficulty),extras:{totalFees:Number(sum),avgFee:rates.length?Number(sum)/rates.length:0,medianFee:median,feeRange:rates.length?[rates[0],rates.at(-1)]:[0,0],reward:Number(reward),pool:{id:0,name:match?.[0]||'',slug:match?.[1]||'',...(payout?{address:payout}:{})},matchRate:null},doge:{isAuxPow:true,sizeSource:'raw-block',feeSource:'atomicwallet-index+verified-raw-block'}};
+ return {id:b.hash,height:b.height,version:b.version,timestamp:b.time,tx_count:b.txCount,size:b.size,weight:b.size*4,merkle_root:b.merkleRoot,previousblockhash:b.previousBlockHash,nonce:Number(b.nonce),bits:parseInt(b.bits,16),difficulty:Number(b.difficulty),extras:{summaryAvailable:b.txCount<=500,totalFees:Number(sum),avgFee:rates.length?Number(sum)/rates.length:0,medianFee:median,feeRange:rates.length?[rates[0],rates.at(-1)]:[0,0],reward:Number(reward),pool:{id:0,name:match?.[0]||'',slug:match?.[1]||'',...(payout?{address:payout}:{})},matchRate:null},doge:{isAuxPow:true,sizeSource:'raw-block',feeSource:'atomicwallet-index+verified-raw-block'}};
 }
-function cached(hash){try{return JSON.parse(fs.readFileSync(path.join(dir,hash+'.json')));}catch{return null;}}
+function cached(hash){try{const saved=JSON.parse(fs.readFileSync(path.join(dir,hash+'.json')));saved.extras.summaryAvailable=saved.tx_count<=500;return saved;}catch{return null;}}
 async function block(id,lane='collector'){
  if(/^[a-f0-9]{64}$/.test(String(id))){const saved=cached(id);if(saved)return saved;}
  const b=await request('/block/'+id+'?pageSize=1000',lane);
