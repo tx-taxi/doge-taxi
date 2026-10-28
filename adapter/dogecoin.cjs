@@ -98,10 +98,9 @@ async function route(p){let m;const pathname=p.split('?')[0];
  if(pathname==='/api/v1/historical-price'&&!new URL(p,'http://localhost').searchParams.has('timestamp')){const q=await require('./price.cjs').current();return {prices:[{time:Math.floor(q.fetchedAt/1000),USD:q.USD}],exchangeRates:{}};}
  if(pathname==='/api/v1/statistics/2h')return observations.points.filter(p=>p.added>Date.now()/1000-7200).slice().reverse();
  if(pathname==='/api/v1/init-data')return publicSnapshot(await snapshot());
- if(pathname==='/api/blocks/tip/height')return String((await fetchJson('',refreshInterval,'collector')).height);
- if(pathname==='/api/blocks/tip/hash')return (await fetchJson('',refreshInterval,'collector')).hash;
+ if(pathname==='/api/blocks/tip/height'||pathname==='/api/blocks/tip/hash'){const d=await snapshot();if(Date.now()-d.doge.blocksObservedAt>refreshInterval*2)throw Object.assign(Error('Block tip temporarily unavailable'),{status:503});return pathname.endsWith('height')?String(d.blocks[0].height):d.blocks[0].id;}
  if(m=pathname.match(/^\/api\/block-height\/(\d+)$/))return (await getBlock(m[1])).id;
- if(m=pathname.match(/^\/api\/(?:v1\/)?blocks(?:\/(\d+))?$/)){if(!m[1])return (await snapshot()).blocks;const h=Number(m[1]);return(await chair.blocks(Array.from({length:Math.min(10,h+1)},(_,i)=>h-i))).blocks;}
+ if(m=pathname.match(/^\/api\/(?:v1\/)?blocks(?:\/(\d+))?$/)){if(!m[1])return (await snapshot()).blocks;const h=Number(m[1]),heights=Array.from({length:Math.min(10,h+1)},(_,i)=>h-i);try{const rows=[];for(const height of heights)rows.push(await getBlock(String(height)));return rows;}catch{return(await chair.blocks(heights,'history')).blocks.map(b=>atomic.cached(b.id)||b);}}
  if(m=pathname.match(/^\/api\/v1\/block\/([a-f0-9]{64})\/summary$/)){
   try{const data=await atomic.blockPage(m[1]);if(data.txs.length>500)throw Error('Block overview exceeds bounded display capacity');return data.txs.map(t=>({txid:t.txid,fee:t.fee,vsize:t.size,value:t.doge.value,rate:t.fee/t.size,flags:0}));}catch(e){if(e.status===404)throw e;}
   const item=await chair.blockPage(m[1],0,100);
