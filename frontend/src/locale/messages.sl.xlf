@@ -10844,6 +10844,27 @@
           <context context-type="linenumber">173</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="graphs.blockFeesSubsidy.fees" datatype="html"><source>Fees</source>
+        <target>Omrežnine</target>
+      </trans-unit>
+      <trans-unit id="32fba724df729afb840693b40e3f8869356f4e33" datatype="html"><source>Size</source>
+        <target>Velikost</target>
+      </trans-unit>
+      <trans-unit id="tx-taxi.difficulty.difficulty-title" datatype="html"><source>Difficulty</source>
+        <target>Težavnost</target>
+        </trans-unit>
+      <trans-unit id="tx-taxi.unconfirmed" datatype="html"><source>Unconfirmed</source>
+        <target>Nepotrjeno</target>
+        </trans-unit>
+      <trans-unit id="tx-taxi.global.about" datatype="html"><source>About</source>
+        <target>O projektu</target>
+      </trans-unit>
+      <trans-unit id="tx-taxi.global.terms" datatype="html"><source>Terms of Service</source>
+        <target>Pogoji storitve</target>
+      </trans-unit>
+      <trans-unit id="tx-taxi.global.privacy" datatype="html"><source>Privacy Policy</source>
+        <target>Politika zasebnosti</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>
