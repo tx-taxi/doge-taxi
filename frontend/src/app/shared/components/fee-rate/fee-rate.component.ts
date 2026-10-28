@@ -1,5 +1,5 @@
 import { compactBlockNumber } from '@app/shared/block-format';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Inject, LOCALE_ID } from '@angular/core';
 import { Observable } from 'rxjs';
 import { StateService } from '@app/services/state.service';
 import { FeeRoundingPipe } from '@app/shared/pipes/fee-rounding/fee-rounding.pipe';
@@ -12,7 +12,7 @@ import { FeeRoundingPipe } from '@app/shared/pipes/fee-rounding/fee-rounding.pip
 })
 export class FeeRateComponent implements OnInit {
   @Input() compactBlock = false;
-  compactBlockNumber = compactBlockNumber;
+  compactBlockNumber = (value: number) => compactBlockNumber(value, false, this.locale);
   @Input() fee: number | undefined;
   @Input() weight: number = 4;
   @Input() rounding: string = null;
@@ -25,6 +25,7 @@ export class FeeRateComponent implements OnInit {
   rateUnits$: Observable<string>;
 
   constructor(
+    @Inject(LOCALE_ID) private locale: string,
     private stateService: StateService,
     private feeRoundingPipe: FeeRoundingPipe,
   ) { }

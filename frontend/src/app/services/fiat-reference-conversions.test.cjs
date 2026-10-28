@@ -63,3 +63,15 @@ test('an old router response cannot overwrite a newly configured router', async 
  fx.setRouterUrl('http://127.0.0.1:4758'); await tick(); assert.equal(last.CAD,140);
  finishOld(Response.json({base:'USD',asOf,stale:false,rates:{USD:1,CAD:1.9}})); await tick(); assert.equal(last.CAD,140);
 });
+
+// Production explorers use the same-origin router proxy; reject unrelated relative paths.
+test('production proxy supplies each selected non-USD quote from the native USD price', async () => {
+ const requests = [], quotes = {USD: 1, EUR: 0.9, GBP: 0.75, JPY: 150, AUD: 1.5, CAD: 1.4, CHF: 0.85};
+ let last;
+ const fx = new FiatReferenceConversions(true, () => {}, async url => { requests.push(url); return Response.json({base: 'USD', asOf, stale: false, rates: quotes}); }, () => Date.parse(asOf+'T15:00:00Z'));
+ fx.subscribe(value => { last = value; });
+ fx.setRouterUrl('/local-router'); fx.next({USD: 100});
+ for (const currency of ['EUR', 'GBP', 'JPY', 'AUD', 'CAD', 'CHF']) { fx.select(currency); await tick(); assert.equal(last[currency], 100 * quotes[currency]); assert.equal(last.USD, 100); }
+ assert.deepEqual(requests, ['/local-router/api/v1/fiat-rates']);
+ fx.setRouterUrl('/local-router/unsafe'); fx.select('EUR'); fx.next({USD: 100}); await tick(); assert.equal(last.EUR, undefined); assert.equal(requests.length, 1);
+});

@@ -1,5 +1,5 @@
 import { compactBlockAmount } from '@app/shared/block-format';
-import { Component, OnInit, OnDestroy, Input, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
+import { Component, OnInit, OnDestroy, Input, ChangeDetectionStrategy, ChangeDetectorRef, Inject, LOCALE_ID } from '@angular/core';
 import { StateService } from '@app/services/state.service';
 import { Observable, Subscription } from 'rxjs';
 import { Price } from '@app/services/price.service';
@@ -22,7 +22,7 @@ export class AmountComponent implements OnInit, OnDestroy {
 
   @Input() satoshis: number | string;
   @Input() compactBlock = false;
-  compactBlockAmount = compactBlockAmount;
+  compactBlockAmount = (value: number | string, atomic = false) => compactBlockAmount(value, atomic, this.locale);
 
   @Input() digitsInfo = '1.8-8';
   @Input() noFiat = false;
@@ -34,6 +34,7 @@ export class AmountComponent implements OnInit, OnDestroy {
   @Input() unitStyle: any;
 
   constructor(
+    @Inject(LOCALE_ID) private locale: string,
     private stateService: StateService,
     private cd: ChangeDetectorRef,
   ) {
@@ -49,16 +50,17 @@ export class AmountComponent implements OnInit, OnDestroy {
       const value = BigInt(this.satoshis);
       const negative=value<0n; const absolute=negative?-value:value;
       const prefix=negative?'-':this.addPlus&&value>=0n?'+':'';
-      if(atomic)return prefix+absolute.toLocaleString('en-US');
+      if(atomic)return prefix+absolute.toLocaleString(this.locale);
       const match=this.digitsInfo?.match(/\.(\d+)-(\d+)$/);
       const min=Number(match?.[1] ?? 8), max=Math.min(8,Number(match?.[2] ?? 8));
       const factor=10n ** BigInt(8-max);
       const rounded=(absolute+factor/2n)/factor;
       const scale=10n ** BigInt(max);
-      const integer=(rounded/scale).toLocaleString('en-US');
+      const integer=(rounded/scale).toLocaleString(this.locale);
       let fraction=(rounded%scale).toString().padStart(max,'0');
       while(fraction.length>min && fraction.endsWith('0'))fraction=fraction.slice(0,-1);
-      return prefix+integer+(fraction?'.'+fraction:'');
+      const decimal = new Intl.NumberFormat(this.locale).formatToParts(1.1).find(part => part.type === 'decimal')?.value || '.';
+      return prefix+integer+(fraction?decimal+fraction:'');
     } catch{return '—';}
   }
 

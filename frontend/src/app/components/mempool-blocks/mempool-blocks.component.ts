@@ -1,5 +1,5 @@
 import { blockValueDetails } from '@app/shared/block-format';
-import { Component, OnInit, OnDestroy, ChangeDetectionStrategy, ChangeDetectorRef, HostListener, Input, OnChanges, SimpleChanges, Output, EventEmitter, ViewChild, ElementRef } from '@angular/core';
+import { Component, Inject, LOCALE_ID, OnInit, OnDestroy, ChangeDetectionStrategy, ChangeDetectorRef, HostListener, Input, OnChanges, SimpleChanges, Output, EventEmitter, ViewChild, ElementRef } from '@angular/core';
 import { Subscription, Observable, of, combineLatest } from 'rxjs';
 import { MempoolBlock } from '@interfaces/websocket.interface';
 import { StateService } from '@app/services/state.service';
@@ -30,7 +30,7 @@ import { ThemeService } from '@app/services/theme.service';
 export class MempoolBlocksComponent implements OnInit, OnChanges, OnDestroy {
   readonly sampledLinkDetails = $localize`:@@tx-taxi.doge.strip.sample-link: Observed pending transactions only; fill represents observed bytes. The expected next-block time is about 1 minute, not a promise of inclusion.`;
   readonly sampledBodyDetails = $localize`:@@tx-taxi.doge.strip.sample-body:Observed pending transactions; fill shows observed bytes out of the 1 MB block capacity. Timing estimates the next block, not guaranteed inclusion.`;
-  blockValueDetails = blockValueDetails;
+  blockValueDetails = (total: number | string, median: number, min: number, max: number) => blockValueDetails(total, median, min, max, this.locale);
   @Input() minimal: boolean = false;
   @Input() blockWidth: number = 125;
   @Input() containerWidth: number = null;
@@ -97,6 +97,7 @@ export class MempoolBlocksComponent implements OnInit, OnChanges, OnDestroy {
   blockIndex = 1;
 
   constructor(
+    @Inject(LOCALE_ID) private locale: string,
     private router: Router,
     public stateService: StateService,
     private etaService: EtaService,

@@ -9,6 +9,8 @@ const REFRESH = 60 * 60000;
 const DEFAULT_ROUTER = 'https://tx.taxi';
 
 function rateEndpoint(configured: string): string | null {
+  // The gateway exposes the hub API through this fixed same-origin prefix.
+  if (configured === '/local-router' || configured === '/local-router/') return '/local-router/api/v1/fiat-rates';
   try {
     const url = new URL(configured || DEFAULT_ROUTER);
     if (!['http:', 'https:'].includes(url.protocol) || !url.hostname || url.username || url.password || url.pathname !== '/' || url.search || url.hash) return null;
