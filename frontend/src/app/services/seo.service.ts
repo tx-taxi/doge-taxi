@@ -50,7 +50,7 @@ export class SeoService {
   }
 
   private documentMetadata() {
-    if (/^\/(es|fr|de|it)(?:\/|$)/.test(window.location.pathname)) return undefined;
+    if (/^\/(es|fr|de|it|pt)(?:\/|$)/.test(window.location.pathname)) return undefined;
     let path = this.router.url.split('?')[0].split('#')[0];
     try { path = decodeURIComponent(path); } catch {}
     return nativeSeoPages[path.replace(/\/$/, '') || '/'];
@@ -103,15 +103,15 @@ export class SeoService {
   updateCanonical(path) {
     try { path = decodeURIComponent(path); } catch {}
     path = path.replace(/\/$/, '') || '/';
-    const locale = /^\/(es|fr|de|it)(?:\/|$)/.exec(window.location.pathname)?.[1];
+    const locale = /^\/(es|fr|de|it|pt)(?:\/|$)/.exec(window.location.pathname)?.[1];
     const canonicalUrl = 'https://' + this.baseDomain + (locale ? '/' + locale : '') + path;
     this.canonicalLink.setAttribute('href', canonicalUrl);
     this.metaService.updateTag({ property: 'og:url', content: canonicalUrl });
   }
 
   getTitle(): string {
-    const locale = /^\/(es|fr|de|it)(?:\/|$)/.exec(window.location.pathname)?.[1];
-    if (locale && !this.network) return this.baseTitle + ' - ' + ({es: 'Explorador de Dogecoin', fr: 'Explorateur Dogecoin', de: 'Dogecoin-Explorer', it: 'Esploratore Dogecoin'}[locale]);
+    const locale = /^\/(es|fr|de|it|pt)(?:\/|$)/.exec(window.location.pathname)?.[1];
+    if (locale && !this.network) return this.baseTitle + ' - ' + ({es: 'Explorador de Dogecoin', fr: 'Explorateur Dogecoin', de: 'Dogecoin-Explorer', it: 'Esploratore Dogecoin', pt: 'Explorador Dogecoin'}[locale]);
     if (this.network === 'testnet')
       {return this.baseTitle + ' - Bitcoin Testnet3';}
     if (this.network === 'testnet4')
@@ -126,8 +126,8 @@ export class SeoService {
   }
 
   getDescription(): string {
-    const locale = /^\/(es|fr|de|it)(?:\/|$)/.exec(window.location.pathname)?.[1];
-    if (locale) return ({es: 'Explora bloques, transacciones, direcciones, comisiones y actividad de minería de Dogecoin.', fr: 'Explorez les blocs, transactions, adresses, frais et activités de minage Dogecoin.', de: 'Erkunden Sie Dogecoin-Blöcke, Transaktionen, Adressen, Gebühren und Mining-Aktivitäten.', it: 'Esplora blocchi, transazioni, indirizzi, commissioni e attività di mining Dogecoin.'}[locale]);
+    const locale = /^\/(es|fr|de|it|pt)(?:\/|$)/.exec(window.location.pathname)?.[1];
+    if (locale) return ({es: 'Explora bloques, transacciones, direcciones, comisiones y actividad de minería de Dogecoin.', fr: 'Explorez les blocs, transactions, adresses, frais et activités de minage Dogecoin.', de: 'Erkunden Sie Dogecoin-Blöcke, Transaktionen, Adressen, Gebühren und Mining-Aktivitäten.', it: 'Esplora blocchi, transazioni, indirizzi, commissioni e attività di mining Dogecoin.', pt: 'Explore blocos, transações, endereços, taxas e atividade de mineração Dogecoin.'}[locale]);
     return this.documentMetadata()?.description || this.baseDescription;
   }
 
