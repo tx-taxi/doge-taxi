@@ -49,7 +49,7 @@
       </trans-unit>
       <trans-unit id="ngb.datepicker.next-month" datatype="html">
         <source>Next month</source>
-        <target>Next month</target>
+        <target>Nästa månad</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/datepicker/datepicker-navigation.ts</context>
           <context context-type="linenumber">112</context>
@@ -77,7 +77,7 @@
       </trans-unit>
       <trans-unit id="ngb.datepicker.select-month" datatype="html">
         <source>Select month</source>
-        <target>Select month</target>
+        <target>Välj månad</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/ngb-config.ts</context>
           <context context-type="linenumber">13</context>
@@ -97,7 +97,7 @@
       </trans-unit>
       <trans-unit id="ngb.timepicker.hours" datatype="html">
         <source>Hours</source>
-        <target>Hours</target>
+        <target>Timmar</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/ngb-config.ts</context>
           <context context-type="linenumber">13</context>
@@ -129,7 +129,7 @@
       </trans-unit>
       <trans-unit id="ngb.datepicker.select-year" datatype="html">
         <source>Select year</source>
-        <target>Select year</target>
+        <target>Välj år</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/ngb-config.ts</context>
           <context context-type="linenumber">13</context>
@@ -1659,7 +1659,7 @@
       </trans-unit>
       <trans-unit id="cf2ec414465d65ab24b354663d94d051a67e26e9" datatype="html">
         <source>Total vSize</source>
-        <target>Total vSize</target>
+        <target>Total virtuell storlek</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/acceleration/acceleration-stats/acceleration-stats.component.html</context>
           <context context-type="linenumber">20</context>
@@ -2511,7 +2511,7 @@
       </trans-unit>
       <trans-unit id="f8c91b77ad53ccd0f6adb4a6ea3a0f5c3329688b" datatype="html">
         <source>Asset</source>
-        <target>Asset</target>
+        <target>Tillgång</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/asset/asset.component.html</context>
           <context context-type="linenumber">3</context>
@@ -2666,7 +2666,7 @@
       </trans-unit>
       <trans-unit id="asset.component.asset-browser-title" datatype="html">
         <source>Asset: <x id="INTERPOLATION" equiv-text="this.assetString" /></source>
-        <target>Asset: <x id="INTERPOLATION" equiv-text="this.assetString" /></target>
+        <target>Tillgång: <x id="INTERPOLATION" equiv-text="this.assetString" /></target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/asset/asset.component.ts</context>
           <context context-type="linenumber">76</context>
@@ -2703,7 +2703,7 @@
       </trans-unit>
       <trans-unit id="ee8f8008bae6ce3a49840c4e1d39b4af23d4c263" datatype="html">
         <source>Assets</source>
-        <target>Assets</target>
+        <target>Tillgångar</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/assets/assets-nav/assets-nav.component.html</context>
           <context context-type="linenumber">3</context>
@@ -2828,7 +2828,7 @@
       </trans-unit>
       <trans-unit id="d5e7c95d7c8920ae0a384e3fffb14776b1e203f4" datatype="html">
         <source>Asset ID</source>
-        <target>Asset ID</target>
+        <target>Tillgångs-ID</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/assets/assets.component.html</context>
           <context context-type="linenumber">7</context>
@@ -3072,7 +3072,7 @@
       </trans-unit>
       <trans-unit id="180092a6b8a6151a05f4a7552a2fb75fd159dfa8" datatype="html">
         <source>Match</source>
-        <target>Match</target>
+        <target>Träff</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/block-filters/block-filters.component.html</context>
           <context context-type="linenumber">18</context>
@@ -3779,7 +3779,7 @@
       </trans-unit>
       <trans-unit id="21f88da2fbe81e4dc893ce1df92bd0fe25bcecee" datatype="html">
         <source>Miner</source>
-        <target>Miner</target>
+        <target>Utvinnare</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/block/block-preview.component.html</context>
           <context context-type="linenumber">53</context>
@@ -3894,7 +3894,7 @@
       </trans-unit>
       <trans-unit id="0dc973e4853621b49d9e31be902a0680334f632d" datatype="html">
         <source>Stale</source>
-        <target>Stale</target>
+        <target>Inaktuell</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/block/block.component.html</context>
           <context context-type="linenumber">34</context>
@@ -4038,7 +4038,7 @@
       </trans-unit>
       <trans-unit id="2862af5284f66d4b06bdcf77a5519141723b6989" datatype="html">
         <source>Stale</source>
-        <target>Stale</target>
+        <target>Inaktuell</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/block/block.component.html</context>
           <context context-type="linenumber">239</context>
@@ -4161,7 +4161,7 @@
       </trans-unit>
       <trans-unit id="d71be278785ad5940aacaf2b29a67bdbf6fc6be8" datatype="html">
         <source>Merkle root</source>
-        <target>Merkle root</target>
+        <target>Merklerot</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/block/block.component.html</context>
           <context context-type="linenumber">338</context>
@@ -4208,7 +4208,7 @@
       </trans-unit>
       <trans-unit id="cbfb79ff517493268a49acffa81ecc02336d8372" datatype="html">
         <source>Block Header Hex</source>
-        <target>Block Header Hex</target>
+        <target>Blockhuvud i hex</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/block/block.component.html</context>
           <context context-type="linenumber">357</context>
@@ -5694,7 +5694,7 @@
       </trans-unit>
       <trans-unit id="7a080851e25a41e898776a9c90cf8dbe81027f9a" datatype="html">
         <source>Output</source>
-        <target>Output</target>
+        <target>Utdata</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/liquid-reserves-audit/federation-utxos-list/federation-utxos-list.component.html</context>
           <context context-type="linenumber">8</context>
@@ -5738,7 +5738,7 @@
       </trans-unit>
       <trans-unit id="1c6520aeea2eb946269acab0a2863162b8311e7d" datatype="html">
         <source>Dust</source>
-        <target>Dust</target>
+        <target>Småbelopp</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/liquid-reserves-audit/federation-utxos-list/federation-utxos-list.component.html</context>
           <context context-type="linenumber">15</context>
@@ -6090,7 +6090,7 @@
       </trans-unit>
       <trans-unit id="667d1fa0b03107009b84c29319f1393e93992788" datatype="html">
         <source><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;" />Mint<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;" /><x id="START_TAG_SPAN_1" ctype="x-span_1" equiv-text="&lt;span class=&quot;amount&quot;&gt;" /> <x id="INTERPOLATION" equiv-text="{{ minted &gt;= 100000 ? (minted | amountShortener:undefined:undefined:true) : minted }}" /> <x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;" /><x id="START_TAG_NG_CONTAINER" ctype="x-ng_container" equiv-text="&lt;ng-container *ngTemplateOutlet=&quot;runeName; context: { $implicit: runestone.mint.toString() }&quot;&gt;" /><x id="CLOSE_TAG_NG_CONTAINER" ctype="x-ng_container" equiv-text="&lt;/ng-container&gt;" /></source>
-        <target><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;" />Mint<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;" /><x id="START_TAG_SPAN_1" ctype="x-span_1" equiv-text="&lt;span class=&quot;amount&quot;&gt;" /> <x id="INTERPOLATION" equiv-text="{{ minted &gt;= 100000 ? (minted | amountShortener:undefined:undefined:true) : minted }}" /> <x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;" /><x id="START_TAG_NG_CONTAINER" ctype="x-ng_container" equiv-text="&lt;ng-container *ngTemplateOutlet=&quot;runeName; context: { $implicit: runestone.mint.toString() }&quot;&gt;" /><x id="CLOSE_TAG_NG_CONTAINER" ctype="x-ng_container" equiv-text="&lt;/ng-container&gt;" /></target>
+        <target><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;" />Prägling<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;" /><x id="START_TAG_SPAN_1" ctype="x-span_1" equiv-text="&lt;span class=&quot;amount&quot;&gt;" /> <x id="INTERPOLATION" equiv-text="{{ minted &gt;= 100000 ? (minted | amountShortener:undefined:undefined:true) : minted }}" /> <x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;" /><x id="START_TAG_NG_CONTAINER" ctype="x-ng_container" equiv-text="&lt;ng-container *ngTemplateOutlet=&quot;runeName; context: { $implicit: runestone.mint.toString() }&quot;&gt;" /><x id="CLOSE_TAG_NG_CONTAINER" ctype="x-ng_container" equiv-text="&lt;/ng-container&gt;" /></target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/ord-data/ord-data.component.html</context>
           <context context-type="linenumber">3,5</context>
@@ -6509,7 +6509,7 @@
       </trans-unit>
       <trans-unit id="cc657077942054572b255be033d634cf601c50b6" datatype="html">
         <source>Hashrate (24h)</source>
-        <target>Hashrate (24h)</target>
+        <target>Hashhastighet (24 h)</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/pool/pool.component.html</context>
           <context context-type="linenumber">95</context>
@@ -6595,7 +6595,7 @@
       </trans-unit>
       <trans-unit id="a1c9b3d4fa67450fe9afd1d726f8a1bd91d990ea" datatype="html">
         <source>Clean</source>
-        <target>Clean</target>
+        <target>Ren</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/pool/pool.component.html</context>
           <context context-type="linenumber">227</context>
@@ -6604,7 +6604,7 @@
       </trans-unit>
       <trans-unit id="5eef71f3169c4ea9311dedb86bb781bd710a47e9" datatype="html">
         <source>Prevhash</source>
-        <target>Prevhash</target>
+        <target>Föregående hash</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/pool/pool.component.html</context>
           <context context-type="linenumber">228</context>
@@ -7945,7 +7945,7 @@ Publicera för att lägga till den i mempoolen.</target>
       </trans-unit>
       <trans-unit id="31d8d7f29ddbd3f64d374a132ddacd5e4a0835a2" datatype="html">
         <source>Inputs &amp; Outputs</source>
-        <target>Inputs &amp; Outputs</target>
+        <target>Indata och utdata</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/transaction/transaction-raw.component.html</context>
           <context context-type="linenumber">143</context>
@@ -8024,9 +8024,8 @@ Publicera för att lägga till den i mempoolen.</target>
         </context-group>
       </trans-unit>
       <trans-unit id="df5fd5288dc0b13ce611a0c857e97baee9595e67" datatype="html">
-        <source> This transaction ID appears twice in the blockchain as the coinbase of blocks <x id="START_LINK" ctype="x-a" equiv-text="&lt;a [routerLink]=&quot;['/block/' | relativeUrl, duplicateTxBlocks[0]]&quot;&gt;" /><x id="INTERPOLATION" equiv-text="locks[0] }}" /><x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;" /> and <x id="START_LINK_1" equiv-text="&lt;a [routerLink]=&quot;['/block/' | relativeUrl, duplicateTxBlocks[1]]&quot;&gt;" /><x id="INTERPOLATION_1" equiv-text="cks[1] }}" /><x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;" />, due to a bug later mitigated by <x id="START_LINK_2" equiv-text="&lt;a href=&quot;https://github.com/bitcoin/bips/blob/master/bip-0030.mediawiki&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;" />BIP-30<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;" />. </source>
-        <target> Detta transaktions-ID förekommer två gånger i blockkedjan som coinbase i blocken <x id="START_LINK" ctype="x-a" equiv-text="&lt;a [routerLink]=&quot;['/block/' | relativeUrl, duplicateTxBlocks[0]]&quot;&gt;" /><x id="INTERPOLATION" equiv-text="locks[0] }}" /><x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;" /> och <x id="START_LINK_1" equiv-text="&lt;a [routerLink]=&quot;['/block/' | relativeUrl, duplicateTxBlocks[1]]&quot;&gt;" /><x id="INTERPOLATION_1" equiv-text="cks[1] }}" /><x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;" />, på grund av en bugg som senare åtgärdades av <x id="START_LINK_2" equiv-text="&lt;a href=&quot;https://github.com/bitcoin/bips/blob/master/bip-0030.mediawiki&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;" />BIP-30<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;" />. </target>
-        <context-group purpose="location">
+        <source> This transaction ID appears twice in the blockchain as the coinbase of blocks <x id="START_LINK" ctype="x-a" equiv-text="&lt;a [routerLink]=&quot;['/block/' | relativeUrl, duplicateTxBlocks[0]]&quot;&gt;" /><x id="INTERPOLATION" equiv-text="{{ duplicateTxBlocks[0] }}" /><x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;" /> and <x id="START_LINK_1" equiv-text="&lt;a [routerLink]=&quot;['/block/' | relativeUrl, duplicateTxBlocks[1]]&quot;&gt;" /><x id="INTERPOLATION_1" equiv-text="{{ duplicateTxBlocks[1] }}" /><x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;" />, due to a bug later mitigated by <x id="START_LINK_2" equiv-text="&lt;a href=&quot;https://github.com/bitcoin/bips/blob/master/bip-0030.mediawiki&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;" />BIP-30<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;" />. </source>
+        <target state="needs-review-translation"> Detta transaktions-ID förekommer två gånger i blockkedjan som coinbase i blocken <x id="START_LINK" ctype="x-a" equiv-text="&lt;a [routerLink]=&quot;['/block/' | relativeUrl, duplicateTxBlocks[0]]&quot;&gt;" /><x id="INTERPOLATION" equiv-text="{{ duplicateTxBlocks[0] }}" /><x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;" /> och <x id="START_LINK_1" equiv-text="&lt;a [routerLink]=&quot;['/block/' | relativeUrl, duplicateTxBlocks[1]]&quot;&gt;" /><x id="INTERPOLATION_1" equiv-text="{{ duplicateTxBlocks[1] }}" /><x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;" /> på grund av ett fel som senare begränsades av <x id="START_LINK_2" equiv-text="&lt;a href=&quot;https://github.com/bitcoin/bips/blob/master/bip-0030.mediawiki&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;" />BIP-30<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;" />. </target><context-group purpose="location">
           <context context-type="sourcefile">src/app/components/transaction/transaction.component.html</context>
           <context context-type="linenumber">40,42</context>
         </context-group>
@@ -8148,8 +8147,7 @@ Publicera för att lägga till den i mempoolen.</target>
       </trans-unit>
       <trans-unit id="c64b73564fd858ee5a4f73040893c9d625ca56ad" datatype="html">
         <source>Witness</source>
-        <target>Witness</target>
-        <context-group purpose="location">
+        <target state="needs-review-translation">Vittnesdata</target><context-group purpose="location">
           <context context-type="sourcefile">src/app/components/transactions-list/transactions-list.component.html</context>
           <context context-type="linenumber">173</context>
         </context-group>
@@ -8157,8 +8155,7 @@ Publicera för att lägga till den i mempoolen.</target>
       </trans-unit>
       <trans-unit id="a8bc418b73c6bfcefc1b07c84d7f1126ab2a3237" datatype="html">
         <source>P2SH redeem script</source>
-        <target>P2SH redeem script</target>
-        <context-group purpose="location">
+        <target state="needs-review-translation">P2SH-inlösenskript</target><context-group purpose="location">
           <context context-type="sourcefile">src/app/components/transactions-list/transactions-list.component.html</context>
           <context context-type="linenumber">243</context>
         </context-group>
@@ -8193,8 +8190,7 @@ Publicera för att lägga till den i mempoolen.</target>
       </trans-unit>
       <trans-unit id="e1d63108bdf06fa14ec13f038e23eebd4d391b16" datatype="html">
         <source>P2WSH witness script</source>
-        <target>P2WSH witness script</target>
-        <context-group purpose="location">
+        <target state="needs-review-translation">P2WSH-vittnesskript</target><context-group purpose="location">
           <context context-type="sourcefile">src/app/components/transactions-list/transactions-list.component.html</context>
           <context context-type="linenumber">270</context>
         </context-group>
@@ -8285,7 +8281,7 @@ Publicera för att lägga till den i mempoolen.</target>
       </trans-unit>
       <trans-unit id="849d069385309aff4f829bb3727261ead9a11bfe" datatype="html">
         <source>key path</source>
-        <target>key path</target>
+        <target>nyckelväg</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/transactions-list/transactions-list.component.html</context>
           <context context-type="linenumber">592</context>
@@ -8429,7 +8425,7 @@ Publicera för att lägga till den i mempoolen.</target>
       </trans-unit>
       <trans-unit id="3e242f213dd1a0754aad9164aa80887d67708500" datatype="html">
         <source>Input</source>
-        <target>Input</target>
+        <target>Indata</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/tx-bowtie-graph-tooltip/tx-bowtie-graph-tooltip.component.html</context>
           <context context-type="linenumber">42</context>
@@ -8846,9 +8842,8 @@ Publicera för att lägga till den i mempoolen.</target>
         </context-group>
       </trans-unit>
       <trans-unit id="meta.description.docs.faq" datatype="html">
-        <source>Get answers to common questions like: What is a mempool? Why isn't my transaction confirming? How can I run my own instance of The Mempool Open Source Project? And more.</source>
-        <target>Få svar på vanliga frågor som: Vad är en mempool? Varför bekräftas inte min transaktion? Hur kan jag köra min egen instans av Mempool Open Source Project? Och mer.</target>
-        <context-group purpose="location">
+        <source>Get answers to common Dogecoin questions, including block timing, AuxPoW, fees, pending observations, transactions, and available explorer data.</source>
+        <target state="needs-review-translation">Få svar på vanliga frågor om Dogecoin, inklusive blocktider, AuxPoW, avgifter, väntande observationer, transaktioner och tillgängliga utforskardata.</target><context-group purpose="location">
           <context context-type="sourcefile">src/app/docs/docs/docs.component.ts</context>
           <context context-type="linenumber">48</context>
         </context-group>
@@ -8870,9 +8865,8 @@ Publicera för att lägga till den i mempoolen.</target>
         </context-group>
       </trans-unit>
       <trans-unit id="meta.description.docs.rest-bitcoin" datatype="html">
-        <source>Documentation for the mempool.space REST API service: get info on addresses, transactions, blocks, fees, mining, the Lightning network, and more.</source>
-        <target>Dokumentation för tjänsten mempool.space REST API: få information om adresser, transaktioner, block, avgifter, gruvdrift, Lightning-nätverket och mer.</target>
-        <context-group purpose="location">
+        <source>Documentation for the doge.tx.taxi REST API: query available Dogecoin block, transaction, address, fee, and network data.</source>
+        <target state="needs-review-translation">Dokumentation för doge.tx.taxis REST-API: fråga efter tillgängliga Dogecoin-block, transaktioner, adresser, avgifter och nätverksdata.</target><context-group purpose="location">
           <context context-type="sourcefile">src/app/docs/docs/docs.component.ts</context>
           <context context-type="linenumber">56</context>
         </context-group>
@@ -8894,9 +8888,8 @@ Publicera för att lägga till den i mempoolen.</target>
         </context-group>
       </trans-unit>
       <trans-unit id="meta.description.docs.websocket-bitcoin" datatype="html">
-        <source>Documentation for the mempool.space WebSocket API service: get real-time info on blocks, mempools, transactions, addresses, and more.</source>
-        <target>Dokumentation för mempool.space WebSocket API-tjänsten: få realtidsinformation om block, mempooler, transaktioner, adresser och mer.</target>
-        <context-group purpose="location">
+        <source>Documentation for the doge.tx.taxi WebSocket API: receive current Dogecoin block, transaction, address, pending-sample, and provider-freshness updates.</source>
+        <target state="needs-review-translation">Dokumentation för doge.tx.taxis WebSocket-API: ta emot aktuella uppdateringar om Dogecoin-block, transaktioner, adresser, väntande stickprov och datakällans aktualitet.</target><context-group purpose="location">
           <context context-type="sourcefile">src/app/docs/docs/docs.component.ts</context>
           <context context-type="linenumber">64</context>
         </context-group>
@@ -10454,7 +10447,7 @@ Publicera för att lägga till den i mempoolen.</target>
       </trans-unit>
       <trans-unit id="c18497e4f0db0d0ad0c71ba294295f42b3d312c9" datatype="html">
         <source>Lightning ISP</source>
-        <target>Lightning ISP</target>
+        <target>Lightning-internetleverantör</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/lightning/nodes-per-isp/nodes-per-isp-preview.component.html</context>
           <context context-type="linenumber">3</context>
@@ -13351,6 +13344,821 @@ Publicera för att lägga till den i mempoolen.</target>
         <target state="needs-review-translation">Information om varumärken och erkännanden för doge.tx.taxi, inklusive uppströmsprojektet mempool/mempool och projektets självständighet.</target><context-group purpose="location">
           <context context-type="sourcefile">src/app/components/trademark-policy/trademark-policy.component.ts</context>
           <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="af6627251e98f2ee627f2f8c84f135b65c3fffee" datatype="html">
+        <source>This transaction belongs to a chunk of 1 transaction, with combined effective fee rate <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;" /><x id="INTERPOLATION" equiv-text="s.chunkFeerate | feeRounding }}" /> koinu/B<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;" />.</source>
+        <target state="needs-review-translation">Den här transaktionen tillhör en del med 1 transaktion och en sammanlagd effektiv avgiftstakt på <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;" /><x id="INTERPOLATION" equiv-text="s.chunkFeerate | feeRounding }}" /> koinu/B<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;" />.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/transaction/transaction-details/transaction-details.component.html</context>
+          <context context-type="linenumber">244</context>
+        </context-group>
+        <note priority="1" from="description">cluster.preview.chunk-line-one</note>
+      </trans-unit>
+      <trans-unit id="ae0a475bfce03fadb87c9090e64081a9310beea2" datatype="html">
+        <source>This transaction belongs to a chunk of <x id="INTERPOLATION" equiv-text="{{ clusterPreviewStats.chunkSize }}" /> transactions, with combined effective fee rate <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;" /><x id="INTERPOLATION_1" equiv-text="s.chunkFeerate | feeRounding }}" /> koinu/B<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;" />.</source>
+        <target state="needs-review-translation">Den här transaktionen tillhör en del med <x id="INTERPOLATION" equiv-text="{{ clusterPreviewStats.chunkSize }}" /> transaktioner och en sammanlagd effektiv avgiftstakt på <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;" /><x id="INTERPOLATION_1" equiv-text="s.chunkFeerate | feeRounding }}" /> koinu/B<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;" />.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/transaction/transaction-details/transaction-details.component.html</context>
+          <context context-type="linenumber">246</context>
+        </context-group>
+        <note priority="1" from="description">cluster.preview.chunk-line-many</note>
+      </trans-unit>
+      <trans-unit id="c7678f3be45eefaebe9bda75a0a30f97204433b5" datatype="html">
+        <source>In a mempool cluster containing 1 other chunk.</source>
+        <target state="needs-review-translation">I ett mempoolkluster som innehåller 1 annan del.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/transaction/transaction-details/transaction-details.component.html</context>
+          <context context-type="linenumber">249</context>
+        </context-group>
+        <note priority="1" from="description">cluster.preview.cluster-line-one</note>
+      </trans-unit>
+      <trans-unit id="acf9470007b6c76f037bf8aec23fc8d2ba2267a4" datatype="html">
+        <source>In a mempool cluster containing <x id="INTERPOLATION" equiv-text="{{ clusterPreviewStats.otherChunks }}" /> other chunks.</source>
+        <target state="needs-review-translation">I ett mempoolkluster som innehåller <x id="INTERPOLATION" equiv-text="{{ clusterPreviewStats.otherChunks }}" /> andra delar.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/transaction/transaction-details/transaction-details.component.html</context>
+          <context context-type="linenumber">251</context>
+        </context-group>
+        <note priority="1" from="description">cluster.preview.cluster-line-many</note>
+      </trans-unit>
+      <trans-unit id="tx-taxi.missing-prevouts" datatype="html">
+        <source>Missing prevouts are not loaded. Some fields like fee rate cannot be calculated.</source>
+        <target state="needs-review-translation">Saknade tidigare utdata har inte lästs in. Vissa fält, som avgiftstakt, kan inte beräknas.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/transaction/transaction-raw.component.html</context>
+          <context context-type="linenumber">68</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.prevouts-error" datatype="html">
+        <source>Error loading missing prevouts</source>
+        <target state="needs-review-translation">Fel vid inläsning av saknade tidigare utdata</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/transaction/transaction-raw.component.html</context>
+          <context context-type="linenumber">70</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.cpfp-error" datatype="html">
+        <source>Error loading CPFP data</source>
+        <target state="needs-review-translation">Fel vid inläsning av CPFP-data</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/transaction/transaction-raw.component.html</context>
+          <context context-type="linenumber">77</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="92626adb4b7e2aff0d35c2db5e023aac29d27f0f" datatype="html">
+        <source>Cluster</source>
+        <target state="needs-review-translation">Kluster</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/transaction/transaction-raw.component.html</context>
+          <context context-type="linenumber">100</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/transaction/transaction.component.html</context>
+          <context context-type="linenumber">88</context>
+        </context-group>
+        <note priority="1" from="description">Cluster</note>
+        <note priority="1" from="meaning">transaction.cluster</note>
+      </trans-unit>
+      <trans-unit id="719f62092a6b4142d8fa32d09bb8a72d9e613aa7" datatype="html">
+        <source>Only ~<x id="INTERPOLATION" equiv-text="{{ medianFeeNeeded | feeRounding }}" /> koinu/B was needed to get into this block</source>
+        <target state="needs-review-translation">Endast cirka <x id="INTERPOLATION" equiv-text="{{ medianFeeNeeded | feeRounding }}" /> koinu/B behövdes för att komma med i detta block</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/tx-fee-rating/tx-fee-rating.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/tx-fee-rating/tx-fee-rating.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+        <note priority="1" from="description">tx-fee-rating.warning-tooltip</note>
+      </trans-unit>
+      <trans-unit id="tx-taxi.pending-transactions" datatype="html">
+        <source>Pending Transactions</source>
+        <target state="needs-review-translation">Väntande transaktioner</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge-chart-unavailable" datatype="html">
+        <source>Chart unavailable.</source>
+        <target state="needs-review-translation">Diagrammet är inte tillgängligt.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.view-pending" datatype="html">
+        <source>View pending transactions</source>
+        <target state="needs-review-translation">Visa väntande transaktioner</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.not-available" datatype="html">
+        <source>Not available</source>
+        <target state="needs-review-translation">Inte tillgängligt</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="c19bde6e194e95b60145a4e312fc31941197d90c" datatype="html">
+        <source>LBTC Supply vs. BTC Holdings</source>
+        <target state="needs-review-translation">LBTC-utbud jämfört med BTC-innehav</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">103</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">236</context>
+        </context-group>
+        <note priority="1" from="description">dashboard.lbtc-supply-vs-btc-holdings</note>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.label.1" datatype="html">
+        <source>Connection</source>
+        <target state="needs-review-translation">Anslutning</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.label.2" datatype="html">
+        <source>Initialize the stream</source>
+        <target state="needs-review-translation">Initiera strömmen</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.description.19" datatype="html">
+        <source>Connect to &lt;code&gt;wss://doge.tx.taxi/api/v1/ws&lt;/code&gt;, then send this message. The service returns the current block, fee, pending-sample, and provider-freshness snapshot when available.</source>
+        <target state="needs-review-translation">Anslut till &lt;code&gt;wss://doge.tx.taxi/api/v1/ws&lt;/code&gt; och skicka sedan detta meddelande. När data finns tillgängliga returnerar tjänsten en ögonblicksbild av aktuellt block, avgifter, väntande stickprov och datakällans aktualitet.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.label.3" datatype="html">
+        <source>Track one transaction</source>
+        <target state="needs-review-translation">Följ en transaktion</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.description.20" datatype="html">
+        <source>Track a 64-character transaction ID. The service sends &lt;code&gt;tx&lt;/code&gt; when it can retrieve the transaction and stops tracking it after confirmation.</source>
+        <target state="needs-review-translation">Följ ett transaktions-ID med 64 tecken. Tjänsten skickar &lt;code&gt;tx&lt;/code&gt; när transaktionen kan hämtas och slutar följa den efter bekräftelse.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.label.4" datatype="html">
+        <source>Track an address</source>
+        <target state="needs-review-translation">Följ en adress</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.description.21" datatype="html">
+        <source>Track a standard Dogecoin address. New unconfirmed transactions arrive as &lt;code&gt;address-transactions&lt;/code&gt;; confirmations arrive as &lt;code&gt;block-transactions&lt;/code&gt;. Address history remains subject to provider availability.</source>
+        <target state="needs-review-translation">Följ en standardadress för Dogecoin. Nya obekräftade transaktioner kommer som &lt;code&gt;address-transactions&lt;/code&gt;; bekräftelser kommer som &lt;code&gt;block-transactions&lt;/code&gt;. Adresshistoriken beror på dataleverantörens tillgänglighet.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.label.5" datatype="html">
+        <source>Inspect the pending sample</source>
+        <target state="needs-review-translation">Granska det väntande stickprovet</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.description.22" datatype="html">
+        <source>Request the transactions included in the explorer’s bounded pending sample. This is a sampled visualization of the latest provider observation, not the network-wide mempool and not a confirmation promise.</source>
+        <target state="needs-review-translation">Begär transaktionerna i utforskarens begränsade väntande stickprov. Det är en visualisering av ett urval från leverantörens senaste observation, inte hela nätverkets mempool och inte ett löfte om bekräftelse.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.label.6" datatype="html">
+        <source>Network</source>
+        <target state="needs-review-translation">Nätverk</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.label.7" datatype="html">
+        <source>Get the tip height</source>
+        <target state="needs-review-translation">Hämta kedjespetsens höjd</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.description.1" datatype="html">
+        <source>Returns the current best-chain height as plain text.</source>
+        <target state="needs-review-translation">Returnerar den aktuella bästa kedjans höjd som ren text.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.label.8" datatype="html">
+        <source>Get the tip hash</source>
+        <target state="needs-review-translation">Hämta kedjespetsens hash</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.description.2" datatype="html">
+        <source>Returns the current best-chain block hash as plain text.</source>
+        <target state="needs-review-translation">Returnerar den aktuella bästa kedjans blockhash som ren text.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.label.9" datatype="html">
+        <source>Get explorer network data</source>
+        <target state="needs-review-translation">Hämta utforskarens nätverksdata</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.description.3" datatype="html">
+        <source>Returns the latest observed Dogecoin target block time, permanent subsidy, provider observation timestamps, and tip snapshot. Timestamps describe the source observation, not a guarantee of live network state.</source>
+        <target state="needs-review-translation">Returnerar senast observerad målblocktid för Dogecoin, permanent subvention, leverantörens observationstider och en ögonblicksbild av kedjespetsen. Tiderna beskriver källans observation och garanterar inte nätverkets aktuella tillstånd.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.label.11" datatype="html">
+        <source>Get a block hash by height</source>
+        <target state="needs-review-translation">Hämta en blockhash efter höjd</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.description.4" datatype="html">
+        <source>Resolves a decimal block height to its canonical block hash.</source>
+        <target state="needs-review-translation">Slår upp en decimal blockhöjd och returnerar dess kanoniska blockhash.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.label.12" datatype="html">
+        <source>Get a block</source>
+        <target state="needs-review-translation">Hämta ett block</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.description.5" datatype="html">
+        <source>Returns indexed block data including height, timestamp, header fields, transaction count, fees when available, and reward. Recent strip data is cross-checked against raw Dogecoin block data before use; older detail availability depends on the historical provider.</source>
+        <target state="needs-review-translation">Returnerar indexerade blockdata med höjd, tidsstämpel, huvudfält, antal transaktioner, avgifter när de finns och belöning. Nya block i remsan jämförs med råa Dogecoin-block före användning; äldre detaljer beror på historikleverantören.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.label.13" datatype="html">
+        <source>Get a block transaction page</source>
+        <target state="needs-review-translation">Hämta en sida med blocktransaktioner</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.description.6" datatype="html">
+        <source>Returns up to 25 indexed transactions from a block. The gateway rejects incomplete pages rather than silently returning partial data.</source>
+        <target state="needs-review-translation">Returnerar upp till 25 indexerade transaktioner från ett block. Gatewayen avvisar ofullständiga sidor i stället för att tyst returnera partiella data.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.label.14" datatype="html">
+        <source>Get all indexed transaction IDs</source>
+        <target state="needs-review-translation">Hämta alla indexerade transaktions-ID:n</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.description.7" datatype="html">
+        <source>Returns a complete transaction-ID list only when the provider can supply the whole block.</source>
+        <target state="needs-review-translation">Returnerar en fullständig lista med transaktions-ID:n endast när leverantören kan tillhandahålla hela blocket.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.label.16" datatype="html">
+        <source>Get a transaction</source>
+        <target state="needs-review-translation">Hämta en transaktion</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">37</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.description.8" datatype="html">
+        <source>Returns a transaction with inputs, outputs, koinu values, and confirmation status. Amounts are in koinu; 100,000,000 koinu equals 1 DOGE.</source>
+        <target state="needs-review-translation">Returnerar en transaktion med indata, utdata, koinu-värden och bekräftelsestatus. Beloppen anges i koinu; 100 000 000 koinu motsvarar 1 DOGE.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">37</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.label.17" datatype="html">
+        <source>Get transaction status</source>
+        <target state="needs-review-translation">Hämta transaktionsstatus</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">38</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.description.9" datatype="html">
+        <source>Returns only the confirmation status and, when known, the containing block.</source>
+        <target state="needs-review-translation">Returnerar endast bekräftelsestatus och, om känt, blocket som innehåller transaktionen.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">38</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.label.18" datatype="html">
+        <source>Get output spends</source>
+        <target state="needs-review-translation">Hämta utdatas spenderingsstatus</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.description.10" datatype="html">
+        <source>Returns one entry per output describing whether it has been spent, when the historical provider has the data.</source>
+        <target state="needs-review-translation">När historikleverantören har uppgifterna returneras en post per utdata som visar om den har spenderats.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.label.19" datatype="html">
+        <source>Get raw transaction data</source>
+        <target state="needs-review-translation">Hämta råa transaktionsdata</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">40</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.description.11" datatype="html">
+        <source>Returns a transaction serialized as hexadecimal when it remains available from the provider.</source>
+        <target state="needs-review-translation">Returnerar transaktionen serialiserad som hexadecimal data om den fortfarande är tillgänglig från leverantören.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">40</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.label.21" datatype="html">
+        <source>Get address statistics</source>
+        <target state="needs-review-translation">Hämta adressstatistik</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">42</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.description.12" datatype="html">
+        <source>Returns indexed funded, spent, and transaction totals for a standard Dogecoin address. The explorer does not provide wallet balances or private-key services.</source>
+        <target state="needs-review-translation">Returnerar indexerade totalsummor för mottaget, spenderat och antal transaktioner för en standardadress i Dogecoin. Utforskaren tillhandahåller inte plånbokssaldo eller tjänster för privata nycklar.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">42</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.label.22" datatype="html">
+        <source>Get address transactions</source>
+        <target state="needs-review-translation">Hämta adresstransaktioner</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">43</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.description.13" datatype="html">
+        <source>Returns the current provider page of transactions for an address. Use the chain cursor endpoint to continue through confirmed history.</source>
+        <target state="needs-review-translation">Returnerar leverantörens aktuella sida med transaktioner för en adress. Använd kedjemarkörens slutpunkt för att fortsätta genom bekräftad historik.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">43</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.label.23" datatype="html">
+        <source>Continue confirmed address history</source>
+        <target state="needs-review-translation">Fortsätt genom bekräftad adresshistorik</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">44</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.description.14" datatype="html">
+        <source>Returns the next historical page before a confirmed transaction ID. Historical depth is limited by the upstream indexed provider.</source>
+        <target state="needs-review-translation">Returnerar nästa historiksida före ett bekräftat transaktions-ID. Historikens djup begränsas av uppströms indexleverantör.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">44</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.label.24" datatype="html">
+        <source>Validate an address format</source>
+        <target state="needs-review-translation">Validera ett adressformat</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">45</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.description.15" datatype="html">
+        <source>Checks whether a value matches the gateway’s standard Dogecoin address format. This is format validation, not an ownership or balance check.</source>
+        <target state="needs-review-translation">Kontrollerar om ett värde motsvarar gatewayens standardformat för Dogecoin-adresser. Det är en formatkontroll, inte en kontroll av ägande eller saldo.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">45</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.label.25" datatype="html">
+        <source>Fees and pending sample</source>
+        <target state="needs-review-translation">Avgifter och väntande stickprov</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">46</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.label.26" datatype="html">
+        <source>Get fee estimates</source>
+        <target state="needs-review-translation">Hämta avgiftsuppskattningar</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">47</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.description.16" datatype="html">
+        <source>Returns source fee suggestions in koinu/B. They are observations from the configured provider and should be checked when creating a transaction.</source>
+        <target state="needs-review-translation">Returnerar källans avgiftsförslag i koinu/B. Det är observationer från den konfigurerade leverantören och bör kontrolleras när en transaktion skapas.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">47</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.label.27" datatype="html">
+        <source>Get the bounded pending sample</source>
+        <target state="needs-review-translation">Hämta det begränsade väntande stickprovet</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">48</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.description.17" datatype="html">
+        <source>Returns the explorer’s packed sample of recently observed pending transactions. It is capped at one million bytes and may be empty or stale during source outages; it is not a complete mempool view.</source>
+        <target state="needs-review-translation">Returnerar utforskarens packade urval av nyligen observerade väntande transaktioner. Det är begränsat till en miljon byte och kan vara tomt eller inaktuellt vid källavbrott; det är inte en fullständig mempoolvy.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">48</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.label.28" datatype="html">
+        <source>Get recently observed pending transactions</source>
+        <target state="needs-review-translation">Hämta nyligen observerade väntande transaktioner</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">49</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.description.18" datatype="html">
+        <source>Returns the bounded recent pending observation used by the explorer. It does not enumerate every transaction relayed by the Dogecoin network.</source>
+        <target state="needs-review-translation">Returnerar den begränsade senaste observation av väntande transaktioner som utforskaren använder. Den räknar inte upp varje transaktion som vidarebefordras i Dogecoin-nätverket.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">49</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.faq.heading.1" datatype="html">
+        <source>Dogecoin basics</source>
+        <target state="needs-review-translation">Grunderna i Dogecoin</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">53</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.faq.heading.2" datatype="html">
+        <source>What units does the explorer use?</source>
+        <target state="needs-review-translation">Vilka enheter använder utforskaren?</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">54</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.faq.heading.3" datatype="html">
+        <source>How quickly are blocks found?</source>
+        <target state="needs-review-translation">Hur snabbt hittas block?</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">55</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.faq.heading.4" datatype="html">
+        <source>What is AuxPoW merged mining?</source>
+        <target state="needs-review-translation">Vad är AuxPoW-samutvinning?</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">56</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.faq.heading.5" datatype="html">
+        <source>Using this explorer</source>
+        <target state="needs-review-translation">Använda utforskaren</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">57</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.faq.heading.6" datatype="html">
+        <source>What can I search for?</source>
+        <target state="needs-review-translation">Vad kan jag söka efter?</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">58</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.faq.heading.7" datatype="html">
+        <source>What does the pending strip represent?</source>
+        <target state="needs-review-translation">Vad visar remsan med väntande transaktioner?</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">59</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.faq.heading.8" datatype="html">
+        <source>How should I read fee estimates?</source>
+        <target state="needs-review-translation">Hur ska jag läsa avgiftsuppskattningar?</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">60</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.faq.heading.9" datatype="html">
+        <source>Why is historical data sometimes unavailable?</source>
+        <target state="needs-review-translation">Varför är historiska data ibland otillgängliga?</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">61</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.faq.heading.10" datatype="html">
+        <source>Transactions and confirmations</source>
+        <target state="needs-review-translation">Transaktioner och bekräftelser</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">62</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.faq.heading.11" datatype="html">
+        <source>Why is my transaction still unconfirmed?</source>
+        <target state="needs-review-translation">Varför är min transaktion fortfarande obekräftad?</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">63</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.faq.heading.12" datatype="html">
+        <source>Can this site change or recover a transaction?</source>
+        <target state="needs-review-translation">Kan webbplatsen ändra eller återställa en transaktion?</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">64</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.docs.disclaimer-title" datatype="html">
+        <source>doge.tx.taxi shows public Dogecoin data.</source>
+        <target state="needs-review-translation">doge.tx.taxi visar offentliga Dogecoin-data.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.docs.disclaimer-body" datatype="html">
+        <source>It cannot access wallets, recover funds, reverse a transaction, or control when a miner confirms it.</source>
+        <target state="needs-review-translation">Den kan inte komma åt plånböcker, återställa medel, återkalla en transaktion eller styra när en utvinnare bekräftar den.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.docs.rest-intro" datatype="html">
+        <source>The Dogecoin REST API is read-only. Requests use</source>
+        <target state="needs-review-translation">Dogecoins REST-API är skrivskyddat. Förfrågningar använder</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.docs.rest-outro" datatype="html">
+        <source>; unavailable source capabilities return an error instead of placeholder data.</source>
+        <target state="needs-review-translation">; funktioner som inte finns hos källan ger ett fel i stället för platshållardata.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.docs.ws-intro" datatype="html">
+        <source>The WebSocket endpoint is</source>
+        <target state="needs-review-translation">WebSocket-slutpunkten är</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.docs.ws-outro" datatype="html">
+        <source>. It is a read-only stream with a shared, rate-bounded collector.</source>
+        <target state="needs-review-translation">. Det är en skrivskyddad ström med en delad insamlare med hastighetsbegränsning.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.docs.payload" datatype="html">
+        <source>Payload</source>
+        <target state="needs-review-translation">Nyttolast</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.faq.units-intro" datatype="html">
+        <source>Dogecoin amounts are displayed in DOGE and the smallest unit, koinu.</source>
+        <target state="needs-review-translation">Dogecoin-belopp visas i DOGE och den minsta enheten koinu.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.faq.unit-equivalence" datatype="html">
+        <source>1 DOGE = 100,000,000 koinu.</source>
+        <target state="needs-review-translation">1 DOGE = 100 000 000 koinu.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.faq.units-outro" datatype="html">
+        <source>Transaction fees and fee estimates use koinu per byte (koinu/B).</source>
+        <target state="needs-review-translation">Transaktionsavgifter och avgiftsuppskattningar använder koinu per byte (koinu/B).</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.faq.block-time" datatype="html">
+        <source>Dogecoin targets one block about every minute. Actual intervals vary because proof of work is probabilistic. DigiShield adjusts difficulty frequently to keep the target cadence.</source>
+        <target state="needs-review-translation">Dogecoin har ett mål om ungefär ett block per minut. Faktiska intervall varierar eftersom proof of work är probabilistiskt. DigiShield justerar ofta svårighetsgraden för att hålla måltakten.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs.component.html</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.faq.merged-mining" datatype="html">
+        <source>Dogecoin uses Scrypt proof of work and supports AuxPoW merged mining. A miner can use work performed for a parent chain to prove Dogecoin work when the AuxPoW commitment satisfies Dogecoin’s consensus rules.</source>
+        <target state="needs-review-translation">Dogecoin använder Scrypt proof of work och stöder AuxPoW-samutvinning. En utvinnare kan använda arbete för en föräldrakedja som bevis för Dogecoin när AuxPoW-åtagandet uppfyller Dogecoins konsensusregler.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs.component.html</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.faq.searching" datatype="html">
+        <source>Search a block height, block hash, transaction ID, or standard Dogecoin address. A hash can be meaningful on more than one chain, so tx.taxi keeps manual chain selection available.</source>
+        <target state="needs-review-translation">Sök efter blockhöjd, blockhash, transaktions-ID eller en standardadress i Dogecoin. En hash kan ha betydelse på flera kedjor, så tx.taxi tillåter manuellt kedjeval.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs.component.html</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.faq.pending-sample-faq" datatype="html">
+        <source>The pending strip is a bounded sample from the explorer’s most recent provider observation. It is packed up to one million bytes for visualization and can be incomplete, empty, or stale when the source is unavailable. It does not claim to show Dogecoin’s entire network mempool.</source>
+        <target state="needs-review-translation">Remsan med väntande transaktioner är ett begränsat urval från utforskarens senaste observation hos leverantören. För visualisering packas upp till en miljon byte, och urvalet kan vara ofullständigt, tomt eller inaktuellt när källan är otillgänglig. Det gör inte anspråk på att visa hela Dogecoin-nätverkets mempool.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs.component.html</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.faq.fee-estimates" datatype="html">
+        <source>Fee estimates are provider observations expressed in koinu/B. They are a guide for transaction creation, not a service-level confirmation promise; check the current estimate in your wallet before broadcasting.</source>
+        <target state="needs-review-translation">Avgiftsuppskattningar är leverantörsobservationer uttryckta i koinu/B. De är vägledning när en transaktion skapas, inte ett löfte om bekräftelse från tjänsten; kontrollera den aktuella uppskattningen i plånboken före sändning.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs.component.html</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.faq.historical-data" datatype="html">
+        <source>Recent strip blocks are enriched from indexed data and raw Dogecoin blocks. Older block, raw-hex, transaction, address, and outspend lookups depend on the historical provider. If it cannot supply complete data within the gateway’s bounds, the API returns an unavailable response rather than incomplete results.</source>
+        <target state="needs-review-translation">De senaste blocken i remsan kompletteras med indexerade data och råa Dogecoin-block. Äldre block, rå hexadecimal data, transaktioner, adresser och spenderade utdata beror på historikleverantören. Om fullständiga data inte kan levereras inom gatewayens gränser returnerar API:t otillgänglighet i stället för ofullständiga resultat.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs.component.html</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.faq.unconfirmed" datatype="html">
+        <source>Confirmation depends on propagation, fees, miner selection, and the next proof-of-work block. Dogecoin’s target is about one minute, but a target is not a deadline. The explorer cannot accelerate a transaction.</source>
+        <target state="needs-review-translation">Bekräftelse beror på spridning, avgifter, utvinnarens val och nästa proof of work-block. Dogecoins mål är cirka en minut, men ett mål är ingen tidsfrist. Utforskaren kan inte påskynda en transaktion.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs.component.html</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.faq.not-custodial" datatype="html">
+        <source>No. This explorer only reads public chain and provider data. Contact the wallet, exchange, or payment service that created a transaction for account or transaction support.</source>
+        <target state="needs-review-translation">Nej. Utforskaren läser endast offentliga kedje- och leverantörsdata. Kontakta plånboken, börsen eller betaltjänsten som skapade transaktionen för konto- eller transaktionssupport.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs.component.html</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.docs.category.1" datatype="html">
+        <source>connection</source>
+        <target state="needs-review-translation">anslutning</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs.component.ts</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.docs.category.2" datatype="html">
+        <source>network</source>
+        <target state="needs-review-translation">nätverk</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs.component.ts</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.docs.category.4" datatype="html">
+        <source>transactions</source>
+        <target state="needs-review-translation">transaktioner</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs.component.ts</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.docs.category.6" datatype="html">
+        <source>fees</source>
+        <target state="needs-review-translation">avgifter</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs.component.ts</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.docs.category.7" datatype="html">
+        <source>about</source>
+        <target state="needs-review-translation">om</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs.component.ts</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.docs.category.8" datatype="html">
+        <source>explorer</source>
+        <target state="needs-review-translation">utforskare</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs.component.ts</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7af8cba6646f8c9de5351a05976188876d00d58e" datatype="html">
+        <source>sat/B</source>
+        <target state="needs-review-translation">sat/B</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/accelerate-checkout/accelerate-checkout.component.html</context>
+          <context context-type="linenumber">121</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/accelerate-checkout/accelerate-checkout.component.html</context>
+          <context context-type="linenumber">143</context>
+        </context-group>
+        <note priority="1" from="description">sat/B</note>
+        <note priority="1" from="meaning">shared.sat-vbyte</note>
+      </trans-unit>
+      <trans-unit id="1ac50ef21ed21d7f6b6dcb0bc74ad5c0ba6c144e" datatype="html">
+        <source>DOGE</source>
+        <target state="needs-review-translation">DOGE</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/amount-selector/amount-selector.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/balance-widget/balance-widget.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/balance-widget/balance-widget.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/balance-widget/balance-widget.component.html</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/liquid-reserves-audit/recent-pegs-stats/recent-pegs-stats.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/liquid-reserves-audit/recent-pegs-stats/recent-pegs-stats.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/liquid-reserves-audit/reserves-ratio-stats/reserves-ratio-stats.component.html</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+        <note priority="1" from="description">BTC</note>
+        <note priority="1" from="meaning">shared.btc</note>
+      </trans-unit>
+      <trans-unit id="806c6ccce363f1fdd06d9323210a9248bd7b4b6b" datatype="html">
+        <source>koinu</source>
+        <target state="needs-review-translation">koinu</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/amount-selector/amount-selector.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/block-overview-tooltip/block-overview-tooltip.component.html</context>
+          <context context-type="linenumber">43</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/calculator/calculator.component.html</context>
+          <context context-type="linenumber">42</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/calculator/calculator.component.html</context>
+          <context context-type="linenumber">61</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/cluster-diagram/cluster-diagram.component.html</context>
+          <context context-type="linenumber">135</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/rbf-timeline/rbf-timeline-tooltip.component.html</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/transaction/transaction-details/transaction-details.component.html</context>
+          <context context-type="linenumber">201</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/transaction/transaction-preview.component.html</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/transactions-list/transactions-list.component.html</context>
+          <context context-type="linenumber">518</context>
+        </context-group>
+        <note priority="1" from="description">shared.sats</note>
+      </trans-unit>
+      <trans-unit id="055c54ed5f836870d20d1b85c45c56d9864d7281" datatype="html">
+        <source>koinu/tx</source>
+        <target state="needs-review-translation">koinu/tx</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/reward-stats/reward-stats.component.html</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+        <note priority="1" from="description">koinu/B</note>
+        <note priority="1" from="meaning">shared.sat-vbyte</note>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.34" datatype="html">
+        <source>Dogecoin</source>
+        <target state="needs-review-translation">Dogecoin</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/trademark-policy/trademark-policy.component.html</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.pool-luck-description" datatype="html">
+        <source>The overall luck of all mining pools over the past week. A luck above 100% means the average block interval during that week was less than the 1-minute Dogecoin target.</source>
+        <target state="needs-review-translation">Den totala turen för alla utvinningspooler under den senaste veckan. Över 100% innebär att det genomsnittliga blockintervallet under veckan var kortare än Dogecoins mål på 1 minut.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/pool-ranking/pool-ranking.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.search.choose-chain-current" datatype="html">
+        <source>Choose search chain, selected: <x id="name" equiv-text="name" /></source>
+        <target state="needs-review-translation">Välj söknätverk, valt: <x id="name" equiv-text="name" /></target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/search-form/search-form.component.ts</context>
+          <context context-type="linenumber">49</context>
         </context-group>
       </trans-unit>
       </body>
