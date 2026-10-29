@@ -11567,6 +11567,12 @@
       <trans-unit id="taxi.timezone.plus12" datatype="html"><source>New Zealand Standard Time (NZST)</source><target>Neuseeländische Normalzeit (NZST)</target></trans-unit>
       <trans-unit id="taxi.timezone.plus13" datatype="html"><source>Tonga Time (TOT)</source><target>Tonga-Zeit (TOT)</target></trans-unit>
       <trans-unit id="taxi.timezone.plus14" datatype="html"><source>Line Islands Time (LINT)</source><target>Linieninseln-Zeit (LINT)</target></trans-unit>
+    <trans-unit id="taxi.filter.inscription" datatype="html"><source>Inscription</source><target>Inschrift</target></trans-unit>
+<trans-unit id="tx-taxi.custom-dashboard.pending" datatype="html"><source>Pending Transactions</source><target>Ausstehende Transaktionen</target></trans-unit>
+<trans-unit id="tx-taxi.eight-blocks.by" datatype="html"><source>by</source><target>von</target></trans-unit>
+<trans-unit id="tx-taxi.eight-blocks.unknown" datatype="html"><source>Unknown</source><target>Unbekannt</target></trans-unit>
+<trans-unit id="tx-taxi.docs.endpoint" datatype="html"><source>Endpoint</source><target>Endpunkt</target></trans-unit>
+<trans-unit id="tx-taxi.about.project-links" datatype="html"><source>Project links</source><target>Projektlinks</target></trans-unit>
     </body>
   </file>
 </xliff>

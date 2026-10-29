@@ -4216,7 +4216,7 @@
       </trans-unit>
       <trans-unit id="cbfb79ff517493268a49acffa81ecc02336d8372" datatype="html">
         <source>Block Header Hex</source>
-        <target>Block Header Hex</target>
+        <target>Cabecera del bloque en hexadecimal</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/block/block.component.html</context>
           <context context-type="linenumber">357</context>
@@ -11938,6 +11938,12 @@
       <trans-unit id="taxi.timezone.plus12" datatype="html"><source>New Zealand Standard Time (NZST)</source><target>Hora estándar de Nueva Zelanda (NZST)</target></trans-unit>
       <trans-unit id="taxi.timezone.plus13" datatype="html"><source>Tonga Time (TOT)</source><target>Hora de Tonga (TOT)</target></trans-unit>
       <trans-unit id="taxi.timezone.plus14" datatype="html"><source>Line Islands Time (LINT)</source><target>Hora de las islas de la Línea (LINT)</target></trans-unit>
+          <trans-unit id="tx-taxi.eight-blocks.by" datatype="html"><source>by</source><target>por</target></trans-unit>
+      <trans-unit id="tx-taxi.eight-blocks.unknown" datatype="html"><source>Unknown</source><target>Desconocido</target></trans-unit>
+      <trans-unit id="tx-taxi.docs.endpoint" datatype="html"><source>Endpoint</source><target>Punto de acceso</target></trans-unit>
+    <trans-unit id="tx-taxi.about.project-links" datatype="html"><source>Project links</source><target>Enlaces del proyecto</target></trans-unit>
+    <trans-unit id="taxi.filter.inscription" datatype="html"><source>Inscription</source><target>Inscripción</target></trans-unit>
+<trans-unit id="tx-taxi.custom-dashboard.pending" datatype="html"><source>Pending Transactions</source><target>Transacciones pendientes</target></trans-unit>
     </body>
   </file>
 </xliff>

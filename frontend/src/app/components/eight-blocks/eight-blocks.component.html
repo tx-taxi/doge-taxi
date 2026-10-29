@@ -17,7 +17,7 @@
         ></app-block-overview-graph>
         <div *ngIf="showInfo && blockInfo[i]" class="info" @infoChange>
           <h1 class="height">{{ blockInfo[i].height }}</h1>
-          <h2 class="mined-by">by {{ blockInfo[i].extras.pool.name || 'Unknown' }}</h2>
+          <h2 class="mined-by"><span i18n="@@tx-taxi.eight-blocks.by">by</span> <span *ngIf="blockInfo[i].extras.pool.name; else unknownPool">{{ blockInfo[i].extras.pool.name }}</span><ng-template #unknownPool><span i18n="@@tx-taxi.eight-blocks.unknown">Unknown</span></ng-template></h2>
         </div>
       </div>
     </div>
