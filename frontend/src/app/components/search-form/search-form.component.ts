@@ -60,7 +60,7 @@ export class SearchFormComponent implements OnInit {
   }
 
   readonly defaultChainIconUrl = '/resources/chains/dogecoin.png';
-  readonly defaultChainIconAlt = 'Dogecoin explorer';
+  readonly defaultChainIconAlt = $localize`:@@tx-taxi.doge.search-icon-alt:Dogecoin explorer`;
   readonly defaultChainAccent = '#8d762f';
   readonly defaultSearchPlaceholder = $localize`:@@tx-taxi.global.search-placeholder:Wave a taxi, paste anything here.`;
   env: Env;

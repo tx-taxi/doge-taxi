@@ -29,7 +29,7 @@
         }
       }
       @if (!enterpriseInfo || enterpriseInfo.dualLogo) {
-        <img *ngIf="!officialMempoolSpace" src="/resources/branding/doge-dark-navbar.svg" alt="doge.tx.taxi Dogecoin explorer" class="btc-brand-navbar" [style.opacity]="connectionState.val === 2 ? 1 : 0.5">
+        <img *ngIf="!officialMempoolSpace" src="/resources/branding/doge-dark-navbar.svg" alt="doge.tx.taxi Dogecoin explorer" i18n-alt="@@tx-taxi.doge.logo-alt" class="btc-brand-navbar" [style.opacity]="connectionState.val === 2 ? 1 : 0.5">
         <app-svg-images *ngIf="officialMempoolSpace" name="officialMempoolSpace" viewBox="0 0 500 126"></app-svg-images>
       }
       <div class="connection-badge">
@@ -50,7 +50,7 @@
         }
       }
       @if (!enterpriseInfo || enterpriseInfo.dualLogo) {
-        <img *ngIf="!officialMempoolSpace" src="/resources/branding/doge-dark-navbar.svg" alt="doge.tx.taxi Dogecoin explorer" class="btc-brand-navbar" [style.opacity]="connectionState.val === 2 ? 1 : 0.5">
+        <img *ngIf="!officialMempoolSpace" src="/resources/branding/doge-dark-navbar.svg" alt="doge.tx.taxi Dogecoin explorer" i18n-alt="@@tx-taxi.doge.logo-alt" class="btc-brand-navbar" [style.opacity]="connectionState.val === 2 ? 1 : 0.5">
         <app-svg-images *ngIf="officialMempoolSpace" name="officialMempoolSpace" viewBox="0 0 500 126"></app-svg-images>
       }
       <div class="connection-badge">
