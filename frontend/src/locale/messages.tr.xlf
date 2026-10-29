@@ -8023,9 +8023,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="df5fd5288dc0b13ce611a0c857e97baee9595e67" datatype="html">
-        <source> This transaction ID appears twice in the blockchain as the coinbase of blocks <x id="START_LINK" ctype="x-a" equiv-text="&lt;a [routerLink]=&quot;['/block/' | relativeUrl, duplicateTxBlocks[0]]&quot;&gt;" /><x id="INTERPOLATION" equiv-text="locks[0] }}" /><x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;" /> and <x id="START_LINK_1" equiv-text="&lt;a [routerLink]=&quot;['/block/' | relativeUrl, duplicateTxBlocks[1]]&quot;&gt;" /><x id="INTERPOLATION_1" equiv-text="cks[1] }}" /><x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;" />, due to a bug later mitigated by <x id="START_LINK_2" equiv-text="&lt;a href=&quot;https://github.com/bitcoin/bips/blob/master/bip-0030.mediawiki&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;" />BIP-30<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;" />. </source>
-        <target>Bu işlem ID'si (numarası) blokzincirde, BIP-30'daki <x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;" />, <x id="START_LINK_2" equiv-text="&lt;a href=&quot;https://github.com/bitcoin/bips/blob/master/bip-0030.mediawiki&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;" /> hatasından dolayı <x id="START_LINK" ctype="x-a" equiv-text="&lt;a [routerLink]=&quot;['/block/' | relativeUrl, duplicateTxBlocks[0]]&quot;&gt;" /><x id="INTERPOLATION" equiv-text="locks[0] }}" /><x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;" /> ve <x id="START_LINK_1" equiv-text="&lt;a [routerLink]=&quot;['/block/' | relativeUrl, duplicateTxBlocks[1]]&quot;&gt;" /> <x id="INTERPOLATION_1" equiv-text="cks[1] }}" /><x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;" />  olacak şekilde iki kere gözükmektedir. </target>
-        <context-group purpose="location">
+        <source> This transaction ID appears twice in the blockchain as the coinbase of blocks <x id="START_LINK" ctype="x-a" equiv-text="&lt;a [routerLink]=&quot;['/block/' | relativeUrl, duplicateTxBlocks[0]]&quot;&gt;" /><x id="INTERPOLATION" equiv-text="{{ duplicateTxBlocks[0] }}" /><x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;" /> and <x id="START_LINK_1" equiv-text="&lt;a [routerLink]=&quot;['/block/' | relativeUrl, duplicateTxBlocks[1]]&quot;&gt;" /><x id="INTERPOLATION_1" equiv-text="{{ duplicateTxBlocks[1] }}" /><x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;" />, due to a bug later mitigated by <x id="START_LINK_2" equiv-text="&lt;a href=&quot;https://github.com/bitcoin/bips/blob/master/bip-0030.mediawiki&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;" />BIP-30<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;" />. </source>
+        <target state="needs-review-translation"> Bu işlem kimliği, daha sonra <x id="START_LINK_2" equiv-text="&lt;a href=&quot;https://github.com/bitcoin/bips/blob/master/bip-0030.mediawiki&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;" />BIP-30<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;" /> ile etkisi azaltılan bir hata nedeniyle blok zincirinde <x id="START_LINK" ctype="x-a" equiv-text="&lt;a [routerLink]=&quot;['/block/' | relativeUrl, duplicateTxBlocks[0]]&quot;&gt;" /><x id="INTERPOLATION" equiv-text="{{ duplicateTxBlocks[0] }}" /><x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;" /> ve <x id="START_LINK_1" equiv-text="&lt;a [routerLink]=&quot;['/block/' | relativeUrl, duplicateTxBlocks[1]]&quot;&gt;" /><x id="INTERPOLATION_1" equiv-text="{{ duplicateTxBlocks[1] }}" /><x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;" /> bloklarının coinbase işlemi olarak iki kez görünür. </target><context-group purpose="location">
           <context context-type="sourcefile">src/app/components/transaction/transaction.component.html</context>
           <context context-type="linenumber">40,42</context>
         </context-group>
@@ -8147,8 +8146,7 @@
       </trans-unit>
       <trans-unit id="c64b73564fd858ee5a4f73040893c9d625ca56ad" datatype="html">
         <source>Witness</source>
-        <target>Witness</target>
-        <context-group purpose="location">
+        <target state="needs-review-translation">Tanık verisi</target><context-group purpose="location">
           <context context-type="sourcefile">src/app/components/transactions-list/transactions-list.component.html</context>
           <context context-type="linenumber">173</context>
         </context-group>
@@ -8845,9 +8843,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="meta.description.docs.faq" datatype="html">
-        <source>Get answers to common questions like: What is a mempool? Why isn't my transaction confirming? How can I run my own instance of The Mempool Open Source Project? And more.</source>
-        <target>Mempool nedir, neden işlemim onaylanmıyor, Açık Kaynak Kodlu Mempool projesinin bir kopyasını nasıl çalıştırabilirim? gibi temel sorulara cevaplar bulun.</target>
-        <context-group purpose="location">
+        <source>Get answers to common Dogecoin questions, including block timing, AuxPoW, fees, pending observations, transactions, and available explorer data.</source>
+        <target state="needs-review-translation">Blok süreleri, AuxPoW, ücretler, bekleyen gözlemler, işlemler ve kullanılabilir gezgin verileri dahil Dogecoin hakkındaki sık sorulan soruların yanıtlarını alın.</target><context-group purpose="location">
           <context context-type="sourcefile">src/app/docs/docs/docs.component.ts</context>
           <context context-type="linenumber">48</context>
         </context-group>
@@ -8869,9 +8866,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="meta.description.docs.rest-bitcoin" datatype="html">
-        <source>Documentation for the mempool.space REST API service: get info on addresses, transactions, blocks, fees, mining, the Lightning network, and more.</source>
-        <target>mempool.space REST API servisi dökümantasyonu: adresler ile ilgili bilgi al, işlemler, bloklar, ücretler, madencilik, Lightning ağı ve daha fazlası. </target>
-        <context-group purpose="location">
+        <source>Documentation for the doge.tx.taxi REST API: query available Dogecoin block, transaction, address, fee, and network data.</source>
+        <target state="needs-review-translation">doge.tx.taxi REST API belgeleri: kullanılabilir Dogecoin blok, işlem, adres, ücret ve ağ verilerini sorgulayın.</target><context-group purpose="location">
           <context context-type="sourcefile">src/app/docs/docs/docs.component.ts</context>
           <context context-type="linenumber">56</context>
         </context-group>
@@ -8893,9 +8889,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="meta.description.docs.websocket-bitcoin" datatype="html">
-        <source>Documentation for the mempool.space WebSocket API service: get real-time info on blocks, mempools, transactions, addresses, and more.</source>
-        <target>Mempool.space Websoket API servisi için, bloklardan gerçek-zamanlı bilgi çek, mempoollar, işlemler, adresler vb talepler için dökümantasyon. </target>
-        <context-group purpose="location">
+        <source>Documentation for the doge.tx.taxi WebSocket API: receive current Dogecoin block, transaction, address, pending-sample, and provider-freshness updates.</source>
+        <target state="needs-review-translation">doge.tx.taxi WebSocket API belgeleri: mevcut Dogecoin blok, işlem, adres, bekleyen örneklem ve kaynak güncelliği güncellemelerini alın.</target><context-group purpose="location">
           <context context-type="sourcefile">src/app/docs/docs/docs.component.ts</context>
           <context context-type="linenumber">64</context>
         </context-group>
@@ -13350,6 +13345,821 @@
         <target state="needs-review-translation">Üst proje mempool/mempool atfı ve proje bağımsızlığı dahil doge.tx.taxi ticari marka ve atıf notları.</target><context-group purpose="location">
           <context context-type="sourcefile">src/app/components/trademark-policy/trademark-policy.component.ts</context>
           <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="af6627251e98f2ee627f2f8c84f135b65c3fffee" datatype="html">
+        <source>This transaction belongs to a chunk of 1 transaction, with combined effective fee rate <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;" /><x id="INTERPOLATION" equiv-text="s.chunkFeerate | feeRounding }}" /> koinu/B<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;" />.</source>
+        <target state="needs-review-translation">Bu işlem, 1 işlem içeren bir parçaya aittir; birleşik etkin ücret oranı <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;" /><x id="INTERPOLATION" equiv-text="s.chunkFeerate | feeRounding }}" /> koinu/B<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;" /> değerindedir.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/transaction/transaction-details/transaction-details.component.html</context>
+          <context context-type="linenumber">244</context>
+        </context-group>
+        <note priority="1" from="description">cluster.preview.chunk-line-one</note>
+      </trans-unit>
+      <trans-unit id="ae0a475bfce03fadb87c9090e64081a9310beea2" datatype="html">
+        <source>This transaction belongs to a chunk of <x id="INTERPOLATION" equiv-text="{{ clusterPreviewStats.chunkSize }}" /> transactions, with combined effective fee rate <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;" /><x id="INTERPOLATION_1" equiv-text="s.chunkFeerate | feeRounding }}" /> koinu/B<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;" />.</source>
+        <target state="needs-review-translation">Bu işlem, <x id="INTERPOLATION" equiv-text="{{ clusterPreviewStats.chunkSize }}" /> işlem içeren bir parçaya aittir; birleşik etkin ücret oranı <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;" /><x id="INTERPOLATION_1" equiv-text="s.chunkFeerate | feeRounding }}" /> koinu/B<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;" /> değerindedir.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/transaction/transaction-details/transaction-details.component.html</context>
+          <context context-type="linenumber">246</context>
+        </context-group>
+        <note priority="1" from="description">cluster.preview.chunk-line-many</note>
+      </trans-unit>
+      <trans-unit id="c7678f3be45eefaebe9bda75a0a30f97204433b5" datatype="html">
+        <source>In a mempool cluster containing 1 other chunk.</source>
+        <target state="needs-review-translation">1 başka parça içeren bir mempool kümesinde.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/transaction/transaction-details/transaction-details.component.html</context>
+          <context context-type="linenumber">249</context>
+        </context-group>
+        <note priority="1" from="description">cluster.preview.cluster-line-one</note>
+      </trans-unit>
+      <trans-unit id="acf9470007b6c76f037bf8aec23fc8d2ba2267a4" datatype="html">
+        <source>In a mempool cluster containing <x id="INTERPOLATION" equiv-text="{{ clusterPreviewStats.otherChunks }}" /> other chunks.</source>
+        <target state="needs-review-translation"><x id="INTERPOLATION" equiv-text="{{ clusterPreviewStats.otherChunks }}" /> başka parça içeren bir mempool kümesinde.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/transaction/transaction-details/transaction-details.component.html</context>
+          <context context-type="linenumber">251</context>
+        </context-group>
+        <note priority="1" from="description">cluster.preview.cluster-line-many</note>
+      </trans-unit>
+      <trans-unit id="tx-taxi.missing-prevouts" datatype="html">
+        <source>Missing prevouts are not loaded. Some fields like fee rate cannot be calculated.</source>
+        <target state="needs-review-translation">Eksik önceki çıktılar yüklenmedi. Ücret oranı gibi bazı alanlar hesaplanamaz.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/transaction/transaction-raw.component.html</context>
+          <context context-type="linenumber">68</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.prevouts-error" datatype="html">
+        <source>Error loading missing prevouts</source>
+        <target state="needs-review-translation">Eksik önceki çıktılar yüklenirken hata oluştu</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/transaction/transaction-raw.component.html</context>
+          <context context-type="linenumber">70</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.cpfp-error" datatype="html">
+        <source>Error loading CPFP data</source>
+        <target state="needs-review-translation">CPFP verileri yüklenirken hata oluştu</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/transaction/transaction-raw.component.html</context>
+          <context context-type="linenumber">77</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="92626adb4b7e2aff0d35c2db5e023aac29d27f0f" datatype="html">
+        <source>Cluster</source>
+        <target state="needs-review-translation">Küme</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/transaction/transaction-raw.component.html</context>
+          <context context-type="linenumber">100</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/transaction/transaction.component.html</context>
+          <context context-type="linenumber">88</context>
+        </context-group>
+        <note priority="1" from="description">Cluster</note>
+        <note priority="1" from="meaning">transaction.cluster</note>
+      </trans-unit>
+      <trans-unit id="719f62092a6b4142d8fa32d09bb8a72d9e613aa7" datatype="html">
+        <source>Only ~<x id="INTERPOLATION" equiv-text="{{ medianFeeNeeded | feeRounding }}" /> koinu/B was needed to get into this block</source>
+        <target state="needs-review-translation">Bu bloğa girmek için yalnızca yaklaşık <x id="INTERPOLATION" equiv-text="{{ medianFeeNeeded | feeRounding }}" /> koinu/B gerekiyordu</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/tx-fee-rating/tx-fee-rating.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/tx-fee-rating/tx-fee-rating.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+        <note priority="1" from="description">tx-fee-rating.warning-tooltip</note>
+      </trans-unit>
+      <trans-unit id="tx-taxi.pending-transactions" datatype="html">
+        <source>Pending Transactions</source>
+        <target state="needs-review-translation">Bekleyen işlemler</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge-chart-unavailable" datatype="html">
+        <source>Chart unavailable.</source>
+        <target state="needs-review-translation">Grafik kullanılamıyor.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.view-pending" datatype="html">
+        <source>View pending transactions</source>
+        <target state="needs-review-translation">Bekleyen işlemleri görüntüle</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.not-available" datatype="html">
+        <source>Not available</source>
+        <target state="needs-review-translation">Kullanılamıyor</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="c19bde6e194e95b60145a4e312fc31941197d90c" datatype="html">
+        <source>LBTC Supply vs. BTC Holdings</source>
+        <target state="needs-review-translation">LBTC arzı ve BTC varlıkları</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">103</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">236</context>
+        </context-group>
+        <note priority="1" from="description">dashboard.lbtc-supply-vs-btc-holdings</note>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.label.1" datatype="html">
+        <source>Connection</source>
+        <target state="needs-review-translation">Bağlantı</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.label.2" datatype="html">
+        <source>Initialize the stream</source>
+        <target state="needs-review-translation">Akışı başlat</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.description.19" datatype="html">
+        <source>Connect to &lt;code&gt;wss://doge.tx.taxi/api/v1/ws&lt;/code&gt;, then send this message. The service returns the current block, fee, pending-sample, and provider-freshness snapshot when available.</source>
+        <target state="needs-review-translation">&lt;code&gt;wss://doge.tx.taxi/api/v1/ws&lt;/code&gt; adresine bağlanın, ardından bu mesajı gönderin. Veriler mevcutsa hizmet mevcut blok, ücret, bekleyen örneklem ve kaynak güncelliği anlık görüntüsünü döndürür.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.label.3" datatype="html">
+        <source>Track one transaction</source>
+        <target state="needs-review-translation">Bir işlemi takip et</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.description.20" datatype="html">
+        <source>Track a 64-character transaction ID. The service sends &lt;code&gt;tx&lt;/code&gt; when it can retrieve the transaction and stops tracking it after confirmation.</source>
+        <target state="needs-review-translation">64 karakterlik bir işlem kimliğini takip edin. Hizmet işlemi alabiliyorsa &lt;code&gt;tx&lt;/code&gt; gönderir ve onaydan sonra takibi durdurur.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.label.4" datatype="html">
+        <source>Track an address</source>
+        <target state="needs-review-translation">Bir adresi takip et</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.description.21" datatype="html">
+        <source>Track a standard Dogecoin address. New unconfirmed transactions arrive as &lt;code&gt;address-transactions&lt;/code&gt;; confirmations arrive as &lt;code&gt;block-transactions&lt;/code&gt;. Address history remains subject to provider availability.</source>
+        <target state="needs-review-translation">Standart bir Dogecoin adresini takip edin. Yeni onaylanmamış işlemler &lt;code&gt;address-transactions&lt;/code&gt;, onaylar &lt;code&gt;block-transactions&lt;/code&gt; olarak gelir. Adres geçmişi sağlayıcının kullanılabilirliğine bağlıdır.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.label.5" datatype="html">
+        <source>Inspect the pending sample</source>
+        <target state="needs-review-translation">Bekleyen örneklemi incele</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.description.22" datatype="html">
+        <source>Request the transactions included in the explorer’s bounded pending sample. This is a sampled visualization of the latest provider observation, not the network-wide mempool and not a confirmation promise.</source>
+        <target state="needs-review-translation">Gezginin sınırlı bekleyen örneklemindeki işlemleri isteyin. Bu, sağlayıcının son gözleminin örneklenmiş görselleştirmesidir; ağ genelindeki mempool veya onay vaadi değildir.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.label.6" datatype="html">
+        <source>Network</source>
+        <target state="needs-review-translation">Ağ</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.label.7" datatype="html">
+        <source>Get the tip height</source>
+        <target state="needs-review-translation">Zincir ucunun yüksekliğini al</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.description.1" datatype="html">
+        <source>Returns the current best-chain height as plain text.</source>
+        <target state="needs-review-translation">Mevcut en iyi zincirin yüksekliğini düz metin olarak döndürür.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.label.8" datatype="html">
+        <source>Get the tip hash</source>
+        <target state="needs-review-translation">Zincir ucunun hash değerini al</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.description.2" datatype="html">
+        <source>Returns the current best-chain block hash as plain text.</source>
+        <target state="needs-review-translation">Mevcut en iyi zincirin blok hash değerini düz metin olarak döndürür.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.label.9" datatype="html">
+        <source>Get explorer network data</source>
+        <target state="needs-review-translation">Gezgin ağ verilerini al</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.description.3" datatype="html">
+        <source>Returns the latest observed Dogecoin target block time, permanent subsidy, provider observation timestamps, and tip snapshot. Timestamps describe the source observation, not a guarantee of live network state.</source>
+        <target state="needs-review-translation">Son gözlemlenen Dogecoin hedef blok süresini, kalıcı sübvansiyonu, sağlayıcı gözlem zamanlarını ve zincir ucu anlık görüntüsünü döndürür. Zamanlar kaynak gözlemini gösterir, canlı ağ durumunu garanti etmez.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.label.11" datatype="html">
+        <source>Get a block hash by height</source>
+        <target state="needs-review-translation">Yüksekliğe göre blok hash değerini al</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.description.4" datatype="html">
+        <source>Resolves a decimal block height to its canonical block hash.</source>
+        <target state="needs-review-translation">Ondalık blok yüksekliğini kanonik blok hash değerine çözümler.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.label.12" datatype="html">
+        <source>Get a block</source>
+        <target state="needs-review-translation">Blok al</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.description.5" datatype="html">
+        <source>Returns indexed block data including height, timestamp, header fields, transaction count, fees when available, and reward. Recent strip data is cross-checked against raw Dogecoin block data before use; older detail availability depends on the historical provider.</source>
+        <target state="needs-review-translation">Yükseklik, zaman, başlık alanları, işlem sayısı, mevcutsa ücretler ve ödül dahil indekslenmiş blok verilerini döndürür. Son blok şeridi verileri kullanımdan önce ham Dogecoin bloklarıyla karşılaştırılır; eski ayrıntıların kullanılabilirliği geçmiş sağlayıcısına bağlıdır.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.label.13" datatype="html">
+        <source>Get a block transaction page</source>
+        <target state="needs-review-translation">Blok işlem sayfasını al</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.description.6" datatype="html">
+        <source>Returns up to 25 indexed transactions from a block. The gateway rejects incomplete pages rather than silently returning partial data.</source>
+        <target state="needs-review-translation">Bir bloktan en fazla 25 indekslenmiş işlem döndürür. Ağ geçidi eksik sayfaları sessizce kısmi veri döndürmek yerine reddeder.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.label.14" datatype="html">
+        <source>Get all indexed transaction IDs</source>
+        <target state="needs-review-translation">Tüm indekslenmiş işlem kimliklerini al</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.description.7" datatype="html">
+        <source>Returns a complete transaction-ID list only when the provider can supply the whole block.</source>
+        <target state="needs-review-translation">Tam işlem kimliği listesini yalnızca sağlayıcı bloğun tamamını sağlayabildiğinde döndürür.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.label.16" datatype="html">
+        <source>Get a transaction</source>
+        <target state="needs-review-translation">İşlem al</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">37</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.description.8" datatype="html">
+        <source>Returns a transaction with inputs, outputs, koinu values, and confirmation status. Amounts are in koinu; 100,000,000 koinu equals 1 DOGE.</source>
+        <target state="needs-review-translation">Girdileri, çıktıları, koinu değerlerini ve onay durumunu içeren işlem döndürür. Tutarlar koinu cinsindendir; 100.000.000 koinu, 1 DOGE’ye eşittir.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">37</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.label.17" datatype="html">
+        <source>Get transaction status</source>
+        <target state="needs-review-translation">İşlem durumunu al</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">38</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.description.9" datatype="html">
+        <source>Returns only the confirmation status and, when known, the containing block.</source>
+        <target state="needs-review-translation">Yalnızca onay durumunu ve biliniyorsa işlemi içeren bloğu döndürür.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">38</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.label.18" datatype="html">
+        <source>Get output spends</source>
+        <target state="needs-review-translation">Çıktı harcamalarını al</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.description.10" datatype="html">
+        <source>Returns one entry per output describing whether it has been spent, when the historical provider has the data.</source>
+        <target state="needs-review-translation">Geçmiş sağlayıcısında veri varsa her çıktı için harcanıp harcanmadığını belirten bir kayıt döndürür.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.label.19" datatype="html">
+        <source>Get raw transaction data</source>
+        <target state="needs-review-translation">Ham işlem verilerini al</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">40</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.description.11" datatype="html">
+        <source>Returns a transaction serialized as hexadecimal when it remains available from the provider.</source>
+        <target state="needs-review-translation">Sağlayıcıda hâlâ mevcutsa onaltılık olarak serileştirilmiş işlem döndürür.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">40</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.label.21" datatype="html">
+        <source>Get address statistics</source>
+        <target state="needs-review-translation">Adres istatistiklerini al</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">42</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.description.12" datatype="html">
+        <source>Returns indexed funded, spent, and transaction totals for a standard Dogecoin address. The explorer does not provide wallet balances or private-key services.</source>
+        <target state="needs-review-translation">Standart Dogecoin adresi için indekslenmiş gelen, harcanan ve işlem toplamlarını döndürür. Gezgin cüzdan bakiyesi veya özel anahtar hizmeti sağlamaz.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">42</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.label.22" datatype="html">
+        <source>Get address transactions</source>
+        <target state="needs-review-translation">Adres işlemlerini al</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">43</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.description.13" datatype="html">
+        <source>Returns the current provider page of transactions for an address. Use the chain cursor endpoint to continue through confirmed history.</source>
+        <target state="needs-review-translation">Sağlayıcının adrese ait mevcut işlem sayfasını döndürür. Onaylanmış geçmişe devam etmek için zincir imleci uç noktasını kullanın.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">43</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.label.23" datatype="html">
+        <source>Continue confirmed address history</source>
+        <target state="needs-review-translation">Onaylanmış adres geçmişine devam et</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">44</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.description.14" datatype="html">
+        <source>Returns the next historical page before a confirmed transaction ID. Historical depth is limited by the upstream indexed provider.</source>
+        <target state="needs-review-translation">Belirtilen onaylanmış işlem kimliğinden önceki geçmiş sayfasını döndürür. Geçmiş derinliği üst indeks sağlayıcısıyla sınırlıdır.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">44</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.label.24" datatype="html">
+        <source>Validate an address format</source>
+        <target state="needs-review-translation">Adres biçimini doğrula</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">45</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.description.15" datatype="html">
+        <source>Checks whether a value matches the gateway’s standard Dogecoin address format. This is format validation, not an ownership or balance check.</source>
+        <target state="needs-review-translation">Bir değerin ağ geçidinin standart Dogecoin adres biçimine uyup uymadığını kontrol eder. Bu, sahiplik veya bakiye kontrolü değil, biçim doğrulamasıdır.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">45</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.label.25" datatype="html">
+        <source>Fees and pending sample</source>
+        <target state="needs-review-translation">Ücretler ve bekleyen örneklem</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">46</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.label.26" datatype="html">
+        <source>Get fee estimates</source>
+        <target state="needs-review-translation">Ücret tahminlerini al</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">47</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.description.16" datatype="html">
+        <source>Returns source fee suggestions in koinu/B. They are observations from the configured provider and should be checked when creating a transaction.</source>
+        <target state="needs-review-translation">Kaynak ücret önerilerini koinu/B cinsinden döndürür. Bunlar yapılandırılmış sağlayıcının gözlemleridir ve işlem oluştururken kontrol edilmelidir.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">47</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.label.27" datatype="html">
+        <source>Get the bounded pending sample</source>
+        <target state="needs-review-translation">Sınırlı bekleyen örneklemi al</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">48</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.description.17" datatype="html">
+        <source>Returns the explorer’s packed sample of recently observed pending transactions. It is capped at one million bytes and may be empty or stale during source outages; it is not a complete mempool view.</source>
+        <target state="needs-review-translation">Gezginin son gözlemlenen bekleyen işlemlerden oluşturduğu örneklemi döndürür. Üst sınır bir milyon bayttır; kaynak kesintisinde boş veya eski olabilir. Tam mempool görünümü değildir.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">48</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.label.28" datatype="html">
+        <source>Get recently observed pending transactions</source>
+        <target state="needs-review-translation">Son gözlemlenen bekleyen işlemleri al</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">49</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.description.18" datatype="html">
+        <source>Returns the bounded recent pending observation used by the explorer. It does not enumerate every transaction relayed by the Dogecoin network.</source>
+        <target state="needs-review-translation">Gezginin kullandığı sınırlı son bekleyen işlem gözlemini döndürür. Dogecoin ağında iletilen her işlemi listelemez.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">49</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.faq.heading.1" datatype="html">
+        <source>Dogecoin basics</source>
+        <target state="needs-review-translation">Dogecoin temelleri</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">53</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.faq.heading.2" datatype="html">
+        <source>What units does the explorer use?</source>
+        <target state="needs-review-translation">Gezgin hangi birimleri kullanır?</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">54</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.faq.heading.3" datatype="html">
+        <source>How quickly are blocks found?</source>
+        <target state="needs-review-translation">Bloklar ne sıklıkla bulunur?</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">55</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.faq.heading.4" datatype="html">
+        <source>What is AuxPoW merged mining?</source>
+        <target state="needs-review-translation">AuxPoW birleştirilmiş madencilik nedir?</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">56</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.faq.heading.5" datatype="html">
+        <source>Using this explorer</source>
+        <target state="needs-review-translation">Bu gezgini kullanma</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">57</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.faq.heading.6" datatype="html">
+        <source>What can I search for?</source>
+        <target state="needs-review-translation">Neleri arayabilirim?</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">58</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.faq.heading.7" datatype="html">
+        <source>What does the pending strip represent?</source>
+        <target state="needs-review-translation">Bekleyen işlem şeridi neyi gösterir?</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">59</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.faq.heading.8" datatype="html">
+        <source>How should I read fee estimates?</source>
+        <target state="needs-review-translation">Ücret tahminlerini nasıl okumalıyım?</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">60</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.faq.heading.9" datatype="html">
+        <source>Why is historical data sometimes unavailable?</source>
+        <target state="needs-review-translation">Geçmiş veriler neden bazen kullanılamıyor?</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">61</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.faq.heading.10" datatype="html">
+        <source>Transactions and confirmations</source>
+        <target state="needs-review-translation">İşlemler ve onaylar</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">62</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.faq.heading.11" datatype="html">
+        <source>Why is my transaction still unconfirmed?</source>
+        <target state="needs-review-translation">İşlemim neden hâlâ onaylanmadı?</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">63</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.faq.heading.12" datatype="html">
+        <source>Can this site change or recover a transaction?</source>
+        <target state="needs-review-translation">Bu site bir işlemi değiştirebilir veya kurtarabilir mi?</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">64</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.docs.disclaimer-title" datatype="html">
+        <source>doge.tx.taxi shows public Dogecoin data.</source>
+        <target state="needs-review-translation">doge.tx.taxi herkese açık Dogecoin verilerini gösterir.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.docs.disclaimer-body" datatype="html">
+        <source>It cannot access wallets, recover funds, reverse a transaction, or control when a miner confirms it.</source>
+        <target state="needs-review-translation">Cüzdanlara erişemez, fonları kurtaramaz, işlemi geri alamaz veya bir madencinin işlemi ne zaman onaylayacağını kontrol edemez.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.docs.rest-intro" datatype="html">
+        <source>The Dogecoin REST API is read-only. Requests use</source>
+        <target state="needs-review-translation">Dogecoin REST API yalnızca okunabilir. İstekler şunu kullanır:</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.docs.rest-outro" datatype="html">
+        <source>; unavailable source capabilities return an error instead of placeholder data.</source>
+        <target state="needs-review-translation">; kullanılamayan kaynak özellikleri yer tutucu veriler yerine hata döndürür.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.docs.ws-intro" datatype="html">
+        <source>The WebSocket endpoint is</source>
+        <target state="needs-review-translation">WebSocket uç noktası:</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.docs.ws-outro" datatype="html">
+        <source>. It is a read-only stream with a shared, rate-bounded collector.</source>
+        <target state="needs-review-translation">. Paylaşılan, hız sınırlı bir toplayıcı içeren salt okunur akıştır.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.docs.payload" datatype="html">
+        <source>Payload</source>
+        <target state="needs-review-translation">Yük</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.faq.units-intro" datatype="html">
+        <source>Dogecoin amounts are displayed in DOGE and the smallest unit, koinu.</source>
+        <target state="needs-review-translation">Dogecoin tutarları DOGE ve en küçük birim koinu olarak gösterilir.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.faq.unit-equivalence" datatype="html">
+        <source>1 DOGE = 100,000,000 koinu.</source>
+        <target state="needs-review-translation">1 DOGE = 100.000.000 koinu.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.faq.units-outro" datatype="html">
+        <source>Transaction fees and fee estimates use koinu per byte (koinu/B).</source>
+        <target state="needs-review-translation">İşlem ücretleri ve tahminleri bayt başına koinu (koinu/B) kullanır.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.faq.block-time" datatype="html">
+        <source>Dogecoin targets one block about every minute. Actual intervals vary because proof of work is probabilistic. DigiShield adjusts difficulty frequently to keep the target cadence.</source>
+        <target state="needs-review-translation">Dogecoin yaklaşık her dakika bir blok hedefler. Proof of work olasılıksal olduğu için gerçek aralıklar değişir. DigiShield hedef tempoyu korumak için zorluğu sık sık ayarlar.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs.component.html</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.faq.merged-mining" datatype="html">
+        <source>Dogecoin uses Scrypt proof of work and supports AuxPoW merged mining. A miner can use work performed for a parent chain to prove Dogecoin work when the AuxPoW commitment satisfies Dogecoin’s consensus rules.</source>
+        <target state="needs-review-translation">Dogecoin Scrypt proof of work kullanır ve AuxPoW birleştirilmiş madenciliği destekler. AuxPoW taahhüdü Dogecoin mutabakat kurallarını karşılıyorsa madenci üst zincir için yaptığı işi Dogecoin iş kanıtı olarak kullanabilir.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs.component.html</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.faq.searching" datatype="html">
+        <source>Search a block height, block hash, transaction ID, or standard Dogecoin address. A hash can be meaningful on more than one chain, so tx.taxi keeps manual chain selection available.</source>
+        <target state="needs-review-translation">Blok yüksekliği, blok hash değeri, işlem kimliği veya standart Dogecoin adresi arayın. Bir hash birden fazla ağda anlamlı olabileceğinden tx.taxi manuel ağ seçimini sunar.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs.component.html</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.faq.pending-sample-faq" datatype="html">
+        <source>The pending strip is a bounded sample from the explorer’s most recent provider observation. It is packed up to one million bytes for visualization and can be incomplete, empty, or stale when the source is unavailable. It does not claim to show Dogecoin’s entire network mempool.</source>
+        <target state="needs-review-translation">Bekleyen işlem şeridi, gezginin sağlayıcısının en son gözleminden alınan sınırlı bir örneklemdir. Görselleştirme için en fazla bir milyon bayt paketlenir; kaynak kullanılamadığında eksik, boş veya eski olabilir. Dogecoin ağının tüm mempoolunu gösterdiğini iddia etmez.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs.component.html</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.faq.fee-estimates" datatype="html">
+        <source>Fee estimates are provider observations expressed in koinu/B. They are a guide for transaction creation, not a service-level confirmation promise; check the current estimate in your wallet before broadcasting.</source>
+        <target state="needs-review-translation">Ücret tahminleri koinu/B cinsinden sağlayıcı gözlemleridir. İşlem oluştururken yol gösterir; hizmet tarafından verilmiş bir onay vaadi değildir. Yayınlamadan önce cüzdanınızdaki güncel tahmini kontrol edin.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs.component.html</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.faq.historical-data" datatype="html">
+        <source>Recent strip blocks are enriched from indexed data and raw Dogecoin blocks. Older block, raw-hex, transaction, address, and outspend lookups depend on the historical provider. If it cannot supply complete data within the gateway’s bounds, the API returns an unavailable response rather than incomplete results.</source>
+        <target state="needs-review-translation">Şeritteki son bloklar indekslenmiş veriler ve ham Dogecoin bloklarıyla zenginleştirilir. Daha eski blok, ham onaltılık veri, işlem, adres ve çıktı harcaması sorguları geçmiş sağlayıcısına bağlıdır. Ağ geçidi sınırları içinde tam veri sağlanamazsa API eksik sonuç yerine kullanılamıyor yanıtı döndürür.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs.component.html</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.faq.unconfirmed" datatype="html">
+        <source>Confirmation depends on propagation, fees, miner selection, and the next proof-of-work block. Dogecoin’s target is about one minute, but a target is not a deadline. The explorer cannot accelerate a transaction.</source>
+        <target state="needs-review-translation">Onay; yayılmaya, ücrete, madenci seçimine ve sonraki proof of work bloğuna bağlıdır. Dogecoin hedefi yaklaşık bir dakikadır, ancak hedef son tarih değildir. Gezgin işlemi hızlandıramaz.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs.component.html</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.faq.not-custodial" datatype="html">
+        <source>No. This explorer only reads public chain and provider data. Contact the wallet, exchange, or payment service that created a transaction for account or transaction support.</source>
+        <target state="needs-review-translation">Hayır. Bu gezgin yalnızca herkese açık zincir ve sağlayıcı verilerini okur. Hesap veya işlem desteği için işlemi oluşturan cüzdan, borsa ya da ödeme hizmetine başvurun.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs.component.html</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.docs.category.1" datatype="html">
+        <source>connection</source>
+        <target state="needs-review-translation">bağlantı</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs.component.ts</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.docs.category.2" datatype="html">
+        <source>network</source>
+        <target state="needs-review-translation">ağ</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs.component.ts</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.docs.category.4" datatype="html">
+        <source>transactions</source>
+        <target state="needs-review-translation">işlemler</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs.component.ts</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.docs.category.6" datatype="html">
+        <source>fees</source>
+        <target state="needs-review-translation">ücretler</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs.component.ts</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.docs.category.7" datatype="html">
+        <source>about</source>
+        <target state="needs-review-translation">hakkında</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs.component.ts</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.docs.category.8" datatype="html">
+        <source>explorer</source>
+        <target state="needs-review-translation">gezgin</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs.component.ts</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7af8cba6646f8c9de5351a05976188876d00d58e" datatype="html">
+        <source>sat/B</source>
+        <target state="needs-review-translation">sat/B</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/accelerate-checkout/accelerate-checkout.component.html</context>
+          <context context-type="linenumber">121</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/accelerate-checkout/accelerate-checkout.component.html</context>
+          <context context-type="linenumber">143</context>
+        </context-group>
+        <note priority="1" from="description">sat/B</note>
+        <note priority="1" from="meaning">shared.sat-vbyte</note>
+      </trans-unit>
+      <trans-unit id="1ac50ef21ed21d7f6b6dcb0bc74ad5c0ba6c144e" datatype="html">
+        <source>DOGE</source>
+        <target state="needs-review-translation">DOGE</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/amount-selector/amount-selector.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/balance-widget/balance-widget.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/balance-widget/balance-widget.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/balance-widget/balance-widget.component.html</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/liquid-reserves-audit/recent-pegs-stats/recent-pegs-stats.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/liquid-reserves-audit/recent-pegs-stats/recent-pegs-stats.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/liquid-reserves-audit/reserves-ratio-stats/reserves-ratio-stats.component.html</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+        <note priority="1" from="description">BTC</note>
+        <note priority="1" from="meaning">shared.btc</note>
+      </trans-unit>
+      <trans-unit id="806c6ccce363f1fdd06d9323210a9248bd7b4b6b" datatype="html">
+        <source>koinu</source>
+        <target state="needs-review-translation">koinu</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/amount-selector/amount-selector.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/block-overview-tooltip/block-overview-tooltip.component.html</context>
+          <context context-type="linenumber">43</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/calculator/calculator.component.html</context>
+          <context context-type="linenumber">42</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/calculator/calculator.component.html</context>
+          <context context-type="linenumber">61</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/cluster-diagram/cluster-diagram.component.html</context>
+          <context context-type="linenumber">135</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/rbf-timeline/rbf-timeline-tooltip.component.html</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/transaction/transaction-details/transaction-details.component.html</context>
+          <context context-type="linenumber">201</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/transaction/transaction-preview.component.html</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/transactions-list/transactions-list.component.html</context>
+          <context context-type="linenumber">518</context>
+        </context-group>
+        <note priority="1" from="description">shared.sats</note>
+      </trans-unit>
+      <trans-unit id="055c54ed5f836870d20d1b85c45c56d9864d7281" datatype="html">
+        <source>koinu/tx</source>
+        <target state="needs-review-translation">koinu/tx</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/reward-stats/reward-stats.component.html</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+        <note priority="1" from="description">koinu/B</note>
+        <note priority="1" from="meaning">shared.sat-vbyte</note>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.34" datatype="html">
+        <source>Dogecoin</source>
+        <target state="needs-review-translation">Dogecoin</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/trademark-policy/trademark-policy.component.html</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.pool-luck-description" datatype="html">
+        <source>The overall luck of all mining pools over the past week. A luck above 100% means the average block interval during that week was less than the 1-minute Dogecoin target.</source>
+        <target state="needs-review-translation">Son bir haftadaki tüm madencilik havuzlarının genel şansı. %100’ün üzerindeki şans, o hafta ortalama blok aralığının Dogecoin’in 1 dakikalık hedefinden kısa olduğu anlamına gelir.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/pool-ranking/pool-ranking.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.search.choose-chain-current" datatype="html">
+        <source>Choose search chain, selected: <x id="name" equiv-text="name" /></source>
+        <target state="needs-review-translation">Aranacak ağı seçin, seçili: <x id="name" equiv-text="name" /></target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/search-form/search-form.component.ts</context>
+          <context context-type="linenumber">49</context>
         </context-group>
       </trans-unit>
       </body>
