@@ -13179,8 +13179,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="tx-taxi.doge.legal.inline.1" datatype="html">
-        <source>tx.taxi uses Cloudflare Web Analytics for page views and performance, and a first-party daily cookie shared across its explorers to count browsers once per UTC day. The daily audience collector stores only a daily identifier, the explorer hostname, and whether there was interaction. It does not receive search text, addresses, transaction IDs, URLs, or IP addresses. Individual daily records expire after 31 days; aggregate counts are retained for 400 days. Do Not Track and Global Privacy Control disable this first-party measurement.</source>
-        <target state="needs-review-translation">tx.taxi 使用 Cloudflare Web Analytics 统计页面访问和性能，并使用其浏览器之间共享的第一方每日 Cookie，按 UTC 日期每天对浏览器计数一次。每日访问量收集器仅存储每日标识符、浏览器主机名以及是否发生交互，不接收搜索文本、地址、交易 ID、URL 或 IP 地址。每日个人记录在 31 天后过期；汇总计数保留 400 天。启用“请勿追踪”或全球隐私控制会禁用此第一方统计。</target><context-group purpose="location">
+        <source>tx.taxi uses Cloudflare Web Analytics for page views and performance, and a first-party daily cookie shared across its explorers to count browsers once per UTC day. The daily audience collector stores only a daily identifier, the explorer hostname, and whether there was interaction. It does not receive search text, addresses, transaction IDs, or URLs, and it does not store IP addresses. Individual daily records expire after 31 days; aggregate counts are retained for 400 days. Do Not Track and Global Privacy Control disable this first-party measurement.</source>
+        <target state="needs-review-translation">tx.taxi 使用 Cloudflare Web Analytics 统计页面访问和性能，并使用其浏览器之间共享的第一方每日 Cookie，按 UTC 日期每天对浏览器计数一次。每日访问量收集器仅存储每日标识符、浏览器主机名以及是否发生交互，不接收搜索文本、地址、交易 ID 或 URL，也不存储 IP 地址。每日个人记录在 31 天后过期；汇总计数保留 400 天。启用“请勿追踪”或全球隐私控制会禁用此第一方统计。</target><context-group purpose="location">
           <context context-type="sourcefile">src/app/components/privacy-policy/privacy-policy.component.html</context>
           <context context-type="linenumber">14</context>
         </context-group>
