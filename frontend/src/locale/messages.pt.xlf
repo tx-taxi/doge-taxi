@@ -11538,7 +11538,7 @@
       <trans-unit id="tx-taxi.doge.api.label.10" datatype="html"><source>Blocks</source><target>Blocos</target></trans-unit>
       <trans-unit id="tx-taxi.doge.api.label.15" datatype="html"><source>Transactions</source><target>Transações</target></trans-unit>
       <trans-unit id="tx-taxi.doge.api.label.20" datatype="html"><source>Addresses</source><target>Endereços</target></trans-unit>
-      <trans-unit id="tx-taxi.docs.endpoint" datatype="html"><source>Endpoint</source><target>Terminal</target></trans-unit>
+      <trans-unit id="tx-taxi.docs.endpoint" datatype="html"><source>Endpoint</source><target>Ponto de acesso</target></trans-unit>
       <trans-unit id="tx-taxi.doge.docs.description" datatype="html"><source>Description</source><target>Descrição</target></trans-unit>
       <trans-unit id="tx-taxi.doge.docs.category.3" datatype="html"><source>blocks</source><target>blocos</target></trans-unit>
       <trans-unit id="tx-taxi.doge.docs.category.5" datatype="html"><source>addresses</source><target>endereços</target></trans-unit>
