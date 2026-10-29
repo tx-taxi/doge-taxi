@@ -6326,7 +6326,7 @@
       </trans-unit>
       <trans-unit id="fe5317c6c60dd7e0e86f04d22f566f67cf04d404" datatype="html">
         <source>Mining Pools</source>
-        <target>Майнинг-улы</target>
+        <target>Пулы майнинга</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/pool-ranking/pool-ranking.component.ts</context>
           <context context-type="linenumber">60</context>
@@ -11529,7 +11529,7 @@
       <trans-unit id="tx-taxi.eight-blocks.unknown" datatype="html"><source>Unknown</source><target>Неизвестно</target></trans-unit>
       <trans-unit id="tx-taxi.doge.hashrate-difficulty" datatype="html"><source>Hashrate &amp; Difficulty</source><target>Хэшрейт и сложность</target></trans-unit>
       <trans-unit id="tx-taxi.doge.nav.6" datatype="html"><source>Documentation</source><target>Документация</target></trans-unit>
-      <trans-unit id="tx-taxi.doge.mining-pools" datatype="html"><source>Mining Pools</source><target>Майнинг-улы</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.mining-pools" datatype="html"><source>Mining Pools</source><target>Пулы майнинга</target></trans-unit>
       <trans-unit id="tx-taxi.doge.legal.1" datatype="html"><source>Privacy Policy</source><target>Политика конфиденциальности</target></trans-unit>
       <trans-unit id="tx-taxi.doge.legal.meta.title.1" datatype="html"><source>Privacy Policy</source><target>Политика конфиденциальности</target></trans-unit>
       <trans-unit id="tx-taxi.global.open" datatype="html"><source>Open</source><target>Открыть</target></trans-unit>
