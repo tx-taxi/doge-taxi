@@ -11340,6 +11340,21 @@
       <trans-unit id="tx-taxi.global.privacy" datatype="html"><source>Privacy Policy</source>
         <target>Політика конфіденційності</target>
       </trans-unit>
+      <trans-unit id="tx-taxi.eight-blocks.unknown" datatype="html"><source>Unknown</source><target>Невідомо</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.hashrate-difficulty" datatype="html"><source>Hashrate &amp; Difficulty</source><target>Хешрейт та складність</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.nav.6" datatype="html"><source>Documentation</source><target>Документація</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.1" datatype="html"><source>Privacy Policy</source><target>Політика конфіденційності</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.meta.title.1" datatype="html"><source>Privacy Policy</source><target>Політика конфіденційності</target></trans-unit>
+      <trans-unit id="tx-taxi.global.open" datatype="html"><source>Open</source><target>Відкритий</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.16" datatype="html"><source>Terms of Service</source><target>Умови використання</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.meta.title.2" datatype="html"><source>Terms of Service</source><target>Умови використання</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.api.label.10" datatype="html"><source>Blocks</source><target>Блоки</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.api.label.15" datatype="html"><source>Transactions</source><target>Транзакції</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.api.label.20" datatype="html"><source>Addresses</source><target>Адреси</target></trans-unit>
+      <trans-unit id="tx-taxi.docs.endpoint" datatype="html"><source>Endpoint</source><target>Ендпоїнт</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.docs.description" datatype="html"><source>Description</source><target>Опис</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.docs.category.3" datatype="html"><source>blocks</source><target>блоки</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.docs.category.5" datatype="html"><source>addresses</source><target>адреси</target></trans-unit>
     </body>
   </file>
 </xliff>

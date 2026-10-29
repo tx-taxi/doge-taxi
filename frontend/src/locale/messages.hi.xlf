@@ -11514,6 +11514,22 @@
       <trans-unit id="tx-taxi.global.privacy" datatype="html"><source>Privacy Policy</source>
         <target>गोपनीयता नीति</target>
       </trans-unit>
+      <trans-unit id="tx-taxi.eight-blocks.unknown" datatype="html"><source>Unknown</source><target>अज्ञात</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.hashrate-difficulty" datatype="html"><source>Hashrate &amp; Difficulty</source><target>हैशरेट और कठिनाई</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.nav.6" datatype="html"><source>Documentation</source><target>प्रलेखन</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.mining-pools" datatype="html"><source>Mining Pools</source><target>खनन पूल</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.1" datatype="html"><source>Privacy Policy</source><target>गोपनीयता नीति</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.meta.title.1" datatype="html"><source>Privacy Policy</source><target>गोपनीयता नीति</target></trans-unit>
+      <trans-unit id="tx-taxi.global.open" datatype="html"><source>Open</source><target>खुला</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.16" datatype="html"><source>Terms of Service</source><target>नियम और शर्तें</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.meta.title.2" datatype="html"><source>Terms of Service</source><target>नियम और शर्तें</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.api.label.10" datatype="html"><source>Blocks</source><target>ब्लॉक</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.api.label.15" datatype="html"><source>Transactions</source><target>ट्रांसेक्शन</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.api.label.20" datatype="html"><source>Addresses</source><target>पतों</target></trans-unit>
+      <trans-unit id="tx-taxi.docs.endpoint" datatype="html"><source>Endpoint</source><target>ैंडपॉइन्ट</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.docs.description" datatype="html"><source>Description</source><target>विवरण</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.docs.category.3" datatype="html"><source>blocks</source><target>ब्लॉक्स</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.docs.category.5" datatype="html"><source>addresses</source><target>पते</target></trans-unit>
     </body>
   </file>
 </xliff>

@@ -235,6 +235,10 @@
                 "es"
               ],
               "outputPath": "dist/spanish"
+            },
+            "french-german": {
+              "localize": ["fr", "de"],
+              "outputPath": "dist/french-german"
             }
           },
           "defaultConfiguration": ""

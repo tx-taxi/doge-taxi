@@ -50,7 +50,7 @@ export class SeoService {
   }
 
   private documentMetadata() {
-    if (window.location.pathname === '/es' || window.location.pathname.startsWith('/es/')) return undefined;
+    if (/^\/(es|fr|de)(?:\/|$)/.test(window.location.pathname)) return undefined;
     let path = this.router.url.split('?')[0].split('#')[0];
     try { path = decodeURIComponent(path); } catch {}
     return nativeSeoPages[path.replace(/\/$/, '') || '/'];
@@ -103,14 +103,15 @@ export class SeoService {
   updateCanonical(path) {
     try { path = decodeURIComponent(path); } catch {}
     path = path.replace(/\/$/, '') || '/';
-    const localized = window.location.pathname === '/es' || window.location.pathname.startsWith('/es/');
-    const canonicalUrl = 'https://' + this.baseDomain + (localized ? '/es' : '') + path;
+    const locale = /^\/(es|fr|de)(?:\/|$)/.exec(window.location.pathname)?.[1];
+    const canonicalUrl = 'https://' + this.baseDomain + (locale ? '/' + locale : '') + path;
     this.canonicalLink.setAttribute('href', canonicalUrl);
     this.metaService.updateTag({ property: 'og:url', content: canonicalUrl });
   }
 
   getTitle(): string {
-    if ((window.location.pathname === '/es' || window.location.pathname.startsWith('/es/')) && !this.network) return this.baseTitle + ' - Explorador de Dogecoin';
+    const locale = /^\/(es|fr|de)(?:\/|$)/.exec(window.location.pathname)?.[1];
+    if (locale && !this.network) return this.baseTitle + ' - ' + ({es: 'Explorador de Dogecoin', fr: 'Explorateur Dogecoin', de: 'Dogecoin-Explorer'}[locale]);
     if (this.network === 'testnet')
       {return this.baseTitle + ' - Bitcoin Testnet3';}
     if (this.network === 'testnet4')
@@ -125,7 +126,8 @@ export class SeoService {
   }
 
   getDescription(): string {
-    if (window.location.pathname === '/es' || window.location.pathname.startsWith('/es/')) return 'Explora bloques, transacciones, direcciones, comisiones y actividad de minería de Dogecoin.';
+    const locale = /^\/(es|fr|de)(?:\/|$)/.exec(window.location.pathname)?.[1];
+    if (locale) return ({es: 'Explora bloques, transacciones, direcciones, comisiones y actividad de minería de Dogecoin.', fr: 'Explorez les blocs, transactions, adresses, frais et activités de minage Dogecoin.', de: 'Erkunden Sie Dogecoin-Blöcke, Transaktionen, Adressen, Gebühren und Mining-Aktivitäten.'}[locale]);
     return this.documentMetadata()?.description || this.baseDescription;
   }
 

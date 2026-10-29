@@ -11526,6 +11526,23 @@
       <trans-unit id="tx-taxi.global.privacy" datatype="html"><source>Privacy Policy</source>
         <target>Gizlilik politikası</target>
       </trans-unit>
+      <trans-unit id="tx-taxi.eight-blocks.unknown" datatype="html"><source>Unknown</source><target>Bilinmiyor</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.hashrate-difficulty" datatype="html"><source>Hashrate &amp; Difficulty</source><target>Hashrate ve Zorluk</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.nav.6" datatype="html"><source>Documentation</source><target>Dökümentasyon</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.mining-pools" datatype="html"><source>Mining Pools</source><target>Madencilik havuzları</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.1" datatype="html"><source>Privacy Policy</source><target>Gizlilik politikası</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.meta.title.1" datatype="html"><source>Privacy Policy</source><target>Gizlilik politikası</target></trans-unit>
+      <trans-unit id="tx-taxi.global.open" datatype="html"><source>Open</source><target>Açık</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.16" datatype="html"><source>Terms of Service</source><target>Hizmet Koşulları</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.meta.title.2" datatype="html"><source>Terms of Service</source><target>Hizmet Koşulları</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.api.label.10" datatype="html"><source>Blocks</source><target>Bloklar</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.api.label.15" datatype="html"><source>Transactions</source><target>İşlemler</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.api.label.20" datatype="html"><source>Addresses</source><target>Adresler</target></trans-unit>
+      <trans-unit id="tx-taxi.docs.endpoint" datatype="html"><source>Endpoint</source><target>Çıkış Noktası</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.docs.description" datatype="html"><source>Description</source><target>Tanım</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.docs.category.3" datatype="html"><source>blocks</source><target>bloklar</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.docs.category.5" datatype="html"><source>addresses</source><target>adresler</target></trans-unit>
+      <trans-unit id="taxi.filter.inscription" datatype="html"><source>Inscription</source><target>Kaynak Yazıt</target></trans-unit>
     </body>
   </file>
 </xliff>

@@ -2228,6 +2228,16 @@
       <trans-unit id="tx-taxi.global.terms" datatype="html"><source>Terms of Service</source>
         <target>Termos de Serviço</target>
         </trans-unit>
+      <trans-unit id="tx-taxi.eight-blocks.unknown" datatype="html"><source>Unknown</source><target>Desconhecido</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.16" datatype="html"><source>Terms of Service</source><target>Termos de Serviço</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.meta.title.2" datatype="html"><source>Terms of Service</source><target>Termos de Serviço</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.api.label.10" datatype="html"><source>Blocks</source><target>Blocos</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.api.label.15" datatype="html"><source>Transactions</source><target>Transações</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.api.label.20" datatype="html"><source>Addresses</source><target>Endereços</target></trans-unit>
+      <trans-unit id="tx-taxi.docs.endpoint" datatype="html"><source>Endpoint</source><target>Endpoint</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.docs.description" datatype="html"><source>Description</source><target>Descrição</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.docs.category.3" datatype="html"><source>blocks</source><target>blocos</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.docs.category.4" datatype="html"><source>transactions</source><target>transações</target></trans-unit>
     </body>
   </file>
 </xliff>

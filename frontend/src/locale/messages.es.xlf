@@ -11944,6 +11944,15 @@
     <trans-unit id="tx-taxi.about.project-links" datatype="html"><source>Project links</source><target>Enlaces del proyecto</target></trans-unit>
     <trans-unit id="taxi.filter.inscription" datatype="html"><source>Inscription</source><target>Inscripción</target></trans-unit>
 <trans-unit id="tx-taxi.custom-dashboard.pending" datatype="html"><source>Pending Transactions</source><target>Transacciones pendientes</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.redirect.title" datatype="html"><source>Continue to <x id="INTERPOLATION" equiv-text="{{chain}}"/></source><target>Continuar a <x id="INTERPOLATION" equiv-text="{{chain}}"/></target></trans-unit>
+      <trans-unit id="tx-taxi.doge.redirect.body" datatype="html"><source>You are leaving the Dogecoin explorer.</source><target>Vas a salir del explorador de Dogecoin.</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.redirect.remember" datatype="html"><source>Never ask again when leaving Dogecoin</source><target>No volver a preguntar al salir de Dogecoin</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.redirect.continue" datatype="html"><source>Continue</source><target>Continuar</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.redirect.back" datatype="html"><source>Back to Dogecoin</source><target>Volver a Dogecoin</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.intro.aria" datatype="html"><source>About tx.taxi</source><target>Acerca de tx.taxi</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.intro.documentation" datatype="html"><source>documentation</source><target>documentación</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.intro.explorer" datatype="html"><source>explorer</source><target>explorador</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.intro.open-native" datatype="html"><source>Explore <x id="INTERPOLATION" equiv-text="{{ chainName }}"/></source><target>Explorar <x id="INTERPOLATION" equiv-text="{{ chainName }}"/></target></trans-unit>
     </body>
   </file>
 </xliff>
