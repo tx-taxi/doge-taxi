@@ -50,7 +50,7 @@ export class SeoService {
   }
 
   private documentMetadata() {
-    if (/^\/(es|fr|de|it|pt|ru|zh|ja|nl|pl)(?:\/|$)/.test(window.location.pathname)) return undefined;
+    if (/^\/(es|fr|de|it|pt|ru|zh|ja|nl|pl|uk)(?:\/|$)/.test(window.location.pathname)) return undefined;
     let path = this.router.url.split('?')[0].split('#')[0];
     try { path = decodeURIComponent(path); } catch {}
     return nativeSeoPages[path.replace(/\/$/, '') || '/'];
@@ -103,15 +103,15 @@ export class SeoService {
   updateCanonical(path) {
     try { path = decodeURIComponent(path); } catch {}
     path = path.replace(/\/$/, '') || '/';
-    const locale = /^\/(es|fr|de|it|pt|ru|zh|ja|nl|pl)(?:\/|$)/.exec(window.location.pathname)?.[1];
+    const locale = /^\/(es|fr|de|it|pt|ru|zh|ja|nl|pl|uk)(?:\/|$)/.exec(window.location.pathname)?.[1];
     const canonicalUrl = 'https://' + this.baseDomain + (locale ? '/' + locale : '') + path;
     this.canonicalLink.setAttribute('href', canonicalUrl);
     this.metaService.updateTag({ property: 'og:url', content: canonicalUrl });
   }
 
   getTitle(): string {
-    const locale = /^\/(es|fr|de|it|pt|ru|zh|ja|nl|pl)(?:\/|$)/.exec(window.location.pathname)?.[1];
-    if (locale && !this.network) return this.baseTitle + ' - ' + ({es: 'Explorador de Dogecoin', fr: 'Explorateur Dogecoin', de: 'Dogecoin-Explorer', it: 'Esploratore Dogecoin', pt: 'Explorador Dogecoin', ru: 'Обозреватель Dogecoin', zh: '狗狗币浏览器', ja: 'Dogecoin エクスプローラー', nl: 'Dogecoin-verkenner', pl: 'Eksplorator Dogecoin'}[locale]);
+    const locale = /^\/(es|fr|de|it|pt|ru|zh|ja|nl|pl|uk)(?:\/|$)/.exec(window.location.pathname)?.[1];
+    if (locale && !this.network) return this.baseTitle + ' - ' + ({es: 'Explorador de Dogecoin', fr: 'Explorateur Dogecoin', de: 'Dogecoin-Explorer', it: 'Esploratore Dogecoin', pt: 'Explorador Dogecoin', ru: 'Обозреватель Dogecoin', zh: '狗狗币浏览器', ja: 'Dogecoin エクスプローラー', nl: 'Dogecoin-verkenner', pl: 'Eksplorator Dogecoin', uk: 'Оглядач Dogecoin'}[locale]);
     if (this.network === 'testnet')
       {return this.baseTitle + ' - Bitcoin Testnet3';}
     if (this.network === 'testnet4')
@@ -126,8 +126,8 @@ export class SeoService {
   }
 
   getDescription(): string {
-    const locale = /^\/(es|fr|de|it|pt|ru|zh|ja|nl|pl)(?:\/|$)/.exec(window.location.pathname)?.[1];
-    if (locale) return ({es: 'Explora bloques, transacciones, direcciones, comisiones y actividad de minería de Dogecoin.', fr: 'Explorez les blocs, transactions, adresses, frais et activités de minage Dogecoin.', de: 'Erkunden Sie Dogecoin-Blöcke, Transaktionen, Adressen, Gebühren und Mining-Aktivitäten.', it: 'Esplora blocchi, transazioni, indirizzi, commissioni e attività di mining Dogecoin.', pt: 'Explore blocos, transações, endereços, taxas e atividade de mineração Dogecoin.', ru: 'Изучайте блоки, транзакции, адреса, комиссии и майнинг Dogecoin.', zh: '查看狗狗币区块、交易、地址、手续费和挖矿活动。', ja: 'Dogecoin のブロック、取引、アドレス、手数料、マイニング活動を確認できます。', nl: 'Bekijk Dogecoin-blokken, transacties, adressen, kosten en mijnbouwactiviteiten.', pl: 'Przeglądaj bloki, transakcje, adresy, opłaty i wydobycie Dogecoin.'}[locale]);
+    const locale = /^\/(es|fr|de|it|pt|ru|zh|ja|nl|pl|uk)(?:\/|$)/.exec(window.location.pathname)?.[1];
+    if (locale) return ({es: 'Explora bloques, transacciones, direcciones, comisiones y actividad de minería de Dogecoin.', fr: 'Explorez les blocs, transactions, adresses, frais et activités de minage Dogecoin.', de: 'Erkunden Sie Dogecoin-Blöcke, Transaktionen, Adressen, Gebühren und Mining-Aktivitäten.', it: 'Esplora blocchi, transazioni, indirizzi, commissioni e attività di mining Dogecoin.', pt: 'Explore blocos, transações, endereços, taxas e atividade de mineração Dogecoin.', ru: 'Изучайте блоки, транзакции, адреса, комиссии и майнинг Dogecoin.', zh: '查看狗狗币区块、交易、地址、手续费和挖矿活动。', ja: 'Dogecoin のブロック、取引、アドレス、手数料、マイニング活動を確認できます。', nl: 'Bekijk Dogecoin-blokken, transacties, adressen, kosten en mijnbouwactiviteiten.', pl: 'Przeglądaj bloki, transakcje, adresy, opłaty i wydobycie Dogecoin.', uk: 'Переглядайте блоки, транзакції, адреси, комісії та майнінг Dogecoin.'}[locale]);
     return this.documentMetadata()?.description || this.baseDescription;
   }
 
