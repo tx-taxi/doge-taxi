@@ -12848,6 +12848,510 @@
           <context context-type="linenumber">9</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.2" datatype="html">
+        <source>Updated: September 20, 2026</source>
+        <target state="needs-review-translation">Bijgewerkt: 20 september 2026</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/privacy-policy/privacy-policy.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.3" datatype="html">
+        <source>Audience measurement</source>
+        <target state="needs-review-translation">Bezoekersmeting</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/privacy-policy/privacy-policy.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.inline.1" datatype="html">
+        <source>tx.taxi uses Cloudflare Web Analytics for page views and performance, and a first-party daily cookie shared across its explorers to count browsers once per UTC day. The daily audience collector stores only a daily identifier, the explorer hostname, and whether there was interaction. It does not receive search text, addresses, transaction IDs, URLs, or IP addresses. Individual daily records expire after 31 days; aggregate counts are retained for 400 days. Do Not Track and Global Privacy Control disable this first-party measurement.</source>
+        <target state="needs-review-translation">tx.taxi gebruikt Cloudflare Web Analytics voor paginaweergaven en prestaties en een eigen dagelijkse cookie die tussen de verkenners wordt gedeeld om browsers eenmaal per UTC-dag te tellen. De dagelijkse bezoekersteller bewaart alleen een dagelijkse identificatie, de hostnaam van de verkenner en of er interactie was. Hij ontvangt geen zoektekst, adressen, transactie-ID’s, URL’s of IP-adressen. Individuele dagrecords verlopen na 31 dagen; geaggregeerde aantallen worden 400 dagen bewaard. Do Not Track en Global Privacy Control schakelen deze eigen meting uit.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/privacy-policy/privacy-policy.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.inline.2" datatype="html">
+        <source>Details and opt-out</source>
+        <target state="needs-review-translation">Details en uitschrijven</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/privacy-policy/privacy-policy.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.4" datatype="html">
+        <source>Use Your Own Node When Privacy Matters</source>
+        <target state="needs-review-translation">Gebruik je eigen node wanneer privacy belangrijk is</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/privacy-policy/privacy-policy.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.10" datatype="html">
+        <source>doge.tx.taxi displays public Dogecoin chain and mempool data through the backend configured by the site operator. For independent verification and the strongest network privacy, use your own Dogecoin node and explorer.</source>
+        <target state="needs-review-translation">doge.tx.taxi toont openbare Dogecoin-chain- en mempoolgegevens via de door de sitebeheerder ingestelde backend. Gebruik voor onafhankelijke verificatie en de sterkste netwerkprivacy je eigen Dogecoin-node en verkenner.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/privacy-policy/privacy-policy.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.5" datatype="html">
+        <source>Request Data</source>
+        <target state="needs-review-translation">Aanvraaggegevens</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/privacy-policy/privacy-policy.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.11" datatype="html">
+        <source>Normal website and API requests can reveal standard web metadata to the operator, including your IP address, user agent, requested URL, and request time. Server logs may be retained for reliability, abuse prevention, and debugging.</source>
+        <target state="needs-review-translation">Normale website- en API-aanvragen kunnen standaard webmetadata aan de beheerder onthullen, waaronder je IP-adres, user agent, opgevraagde URL en aanvraagtijd. Serverlogs kunnen worden bewaard voor betrouwbaarheid, misbruikpreventie en foutopsporing.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/privacy-policy/privacy-policy.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.6" datatype="html">
+        <source>Local Preferences</source>
+        <target state="needs-review-translation">Lokale voorkeuren</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/privacy-policy/privacy-policy.component.html</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.12" datatype="html">
+        <source>Display preferences such as theme, denomination, fiat currency, language, and timezone may be stored in your browser. doge.tx.taxi does not require an account for ordinary explorer use.</source>
+        <target state="needs-review-translation">Weergavevoorkeuren zoals thema, eenheid, fiatvaluta, taal en tijdzone kunnen in je browser worden opgeslagen. Voor normaal gebruik van doge.tx.taxi is geen account nodig.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/privacy-policy/privacy-policy.component.html</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.7" datatype="html">
+        <source>Public Blockchain Data</source>
+        <target state="needs-review-translation">Openbare blockchaingegevens</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/privacy-policy/privacy-policy.component.html</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.13" datatype="html">
+        <source>Dogecoin transactions, addresses, scripts, and blocks are public. Looking up an address or transaction can associate that lookup with your network metadata. Do not treat a public explorer as a privacy boundary.</source>
+        <target state="needs-review-translation">Dogecoin-transacties, adressen, scripts en blokken zijn openbaar. Het opzoeken van een adres of transactie kan die zoekopdracht met je netwerkmetadata verbinden. Beschouw een openbare verkenner niet als een privacygrens.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/privacy-policy/privacy-policy.component.html</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.8" datatype="html">
+        <source>External Links</source>
+        <target state="needs-review-translation">Externe links</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/privacy-policy/privacy-policy.component.html</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.14" datatype="html">
+        <source>This site links to tx.taxi contact channels, Dogecoin documentation, and upstream source code. Those external services have their own privacy policies.</source>
+        <target state="needs-review-translation">Deze site linkt naar contactkanalen van tx.taxi, Dogecoin-documentatie en de upstream broncode. Die externe diensten hebben hun eigen privacybeleid.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/privacy-policy/privacy-policy.component.html</context>
+          <context context-type="linenumber">36</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.9" datatype="html">
+        <source>Open Source Attribution</source>
+        <target state="needs-review-translation">Opensourcevermelding</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/privacy-policy/privacy-policy.component.html</context>
+          <context context-type="linenumber">40</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.15" datatype="html">
+        <source>Mempool names, logos, and trademarks remain the property of their respective owners; doge.tx.taxi is not affiliated with or endorsed by Mempool Holdings S.A. de C.V.</source>
+        <target state="needs-review-translation">Mempool-namen, logo’s en handelsmerken blijven eigendom van hun respectieve eigenaren; doge.tx.taxi is niet verbonden aan of goedgekeurd door Mempool Holdings S.A. de C.V.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/privacy-policy/privacy-policy.component.html</context>
+          <context context-type="linenumber">41</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.meta.desc.1" datatype="html">
+        <source>Privacy notes for doge.tx.taxi, including public Dogecoin data, browser preferences, server logs, and independent verification.</source>
+        <target state="needs-review-translation">Privacyaantekeningen voor doge.tx.taxi, inclusief openbare Dogecoin-gegevens, browservoorkeuren, serverlogs en onafhankelijke verificatie.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/privacy-policy/privacy-policy.component.ts</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.17" datatype="html">
+        <source>Updated: September 20, 2026</source>
+        <target state="needs-review-translation">Bijgewerkt: 20 september 2026</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/terms-of-service/terms-of-service.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.18" datatype="html">
+        <source>Informational Explorer</source>
+        <target state="needs-review-translation">Informatieve verkenner</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/terms-of-service/terms-of-service.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.24" datatype="html">
+        <source>doge.tx.taxi provides a view of public Dogecoin blocks, transactions, addresses, mining data, fee estimates, and mempool state. It is an informational service, not a wallet, exchange, custodian, payment processor, or transaction-priority service.</source>
+        <target state="needs-review-translation">doge.tx.taxi biedt een weergave van openbare Dogecoin-blokken, transacties, adressen, mijnbouwgegevens, kostenramingen en mempoolstatus. Het is een informatieve dienst, geen wallet, beurs, bewaarder, betalingsverwerker of dienst voor transactieprioriteit.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/terms-of-service/terms-of-service.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.19" datatype="html">
+        <source>No Control Over Dogecoin Transactions</source>
+        <target state="needs-review-translation">Geen controle over Dogecoin-transacties</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/terms-of-service/terms-of-service.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.25" datatype="html">
+        <source>The operator cannot reverse, cancel, accelerate, recover, or redirect a Dogecoin transaction. For wallet, exchange, or payment issues, contact the service that created or received the transaction.</source>
+        <target state="needs-review-translation">De beheerder kan een Dogecoin-transactie niet terugdraaien, annuleren, versnellen, herstellen of omleiden. Neem bij problemen met een wallet, beurs of betaling contact op met de dienst die de transactie heeft aangemaakt of ontvangen.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/terms-of-service/terms-of-service.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.20" datatype="html">
+        <source>Data and Availability</source>
+        <target state="needs-review-translation">Gegevens en beschikbaarheid</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/terms-of-service/terms-of-service.component.html</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.26" datatype="html">
+        <source>Explorer data may be delayed, incomplete, unavailable, or different from another node's view. Fee estimates are estimates only and do not guarantee confirmation. The service is provided as-is without a promise of uninterrupted availability or fitness for a particular purpose.</source>
+        <target state="needs-review-translation">Gegevens van de verkenner kunnen vertraagd, onvolledig of niet beschikbaar zijn, of afwijken van het beeld van een andere node. Kostenramingen zijn slechts schattingen en garanderen geen bevestiging. De dienst wordt aangeboden zoals hij is, zonder belofte van ononderbroken beschikbaarheid of geschiktheid voor een bepaald doel.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/terms-of-service/terms-of-service.component.html</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.21" datatype="html">
+        <source>Acceptable Use</source>
+        <target state="needs-review-translation">Aanvaardbaar gebruik</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/terms-of-service/terms-of-service.component.html</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.27" datatype="html">
+        <source>Do not abuse the website or API, interfere with service operation, bypass reasonable rate limits, or use the service unlawfully. Access may be limited when necessary to protect availability.</source>
+        <target state="needs-review-translation">Maak geen misbruik van de website of API, verstoor de werking niet, omzeil geen redelijke snelheidslimieten en gebruik de dienst niet onwettig. Toegang kan indien nodig worden beperkt om de beschikbaarheid te beschermen.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/terms-of-service/terms-of-service.component.html</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.22" datatype="html">
+        <source>External Services</source>
+        <target state="needs-review-translation">Externe diensten</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/terms-of-service/terms-of-service.component.html</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.28" datatype="html">
+        <source>This site may link to tx.taxi contact channels, Dogecoin references, upstream source code, and infrastructure dependencies. External websites have their own terms and policies.</source>
+        <target state="needs-review-translation">Deze site kan linken naar contactkanalen van tx.taxi, Dogecoin-bronnen, upstream broncode en infrastructuurafhankelijkheden. Externe websites hebben hun eigen voorwaarden en beleid.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/terms-of-service/terms-of-service.component.html</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.23" datatype="html">
+        <source>Open Source</source>
+        <target state="needs-review-translation">Opensource</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/terms-of-service/terms-of-service.component.html</context>
+          <context context-type="linenumber">38</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.inline.3" datatype="html">
+        <source>doge.tx.taxi is derived from</source>
+        <target state="needs-review-translation">doge.tx.taxi is afgeleid van</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/terms-of-service/terms-of-service.component.html</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.inline.4" datatype="html">
+        <source>. Contact</source>
+        <target state="needs-review-translation">. Neem contact op met</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/terms-of-service/terms-of-service.component.html</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.inline.5" datatype="html">
+        <source>for the current reviewed fork source package.</source>
+        <target state="needs-review-translation">voor het huidige beoordeelde broncodepakket van de fork.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/terms-of-service/terms-of-service.component.html</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.meta.desc.2" datatype="html">
+        <source>Terms for using doge.tx.taxi as an informational Dogecoin block and mempool explorer.</source>
+        <target state="needs-review-translation">Voorwaarden voor gebruik van doge.tx.taxi als informatieve Dogecoin-blok- en mempoolverkenner.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/terms-of-service/terms-of-service.component.ts</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="taxi.timezone.minus12" datatype="html">
+        <source>Anywhere on Earth (AoE)</source>
+        <target state="needs-review-translation">Anywhere on Earth-tijd (AoE)</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/timezone-selector/timezone-selector.component.ts</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="taxi.timezone.minus11" datatype="html">
+        <source>Samoa Standard Time (SST)</source>
+        <target state="needs-review-translation">Samoa-standaardtijd (SST)</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/timezone-selector/timezone-selector.component.ts</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="taxi.timezone.minus10" datatype="html">
+        <source>Hawaii Standard Time (HST)</source>
+        <target state="needs-review-translation">Hawaï-standaardtijd (HST)</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/timezone-selector/timezone-selector.component.ts</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="taxi.timezone.minus9" datatype="html">
+        <source>Alaska Standard Time (AKST)</source>
+        <target state="needs-review-translation">Alaska-standaardtijd (AKST)</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/timezone-selector/timezone-selector.component.ts</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="taxi.timezone.minus8" datatype="html">
+        <source>Pacific Standard Time (PST)</source>
+        <target state="needs-review-translation">Pacific-standaardtijd (PST)</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/timezone-selector/timezone-selector.component.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="taxi.timezone.minus7" datatype="html">
+        <source>Mountain Standard Time (MST)</source>
+        <target state="needs-review-translation">Mountain-standaardtijd (MST)</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/timezone-selector/timezone-selector.component.ts</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="taxi.timezone.minus6" datatype="html">
+        <source>Central Standard Time (CST)</source>
+        <target state="needs-review-translation">Central-standaardtijd (CST)</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/timezone-selector/timezone-selector.component.ts</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="taxi.timezone.minus5" datatype="html">
+        <source>Eastern Standard Time (EST)</source>
+        <target state="needs-review-translation">Eastern-standaardtijd (EST)</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/timezone-selector/timezone-selector.component.ts</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="taxi.timezone.minus4" datatype="html">
+        <source>Atlantic Standard Time (AST)</source>
+        <target state="needs-review-translation">Atlantische standaardtijd (AST)</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/timezone-selector/timezone-selector.component.ts</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="taxi.timezone.minus3" datatype="html">
+        <source>Argentina Time (ART)</source>
+        <target state="needs-review-translation">Argentijnse tijd (ART)</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/timezone-selector/timezone-selector.component.ts</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="taxi.timezone.minus2" datatype="html">
+        <source>Fernando de Noronha Time (FNT)</source>
+        <target state="needs-review-translation">Fernando de Noronha-tijd (FNT)</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/timezone-selector/timezone-selector.component.ts</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="taxi.timezone.minus1" datatype="html">
+        <source>Azores Time (AZOT)</source>
+        <target state="needs-review-translation">Azorentijd (AZOT)</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/timezone-selector/timezone-selector.component.ts</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="taxi.timezone.plus0" datatype="html">
+        <source>Greenwich Mean Time (GMT)</source>
+        <target state="needs-review-translation">Greenwich Mean Time (GMT)</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/timezone-selector/timezone-selector.component.ts</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="taxi.timezone.plus1" datatype="html">
+        <source>Central European Time (CET)</source>
+        <target state="needs-review-translation">Midden-Europese tijd (CET)</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/timezone-selector/timezone-selector.component.ts</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="taxi.timezone.plus2" datatype="html">
+        <source>Eastern European Time (EET)</source>
+        <target state="needs-review-translation">Oost-Europese tijd (EET)</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/timezone-selector/timezone-selector.component.ts</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="taxi.timezone.plus3" datatype="html">
+        <source>Moscow Standard Time (MSK)</source>
+        <target state="needs-review-translation">Moskou-standaardtijd (MSK)</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/timezone-selector/timezone-selector.component.ts</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="taxi.timezone.plus4" datatype="html">
+        <source>Armenia Time (AMT)</source>
+        <target state="needs-review-translation">Armeense tijd (AMT)</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/timezone-selector/timezone-selector.component.ts</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="taxi.timezone.plus5" datatype="html">
+        <source>Pakistan Standard Time (PKT)</source>
+        <target state="needs-review-translation">Pakistaanse standaardtijd (PKT)</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/timezone-selector/timezone-selector.component.ts</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="taxi.timezone.plus6" datatype="html">
+        <source>Xinjiang Time (XJT)</source>
+        <target state="needs-review-translation">Xinjiang-tijd (XJT)</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/timezone-selector/timezone-selector.component.ts</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="taxi.timezone.plus7" datatype="html">
+        <source>Indochina Time (ICT)</source>
+        <target state="needs-review-translation">Indochinese tijd (ICT)</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/timezone-selector/timezone-selector.component.ts</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="taxi.timezone.plus8" datatype="html">
+        <source>Hong Kong Time (HKT)</source>
+        <target state="needs-review-translation">Hongkongtijd (HKT)</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/timezone-selector/timezone-selector.component.ts</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="taxi.timezone.plus9" datatype="html">
+        <source>Japan Standard Time (JST)</source>
+        <target state="needs-review-translation">Japanse standaardtijd (JST)</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/timezone-selector/timezone-selector.component.ts</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="taxi.timezone.plus10" datatype="html">
+        <source>Australian Eastern Standard Time (AEST)</source>
+        <target state="needs-review-translation">Australische oostelijke standaardtijd (AEST)</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/timezone-selector/timezone-selector.component.ts</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="taxi.timezone.plus11" datatype="html">
+        <source>Norfolk Time (NFT)</source>
+        <target state="needs-review-translation">Norfolktijd (NFT)</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/timezone-selector/timezone-selector.component.ts</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="taxi.timezone.plus12" datatype="html">
+        <source>New Zealand Standard Time (NZST)</source>
+        <target state="needs-review-translation">Nieuw-Zeelandse standaardtijd (NZST)</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/timezone-selector/timezone-selector.component.ts</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="taxi.timezone.plus13" datatype="html">
+        <source>Tonga Time (TOT)</source>
+        <target state="needs-review-translation">Tongaanse tijd (TOT)</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/timezone-selector/timezone-selector.component.ts</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="taxi.timezone.plus14" datatype="html">
+        <source>Line Islands Time (LINT)</source>
+        <target state="needs-review-translation">Lijneilandentijd (LINT)</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/timezone-selector/timezone-selector.component.ts</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.29" datatype="html">
+        <source>Trademark &amp; Attribution</source>
+        <target state="needs-review-translation">Handelsmerken en vermeldingen</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/trademark-policy/trademark-policy.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.30" datatype="html">
+        <source>Updated: September 20, 2026</source>
+        <target state="needs-review-translation">Bijgewerkt: 20 september 2026</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/trademark-policy/trademark-policy.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.31" datatype="html">
+        <source>tx.taxi Identity</source>
+        <target state="needs-review-translation">Identiteit van tx.taxi</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/trademark-policy/trademark-policy.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.35" datatype="html">
+        <source>doge.tx.taxi is an independently operated Dogecoin explorer in the tx.taxi family. Its domain, wordmark, chain palette, and service identity distinguish this fork from the upstream project.</source>
+        <target state="needs-review-translation">doge.tx.taxi is een onafhankelijk beheerde Dogecoin-verkenner binnen de tx.taxi-familie. Het domein, woordmerk, de chainkleuren en de dienstidentiteit onderscheiden deze fork van het upstream project.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/trademark-policy/trademark-policy.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.32" datatype="html">
+        <source>Upstream Attribution</source>
+        <target state="needs-review-translation">Upstreamvermelding</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/trademark-policy/trademark-policy.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.inline.6" datatype="html">
+        <source>This software is derived from</source>
+        <target state="needs-review-translation">Deze software is afgeleid van</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/trademark-policy/trademark-policy.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.inline.7" datatype="html">
+        <source>. The upstream source code, visual system, project names, logos, and trademarks belong to their respective owners.</source>
+        <target state="needs-review-translation">. De upstream broncode, het visuele systeem, projectnamen, logo’s en handelsmerken behoren toe aan hun respectieve eigenaren.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/trademark-policy/trademark-policy.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.33" datatype="html">
+        <source>No Affiliation</source>
+        <target state="needs-review-translation">Geen verbondenheid</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/trademark-policy/trademark-policy.component.html</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.36" datatype="html">
+        <source>doge.tx.taxi is not affiliated with, sponsored by, or endorsed by Mempool Holdings S.A. de C.V. References to mempool.space and mempool/mempool are nominative attribution to the software from which this fork derives.</source>
+        <target state="needs-review-translation">doge.tx.taxi is niet verbonden aan, gesponsord of goedgekeurd door Mempool Holdings S.A. de C.V. Verwijzingen naar mempool.space en mempool/mempool zijn vermeldingen van de software waarvan deze fork is afgeleid.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/trademark-policy/trademark-policy.component.html</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.37" datatype="html">
+        <source>Dogecoin is an open network and protocol. References to Dogecoin, DOGE, koinu, blocks, transactions, addresses, and merged mining describe the network data presented by this explorer.</source>
+        <target state="needs-review-translation">Dogecoin is een open netwerk en protocol. Verwijzingen naar Dogecoin, DOGE, koinu, blokken, transacties, adressen en gecombineerde mijnbouw beschrijven de netwerkgegevens die deze verkenner presenteert.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/trademark-policy/trademark-policy.component.html</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.meta.title.3" datatype="html">
+        <source>Trademark &amp; Attribution</source>
+        <target state="needs-review-translation">Handelsmerken en vermeldingen</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/trademark-policy/trademark-policy.component.ts</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.meta.desc.3" datatype="html">
+        <source>Trademark and attribution notes for doge.tx.taxi, including upstream mempool/mempool attribution and project independence.</source>
+        <target state="needs-review-translation">Handelsmerk- en vermeldingsinformatie voor doge.tx.taxi, inclusief de upstream vermelding van mempool/mempool en de onafhankelijkheid van het project.</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/trademark-policy/trademark-policy.component.ts</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
       </body>
   </file>
 </xliff>
