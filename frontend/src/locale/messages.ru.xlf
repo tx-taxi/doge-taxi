@@ -2340,8 +2340,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="meta.description.bitcoin.address" datatype="html">
-        <source>See mempool transactions, confirmed transactions, balance, and more for <x id="PH" equiv-text="this.stateService.network==='liquid'||this.stateService.network==='liquidtestnet'?'Liquid':'Bitcoin'"/><x id="PH_1" equiv-text="seoDescriptionNetwork(this.stateService.network)"/> address <x id="INTERPOLATION" equiv-text="this.addressString"/>.</source>
-        <target>Отображение транзакций мемпула, подтвержденных транзакций, балансов и многого другого для &lt;x id=&quot;PH&quot; equiv-text=&quot;this.stateService.network==='liquid'||this.stateService.network==='liquidtestnet'?'Liquid':'Bitcoin'&quot;/&gt;&lt;x id=&quot;PH_1&quot; equiv-text=&quot;seoDescriptionNetwork(this.stateService.network)&quot;/&gt; адреса &lt;span class='notranslate'&gt;&lt;x id=&quot;INTERPOLATION&quot; equiv-text=&quot;this.addressString&quot;/&gt;.</target>
+        <source>See mempool transactions, confirmed transactions, balance, and more for <x id="PH" equiv-text="this.stateService.network==='liquid'||this.stateService.network==='liquidtestnet'?'Liquid':'Dogecoin'"/><x id="PH_1" equiv-text="seoDescriptionNetwork(this.stateService.network)"/> address <x id="INTERPOLATION" equiv-text="this.addressString"/>.</source>
+        <target>Транзакции мемпула, подтверждённые транзакции, баланс и другие данные для адреса <x id="PH" equiv-text="this.stateService.network==='liquid'||this.stateService.network==='liquidtestnet'?'Liquid':'Dogecoin'"/><x id="PH_1" equiv-text="seoDescriptionNetwork(this.stateService.network)"/> <x id="INTERPOLATION" equiv-text="this.addressString"/>.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/address/address-preview.component.ts</context>
           <context context-type="linenumber">75</context>
@@ -2936,8 +2936,8 @@
         <note priority="1" from="description">mining.avg-block-fee-1m</note>
       </trans-unit>
       <trans-unit id="meta.description.bitcoin.graphs.block-fee-rates" datatype="html">
-        <source>See Bitcoin feerates visualized over time, including minimum and maximum feerates per block along with feerates at various percentiles.</source>
-        <target>Посмотреть комиссионные ставки в Биткоине с течением времени, включая минимальные и максимальные ставки на блок.</target>
+        <source>See Dogecoin feerates visualized over time, including minimum and maximum feerates per block along with feerates at various percentiles.</source>
+        <target>Ставки комиссий Dogecoin с течением времени, включая минимальные и максимальные ставки и диапазоны ставок в каждом блоке.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/block-fee-rates-graph/block-fee-rates-graph.component.ts</context>
           <context context-type="linenumber">74</context>
@@ -2977,8 +2977,8 @@
         <note priority="1" from="description">mining.block-fees</note>
       </trans-unit>
       <trans-unit id="meta.description.bitcoin.graphs.block-fees" datatype="html">
-        <source>See the average mining fees earned per Bitcoin block visualized in BTC and USD over time.</source>
-        <target>Посмотреть среднюю стоимость майнинга одного биткоин-блока, визуализированную в BTC и долларах США, с течением времени.</target>
+        <source>See the average mining fees earned per Dogecoin block visualized in DOGE and USD over time.</source>
+        <target>Средние комиссии за блок Dogecoin в DOGE и USD с течением времени.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/block-fees-graph/block-fees-graph.component.ts</context>
           <context context-type="linenumber">71</context>
@@ -3042,8 +3042,8 @@
         <note priority="1" from="description">mining.block-fees-subsidy-subsidy</note>
       </trans-unit>
       <trans-unit id="meta.description.bitcoin.graphs.block-fees-subsidy" datatype="html">
-        <source>See the mining fees earned per Bitcoin block compared to the Bitcoin block subsidy, visualized in BTC and USD over time.</source>
-        <target>Оцените комиссии за майнинг, полученные за Биткоин-блок, в сравнении с субсидией за блок. Данные визуализированны в биткоинах и долларах США с течением времени.</target>
+        <source>See the mining fees earned per Dogecoin block compared to the Dogecoin block subsidy, visualized in DOGE and USD over time.</source>
+        <target>Сравнение комиссий за блок Dogecoin с наградой за блок в DOGE и USD с течением времени.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/block-fees-subsidy-graph/block-fees-subsidy-graph.component.ts</context>
           <context context-type="linenumber">80</context>
@@ -3480,8 +3480,8 @@
         <note priority="1" from="description">mining.block-rewards</note>
       </trans-unit>
       <trans-unit id="meta.description.bitcoin.graphs.block-rewards" datatype="html">
-        <source>See Bitcoin block rewards in BTC and USD visualized over time. Block rewards are the total funds miners earn from the block subsidy and fees.</source>
-        <target>Посмотреть вознаграждения за блок в BTC и USD с течением времени. Вознаграждение за блок - это общая сумма средств, которую майнеры получают за счет субсидий и комиссионных сборов.</target>
+        <source>See Dogecoin block rewards in DOGE and USD visualized over time. Block rewards are the total funds miners earn from the block subsidy and fees.</source>
+        <target>Награды за блок Dogecoin в DOGE и USD с течением времени. Награда включает субсидию блока и комиссии транзакций.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/block-rewards-graph/block-rewards-graph.component.ts</context>
           <context context-type="linenumber">69</context>
@@ -3505,8 +3505,8 @@
         <note priority="1" from="description">mining.block-sizes-weights</note>
       </trans-unit>
       <trans-unit id="meta.description.bitcoin.graphs.block-sizes" datatype="html">
-        <source>See Bitcoin block sizes (MB) and block weights (weight units) visualized over time.</source>
-        <target>Посмотреть размеры Биткоин-блоков (МБ) и их вес (единицы веса) с течением времени.</target>
+        <source>See Dogecoin block sizes (MB) and block weights (weight units) visualized over time.</source>
+        <target>Размеры блоков Dogecoin (МБ) и вес блоков с течением времени.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/block-sizes-weights-graph/block-sizes-weights-graph.component.ts</context>
           <context context-type="linenumber">66</context>
@@ -3661,8 +3661,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="meta.description.bitcoin.block" datatype="html">
-        <source>See size, weight, fee range, included transactions, audit (expected v actual), and more for Bitcoin<x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)"/> block <x id="BLOCK_HEIGHT" equiv-text="block.height"/> (<x id="BLOCK_ID" equiv-text="block.id"/>).</source>
-        <target>Размер, вес, диапазон комиссии, включенные транзакции, аудит (ожидаемый и фактический) и многое другое для Биткоин <x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)"/> блока <x id="BLOCK_HEIGHT" equiv-text="block.height"/> (<x id="BLOCK_ID" equiv-text="block.id"/>).</target>
+        <source>See size, weight, fee range, included transactions, audit (expected v actual), and more for Dogecoin<x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)"/> block <x id="BLOCK_HEIGHT" equiv-text="block.height"/> (<x id="BLOCK_ID" equiv-text="block.id"/>).</source>
+        <target>Размер, вес, диапазон комиссий, транзакции, аудит и другие сведения о блоке Dogecoin<x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)"/> <x id="BLOCK_HEIGHT" equiv-text="block.height"/> (<x id="BLOCK_ID" equiv-text="block.id"/>).</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/block-view/block-view.component.ts</context>
           <context context-type="linenumber">115</context>
@@ -6090,8 +6090,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="meta.description.mining.dashboard" datatype="html">
-        <source>Get real-time Bitcoin mining stats like hashrate, difficulty adjustment, block rewards, pool dominance, and more.</source>
-        <target>Получить в режиме реального времени статистику биткоин-майнинга, такую как хэшрейт, корректировка сложности, вознаграждения за блок, доминирование пулов и многое другое.</target>
+        <source>Get real-time Dogecoin mining stats like hashrate, difficulty adjustment, block rewards, pool dominance, and more.</source>
+        <target>Статистика майнинга Dogecoin в реальном времени: хешрейт, изменение сложности, награды за блоки, доли пулов и многое другое.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/mining-dashboard/mining-dashboard.component.ts</context>
           <context context-type="linenumber">31</context>
@@ -6690,16 +6690,16 @@
         <note priority="1" from="description">price-chart.percent-change</note>
       </trans-unit>
       <trans-unit id="price-chart.title" datatype="html">
-        <source>Bitcoin Price</source>
-        <target>Цена Bitcoin</target>
+        <source>Dogecoin Price</source>
+        <target>Цена Dogecoin</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/price-chart/price-chart.component.ts</context>
           <context context-type="linenumber">77</context>
         </context-group>
       </trans-unit>
       <trans-unit id="price-chart.description" datatype="html">
-        <source>See the Bitcoin price in USD visualized over time.</source>
-        <target>Смотрите динамику цены Bitcoin в USD с течением времени.</target>
+        <source>See the Dogecoin price in USD visualized over time.</source>
+        <target>Цена Dogecoin в USD с течением времени.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/price-chart/price-chart.component.ts</context>
           <context context-type="linenumber">78</context>
@@ -8859,8 +8859,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="meta.description.docs.faq" datatype="html">
-        <source>Get answers to common questions like: What is a mempool? Why isn't my transaction confirming? How can I run my own instance of The Mempool Open Source Project? And more.</source>
-        <target>Получите ответы на распространенные вопросы, например: Что такое мемпул? Почему моя транзакция не подтверждается? Как я могу запустить свой собственную версию проекта Mempool с открытым исходным кодом? И многое другое.</target>
+        <source>Get answers to common Dogecoin questions, including block timing, AuxPoW, fees, pending observations, transactions, and available explorer data.</source>
+        <target>Ответы на вопросы о Dogecoin: время блока, AuxPoW, комиссии, ожидающие транзакции, транзакции и другие темы.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/docs/docs/docs.component.ts</context>
           <context context-type="linenumber">48</context>
@@ -8883,8 +8883,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="meta.description.docs.rest-bitcoin" datatype="html">
-        <source>Documentation for the mempool.space REST API service: get info on addresses, transactions, blocks, fees, mining, the Lightning network, and more.</source>
-        <target>Документация для REST API mempool.space: получите информацию об адресах, транзакциях, блоках, комиссиях, майнинге, сети Лайтнинг и многом другом.</target>
+        <source>Documentation for the doge.tx.taxi REST API: query available Dogecoin block, transaction, address, fee, and network data.</source>
+        <target>Документация REST API doge.tx.taxi: запросы доступных данных о блоках, транзакциях, адресах, комиссиях и сети Dogecoin.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/docs/docs/docs.component.ts</context>
           <context context-type="linenumber">56</context>
@@ -8907,8 +8907,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="meta.description.docs.websocket-bitcoin" datatype="html">
-        <source>Documentation for the mempool.space WebSocket API service: get real-time info on blocks, mempools, transactions, addresses, and more.</source>
-        <target>Документация для WebSocket API mempool.space: получайте в режиме реального времени информацию о блоках, мемпулах, транзакциях, адресах и многом другом.</target>
+        <source>Documentation for the doge.tx.taxi WebSocket API: receive current Dogecoin block, transaction, address, pending-sample, and provider-freshness updates.</source>
+        <target>Документация WebSocket API doge.tx.taxi: текущие данные о блоках, транзакциях, адресах и ожидающих транзакциях Dogecoin.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/docs/docs/docs.component.ts</context>
           <context context-type="linenumber">64</context>
@@ -11543,6 +11543,343 @@
       <trans-unit id="tx-taxi.doge.docs.category.3" datatype="html"><source>blocks</source><target>блоки</target></trans-unit>
       <trans-unit id="tx-taxi.doge.docs.category.5" datatype="html"><source>addresses</source><target>адреса</target></trans-unit>
       <trans-unit id="taxi.filter.inscription" datatype="html"><source>Inscription</source><target>Inscription</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.about.1" datatype="html"><source>About doge.tx.taxi</source><target>О doge.tx.taxi</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.about.2" datatype="html"><source>The Dogecoin explorer in the tx.taxi family.</source><target>Обозреватель Dogecoin в семействе tx.taxi.</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.about.3" datatype="html"><source>Dogecoin documentation</source><target>Документация Dogecoin</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.about.4" datatype="html"><source>Contact the maintainer</source><target>Связаться с разработчиком</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.about.5" datatype="html"><source>doge.tx.taxi is the Dogecoin explorer in the tx.taxi family. Explore blocks, transactions, addresses, mining activity and transaction fees.</source><target>doge.tx.taxi — обозреватель Dogecoin в семействе tx.taxi. Изучайте блоки, транзакции, адреса, добычу и комиссии.</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.about.6" datatype="html"><source>Dogecoin-native data</source><target>Данные сети Dogecoin</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.about.7" datatype="html"><source>Values are denominated in DOGE, koinu, or the selected fiat currency. Fee rates remain koinu/B, transaction sizes use bytes, and all block, address, and mining concepts shown by the interface retain their Dogecoin meaning.</source><target>Значения отображаются в DOGE, койну или выбранной фиатной валюте. Ставки комиссий остаются в koinu/B, размеры транзакций измеряются в байтах, а понятия блоков, адресов и добычи сохраняют значение, принятое в Dogecoin.</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.about.8" datatype="html"><source>Built on open source</source><target>Создан на основе открытого кода</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.about.attr1" datatype="html"><source>This explorer builds on the</source><target>Этот обозреватель основан на</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.about.attr2" datatype="html"><source>. See</source><target>. См.</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.about.attr3" datatype="html"><source>third-party attribution</source><target>сведения о сторонних проектах</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.about.attr4" datatype="html"><source>and contact the maintainer for source and license information.</source><target>и свяжитесь с разработчиком для получения информации об исходном коде и лицензии.</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.about.title" datatype="html"><source>About doge.tx.taxi</source><target>О doge.tx.taxi</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.about.description" datatype="html"><source>Learn about doge.tx.taxi, a Dogecoin block and mempool explorer in the tx.taxi multi-chain family.</source><target>Узнайте о doge.tx.taxi — обозревателе блоков и мемпула Dogecoin в мультичейн-семействе tx.taxi.</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.unavailable" datatype="html"><source>Unavailable</source><target>Недоступно</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.fiat-date-unavailable" datatype="html"><source>Fiat price not available for the selected date</source><target>Цена в фиатной валюте за выбранную дату недоступна</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.not-available" datatype="html"><source>Not available</source><target>Недоступно</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.fiat.stale" datatype="html"><source> · stale</source><target> · устарело</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.fiat.stale-title" datatype="html"><source>ECB reference rate; update unavailable</source><target>Справочный курс ЕЦБ; обновление недоступно</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.fiat.reference-title" datatype="html"><source>ECB reference rate</source><target>Справочный курс ЕЦБ</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.nav.1" datatype="html"><source>doge.tx.taxi dashboard</source><target>Главная doge.tx.taxi</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.nav.2" datatype="html"><source>Dashboard</source><target>Главная</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.nav.3" datatype="html"><source>Mining dashboard</source><target>Данные майнинга</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.nav.4" datatype="html"><source>Dogecoin graphs</source><target>Графики Dogecoin</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.nav.5" datatype="html"><source>Recent blocks</source><target>Последние блоки</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.nav.7" datatype="html"><source>About doge.tx.taxi</source><target>О doge.tx.taxi</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.provider.stale" datatype="html"><source>Data may be out of date.</source><target>Данные могут быть устаревшими.</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.provider.degraded" datatype="html"><source>Some data is temporarily unavailable.</source><target>Некоторые данные временно недоступны.</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.provider.retry" datatype="html"><source>Unable to update. Retrying.</source><target>Не удалось обновить данные. Повторная попытка.</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.sample-description" datatype="html"><source>Observed pending transactions. Fill shows sampled bytes out of the 1 MB block capacity; this is not a predicted block.</source><target>Наблюдаемые ожидающие транзакции. Заполнение показывает объём выборки относительно вместимости блока 1 МБ; это не прогноз блока.</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.pending-sample" datatype="html"><source>Pending sample</source><target>Выборка ожидающих транзакций</target></trans-unit>
+      <trans-unit id="tx-taxi.doge-chart-unavailable" datatype="html"><source>Chart unavailable.</source><target>График недоступен.</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.provider.tracking" datatype="html"><source>Live detail tracking is temporarily unavailable. Displayed details may be stale.</source><target>Отслеживание подробностей временно недоступно. Отображаемые данные могут быть устаревшими.</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.footer.faq" datatype="html"><source>Dogecoin FAQ</source><target>Вопросы о Dogecoin</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.footer.telegram" datatype="html"><source>Join the tx.taxi Telegram channel</source><target>Присоединиться к Telegram-каналу tx.taxi</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.footer.made-with" datatype="html"><source>Made with</source><target>Создано с</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.footer.by" datatype="html"><source>by</source><target>командой</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.about.9" datatype="html"><source>One search across chains.</source><target>Один поиск по разным сетям.</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.about.10" datatype="html"><source>Paste a transaction, block or address into tx.taxi. Open a confirmed match, choose between possible networks, or head straight to your chain’s explorer.</source><target>Вставьте транзакцию, блок или адрес в tx.taxi. Откройте подтверждённое совпадение, выберите подходящую сеть или перейдите прямо в её обозреватель.</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.about.11" datatype="html"><source>Open tx.taxi</source><target>Открыть tx.taxi</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.api.label.1" datatype="html"><source>Connection</source><target>Подключение</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.api.label.2" datatype="html"><source>Initialize the stream</source><target>Инициализировать поток</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.api.label.3" datatype="html"><source>Track one transaction</source><target>Отслеживать транзакцию</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.api.label.4" datatype="html"><source>Track an address</source><target>Отслеживать адрес</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.api.label.5" datatype="html"><source>Inspect the pending sample</source><target>Просмотреть выборку ожидающих транзакций</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.api.label.6" datatype="html"><source>Network</source><target>Сеть</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.api.label.7" datatype="html"><source>Get the tip height</source><target>Получить высоту последнего блока</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.api.label.8" datatype="html"><source>Get the tip hash</source><target>Получить хеш последнего блока</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.api.label.9" datatype="html"><source>Get explorer network data</source><target>Получить данные сети обозревателя</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.api.label.11" datatype="html"><source>Get a block hash by height</source><target>Получить хеш блока по высоте</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.api.label.12" datatype="html"><source>Get a block</source><target>Получить блок</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.api.label.13" datatype="html"><source>Get a block transaction page</source><target>Получить страницу транзакций блока</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.api.label.14" datatype="html"><source>Get all indexed transaction IDs</source><target>Получить все индексированные ID транзакций</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.api.label.16" datatype="html"><source>Get a transaction</source><target>Получить транзакцию</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.api.label.17" datatype="html"><source>Get transaction status</source><target>Получить статус транзакции</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.api.label.18" datatype="html"><source>Get output spends</source><target>Получить сведения о расходовании выходов</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.api.label.19" datatype="html"><source>Get raw transaction data</source><target>Получить необработанные данные транзакции</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.api.label.21" datatype="html"><source>Get address statistics</source><target>Получить статистику адреса</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.api.label.22" datatype="html"><source>Get address transactions</source><target>Получить транзакции адреса</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.api.label.23" datatype="html"><source>Continue confirmed address history</source><target>Продолжить просмотр подтверждённой истории адреса</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.api.label.24" datatype="html"><source>Validate an address format</source><target>Проверить формат адреса</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.api.label.25" datatype="html"><source>Fees and pending sample</source><target>Комиссии и выборка ожидающих транзакций</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.api.label.26" datatype="html"><source>Get fee estimates</source><target>Получить оценки комиссий</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.api.label.27" datatype="html"><source>Get the bounded pending sample</source><target>Получить ограниченную выборку ожидающих транзакций</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.api.label.28" datatype="html"><source>Get recently observed pending transactions</source><target>Получить недавно замеченные ожидающие транзакции</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.faq.heading.1" datatype="html"><source>Dogecoin basics</source><target>Основы Dogecoin</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.faq.heading.2" datatype="html"><source>What units does the explorer use?</source><target>Какие единицы использует обозреватель?</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.faq.heading.3" datatype="html"><source>How quickly are blocks found?</source><target>Как быстро появляются блоки?</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.faq.heading.4" datatype="html"><source>What is AuxPoW merged mining?</source><target>Что такое объединённый майнинг AuxPoW?</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.faq.heading.5" datatype="html"><source>Using this explorer</source><target>Использование обозревателя</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.faq.heading.6" datatype="html"><source>What can I search for?</source><target>Что можно искать?</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.faq.heading.7" datatype="html"><source>What does the pending strip represent?</source><target>Что показывает лента ожидающих транзакций?</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.faq.heading.8" datatype="html"><source>How should I read fee estimates?</source><target>Как читать оценки комиссий?</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.faq.heading.9" datatype="html"><source>Why is historical data sometimes unavailable?</source><target>Почему исторические данные иногда недоступны?</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.faq.heading.10" datatype="html"><source>Transactions and confirmations</source><target>Транзакции и подтверждения</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.faq.heading.11" datatype="html"><source>Why is my transaction still unconfirmed?</source><target>Почему моя транзакция ещё не подтверждена?</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.faq.heading.12" datatype="html"><source>Can this site change or recover a transaction?</source><target>Может ли этот сайт изменить или восстановить транзакцию?</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.docs.disclaimer-title" datatype="html"><source>doge.tx.taxi shows public Dogecoin data.</source><target>doge.tx.taxi показывает публичные данные Dogecoin.</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.docs.disclaimer-body" datatype="html"><source>It cannot access wallets, recover funds, reverse a transaction, or control when a miner confirms it.</source><target>Он не может получить доступ к кошелькам, вернуть средства, отменить транзакцию или управлять временем её подтверждения майнером.</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.docs.rest-intro" datatype="html"><source>The Dogecoin REST API is read-only. Requests use</source><target>REST API Dogecoin предназначен только для чтения. Запросы используют</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.docs.rest-outro" datatype="html"><source>; unavailable source capabilities return an error instead of placeholder data.</source><target>; недоступные функции источника возвращают ошибку вместо фиктивных данных.</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.docs.ws-intro" datatype="html"><source>The WebSocket endpoint is</source><target>Адрес WebSocket</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.docs.ws-outro" datatype="html"><source>. It is a read-only stream with a shared, rate-bounded collector.</source><target>. Это поток только для чтения с общим сборщиком и ограничением частоты запросов.</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.docs.payload" datatype="html"><source>Payload</source><target>Данные</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.docs.category.1" datatype="html"><source>connection</source><target>подключение</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.docs.category.2" datatype="html"><source>network</source><target>сеть</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.docs.category.4" datatype="html"><source>transactions</source><target>транзакции</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.docs.category.6" datatype="html"><source>fees</source><target>комиссии</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.docs.category.7" datatype="html"><source>about</source><target>о сети</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.docs.category.8" datatype="html"><source>explorer</source><target>обозреватель</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.api.description.1" datatype="html"><source>Returns the current best-chain height as plain text.</source><target>Возвращает текущую высоту лучшей цепочки обычным текстом.</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.api.description.2" datatype="html"><source>Returns the current best-chain block hash as plain text.</source><target>Возвращает хеш последнего блока лучшей цепочки обычным текстом.</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.api.description.3" datatype="html"><source>Returns the latest observed Dogecoin target block time, permanent subsidy, provider observation timestamps, and tip snapshot. Timestamps describe the source observation, not a guarantee of live network state.</source><target>Возвращает последнюю наблюдавшуюся целевую длительность блока Dogecoin, постоянную награду, время наблюдений поставщика и снимок последнего блока. Время относится к наблюдению источника и не гарантирует текущее состояние сети.</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.api.description.4" datatype="html"><source>Resolves a decimal block height to its canonical block hash.</source><target>Преобразует десятичную высоту блока в его канонический хеш.</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.api.description.5" datatype="html"><source>Returns indexed block data including height, timestamp, header fields, transaction count, fees when available, and reward. Recent strip data is cross-checked against raw Dogecoin block data before use; older detail availability depends on the historical provider.</source><target>Возвращает индексированные данные блока: высоту, время, поля заголовка, число транзакций, доступные комиссии и награду. Данные недавних блоков сверяются с необработанными блоками Dogecoin; доступность более старых сведений зависит от поставщика истории.</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.api.description.6" datatype="html"><source>Returns up to 25 indexed transactions from a block. The gateway rejects incomplete pages rather than silently returning partial data.</source><target>Возвращает до 25 индексированных транзакций блока. Шлюз отклоняет неполные страницы, а не возвращает частичные данные без предупреждения.</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.api.description.7" datatype="html"><source>Returns a complete transaction-ID list only when the provider can supply the whole block.</source><target>Возвращает полный список ID транзакций только тогда, когда поставщик может предоставить весь блок.</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.api.description.8" datatype="html"><source>Returns a transaction with inputs, outputs, koinu values, and confirmation status. Amounts are in koinu; 100,000,000 koinu equals 1 DOGE.</source><target>Возвращает транзакцию с входами, выходами, значениями в койну и статусом подтверждения. Суммы указаны в койну; 100 000 000 койну равны 1 DOGE.</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.api.description.9" datatype="html"><source>Returns only the confirmation status and, when known, the containing block.</source><target>Возвращает только статус подтверждения и блок, содержащий транзакцию, если он известен.</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.api.description.10" datatype="html"><source>Returns one entry per output describing whether it has been spent, when the historical provider has the data.</source><target>Возвращает запись для каждого выхода с указанием, потрачен ли он, если данные доступны у поставщика истории.</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.api.description.11" datatype="html"><source>Returns a transaction serialized as hexadecimal when it remains available from the provider.</source><target>Возвращает транзакцию в шестнадцатеричном виде, если она ещё доступна у поставщика.</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.api.description.12" datatype="html"><source>Returns indexed funded, spent, and transaction totals for a standard Dogecoin address. The explorer does not provide wallet balances or private-key services.</source><target>Возвращает индексированные суммы полученных и потраченных средств и число транзакций стандартного адреса Dogecoin. Обозреватель не предоставляет балансы кошельков и услуги работы с закрытыми ключами.</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.api.description.13" datatype="html"><source>Returns the current provider page of transactions for an address. Use the chain cursor endpoint to continue through confirmed history.</source><target>Возвращает текущую страницу транзакций адреса от поставщика. Для продолжения подтверждённой истории используйте конечную точку с курсором цепочки.</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.api.description.14" datatype="html"><source>Returns the next historical page before a confirmed transaction ID. Historical depth is limited by the upstream indexed provider.</source><target>Возвращает следующую страницу истории до указанной подтверждённой транзакции. Глубина истории ограничена индексирующим поставщиком.</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.api.description.15" datatype="html"><source>Checks whether a value matches the gateway’s standard Dogecoin address format. This is format validation, not an ownership or balance check.</source><target>Проверяет соответствие значения стандартному формату адреса Dogecoin, принятому шлюзом. Проверяется формат, а не владение или баланс.</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.api.description.16" datatype="html"><source>Returns source fee suggestions in koinu/B. They are observations from the configured provider and should be checked when creating a transaction.</source><target>Возвращает предложенные источником комиссии в koinu/B. Это наблюдения настроенного поставщика; проверяйте их при создании транзакции.</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.api.description.17" datatype="html"><source>Returns the explorer’s packed sample of recently observed pending transactions. It is capped at one million bytes and may be empty or stale during source outages; it is not a complete mempool view.</source><target>Возвращает сформированную обозревателем выборку недавно замеченных ожидающих транзакций. Она ограничена одним миллионом байт и при сбоях источника может быть пустой или устаревшей; это не полный мемпул.</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.api.description.18" datatype="html"><source>Returns the bounded recent pending observation used by the explorer. It does not enumerate every transaction relayed by the Dogecoin network.</source><target>Возвращает ограниченные последние наблюдения ожидающих транзакций, используемые обозревателем. Список не содержит все транзакции, передаваемые сетью Dogecoin.</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.api.description.19" datatype="html"><source>Connect to &lt;code&gt;wss://doge.tx.taxi/api/v1/ws&lt;/code&gt;, then send this message. The service returns the current block, fee, pending-sample, and provider-freshness snapshot when available.</source><target>Подключитесь к &lt;code&gt;wss://doge.tx.taxi/api/v1/ws&lt;/code&gt; и отправьте это сообщение. При наличии данных сервис возвращает снимок текущего блока, комиссий, выборки ожидающих транзакций и актуальности данных поставщика.</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.api.description.20" datatype="html"><source>Track a 64-character transaction ID. The service sends &lt;code&gt;tx&lt;/code&gt; when it can retrieve the transaction and stops tracking it after confirmation.</source><target>Отслеживает ID транзакции из 64 символов. Сервис отправляет &lt;code&gt;tx&lt;/code&gt;, когда может получить транзакцию, и прекращает отслеживание после подтверждения.</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.api.description.21" datatype="html"><source>Track a standard Dogecoin address. New unconfirmed transactions arrive as &lt;code&gt;address-transactions&lt;/code&gt;; confirmations arrive as &lt;code&gt;block-transactions&lt;/code&gt;. Address history remains subject to provider availability.</source><target>Отслеживает стандартный адрес Dogecoin. Новые неподтверждённые транзакции приходят как &lt;code&gt;address-transactions&lt;/code&gt;, подтверждения — как &lt;code&gt;block-transactions&lt;/code&gt;. История адреса зависит от доступности поставщика.</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.api.description.22" datatype="html"><source>Request the transactions included in the explorer’s bounded pending sample. This is a sampled visualization of the latest provider observation, not the network-wide mempool and not a confirmation promise.</source><target>Запрашивает транзакции из ограниченной выборки ожидающих транзакций обозревателя. Это визуализация выборки последнего наблюдения поставщика, а не мемпул всей сети и не обещание подтверждения.</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.faq.units-intro" datatype="html"><source>Dogecoin amounts are displayed in DOGE and the smallest unit, koinu.</source><target>Суммы Dogecoin отображаются в DOGE и минимальных единицах — койну.</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.faq.units-outro" datatype="html"><source>Transaction fees and fee estimates use koinu per byte (koinu/B).</source><target>Комиссии транзакций и их оценки указываются в койну за байт (koinu/B).</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.faq.block-time" datatype="html"><source>Dogecoin targets one block about every minute. Actual intervals vary because proof of work is probabilistic. DigiShield adjusts difficulty frequently to keep the target cadence.</source><target>Целевой интервал Dogecoin составляет около одной минуты на блок. Фактические интервалы меняются, поскольку доказательство работы вероятностное. DigiShield часто корректирует сложность, чтобы поддерживать целевую частоту.</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.faq.merged-mining" datatype="html"><source>Dogecoin uses Scrypt proof of work and supports AuxPoW merged mining. A miner can use work performed for a parent chain to prove Dogecoin work when the AuxPoW commitment satisfies Dogecoin’s consensus rules.</source><target>Dogecoin использует доказательство работы Scrypt и поддерживает объединённый майнинг AuxPoW. Майнер может использовать работу для родительской цепочки как доказательство работы Dogecoin, если обязательство AuxPoW соответствует правилам консенсуса Dogecoin.</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.faq.searching" datatype="html"><source>Search a block height, block hash, transaction ID, or standard Dogecoin address. A hash can be meaningful on more than one chain, so tx.taxi keeps manual chain selection available.</source><target>Ищите высоту или хеш блока, ID транзакции или стандартный адрес Dogecoin. Один хеш может иметь значение в нескольких сетях, поэтому tx.taxi позволяет выбрать сеть вручную.</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.faq.pending-sample-faq" datatype="html"><source>The pending strip is a bounded sample from the explorer’s most recent provider observation. It is packed up to one million bytes for visualization and can be incomplete, empty, or stale when the source is unavailable. It does not claim to show Dogecoin’s entire network mempool.</source><target>Лента ожидающих транзакций — ограниченная выборка из последнего наблюдения поставщика обозревателя. Для визуализации она составляется объёмом до одного миллиона байт и при недоступности источника может быть неполной, пустой или устаревшей. Она не претендует на отображение всего мемпула сети Dogecoin.</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.faq.fee-estimates" datatype="html"><source>Fee estimates are provider observations expressed in koinu/B. They are a guide for transaction creation, not a service-level confirmation promise; check the current estimate in your wallet before broadcasting.</source><target>Оценки комиссий — наблюдения поставщика в koinu/B. Они служат ориентиром при создании транзакции и не обещают подтверждение в определённый срок; перед отправкой проверьте актуальную оценку в кошельке.</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.faq.historical-data" datatype="html"><source>Recent strip blocks are enriched from indexed data and raw Dogecoin blocks. Older block, raw-hex, transaction, address, and outspend lookups depend on the historical provider. If it cannot supply complete data within the gateway’s bounds, the API returns an unavailable response rather than incomplete results.</source><target>Последние блоки ленты дополняются индексированными данными и необработанными блоками Dogecoin. Поиск более старых блоков, необработанных шестнадцатеричных данных, транзакций, адресов и потраченных выходов зависит от поставщика истории. Если он не может предоставить полные данные в пределах ограничений шлюза, API сообщает о недоступности, а не возвращает неполные результаты.</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.faq.unconfirmed" datatype="html"><source>Confirmation depends on propagation, fees, miner selection, and the next proof-of-work block. Dogecoin’s target is about one minute, but a target is not a deadline. The explorer cannot accelerate a transaction.</source><target>Подтверждение зависит от распространения, комиссии, выбора майнера и следующего блока с доказательством работы. Цель Dogecoin — около минуты, но это не крайний срок. Обозреватель не может ускорить транзакцию.</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.faq.not-custodial" datatype="html"><source>No. This explorer only reads public chain and provider data. Contact the wallet, exchange, or payment service that created a transaction for account or transaction support.</source><target>Нет. Этот обозреватель только считывает публичные данные цепочки и поставщика. По вопросам счёта или транзакции обратитесь в кошелёк, на биржу или в платёжный сервис, создавший транзакцию.</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.2" datatype="html"><source>Updated: September 20, 2026</source><target>Обновлено: 20 сентября 2026 г.</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.3" datatype="html"><source>Audience measurement</source><target>Измерение аудитории</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.inline.1" datatype="html"><source>tx.taxi uses Cloudflare Web Analytics for page views and performance, and a first-party daily cookie shared across its explorers to count browsers once per UTC day. The daily audience collector stores only a daily identifier, the explorer hostname, and whether there was interaction. It does not receive search text, addresses, transaction IDs, URLs, or IP addresses. Individual daily records expire after 31 days; aggregate counts are retained for 400 days. Do Not Track and Global Privacy Control disable this first-party measurement.</source><target>tx.taxi использует Cloudflare Web Analytics для измерения просмотров страниц и производительности, а также собственный ежедневный файл cookie, общий для обозревателей, чтобы учитывать браузеры один раз в день по UTC. Ежедневный сборщик аудитории хранит только дневной идентификатор, имя хоста обозревателя и признак взаимодействия. Он не получает текст поиска, адреса, ID транзакций, URL или IP-адреса. Отдельные дневные записи удаляются через 31 день; агрегированные данные хранятся 400 дней. Do Not Track и Global Privacy Control отключают этот собственный сбор данных.</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.inline.2" datatype="html"><source>Details and opt-out</source><target>Подробности и отключение</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.4" datatype="html"><source>Use Your Own Node When Privacy Matters</source><target>Используйте собственный узел, если важна конфиденциальность</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.10" datatype="html"><source>doge.tx.taxi displays public Dogecoin chain and mempool data through the backend configured by the site operator. For independent verification and the strongest network privacy, use your own Dogecoin node and explorer.</source><target>doge.tx.taxi отображает публичные данные цепочки и мемпула Dogecoin через сервер, настроенный оператором сайта. Для независимой проверки и максимальной сетевой конфиденциальности используйте собственный узел и обозреватель Dogecoin.</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.5" datatype="html"><source>Request Data</source><target>Данные запросов</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.11" datatype="html"><source>Normal website and API requests can reveal standard web metadata to the operator, including your IP address, user agent, requested URL, and request time. Server logs may be retained for reliability, abuse prevention, and debugging.</source><target>Обычные запросы к сайту и API могут раскрывать оператору стандартные веб-метаданные, включая IP-адрес, user agent, запрошенный URL и время запроса. Журналы сервера могут сохраняться для надёжности, предотвращения злоупотреблений и устранения неполадок.</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.6" datatype="html"><source>Local Preferences</source><target>Локальные настройки</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.12" datatype="html"><source>Display preferences such as theme, denomination, fiat currency, language, and timezone may be stored in your browser. doge.tx.taxi does not require an account for ordinary explorer use.</source><target>Настройки отображения, такие как тема, единица измерения, фиатная валюта, язык и часовой пояс, могут сохраняться в браузере. Для обычного использования обозревателя doge.tx.taxi учётная запись не требуется.</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.7" datatype="html"><source>Public Blockchain Data</source><target>Публичные данные блокчейна</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.13" datatype="html"><source>Dogecoin transactions, addresses, scripts, and blocks are public. Looking up an address or transaction can associate that lookup with your network metadata. Do not treat a public explorer as a privacy boundary.</source><target>Транзакции, адреса, скрипты и блоки Dogecoin публичны. Поиск адреса или транзакции может связать такой запрос с вашими сетевыми метаданными. Не рассматривайте публичный обозреватель как средство защиты конфиденциальности.</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.8" datatype="html"><source>External Links</source><target>Внешние ссылки</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.14" datatype="html"><source>This site links to tx.taxi contact channels, Dogecoin documentation, and upstream source code. Those external services have their own privacy policies.</source><target>Сайт содержит ссылки на каналы связи tx.taxi, документацию Dogecoin и исходный код исходного проекта. Эти внешние сервисы имеют собственные политики конфиденциальности.</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.9" datatype="html"><source>Open Source Attribution</source><target>Атрибуция открытого кода</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.15" datatype="html"><source>Mempool names, logos, and trademarks remain the property of their respective owners; doge.tx.taxi is not affiliated with or endorsed by Mempool Holdings S.A. de C.V.</source><target>Названия, логотипы и товарные знаки Mempool принадлежат соответствующим владельцам; doge.tx.taxi не связан с Mempool Holdings S.A. de C.V. и не одобрен этой компанией.</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.meta.desc.1" datatype="html"><source>Privacy notes for doge.tx.taxi, including public Dogecoin data, browser preferences, server logs, and independent verification.</source><target>Сведения о конфиденциальности doge.tx.taxi, включая публичные данные Dogecoin, настройки браузера, журналы сервера и независимую проверку.</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.17" datatype="html"><source>Updated: September 20, 2026</source><target>Обновлено: 20 сентября 2026 г.</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.18" datatype="html"><source>Informational Explorer</source><target>Информационный обозреватель</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.24" datatype="html"><source>doge.tx.taxi provides a view of public Dogecoin blocks, transactions, addresses, mining data, fee estimates, and mempool state. It is an informational service, not a wallet, exchange, custodian, payment processor, or transaction-priority service.</source><target>doge.tx.taxi предоставляет доступ к публичным блокам, транзакциям, адресам, данным майнинга, оценкам комиссий и состоянию мемпула Dogecoin. Это информационный сервис, а не кошелёк, биржа, хранитель, платёжный оператор или сервис приоритетной обработки транзакций.</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.19" datatype="html"><source>No Control Over Dogecoin Transactions</source><target>Отсутствие контроля над транзакциями Dogecoin</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.25" datatype="html"><source>The operator cannot reverse, cancel, accelerate, recover, or redirect a Dogecoin transaction. For wallet, exchange, or payment issues, contact the service that created or received the transaction.</source><target>Оператор не может обратить, отменить, ускорить, восстановить или перенаправить транзакцию Dogecoin. По вопросам кошелька, биржи или платежа обратитесь в сервис, создавший или получивший транзакцию.</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.20" datatype="html"><source>Data and Availability</source><target>Данные и доступность</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.26" datatype="html"><source>Explorer data may be delayed, incomplete, unavailable, or different from another node's view. Fee estimates are estimates only and do not guarantee confirmation. The service is provided as-is without a promise of uninterrupted availability or fitness for a particular purpose.</source><target>Данные обозревателя могут запаздывать, быть неполными, недоступными или отличаться от данных другого узла. Оценки комиссий являются только оценками и не гарантируют подтверждения. Сервис предоставляется как есть, без обещания бесперебойной доступности или пригодности для конкретной цели.</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.21" datatype="html"><source>Acceptable Use</source><target>Допустимое использование</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.27" datatype="html"><source>Do not abuse the website or API, interfere with service operation, bypass reasonable rate limits, or use the service unlawfully. Access may be limited when necessary to protect availability.</source><target>Не злоупотребляйте сайтом или API, не мешайте работе сервиса, не обходите разумные ограничения частоты запросов и не используйте сервис незаконно. При необходимости доступ может быть ограничен для поддержания доступности.</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.22" datatype="html"><source>External Services</source><target>Внешние сервисы</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.28" datatype="html"><source>This site may link to tx.taxi contact channels, Dogecoin references, upstream source code, and infrastructure dependencies. External websites have their own terms and policies.</source><target>Сайт может содержать ссылки на каналы связи tx.taxi, материалы Dogecoin, исходный код исходного проекта и инфраструктурные зависимости. Внешние сайты имеют собственные условия и политики.</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.23" datatype="html"><source>Open Source</source><target>Открытый код</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.inline.3" datatype="html"><source>doge.tx.taxi is derived from</source><target>doge.tx.taxi основан на</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.inline.4" datatype="html"><source>. Contact</source><target>. Свяжитесь с</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.inline.5" datatype="html"><source>for the current reviewed fork source package.</source><target>для получения текущего проверенного пакета исходного кода форка.</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.meta.desc.2" datatype="html"><source>Terms for using doge.tx.taxi as an informational Dogecoin block and mempool explorer.</source><target>Условия использования doge.tx.taxi как информационного обозревателя блоков и мемпула Dogecoin.</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.29" datatype="html"><source>Trademark &amp; Attribution</source><target>Товарные знаки и атрибуция</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.30" datatype="html"><source>Updated: September 20, 2026</source><target>Обновлено: 20 сентября 2026 г.</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.31" datatype="html"><source>tx.taxi Identity</source><target>Идентичность tx.taxi</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.35" datatype="html"><source>doge.tx.taxi is an independently operated Dogecoin explorer in the tx.taxi family. Its domain, wordmark, chain palette, and service identity distinguish this fork from the upstream project.</source><target>doge.tx.taxi — независимо управляемый обозреватель Dogecoin в семействе tx.taxi. Домен, словесный знак, цветовая палитра сети и идентичность сервиса отличают этот форк от исходного проекта.</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.32" datatype="html"><source>Upstream Attribution</source><target>Атрибуция исходного проекта</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.inline.6" datatype="html"><source>This software is derived from</source><target>Это программное обеспечение основано на</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.inline.7" datatype="html"><source>. The upstream source code, visual system, project names, logos, and trademarks belong to their respective owners.</source><target>. Исходный код, визуальная система, названия проектов, логотипы и товарные знаки принадлежат соответствующим владельцам.</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.33" datatype="html"><source>No Affiliation</source><target>Отсутствие связи</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.36" datatype="html"><source>doge.tx.taxi is not affiliated with, sponsored by, or endorsed by Mempool Holdings S.A. de C.V. References to mempool.space and mempool/mempool are nominative attribution to the software from which this fork derives.</source><target>doge.tx.taxi не связан с Mempool Holdings S.A. de C.V., не спонсируется и не одобрен этой компанией. Упоминания mempool.space и mempool/mempool служат указанием на программное обеспечение, на основе которого создан этот форк.</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.34" datatype="html"><source>Dogecoin</source><target>Dogecoin</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.37" datatype="html"><source>Dogecoin is an open network and protocol. References to Dogecoin, DOGE, koinu, blocks, transactions, addresses, and merged mining describe the network data presented by this explorer.</source><target>Dogecoin — открытая сеть и протокол. Упоминания Dogecoin, DOGE, койну, блоков, транзакций, адресов и объединённого майнинга описывают данные сети, представленные в обозревателе.</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.meta.title.3" datatype="html"><source>Trademark &amp; Attribution</source><target>Товарные знаки и атрибуция</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.meta.desc.3" datatype="html"><source>Trademark and attribution notes for doge.tx.taxi, including upstream mempool/mempool attribution and project independence.</source><target>Сведения о товарных знаках и атрибуции doge.tx.taxi, включая указание исходного проекта mempool/mempool и независимость проекта.</target></trans-unit>
+      <trans-unit id="8d185fc2da0f9a99918c99a874e3d059a3a7d5ee" datatype="html"><source>Size in bytes of this transaction (including unconfirmed ancestors)</source><target>Размер этой транзакции в байтах (включая неподтверждённые родительские транзакции)</target></trans-unit>
+      <trans-unit id="7af8cba6646f8c9de5351a05976188876d00d58e" datatype="html"><source>sat/B</source><target>sat/B</target></trans-unit>
+      <trans-unit id="b1046d5d7d997498195647aee8059b9109836f1d" datatype="html"><source>Accelerate to ~<x id="INTERPOLATION" equiv-text="{{ x | number : '1.0-0' }}"/> sat/B</source><target>Ускорить до ~<x id="INTERPOLATION" equiv-text="{{ x | number : '1.0-0' }}"/> sat/B</target></trans-unit>
+      <trans-unit id="1ac50ef21ed21d7f6b6dcb0bc74ad5c0ba6c144e" datatype="html"><source>DOGE</source><target>DOGE</target></trans-unit>
+      <trans-unit id="806c6ccce363f1fdd06d9323210a9248bd7b4b6b" datatype="html"><source>koinu</source><target>koinu</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.historical-price-unavailable" datatype="html"><source>Historical price unavailable</source><target>Историческая цена недоступна</target></trans-unit>
+      <trans-unit id="graphs.blockFees.feesBtc" datatype="html"><source>Fees DOGE</source><target>Комиссии DOGE</target></trans-unit>
+      <trans-unit id="graphs.blockFees.feesFiat" datatype="html"><source>Fees <x id="currency" equiv-text="this.currency"/></source><target>Комиссии <x id="currency" equiv-text="this.currency"/></target></trans-unit>
+      <trans-unit id="graphs.blockFees.avgBlock" datatype="html"><source>* On average around block <x id="block" equiv-text="data[0].data[2]"/></source><target>* В среднем около блока <x id="block" equiv-text="data[0].data[2]"/></target></trans-unit>
+      <trans-unit id="tx-taxi.block-overview-unavailable" datatype="html"><source>Transaction overview unavailable for this block.</source><target>Обзор транзакций для этого блока недоступен.</target></trans-unit>
+      <trans-unit id="c367d621ea109d20c3b45e0b50d80e1f46c7dbce" datatype="html"><source>Based on average legacy transaction of 226 bytes</source><target>На основе средней транзакции старого формата размером 226 байт</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.strip.fees-unavailable" datatype="html"><source>Total transaction fees unavailable</source><target>Общая комиссия транзакций недоступна</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.strip.height-gap-one" datatype="html"><source><x id="count" equiv-text="count"/> blocks between <x id="high" equiv-text="high"/> and <x id="low" equiv-text="low"/></source><target>Между <x id="high" equiv-text="high"/> и <x id="low" equiv-text="low"/> пропущено: <x id="count" equiv-text="count"/></target></trans-unit>
+      <trans-unit id="tx-taxi.doge.strip.height-gap" datatype="html"><source><x id="count" equiv-text="count"/> blocks between <x id="high" equiv-text="high"/> and <x id="low" equiv-text="low"/></source><target>Между <x id="high" equiv-text="high"/> и <x id="low" equiv-text="low"/> пропущено: <x id="count" equiv-text="count"/></target></trans-unit>
+      <trans-unit id="tx-taxi.doge.strip.dashboard" datatype="html"><source>Dogecoin explorer dashboard</source><target>Главная обозревателя Dogecoin</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.strip.display-size" datatype="html"><source>Switch to displaying block sizes</source><target>Показывать размеры блоков</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.strip.display-fees" datatype="html"><source>Switch to displaying total fees per block</source><target>Показывать общие комиссии по блокам</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.strip.newest-right" datatype="html"><source>Switch to displaying newest blocks on the right</source><target>Показывать последние блоки справа</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.strip.newest-left" datatype="html"><source>Switch to displaying newest blocks on the left</source><target>Показывать последние блоки слева</target></trans-unit>
+      <trans-unit id="9ac770e80167f5788ad8be04cfc09d2f0087e204" datatype="html"><source> Values were capped at the calculator’s safe precision limit </source><target> Значения ограничены безопасной точностью калькулятора </target></trans-unit>
+      <trans-unit id="tx-taxi.difficulty.scrypt-mining" datatype="html"><source>Scrypt Mining</source><target>Майнинг Scrypt</target></trans-unit>
+      <trans-unit id="tx-taxi.difficulty.network" datatype="html"><source>network</source><target>сеть</target></trans-unit>
+      <trans-unit id="tx-taxi.difficulty.rewards" datatype="html"><source>rewards</source><target>награды</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.block-interval" datatype="html"><source>Block interval · <x id="INTERPOLATION" equiv-text="{{ (block.timestamp - blocks[1].timestamp) / (block.height - blocks[1].height) | number:'1.0-0' }}"/> s</source><target>Интервал блока · <x id="INTERPOLATION" equiv-text="{{ (block.timestamp - blocks[1].timestamp) / (block.height - blocks[1].height) | number:'1.0-0' }}"/> с</target></trans-unit>
+      <trans-unit id="tx-taxi.difficulty.target-interval" datatype="html"><source>Target interval</source><target>Целевой интервал</target></trans-unit>
+      <trans-unit id="tx-taxi.difficulty.merged-mining" datatype="html"><source>Merged mining</source><target>Объединённый майнинг</target></trans-unit>
+      <trans-unit id="tx-taxi.difficulty.no-halving" datatype="html"><source>No halving</source><target>Без халвинга</target></trans-unit>
+      <trans-unit id="tx-taxi.difficulty.doge-subsidy" datatype="html"><source>DOGE subsidy</source><target>Награда DOGE</target></trans-unit>
+      <trans-unit id="tx-taxi.difficulty.latest-fees" datatype="html"><source>Latest block fees</source><target>Комиссии последнего блока</target></trans-unit>
+      <trans-unit id="tx-taxi.difficulty.not-available-difficulty" datatype="html"><source>Not available</source><target>Недоступно</target></trans-unit>
+      <trans-unit id="tx-taxi.incoming-rate" datatype="html"><source>Incoming rate</source><target>Частота поступления</target></trans-unit>
+      <trans-unit id="tx-taxi.unavailable" datatype="html"><source>Unavailable</source><target>Недоступно</target></trans-unit>
+      <trans-unit id="tx-taxi.feed-cadence" datatype="html"><source>Feed cadence</source><target>Частота обновления</target></trans-unit>
+      <trans-unit id="tx-taxi.seconds-120" datatype="html"><source>120 seconds</source><target>120 секунд</target></trans-unit>
+      <trans-unit id="8c6defd0c344c0ad2386cd4a6d4566f8d91601e5" datatype="html"><source>Estimated hashrate (1d)</source><target>Расчётный хешрейт (1 день)</target></trans-unit>
+      <trans-unit id="ecc54dd307f136f1571fbd194e5f68b663a1154f" datatype="html"><source>Difficulty (daily average)</source><target>Сложность (средняя за день)</target></trans-unit>
+      <trans-unit id="meta.description.bitcoin.graphs.hashrate" datatype="html"><source>See estimated daily Dogecoin hashrate and daily-average difficulty over the latest 30 complete days.</source><target>Расчётный дневной хешрейт и средняя дневная сложность Dogecoin за последние 30 полных дней.</target></trans-unit>
+      <trans-unit id="7010320190145843750" datatype="html"><source>Estimated hashrate</source><target>Расчётный хешрейт</target></trans-unit>
+      <trans-unit id="2351592629129991891" datatype="html"><source>Difficulty (daily average)</source><target>Сложность (средняя за день)</target></trans-unit>
+      <trans-unit id="4562748579639725843" datatype="html"><source>Hashrate (15-day average)</source><target>Хешрейт (средний за 15 дней)</target></trans-unit>
+      <trans-unit id="tx-taxi.pending-title" datatype="html"><source>Pending transactions</source><target>Ожидающие транзакции</target></trans-unit>
+      <trans-unit id="tx-taxi.pending-data-unavailable" datatype="html"><source>Pending data is not available yet.</source><target>Данные ожидающих транзакций пока недоступны.</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.strip.sample-link" datatype="html"><source> Observed pending transactions only; fill represents observed bytes. The expected next-block time is about 1 minute, not a promise of inclusion.</source><target> Только наблюдаемые ожидающие транзакции; заполнение отражает их объём в байтах. Следующий блок ожидается примерно через минуту, но включение транзакции не гарантируется.</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.strip.sample-body" datatype="html"><source>Observed pending transactions; fill shows observed bytes out of the 1 MB block capacity. Timing estimates the next block, not guaranteed inclusion.</source><target>Наблюдаемые ожидающие транзакции; заполнение показывает их объём относительно вместимости блока 1 МБ. Время оценивает следующий блок, а не гарантирует включение.</target></trans-unit>
+      <trans-unit id="5983c6a2299b646b3aecc5795ed51573d7cd235a" datatype="html"><source>The overall luck of all mining pools over the past week. A luck bigger than 100% means the average block time for the current epoch is less than 2.5 minutes.</source><target>Общая удача всех пулов майнинга за последнюю неделю. Удача выше 100% означает, что среднее время блока за текущую эпоху меньше 2,5 минуты.</target></trans-unit>
+      <trans-unit id="a801fe3f17b8dfe256ec628aaa6910a84df6d519" datatype="html"><source>Dogecoin Price</source><target>Цена Dogecoin</target></trans-unit>
+      <trans-unit id="fe3ae146eddf4db4c2d60bdf79b1a8a0210157f0" datatype="html"><source>Maximum fee rate (koinu/B)</source><target>Максимальная ставка комиссии (koinu/B)</target></trans-unit>
+      <trans-unit id="a5c3bb57620832141bf6c51d7344e69af366c7e8" datatype="html"><source><x id="INTERPOLATION" equiv-text='new transactions&lt;/span&gt; &lt;/button&gt;  &lt;div [class.container-xl]="!widget" [cla'/> new transactions</source><target>Новые транзакции: <x id="INTERPOLATION" equiv-text='new transactions&lt;/span&gt; &lt;/button&gt;  &lt;div [class.container-xl]="!widget" [cla'/></target></trans-unit>
+      <trans-unit id="meta.description.recent-transactions" datatype="html"><source>See the most recent transactions on the Dogecoin<x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)"/> network, updated in real-time.</source><target>Последние транзакции сети Dogecoin<x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)"/> с обновлением в реальном времени.</target></trans-unit>
+      <trans-unit id="494659c51693e937884c9a0ddbd588d2ff4563dc" datatype="html"><source>DOGE/block</source><target>DOGE/блок</target></trans-unit>
+      <trans-unit id="055c54ed5f836870d20d1b85c45c56d9864d7281" datatype="html"><source>koinu/tx</source><target>koinu/tx</target></trans-unit>
+      <trans-unit id="tx-taxi.search.hub-new-tab" datatype="html"><source>Open tx.taxi in a new tab</source><target>Открыть tx.taxi в новой вкладке</target></trans-unit>
+      <trans-unit id="tx-taxi.search.direct-hint" datatype="html"><source>Or go straight to</source><target>Или сразу перейти к</target></trans-unit>
+      <trans-unit id="tx-taxi.search.open-explorer" datatype="html"><source>Open <x id="name" equiv-text="name"/></source><target>Открыть <x id="name" equiv-text="name"/></target></trans-unit>
+      <trans-unit id="tx-taxi.search.open-new-tab" datatype="html"><source>Open <x id="name" equiv-text="name"/> in a new tab</source><target>Открыть <x id="name" equiv-text="name"/> в новой вкладке</target></trans-unit>
+      <trans-unit id="tx-taxi.search.switch-explorer" datatype="html"><source>Switch to <x id="name" equiv-text="name"/></source><target>Перейти к <x id="name" equiv-text="name"/></target></trans-unit>
+      <trans-unit id="tx-taxi.search.additional-explorers" datatype="html"><source><x id="name" equiv-text="name"/> additional explorers</source><target>Другие обозреватели <x id="name" equiv-text="name"/></target></trans-unit>
+      <trans-unit id="tx-taxi.search.hide-one" datatype="html"><source>Hide <x id="count" equiv-text="count"/> additional <x id="name" equiv-text="name"/> option</source><target>Скрыть дополнительные варианты <x id="name" equiv-text="name"/>: <x id="count" equiv-text="count"/></target></trans-unit>
+      <trans-unit id="tx-taxi.search.hide-many" datatype="html"><source>Hide <x id="count" equiv-text="count"/> additional <x id="name" equiv-text="name"/> options</source><target>Скрыть дополнительные варианты <x id="name" equiv-text="name"/>: <x id="count" equiv-text="count"/></target></trans-unit>
+      <trans-unit id="tx-taxi.search.show-one" datatype="html"><source>Show <x id="count" equiv-text="count"/> additional <x id="name" equiv-text="name"/> option</source><target>Показать дополнительные варианты <x id="name" equiv-text="name"/>: <x id="count" equiv-text="count"/></target></trans-unit>
+      <trans-unit id="tx-taxi.search.show-many" datatype="html"><source>Show <x id="count" equiv-text="count"/> additional <x id="name" equiv-text="name"/> options</source><target>Показать дополнительные варианты <x id="name" equiv-text="name"/>: <x id="count" equiv-text="count"/></target></trans-unit>
+      <trans-unit id="73b176feaf76de1c430603d4d34819b69d84b953" datatype="html"><source>Mempool by bytes (koinu/Byte)</source><target>Мемпул по байтам (koinu/байт)</target></trans-unit>
+      <trans-unit id="bded26fa86be9eac71bc27b9ca6d652b340b24d2" datatype="html"><source>Transaction bytes per second (B/s)</source><target>Байты транзакций в секунду (Б/с)</target></trans-unit>
+      <trans-unit id="af6627251e98f2ee627f2f8c84f135b65c3fffee" datatype="html"><source>This transaction belongs to a chunk of 1 transaction, with combined effective fee rate <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/><x id="INTERPOLATION" equiv-text="s.chunkFeerate | feeRounding }}"/> koinu/B<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/>.</source><target>Транзакция входит в группу из 1 транзакции с общей эффективной ставкой комиссии <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/><x id="INTERPOLATION" equiv-text="s.chunkFeerate | feeRounding }}"/> koinu/B<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/>.</target></trans-unit>
+      <trans-unit id="ae0a475bfce03fadb87c9090e64081a9310beea2" datatype="html"><source>This transaction belongs to a chunk of <x id="INTERPOLATION" equiv-text="{{ clusterPreviewStats.chunkSize }}"/> transactions, with combined effective fee rate <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/><x id="INTERPOLATION_1" equiv-text="s.chunkFeerate | feeRounding }}"/> koinu/B<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/>.</source><target>Транзакция входит в группу из <x id="INTERPOLATION" equiv-text="{{ clusterPreviewStats.chunkSize }}"/> транзакций с общей эффективной ставкой комиссии <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/><x id="INTERPOLATION_1" equiv-text="s.chunkFeerate | feeRounding }}"/> koinu/B<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/>.</target></trans-unit>
+      <trans-unit id="acf9470007b6c76f037bf8aec23fc8d2ba2267a4" datatype="html"><source>In a mempool cluster containing <x id="INTERPOLATION" equiv-text="{{ clusterPreviewStats.otherChunks }}"/> other chunks.</source><target>В кластере мемпула с другими группами: <x id="INTERPOLATION" equiv-text="{{ clusterPreviewStats.otherChunks }}"/>.</target></trans-unit>
+      <trans-unit id="719f62092a6b4142d8fa32d09bb8a72d9e613aa7" datatype="html"><source>Only ~<x id="INTERPOLATION" equiv-text="{{ medianFeeNeeded | feeRounding }}"/> koinu/B was needed to get into this block</source><target>Для попадания в этот блок требовалось всего ~<x id="INTERPOLATION" equiv-text="{{ medianFeeNeeded | feeRounding }}"/> koinu/B</target></trans-unit>
+      <trans-unit id="tx-taxi.view-pending" datatype="html"><source>View pending transactions</source><target>Просмотреть ожидающие транзакции</target></trans-unit>
+      <trans-unit id="tx-taxi.not-available" datatype="html"><source>Not available</source><target>Недоступно</target></trans-unit>
+      <trans-unit id="c19bde6e194e95b60145a4e312fc31941197d90c" datatype="html"><source>LBTC Supply vs. BTC Holdings</source><target>Предложение LBTC и резервы BTC</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.strip.details" datatype="html"><source>Total fees: <x id="amount" equiv-text="amount"/> <x id="symbol" equiv-text="SYMBOL"/>. Median fee rate: <x id="median" equiv-text="middle"/> <x id="unit" equiv-text="FEE_UNIT"/>. Fee range: <x id="min" equiv-text="low"/>–<x id="max" equiv-text="high"/> <x id="unit2" equiv-text="FEE_UNIT"/>.</source><target>Общие комиссии: <x id="amount" equiv-text="amount"/> <x id="symbol" equiv-text="SYMBOL"/>. Медианная ставка: <x id="median" equiv-text="middle"/> <x id="unit" equiv-text="FEE_UNIT"/>. Диапазон ставок: <x id="min" equiv-text="low"/>–<x id="max" equiv-text="high"/> <x id="unit2" equiv-text="FEE_UNIT"/>.</target></trans-unit>
+      <trans-unit id="tx-taxi.global.tagline" datatype="html"><source>Dogecoin blocks, fees, and mempool activity</source><target>Блоки, комиссии и активность мемпула Dogecoin</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.miner.logo" datatype="html"><source>Logo of <x id="NAME" equiv-text="this.name"/> mining pool</source><target>Логотип пула майнинга <x id="NAME" equiv-text="this.name"/></target></trans-unit>
+      <trans-unit id="tx-taxi.doge.redirect.title" datatype="html"><source>Continue to <x id="INTERPOLATION" equiv-text="{{chain}}"/></source><target>Перейти к <x id="INTERPOLATION" equiv-text="{{chain}}"/></target></trans-unit>
+      <trans-unit id="tx-taxi.doge.intro.open-native" datatype="html"><source>Explore <x id="INTERPOLATION" equiv-text="{{ chainName }}"/></source><target>Открыть <x id="INTERPOLATION" equiv-text="{{ chainName }}"/></target></trans-unit>
+      <trans-unit id="tx-taxi.about.project-links" datatype="html"><source>Project links</source><target>Ссылки проекта</target></trans-unit>
+      <trans-unit id="6693ca41dea3f8a2b1747ba08e3f780c52d074bf" datatype="html"><source>Using partner code</source><target>Использование партнёрского кода</target></trans-unit>
+      <trans-unit id="tx-taxi.internal-key" datatype="html"><source>Internal Key</source><target>Внутренний ключ</target></trans-unit>
+      <trans-unit id="graphs.blockFeesSubsidy.subsidy" datatype="html"><source>Subsidy</source><target>Награда</target></trans-unit>
+      <trans-unit id="graphs.blockFeesSubsidy.subsidyUsd" datatype="html"><source>Subsidy (USD)</source><target>Награда (USD)</target></trans-unit>
+      <trans-unit id="graphs.blockFeesSubsidy.feesUsd" datatype="html"><source>Fees (USD)</source><target>Комиссии (USD)</target></trans-unit>
+      <trans-unit id="graphs.blockFeesSubsidy.subsidyPercent" datatype="html"><source>Subsidy (%)</source><target>Награда (%)</target></trans-unit>
+      <trans-unit id="graphs.blockFeesSubsidy.feesPercent" datatype="html"><source>Fees (%)</source><target>Комиссии (%)</target></trans-unit>
+      <trans-unit id="e0f4283c19259f2bd53940324cb490f797b9aae4" datatype="html"><source>select filter categories to highlight matching pending transactions</source><target>Выберите категории фильтра, чтобы выделить подходящие ожидающие транзакции</target></trans-unit>
+      <trans-unit id="tx-taxi.clipboard.copy-label" datatype="html"><source>Copy to clipboard</source><target>Скопировать в буфер обмена</target></trans-unit>
+      <trans-unit id="tx-taxi.clipboard.copied-label" datatype="html"><source>Copied to clipboard</source><target>Скопировано в буфер обмена</target></trans-unit>
+      <trans-unit id="tx-taxi.clipboard.copy-title" datatype="html"><source>Copy</source><target>Копировать</target></trans-unit>
+      <trans-unit id="tx-taxi.clipboard.copied-title" datatype="html"><source>Copied</source><target>Скопировано</target></trans-unit>
+      <trans-unit id="1cdb643999eb6d66bcd839aeaa381b62b8be8cd4" datatype="html"><source>mempool chunk</source><target>группа мемпула</target></trans-unit>
+      <trans-unit id="36028650a60cba9aa7f034ae34643c72f5364f1d" datatype="html"><source>this transaction</source><target>эта транзакция</target></trans-unit>
+      <trans-unit id="1eb8a98f68c1c98884c6436650f5ad80f4b3d5bf" datatype="html"><source>parents</source><target>родительские</target></trans-unit>
+      <trans-unit id="94c4e242e055d9521e1a0bfc7f1d165bbb37b94a" datatype="html"><source>children</source><target>дочерние</target></trans-unit>
+      <trans-unit id="d1ca10f0337c02e631f15b7da5d57dddc1954704" datatype="html"><source>parent</source><target>родительская</target></trans-unit>
+      <trans-unit id="016d2ff8ad4b04f08717b98b5bc61eb122fb1ac8" datatype="html"><source>child</source><target>дочерняя</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.redirect.body" datatype="html"><source>You are leaving the Dogecoin explorer.</source><target>Вы покидаете обозреватель Dogecoin.</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.redirect.remember" datatype="html"><source>Never ask again when leaving Dogecoin</source><target>Больше не спрашивать при выходе из Dogecoin</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.redirect.continue" datatype="html"><source>Continue</source><target>Продолжить</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.redirect.back" datatype="html"><source>Back to Dogecoin</source><target>Вернуться к Dogecoin</target></trans-unit>
+      <trans-unit id="tx-taxi.custom-dashboard.pending" datatype="html"><source>Pending Transactions</source><target>Ожидающие транзакции</target></trans-unit>
+      <trans-unit id="tx-taxi.eight-blocks.by" datatype="html"><source>by</source><target>от</target></trans-unit>
+      <trans-unit id="4ce06818b8fe60a7c040ce7bfecc10b11397401b" datatype="html"><source>24h Volume</source><target>Объём за 24 ч</target></trans-unit>
+      <trans-unit id="7729adad4cbe5f490e393a925fae8a9b90f8ac08" datatype="html"><source>Reserve Deficit</source><target>Дефицит резервов</target></trans-unit>
+      <trans-unit id="489277af67abab02f1de98f4a7930fc611471eda" datatype="html"><source>occurrence</source><target>случай</target></trans-unit>
+      <trans-unit id="850e39efd95e6090598e13a01b7825f6b71b1017" datatype="html"><source>occurrences</source><target>случаи</target></trans-unit>
+      <trans-unit id="57d63f33e6e6f3d4716fab5381cff30d517d5c4e" datatype="html"><source>usages</source><target>использований</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.logo-alt" datatype="html"><source>doge.tx.taxi Dogecoin explorer</source><target>Обозреватель Dogecoin doge.tx.taxi</target></trans-unit>
+      <trans-unit id="6d1c8856044cc923fc70f32cb4be360d200cfa82" datatype="html"><source>1 new transaction</source><target>1 новая транзакция</target></trans-unit>
+      <trans-unit id="487bebf9352332c5e7f5bd00a78371cacff0fd95" datatype="html"><source>Pause/Resume</source><target>Пауза / продолжить</target></trans-unit>
+      <trans-unit id="88f27d579752fd40ef53cfff5e936c293ca19221" datatype="html"><source>Pause/Resume</source><target>Пауза / продолжить</target></trans-unit>
+      <trans-unit id="bba7a55b8bcbfd50a697f8cf0a7b917836f453f0" datatype="html"><source>vSize</source><target>Виртуальный размер</target></trans-unit>
+      <trans-unit id="tx-taxi.search.choose-chain" datatype="html"><source>Choose search chain</source><target>Выбрать блокчейн для поиска</target></trans-unit>
+      <trans-unit id="tx-taxi.search.selected-explorer" datatype="html"><source>Selected explorer</source><target>Выбранный обозреватель</target></trans-unit>
+      <trans-unit id="tx-taxi.global.selected" datatype="html"><source>SELECTED</source><target>ВЫБРАНО</target></trans-unit>
+      <trans-unit id="tx-taxi.global.automatic-routing" datatype="html"><source>Automatic Routing</source><target>Автоматическая маршрутизация</target></trans-unit>
+      <trans-unit id="tx-taxi.global.view-hub" datatype="html"><source>View Hub</source><target>Открыть главную</target></trans-unit>
+      <trans-unit id="tx-taxi.global.native" datatype="html"><source>NATIVE EXPLORERS</source><target>НАШИ ОБОЗРЕВАТЕЛИ</target></trans-unit>
+      <trans-unit id="tx-taxi.search.registry-unavailable" datatype="html"><source>Explorer registry unavailable</source><target>Реестр обозревателей недоступен</target></trans-unit>
+      <trans-unit id="tx-taxi.global.thirdparty" datatype="html"><source>3RD-PARTY EXPLORERS</source><target>СТОРОННИЕ ОБОЗРЕВАТЕЛИ</target></trans-unit>
+      <trans-unit id="tx-taxi.global.opened" datatype="html"><source>Opened</source><target>Открыто</target></trans-unit>
+      <trans-unit id="tx-taxi.search.switch" datatype="html"><source>Switch</source><target>Перейти</target></trans-unit>
+      <trans-unit id="tx-taxi.global.loading-explorers" datatype="html"><source>Loading explorers</source><target>Загрузка обозревателей</target></trans-unit>
+      <trans-unit id="tx-taxi.search.found" datatype="html"><source>Found</source><target>Найдено</target></trans-unit>
+      <trans-unit id="tx-taxi.search.possible" datatype="html"><source>Possible</source><target>Возможно</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.search-icon-alt" datatype="html"><source>Dogecoin explorer</source><target>Обозреватель Dogecoin</target></trans-unit>
+      <trans-unit id="tx-taxi.global.search-placeholder" datatype="html"><source>Wave a taxi, paste anything here.</source><target>Вызовите такси — вставьте сюда что угодно.</target></trans-unit>
+      <trans-unit id="c7678f3be45eefaebe9bda75a0a30f97204433b5" datatype="html"><source>In a mempool cluster containing 1 other chunk.</source><target>В кластере мемпула с одной другой группой.</target></trans-unit>
+      <trans-unit id="tx-taxi.missing-prevouts" datatype="html"><source>Missing prevouts are not loaded. Some fields like fee rate cannot be calculated.</source><target>Отсутствующие предыдущие выходы не загружены. Некоторые поля, например ставка комиссии, вычислить невозможно.</target></trans-unit>
+      <trans-unit id="tx-taxi.prevouts-error" datatype="html"><source>Error loading missing prevouts</source><target>Не удалось загрузить отсутствующие предыдущие выходы</target></trans-unit>
+      <trans-unit id="tx-taxi.cpfp-error" datatype="html"><source>Error loading CPFP data</source><target>Не удалось загрузить данные CPFP</target></trans-unit>
+      <trans-unit id="92626adb4b7e2aff0d35c2db5e023aac29d27f0f" datatype="html"><source>Cluster</source><target>Кластер</target></trans-unit>
+      <trans-unit id="tx-taxi.pending-transactions" datatype="html"><source>Pending Transactions</source><target>Ожидающие транзакции</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.faq.unit-equivalence" datatype="html"><source>1 DOGE = 100,000,000 koinu.</source><target>1 DOGE = 100 000 000 koinu.</target></trans-unit>
+      <trans-unit id="tx-taxi.global.dashboard" datatype="html"><source>Dashboard</source><target>Главная</target></trans-unit>
+      <trans-unit id="tx-taxi.global.tools-docs" datatype="html"><source>Tools &amp; Docs</source><target>Инструменты и документация</target></trans-unit>
+      <trans-unit id="tx-taxi.global.source-code" datatype="html"><source>Source code</source><target>Исходный код</target></trans-unit>
+      <trans-unit id="tx-taxi.global.contact" datatype="html"><source>Contact Us</source><target>Связаться с нами</target></trans-unit>
+      <trans-unit id="tx-taxi.global.trademark" datatype="html"><source>Trademark &amp; Attribution</source><target>Товарные знаки и авторство</target></trans-unit>
+      <trans-unit id="c3c520c2bccb5da8e432dd5f282a72b05e12b7e0" datatype="html"><source>Your balance is too low.</source><target>Недостаточный баланс.</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.miner.unknown-logo" datatype="html"><source>Mining pool logo</source><target>Логотип майнинг-пула</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.intro.aria" datatype="html"><source>About tx.taxi</source><target>О tx.taxi</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.intro.documentation" datatype="html"><source>documentation</source><target>документация</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.intro.explorer" datatype="html"><source>explorer</source><target>обозреватель</target></trans-unit>
+      <trans-unit id="taxi.timezone.minus12" datatype="html"><source>Anywhere on Earth (AoE)</source><target>Время в любой точке Земли (AoE)</target></trans-unit>
+      <trans-unit id="taxi.timezone.minus11" datatype="html"><source>Samoa Standard Time (SST)</source><target>Стандартное время Самоа (SST)</target></trans-unit>
+      <trans-unit id="taxi.timezone.minus10" datatype="html"><source>Hawaii Standard Time (HST)</source><target>Гавайское стандартное время (HST)</target></trans-unit>
+      <trans-unit id="taxi.timezone.minus9" datatype="html"><source>Alaska Standard Time (AKST)</source><target>Стандартное время Аляски (AKST)</target></trans-unit>
+      <trans-unit id="taxi.timezone.minus8" datatype="html"><source>Pacific Standard Time (PST)</source><target>Тихоокеанское стандартное время (PST)</target></trans-unit>
+      <trans-unit id="taxi.timezone.minus7" datatype="html"><source>Mountain Standard Time (MST)</source><target>Горное стандартное время (MST)</target></trans-unit>
+      <trans-unit id="taxi.timezone.minus6" datatype="html"><source>Central Standard Time (CST)</source><target>Центральное стандартное время (CST)</target></trans-unit>
+      <trans-unit id="taxi.timezone.minus5" datatype="html"><source>Eastern Standard Time (EST)</source><target>Восточное стандартное время (EST)</target></trans-unit>
+      <trans-unit id="taxi.timezone.minus4" datatype="html"><source>Atlantic Standard Time (AST)</source><target>Атлантическое стандартное время (AST)</target></trans-unit>
+      <trans-unit id="taxi.timezone.minus3" datatype="html"><source>Argentina Time (ART)</source><target>Время Аргентины (ART)</target></trans-unit>
+      <trans-unit id="taxi.timezone.minus2" datatype="html"><source>Fernando de Noronha Time (FNT)</source><target>Время Фернанду-ди-Норонья (FNT)</target></trans-unit>
+      <trans-unit id="taxi.timezone.minus1" datatype="html"><source>Azores Time (AZOT)</source><target>Время Азорских островов (AZOT)</target></trans-unit>
+      <trans-unit id="taxi.timezone.plus0" datatype="html"><source>Greenwich Mean Time (GMT)</source><target>Время по Гринвичу (GMT)</target></trans-unit>
+      <trans-unit id="taxi.timezone.plus1" datatype="html"><source>Central European Time (CET)</source><target>Центральноевропейское время (CET)</target></trans-unit>
+      <trans-unit id="taxi.timezone.plus2" datatype="html"><source>Eastern European Time (EET)</source><target>Восточноевропейское время (EET)</target></trans-unit>
+      <trans-unit id="taxi.timezone.plus3" datatype="html"><source>Moscow Standard Time (MSK)</source><target>Московское стандартное время (MSK)</target></trans-unit>
+      <trans-unit id="taxi.timezone.plus4" datatype="html"><source>Armenia Time (AMT)</source><target>Время Армении (AMT)</target></trans-unit>
+      <trans-unit id="taxi.timezone.plus5" datatype="html"><source>Pakistan Standard Time (PKT)</source><target>Стандартное время Пакистана (PKT)</target></trans-unit>
+      <trans-unit id="taxi.timezone.plus6" datatype="html"><source>Xinjiang Time (XJT)</source><target>Время Синьцзяна (XJT)</target></trans-unit>
+      <trans-unit id="taxi.timezone.plus7" datatype="html"><source>Indochina Time (ICT)</source><target>Время Индокитая (ICT)</target></trans-unit>
+      <trans-unit id="taxi.timezone.plus8" datatype="html"><source>Hong Kong Time (HKT)</source><target>Время Гонконга (HKT)</target></trans-unit>
+      <trans-unit id="taxi.timezone.plus9" datatype="html"><source>Japan Standard Time (JST)</source><target>Японское стандартное время (JST)</target></trans-unit>
+      <trans-unit id="taxi.timezone.plus10" datatype="html"><source>Australian Eastern Standard Time (AEST)</source><target>Восточное стандартное время Австралии (AEST)</target></trans-unit>
+      <trans-unit id="taxi.timezone.plus11" datatype="html"><source>Norfolk Time (NFT)</source><target>Время Норфолка (NFT)</target></trans-unit>
+      <trans-unit id="taxi.timezone.plus12" datatype="html"><source>New Zealand Standard Time (NZST)</source><target>Стандартное время Новой Зеландии (NZST)</target></trans-unit>
+      <trans-unit id="taxi.timezone.plus13" datatype="html"><source>Tonga Time (TOT)</source><target>Время Тонги (TOT)</target></trans-unit>
+      <trans-unit id="taxi.timezone.plus14" datatype="html"><source>Line Islands Time (LINT)</source><target>Время островов Лайн (LINT)</target></trans-unit>
     </body>
   </file>
 </xliff>
