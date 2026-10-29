@@ -11874,6 +11874,10 @@
       <trans-unit id="tx-taxi.doge.intro.explorer" datatype="html"><source>explorer</source><target>esploratore</target></trans-unit>
       <trans-unit id="tx-taxi.doge.intro.open-native" datatype="html"><source>Explore <x id="INTERPOLATION" equiv-text="{{ chainName }}"/></source><target>Esplora <x id="INTERPOLATION" equiv-text="{{ chainName }}"/></target></trans-unit>
       <trans-unit id="tx-taxi.doge.faq.unit-equivalence" datatype="html"><source>1 DOGE = 100,000,000 koinu.</source><target>1 DOGE = 100.000.000 koinu.</target></trans-unit>
+      <trans-unit id="tx-taxi.clipboard.copy-label" datatype="html"><source>Copy to clipboard</source><target>Copia negli appunti</target></trans-unit>
+      <trans-unit id="tx-taxi.clipboard.copied-label" datatype="html"><source>Copied to clipboard</source><target>Copiato negli appunti</target></trans-unit>
+      <trans-unit id="tx-taxi.clipboard.copy-title" datatype="html"><source>Copy</source><target>Copia</target></trans-unit>
+      <trans-unit id="tx-taxi.clipboard.copied-title" datatype="html"><source>Copied</source><target>Copiato</target></trans-unit>
     </body>
   </file>
 </xliff>
