@@ -4495,7 +4495,7 @@
       </trans-unit>
       <trans-unit id="cf8caac4de0166eae6cd0fdfd010ee92b995cd96" datatype="html">
         <source>Calculator</source>
-        <target>Hesap Makinası</target>
+        <target>Hesap Makinesi</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/calculator/calculator.component.html</context>
           <context context-type="linenumber">3</context>
@@ -8827,7 +8827,7 @@
       </trans-unit>
       <trans-unit id="fcfd4675b4c90f08d18d3abede9a9a4dff4cfdc7" datatype="html">
         <source>Documentation</source>
-        <target>Dökümentasyon</target>
+        <target>Dokümantasyon</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/docs/docs/docs.component.html</context>
           <context context-type="linenumber">4</context>
@@ -11058,7 +11058,7 @@
       </trans-unit>
       <trans-unit id="1cd6dc07ed789f4013d299b031200224977cbb8b" datatype="html">
         <source>API Documentation</source>
-        <target>API Dokümentasyonu</target>
+        <target>API Dokümantasyonu</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/components/global-footer/global-footer.component.html</context>
           <context context-type="linenumber">81</context>
@@ -11487,10 +11487,10 @@
         <target>Yakın Zamanlı Bloklar</target>
       </trans-unit>
       <trans-unit id="tx-taxi.global.calculator" datatype="html"><source>Calculator</source>
-        <target>Hesap Makinası</target>
+        <target>Hesap Makinesi</target>
       </trans-unit>
       <trans-unit id="tx-taxi.global.api-docs" datatype="html"><source>API Documentation</source>
-        <target>API Dokümentasyonu</target>
+        <target>API Dokümantasyonu</target>
       </trans-unit>
       <trans-unit id="tx-taxi.global.about" datatype="html"><source>About</source>
         <target>Hakkında</target>
@@ -11509,7 +11509,7 @@
       </trans-unit>
       <trans-unit id="tx-taxi.eight-blocks.unknown" datatype="html"><source>Unknown</source><target>Bilinmiyor</target></trans-unit>
       <trans-unit id="tx-taxi.doge.hashrate-difficulty" datatype="html"><source>Hashrate &amp; Difficulty</source><target>Hashrate ve Zorluk</target></trans-unit>
-      <trans-unit id="tx-taxi.doge.nav.6" datatype="html"><source>Documentation</source><target>Dökümentasyon</target></trans-unit>
+      <trans-unit id="tx-taxi.doge.nav.6" datatype="html"><source>Documentation</source><target>Dokümantasyon</target></trans-unit>
       <trans-unit id="tx-taxi.doge.mining-pools" datatype="html"><source>Mining Pools</source><target>Madencilik havuzları</target></trans-unit>
       <trans-unit id="tx-taxi.doge.legal.1" datatype="html"><source>Privacy Policy</source><target>Gizlilik politikası</target></trans-unit>
       <trans-unit id="tx-taxi.doge.legal.meta.title.1" datatype="html"><source>Privacy Policy</source><target>Gizlilik politikası</target></trans-unit>
