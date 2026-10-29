@@ -8132,7 +8132,7 @@
       </trans-unit>
       <trans-unit id="81f138da4f955badade9fb60e0e2248627fc647f" datatype="html">
         <source>Inscription</source>
-        <target>Inscription</target>
+        <target>Инскрипция</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/transactions-list/transactions-list.component.html</context>
           <context context-type="linenumber">123</context>
@@ -10983,7 +10983,7 @@
       </trans-unit>
       <trans-unit id="40966c5744cc46092c2ae9dee1957e15c1faef4d" datatype="html">
         <source>bare multisig</source>
-        <target>bare multisig</target>
+        <target>мультиподпись без оболочки</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/components/address-type/address-type.component.html</context>
           <context context-type="linenumber">21</context>
@@ -11542,7 +11542,7 @@
       <trans-unit id="tx-taxi.doge.docs.description" datatype="html"><source>Description</source><target>Описание</target></trans-unit>
       <trans-unit id="tx-taxi.doge.docs.category.3" datatype="html"><source>blocks</source><target>блоки</target></trans-unit>
       <trans-unit id="tx-taxi.doge.docs.category.5" datatype="html"><source>addresses</source><target>адреса</target></trans-unit>
-      <trans-unit id="taxi.filter.inscription" datatype="html"><source>Inscription</source><target>Inscription</target></trans-unit>
+      <trans-unit id="taxi.filter.inscription" datatype="html"><source>Inscription</source><target>Инскрипция</target></trans-unit>
       <trans-unit id="tx-taxi.doge.about.1" datatype="html"><source>About doge.tx.taxi</source><target>О doge.tx.taxi</target></trans-unit>
       <trans-unit id="tx-taxi.doge.about.2" datatype="html"><source>The Dogecoin explorer in the tx.taxi family.</source><target>Обозреватель Dogecoin в семействе tx.taxi.</target></trans-unit>
       <trans-unit id="tx-taxi.doge.about.3" datatype="html"><source>Dogecoin documentation</source><target>Документация Dogecoin</target></trans-unit>
