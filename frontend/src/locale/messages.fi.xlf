@@ -4649,7 +4649,7 @@
       </trans-unit>
       <trans-unit id="4fe744df6d36b5e9b0afab728b77fc635b99f040" datatype="html">
         <source>Recent Replacements</source>
-        <target>Viimeaikaiset korvikkeet</target>
+        <target>Viimeisimmät korvaavat transaktiot</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/custom-dashboard/custom-dashboard.component.html</context>
           <context context-type="linenumber">100</context>
@@ -10994,7 +10994,7 @@
       </trans-unit>
       <trans-unit id="8e623d3cfecb7c560c114390db53c1f430ffd0de" datatype="html">
         <source><x id="INTERPOLATION" equiv-text="{{ i }}"/> confirmation</source>
-        <target><x id="INTERPOLATION" equiv-text="{{ i }}"/>  varmenne</target>
+        <target><x id="INTERPOLATION" equiv-text="{{ i }}"/> vahvistus</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/components/confirmations/confirmations.component.html</context>
           <context context-type="linenumber">4</context>
@@ -11004,7 +11004,7 @@
       </trans-unit>
       <trans-unit id="bc5b0a2631f0b7bc71aaec6aa6f01af21f9a80d4" datatype="html">
         <source><x id="INTERPOLATION" equiv-text="{{ i }}"/> confirmations</source>
-        <target><x id="INTERPOLATION" equiv-text="{{ i }}"/> varmennetta</target>
+        <target><x id="INTERPOLATION" equiv-text="{{ i }}"/> vahvistusta</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/components/confirmations/confirmations.component.html</context>
           <context context-type="linenumber">5</context>
