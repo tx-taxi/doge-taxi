@@ -3150,8 +3150,8 @@
         <note priority="1" from="description">mining.blocks-health</note>
       </trans-unit>
       <trans-unit id="meta.description.bitcoin.graphs.block-health" datatype="html">
-        <source>See Bitcoin block health visualized over time. Block health is a measure of how many expected transactions were included in an actual mined block. Expected transactions are determined using Mempool's re-implementation of Bitcoin Core's transaction selection algorithm.</source>
-        <target>Bitcoin blok sağlığını zaman içinde görüntüle. Blok sağlığı beklenen işlemlerin kaçının gerçekten bloğa dahil edildiğinin ölçüsüdür. Beklenen işlemler Mempool'un çalıştırdığı Bitcoin Core işlem seçme algoritması ile belirlenir.</target>
+        <source>See Dogecoin block health visualized over time.</source>
+        <target>Dogecoin blok sağlığının zaman içindeki değişimini görüntüleyin.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/block-health-graph/block-health-graph.component.ts</context>
           <context context-type="linenumber">65</context>
@@ -5514,7 +5514,7 @@
         </context-group>
       </trans-unit>
       <trans-unit id="meta.descriptions.bitcoin.graphs.hashrate-pools" datatype="html">
-        <source>See Bitcoin mining pool dominance visualized over time: see how top mining pools' share of total hashrate has fluctuated over time.</source>
+        <source>See Dogecoin mining pool dominance visualized over time: see how top mining pools' share of total hashrate has fluctuated over time.</source>
         <target>Madencilik havuzu dominasyonunu değişimini zaman içinde gör : en büyük madencilik havuzlarının toplam havuzdan aldığı payın değişimini incele.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/hashrates-chart-pools/hashrate-chart-pools.component.ts</context>
@@ -5974,8 +5974,8 @@
         <note priority="1" from="description">shared.as-of-block</note>
       </trans-unit>
       <trans-unit id="meta.description.mempool-block" datatype="html">
-        <source>See stats for <x id="PH" equiv-text="this.stateService.network==='liquid'||this.stateService.network==='liquidtestnet'?'Liquid':'Bitcoin'" /><x id="PH_1" equiv-text="seoDescriptionNetwork(this.stateService.network)" /> transactions in the mempool: fee range, aggregate size, and more. Mempool blocks are updated in real-time as the network receives new transactions.</source>
-        <target>İşlemler <x id="PH" equiv-text="this.stateService.network==='liquid'||this.stateService.network==='liquidtestnet'?'Liquid':'Bitcoin'" /><x id="PH_1" equiv-text="seoDescriptionNetwork(this.stateService.network)" /> için mempool istatistiklerini göster: ücret aralığı, toplam büyüklük, ve fazlasını gör. Mempool blokları, ağa yeni işlem geldiğinde anlık olarak güncellenir. </target>
+        <source>See stats for <x id="PH" equiv-text="this.stateService.network==='liquid'||this.stateService.network==='liquidtestnet'?'Liquid':'Dogecoin'" /><x id="PH_1" equiv-text="seoDescriptionNetwork(this.stateService.network)" /> transactions in the mempool: fee range, aggregate size, and more. Mempool blocks are updated in real-time as the network receives new transactions.</source>
+        <target>İşlemler <x id="PH" equiv-text="this.stateService.network==='liquid'||this.stateService.network==='liquidtestnet'?'Liquid':'Dogecoin'" /><x id="PH_1" equiv-text="seoDescriptionNetwork(this.stateService.network)" /> için mempool istatistiklerini göster: ücret aralığı, toplam büyüklük, ve fazlasını gör. Mempool blokları, ağa yeni işlem geldiğinde anlık olarak güncellenir. </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/mempool-block/mempool-block.component.ts</context>
           <context context-type="linenumber">61</context>
@@ -6328,7 +6328,7 @@
         </context-group>
       </trans-unit>
       <trans-unit id="meta.description.bitcoin.graphs.pool-ranking" datatype="html">
-        <source>See the top Bitcoin mining pools ranked by number of blocks mined, over your desired timeframe.</source>
+        <source>See the top Dogecoin mining pools ranked by number of blocks mined, over your desired timeframe.</source>
         <target>Belli bir süre içerisinde blok bulma sayısına göre havuzları listele.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/pool-ranking/pool-ranking.component.ts</context>
@@ -6809,8 +6809,8 @@
         <note priority="1" from="description">test-tx.rejection-reason</note>
       </trans-unit>
       <trans-unit id="meta.description.push-tx" datatype="html">
-        <source>Broadcast a transaction to the <x id="PH" equiv-text="this.stateService.network==='liquid'||this.stateService.network==='liquidtestnet'?'Liquid':'Bitcoin'" /><x id="PH_1" equiv-text="seoDescriptionNetwork(this.stateService.network)" /> network using the transaction's hash.</source>
-        <target>İşlem hashini kullanarak, işlemi <x id="PH" equiv-text="this.stateService.network==='liquid'||this.stateService.network==='liquidtestnet'?'Liquid':'Bitcoin'" /><x id="PH_1" equiv-text="seoDescriptionNetwork(this.stateService.network)" /> ağına yayınla.</target>
+        <source>Broadcast a transaction to the <x id="PH" equiv-text="this.stateService.network==='liquid'||this.stateService.network==='liquidtestnet'?'Liquid':'Dogecoin'" /><x id="PH_1" equiv-text="seoDescriptionNetwork(this.stateService.network)" /> network using the transaction's hash.</source>
+        <target>İşlem hashini kullanarak, işlemi <x id="PH" equiv-text="this.stateService.network==='liquid'||this.stateService.network==='liquidtestnet'?'Liquid':'Dogecoin'" /><x id="PH_1" equiv-text="seoDescriptionNetwork(this.stateService.network)" /> ağına yayınla.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/push-transaction/push-transaction.component.ts</context>
           <context context-type="linenumber">59</context>
@@ -6839,8 +6839,8 @@
         <note priority="1" from="description">rbf.no-replacements-yet</note>
       </trans-unit>
       <trans-unit id="meta.description.rbf-list" datatype="html">
-        <source>See the most recent RBF replacements on the Bitcoin<x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)" /> network, updated in real-time.</source>
-        <target>Bitcoin <x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)" /> ağı üzerindeki en yeni RBF değişimlerini gerçek zamanlı olarak görüntüle.</target>
+        <source>See the most recent RBF replacements on the Dogecoin<x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)" /> network, updated in real-time.</source>
+        <target>Dogecoin <x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)" /> ağı üzerindeki en yeni RBF değişimlerini gerçek zamanlı olarak görüntüle.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/rbf-list/rbf-list.component.ts</context>
           <context context-type="linenumber">63</context>
@@ -7276,8 +7276,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="meta.description.stale-chain-tips" datatype="html">
-        <source>See the most recent stale chain tips on the Bitcoin<x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)" /> network.</source>
-        <target>Bitcoin<x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)" /> ağındaki en güncel eskimiş zincir uçlarını gör.</target>
+        <source>See the most recent stale chain tips on the Dogecoin<x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)" /> network.</source>
+        <target>Dogecoin<x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)" /> ağındaki en güncel eskimiş zincir uçlarını gör.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/stale-list/stale-list.component.ts</context>
           <context context-type="linenumber">63</context>
@@ -8015,8 +8015,8 @@
         <note priority="1" from="meaning">transaction.sigops</note>
       </trans-unit>
       <trans-unit id="meta.description.preview-tx" datatype="html">
-        <source>Preview a transaction to the Bitcoin<x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)" /> network using the transaction's raw hex data.</source>
-        <target>İşlemin ham hex data'sını kullanarak Bitcoin<x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)" /> ağı işlemini önizle.</target>
+        <source>Preview a transaction to the Dogecoin<x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)" /> network using the transaction's raw hex data.</source>
+        <target>İşlemin ham hex data'sını kullanarak Dogecoin<x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)" /> ağı işlemini önizle.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/transaction/transaction-raw.component.ts</context>
           <context context-type="linenumber">91</context>
@@ -8676,8 +8676,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="meta.description.bitcoin.wallet" datatype="html">
-        <source>See mempool transactions, confirmed transactions, balance, and more for <x id="PH" equiv-text="this.stateService.network==='liquid'||this.stateService.network==='liquidtestnet'?'Liquid':'Bitcoin'" /><x id="PH_1" equiv-text="seoDescriptionNetwork(this.stateService.network)" /> wallet <x id="INTERPOLATION" equiv-text="walletName" />.</source>
-        <target><x id="PH" equiv-text="this.stateService.network==='liquid'||this.stateService.network==='liquidtestnet'?'Liquid':'Bitcoin'" /><x id="PH_1" equiv-text="seoDescriptionNetwork(this.stateService.network)" /> cüzdan<x id="INTERPOLATION" equiv-text="walletName" /> için mempool işlemlerini, gerçekleşen işlemleri ve daha fazlasını görüntüle.</target>
+        <source>See mempool transactions, confirmed transactions, balance, and more for <x id="PH" equiv-text="this.stateService.network==='liquid'||this.stateService.network==='liquidtestnet'?'Liquid':'Dogecoin'" /><x id="PH_1" equiv-text="seoDescriptionNetwork(this.stateService.network)" /> wallet <x id="INTERPOLATION" equiv-text="walletName" />.</source>
+        <target><x id="PH" equiv-text="this.stateService.network==='liquid'||this.stateService.network==='liquidtestnet'?'Liquid':'Dogecoin'" /><x id="PH_1" equiv-text="seoDescriptionNetwork(this.stateService.network)" /> cüzdan<x id="INTERPOLATION" equiv-text="walletName" /> için mempool işlemlerini, gerçekleşen işlemleri ve daha fazlasını görüntüle.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/wallet/wallet-preview.component.ts</context>
           <context context-type="linenumber">151</context>

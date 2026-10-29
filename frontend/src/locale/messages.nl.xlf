@@ -3131,8 +3131,8 @@
         <note priority="1" from="description">mining.blocks-health</note>
       </trans-unit>
       <trans-unit id="meta.description.bitcoin.graphs.block-health" datatype="html">
-        <source>See Bitcoin block health visualized over time. Block health is a measure of how many expected transactions were included in an actual mined block. Expected transactions are determined using Mempool's re-implementation of Bitcoin Core's transaction selection algorithm.</source>
-        <target>Zie de gezondheid van Bitcoin-blokken in de loop van de tijd gevisualiseerd. De blokstatus is een maatstaf voor het aantal verwachte transacties dat in een daadwerkelijk gedolven blok is opgenomen. Verwachte transacties worden bepaald met behulp van Mempool's herimplementatie van het transactieselectie-algoritme van Bitcoin Core.</target>
+        <source>See Dogecoin block health visualized over time.</source>
+        <target>Bekijk de gezondheid van Dogecoin-blokken in de loop van de tijd.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/block-health-graph/block-health-graph.component.ts</context>
           <context context-type="linenumber">65</context>
@@ -5480,8 +5480,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="meta.descriptions.bitcoin.graphs.hashrate-pools" datatype="html">
-        <source>See Bitcoin mining pool dominance visualized over time: see how top mining pools' share of total hashrate has fluctuated over time.</source>
-        <target>Bekijk de dominantie van Bitcoin-miners in de loop van de tijd gevisualiseerd: zie hoe het aandeel van de topmining-pools in de totale hashrate in de loop van de tijd fluctueert.</target>
+        <source>See Dogecoin mining pool dominance visualized over time: see how top mining pools' share of total hashrate has fluctuated over time.</source>
+        <target>Bekijk de dominantie van Dogecoin-miners in de loop van de tijd gevisualiseerd: zie hoe het aandeel van de topmining-pools in de totale hashrate in de loop van de tijd fluctueert.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/hashrates-chart-pools/hashrate-chart-pools.component.ts</context>
           <context context-type="linenumber">76</context>
@@ -5938,8 +5938,8 @@
         <note priority="1" from="description">shared.as-of-block</note>
       </trans-unit>
       <trans-unit id="meta.description.mempool-block" datatype="html">
-        <source>See stats for <x id="PH" equiv-text="this.stateService.network==='liquid'||this.stateService.network==='liquidtestnet'?'Liquid':'Bitcoin'" /><x id="PH_1" equiv-text="seoDescriptionNetwork(this.stateService.network)" /> transactions in the mempool: fee range, aggregate size, and more. Mempool blocks are updated in real-time as the network receives new transactions.</source>
-        <target>Bekijk statistieken voor <x id="PH" equiv-text="this.stateService.network==='liquid'||this.stateService.network==='liquidtestnet'?'Liquid':'Bitcoin'" /><x id="PH_1" equiv-text="seoDescriptionNetwork(this.stateService.network)" /> transacties in de mempool: vergoedingsbereik, totale omvang en meer. Mempool-blokken worden in realtime bijgewerkt wanneer het netwerk nieuwe transacties ontvangt.</target>
+        <source>See stats for <x id="PH" equiv-text="this.stateService.network==='liquid'||this.stateService.network==='liquidtestnet'?'Liquid':'Dogecoin'" /><x id="PH_1" equiv-text="seoDescriptionNetwork(this.stateService.network)" /> transactions in the mempool: fee range, aggregate size, and more. Mempool blocks are updated in real-time as the network receives new transactions.</source>
+        <target>Bekijk statistieken voor <x id="PH" equiv-text="this.stateService.network==='liquid'||this.stateService.network==='liquidtestnet'?'Liquid':'Dogecoin'" /><x id="PH_1" equiv-text="seoDescriptionNetwork(this.stateService.network)" /> transacties in de mempool: vergoedingsbereik, totale omvang en meer. Mempool-blokken worden in realtime bijgewerkt wanneer het netwerk nieuwe transacties ontvangt.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/mempool-block/mempool-block.component.ts</context>
           <context context-type="linenumber">61</context>
@@ -6291,8 +6291,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="meta.description.bitcoin.graphs.pool-ranking" datatype="html">
-        <source>See the top Bitcoin mining pools ranked by number of blocks mined, over your desired timeframe.</source>
-        <target>Bekijk de beste Bitcoin-miningpools gerangschikt op het aantal gevonden blokken, gedurende het door u gewenste tijdsbestek.</target>
+        <source>See the top Dogecoin mining pools ranked by number of blocks mined, over your desired timeframe.</source>
+        <target>Bekijk de beste Dogecoin-miningpools gerangschikt op het aantal gevonden blokken, gedurende het door u gewenste tijdsbestek.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/pool-ranking/pool-ranking.component.ts</context>
           <context context-type="linenumber">61</context>
@@ -6769,8 +6769,8 @@
         <note priority="1" from="description">test-tx.rejection-reason</note>
       </trans-unit>
       <trans-unit id="meta.description.push-tx" datatype="html">
-        <source>Broadcast a transaction to the <x id="PH" equiv-text="this.stateService.network==='liquid'||this.stateService.network==='liquidtestnet'?'Liquid':'Bitcoin'" /><x id="PH_1" equiv-text="seoDescriptionNetwork(this.stateService.network)" /> network using the transaction's hash.</source>
-        <target>Zend een transactie uit naar het <x id="PH" equiv-text="this.stateService.network==='liquid'||this.stateService.network==='liquidtestnet'?'Liquid':'Bitcoin'" /><x id="PH_1" equiv-text="seoDescriptionNetwork(this.stateService.network)" /> netwerk met behulp van de hash van de transactie.</target>
+        <source>Broadcast a transaction to the <x id="PH" equiv-text="this.stateService.network==='liquid'||this.stateService.network==='liquidtestnet'?'Liquid':'Dogecoin'" /><x id="PH_1" equiv-text="seoDescriptionNetwork(this.stateService.network)" /> network using the transaction's hash.</source>
+        <target>Zend een transactie uit naar het <x id="PH" equiv-text="this.stateService.network==='liquid'||this.stateService.network==='liquidtestnet'?'Liquid':'Dogecoin'" /><x id="PH_1" equiv-text="seoDescriptionNetwork(this.stateService.network)" /> netwerk met behulp van de hash van de transactie.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/push-transaction/push-transaction.component.ts</context>
           <context context-type="linenumber">59</context>
@@ -6799,8 +6799,8 @@
         <note priority="1" from="description">rbf.no-replacements-yet</note>
       </trans-unit>
       <trans-unit id="meta.description.rbf-list" datatype="html">
-        <source>See the most recent RBF replacements on the Bitcoin<x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)" /> network, updated in real-time.</source>
-        <target>Bekijk de meest recente RBF-vervangingen op het Bitcoin<x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)" />-netwerk, in realtime bijgewerkt.</target>
+        <source>See the most recent RBF replacements on the Dogecoin<x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)" /> network, updated in real-time.</source>
+        <target>Bekijk de meest recente RBF-vervangingen op het Dogecoin<x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)" />-netwerk, in realtime bijgewerkt.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/rbf-list/rbf-list.component.ts</context>
           <context context-type="linenumber">63</context>
@@ -7235,8 +7235,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="meta.description.stale-chain-tips" datatype="html">
-        <source>See the most recent stale chain tips on the Bitcoin<x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)" /> network.</source>
-        <target>Bekijk de meest recente rotte ketentips op het Bitcoin<x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)" />-netwerk.</target>
+        <source>See the most recent stale chain tips on the Dogecoin<x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)" /> network.</source>
+        <target>Bekijk de meest recente rotte ketentips op het Dogecoin<x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)" />-netwerk.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/stale-list/stale-list.component.ts</context>
           <context context-type="linenumber">63</context>
@@ -7967,8 +7967,8 @@
         <note priority="1" from="meaning">transaction.sigops</note>
       </trans-unit>
       <trans-unit id="meta.description.preview-tx" datatype="html">
-        <source>Preview a transaction to the Bitcoin<x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)" /> network using the transaction's raw hex data.</source>
-        <target>Bekijk een transactie op het Bitcoin<x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)" />-netwerk met de ruwe hex-data van de transactie.</target>
+        <source>Preview a transaction to the Dogecoin<x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)" /> network using the transaction's raw hex data.</source>
+        <target>Bekijk een transactie op het Dogecoin<x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)" />-netwerk met de ruwe hex-data van de transactie.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/transaction/transaction-raw.component.ts</context>
           <context context-type="linenumber">91</context>
@@ -8620,8 +8620,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="meta.description.bitcoin.wallet" datatype="html">
-        <source>See mempool transactions, confirmed transactions, balance, and more for <x id="PH" equiv-text="this.stateService.network==='liquid'||this.stateService.network==='liquidtestnet'?'Liquid':'Bitcoin'" /><x id="PH_1" equiv-text="seoDescriptionNetwork(this.stateService.network)" /> wallet <x id="INTERPOLATION" equiv-text="walletName" />.</source>
-        <target>Bekijk mempool-transacties, bevestigde transacties, saldo en meer voor <x id="PH" equiv-text="this.stateService.network==='liquid'||this.stateService.network==='liquidtestnet'?'Liquid':'Bitcoin'" /><x id="PH_1" equiv-text="seoDescriptionNetwork(this.stateService.network)" /> portemonnee <x id="INTERPOLATION" equiv-text="walletName" />.</target>
+        <source>See mempool transactions, confirmed transactions, balance, and more for <x id="PH" equiv-text="this.stateService.network==='liquid'||this.stateService.network==='liquidtestnet'?'Liquid':'Dogecoin'" /><x id="PH_1" equiv-text="seoDescriptionNetwork(this.stateService.network)" /> wallet <x id="INTERPOLATION" equiv-text="walletName" />.</source>
+        <target>Bekijk mempool-transacties, bevestigde transacties, saldo en meer voor <x id="PH" equiv-text="this.stateService.network==='liquid'||this.stateService.network==='liquidtestnet'?'Liquid':'Dogecoin'" /><x id="PH_1" equiv-text="seoDescriptionNetwork(this.stateService.network)" /> portemonnee <x id="INTERPOLATION" equiv-text="walletName" />.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/wallet/wallet-preview.component.ts</context>
           <context context-type="linenumber">151</context>

@@ -3150,8 +3150,8 @@
         <note priority="1" from="description">mining.blocks-health</note>
       </trans-unit>
       <trans-unit id="meta.description.bitcoin.graphs.block-health" datatype="html">
-        <source>See Bitcoin block health visualized over time. Block health is a measure of how many expected transactions were included in an actual mined block. Expected transactions are determined using Mempool's re-implementation of Bitcoin Core's transaction selection algorithm.</source>
-        <target>時間の経過とともに視覚化されたビットコインブロックの健全性をご覧ください。ブロックの健全性は、実際にマイニングされたブロックに予想される取引の数が含まれているかを示す尺度です。予想される取引は、Mempool による Bitcoin Core の取引選択アルゴリズムの再実装を使用して決定されます。</target>
+        <source>See Dogecoin block health visualized over time.</source>
+        <target>Dogecoinブロックの健全性の推移を確認します。</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/block-health-graph/block-health-graph.component.ts</context>
           <context context-type="linenumber">65</context>
@@ -5514,8 +5514,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="meta.descriptions.bitcoin.graphs.hashrate-pools" datatype="html">
-        <source>See Bitcoin mining pool dominance visualized over time: see how top mining pools' share of total hashrate has fluctuated over time.</source>
-        <target>ビットコイン マイニング プールの優位性を時間の経過とともに視覚化します。上位のマイニング プールの合計ハッシュレートのシェアが時間の経過とともにどのように変動したかを確認します。</target>
+        <source>See Dogecoin mining pool dominance visualized over time: see how top mining pools' share of total hashrate has fluctuated over time.</source>
+        <target>Dogecoin マイニング プールの優位性を時間の経過とともに視覚化します。上位のマイニング プールの合計ハッシュレートのシェアが時間の経過とともにどのように変動したかを確認します。</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/hashrates-chart-pools/hashrate-chart-pools.component.ts</context>
           <context context-type="linenumber">76</context>
@@ -5974,8 +5974,8 @@
         <note priority="1" from="description">shared.as-of-block</note>
       </trans-unit>
       <trans-unit id="meta.description.mempool-block" datatype="html">
-        <source>See stats for <x id="PH" equiv-text="this.stateService.network==='liquid'||this.stateService.network==='liquidtestnet'?'Liquid':'Bitcoin'" /><x id="PH_1" equiv-text="seoDescriptionNetwork(this.stateService.network)" /> transactions in the mempool: fee range, aggregate size, and more. Mempool blocks are updated in real-time as the network receives new transactions.</source>
-        <target>mempool内の <x id="PH" equiv-text="this.stateService.network==='liquid'||this.stateService.network==='liquidtestnet'?'Liquid':'Bitcoin'" /><x id="PH_1" equiv-text="seoDescriptionNetwork(this.stateService.network)" /> 取引の情報：手数料の範囲、合計サイズなど。ネットワークが新しい取引を受信すると、mempool ブロックはリアルタイムで更新されます。</target>
+        <source>See stats for <x id="PH" equiv-text="this.stateService.network==='liquid'||this.stateService.network==='liquidtestnet'?'Liquid':'Dogecoin'" /><x id="PH_1" equiv-text="seoDescriptionNetwork(this.stateService.network)" /> transactions in the mempool: fee range, aggregate size, and more. Mempool blocks are updated in real-time as the network receives new transactions.</source>
+        <target>mempool内の <x id="PH" equiv-text="this.stateService.network==='liquid'||this.stateService.network==='liquidtestnet'?'Liquid':'Dogecoin'" /><x id="PH_1" equiv-text="seoDescriptionNetwork(this.stateService.network)" /> 取引の情報：手数料の範囲、合計サイズなど。ネットワークが新しい取引を受信すると、mempool ブロックはリアルタイムで更新されます。</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/mempool-block/mempool-block.component.ts</context>
           <context context-type="linenumber">61</context>
@@ -6328,8 +6328,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="meta.description.bitcoin.graphs.pool-ranking" datatype="html">
-        <source>See the top Bitcoin mining pools ranked by number of blocks mined, over your desired timeframe.</source>
-        <target>希望の期間にわたってマイニングされたブロック数でランク付けされた上位のビットコイン マイニング プールを表示します。</target>
+        <source>See the top Dogecoin mining pools ranked by number of blocks mined, over your desired timeframe.</source>
+        <target>希望の期間にわたってマイニングされたブロック数でランク付けされた上位のDogecoin マイニング プールを表示します。</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/pool-ranking/pool-ranking.component.ts</context>
           <context context-type="linenumber">61</context>
@@ -6809,8 +6809,8 @@
         <note priority="1" from="description">test-tx.rejection-reason</note>
       </trans-unit>
       <trans-unit id="meta.description.push-tx" datatype="html">
-        <source>Broadcast a transaction to the <x id="PH" equiv-text="this.stateService.network==='liquid'||this.stateService.network==='liquidtestnet'?'Liquid':'Bitcoin'" /><x id="PH_1" equiv-text="seoDescriptionNetwork(this.stateService.network)" /> network using the transaction's hash.</source>
-        <target>取引のハッシュを使用して、取引を <x id="PH" equiv-text="this.stateService.network==='liquid'||this.stateService.network==='liquidtestnet'?'Liquid':'Bitcoin'" /><x id="PH_1" equiv-text="seoDescriptionNetwork(this.stateService.network)" /> ネットワークにブロードキャストします。</target>
+        <source>Broadcast a transaction to the <x id="PH" equiv-text="this.stateService.network==='liquid'||this.stateService.network==='liquidtestnet'?'Liquid':'Dogecoin'" /><x id="PH_1" equiv-text="seoDescriptionNetwork(this.stateService.network)" /> network using the transaction's hash.</source>
+        <target>取引のハッシュを使用して、取引を <x id="PH" equiv-text="this.stateService.network==='liquid'||this.stateService.network==='liquidtestnet'?'Liquid':'Dogecoin'" /><x id="PH_1" equiv-text="seoDescriptionNetwork(this.stateService.network)" /> ネットワークにブロードキャストします。</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/push-transaction/push-transaction.component.ts</context>
           <context context-type="linenumber">59</context>
@@ -6839,8 +6839,8 @@
         <note priority="1" from="description">rbf.no-replacements-yet</note>
       </trans-unit>
       <trans-unit id="meta.description.rbf-list" datatype="html">
-        <source>See the most recent RBF replacements on the Bitcoin<x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)" /> network, updated in real-time.</source>
-        <target>リアルタイムで更新される、ビットコイン<x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)" /> ネットワーク上の最新の RBF 置換を確認します。</target>
+        <source>See the most recent RBF replacements on the Dogecoin<x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)" /> network, updated in real-time.</source>
+        <target>リアルタイムで更新される、Dogecoin<x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)" /> ネットワーク上の最新の RBF 置換を確認します。</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/rbf-list/rbf-list.component.ts</context>
           <context context-type="linenumber">63</context>
@@ -7276,8 +7276,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="meta.description.stale-chain-tips" datatype="html">
-        <source>See the most recent stale chain tips on the Bitcoin<x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)" /> network.</source>
-        <target>Bitcoin<x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)" /> ネットワーク上の最新の陳腐化チェーンチップを確認します。</target>
+        <source>See the most recent stale chain tips on the Dogecoin<x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)" /> network.</source>
+        <target>Dogecoin<x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)" /> ネットワーク上の最新の陳腐化チェーンチップを確認します。</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/stale-list/stale-list.component.ts</context>
           <context context-type="linenumber">63</context>
@@ -8015,8 +8015,8 @@
         <note priority="1" from="meaning">transaction.sigops</note>
       </trans-unit>
       <trans-unit id="meta.description.preview-tx" datatype="html">
-        <source>Preview a transaction to the Bitcoin<x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)" /> network using the transaction's raw hex data.</source>
-        <target>Bitcoin<x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)" /> ネットワーク取引を生の16進で閲覧します。</target>
+        <source>Preview a transaction to the Dogecoin<x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)" /> network using the transaction's raw hex data.</source>
+        <target>Dogecoin<x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)" /> ネットワーク取引を生の16進で閲覧します。</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/transaction/transaction-raw.component.ts</context>
           <context context-type="linenumber">91</context>
@@ -8677,8 +8677,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="meta.description.bitcoin.wallet" datatype="html">
-        <source>See mempool transactions, confirmed transactions, balance, and more for <x id="PH" equiv-text="this.stateService.network==='liquid'||this.stateService.network==='liquidtestnet'?'Liquid':'Bitcoin'" /><x id="PH_1" equiv-text="seoDescriptionNetwork(this.stateService.network)" /> wallet <x id="INTERPOLATION" equiv-text="walletName" />.</source>
-        <target><x id="PH" equiv-text="this.stateService.network==='liquid'||this.stateService.network==='liquidtestnet'?'Liquid':'Bitcoin'" /><x id="PH_1" equiv-text="seoDescriptionNetwork(this.stateService.network)" /> ウォレット <x id="INTERPOLATION" equiv-text="walletName" /> のmempoolの取引、承認済みの取引、残高などを確認します。</target>
+        <source>See mempool transactions, confirmed transactions, balance, and more for <x id="PH" equiv-text="this.stateService.network==='liquid'||this.stateService.network==='liquidtestnet'?'Liquid':'Dogecoin'" /><x id="PH_1" equiv-text="seoDescriptionNetwork(this.stateService.network)" /> wallet <x id="INTERPOLATION" equiv-text="walletName" />.</source>
+        <target><x id="PH" equiv-text="this.stateService.network==='liquid'||this.stateService.network==='liquidtestnet'?'Liquid':'Dogecoin'" /><x id="PH_1" equiv-text="seoDescriptionNetwork(this.stateService.network)" /> ウォレット <x id="INTERPOLATION" equiv-text="walletName" /> のmempoolの取引、承認済みの取引、残高などを確認します。</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/wallet/wallet-preview.component.ts</context>
           <context context-type="linenumber">151</context>
