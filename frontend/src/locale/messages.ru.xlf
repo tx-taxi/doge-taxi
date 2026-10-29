@@ -11880,6 +11880,7 @@
       <trans-unit id="taxi.timezone.plus12" datatype="html"><source>New Zealand Standard Time (NZST)</source><target>Стандартное время Новой Зеландии (NZST)</target></trans-unit>
       <trans-unit id="taxi.timezone.plus13" datatype="html"><source>Tonga Time (TOT)</source><target>Время Тонги (TOT)</target></trans-unit>
       <trans-unit id="taxi.timezone.plus14" datatype="html"><source>Line Islands Time (LINT)</source><target>Время островов Лайн (LINT)</target></trans-unit>
+      <trans-unit id="tx-taxi.search.choose-chain-current" datatype="html"><source>Choose search chain, selected: <x id="name" equiv-text="name"/></source><target>Выбрать блокчейн для поиска, выбрано: <x id="name" equiv-text="name"/></target></trans-unit>
     </body>
   </file>
 </xliff>
