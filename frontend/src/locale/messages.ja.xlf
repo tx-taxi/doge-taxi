@@ -14161,6 +14161,7 @@
         <source>The overall luck of all mining pools over the past week. A luck above 100% means the average block interval during that week was less than the 1-minute Dogecoin target.</source>
         <target>過去 1 週間の全マイニングプールの総合的な運。100% を超える場合、その週の平均ブロック間隔が Dogecoin の目標である 1 分未満だったことを示します。</target>
       </trans-unit>
+          <trans-unit id="tx-taxi.search.choose-chain-current" datatype="html"><source>Choose search chain, selected: <x id="name" equiv-text="name"/></source><target>検索するチェーンを選択、現在の選択：<x id="name" equiv-text="name"/></target></trans-unit>
     </body>
   </file>
 </xliff>
