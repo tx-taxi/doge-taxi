@@ -11881,6 +11881,10 @@
       <trans-unit id="tx-taxi.doge.logo-alt" datatype="html"><source>doge.tx.taxi Dogecoin explorer</source><target>doge.tx.taxi, esploratore Dogecoin</target></trans-unit>
       <trans-unit id="tx-taxi.doge.search-icon-alt" datatype="html"><source>Dogecoin explorer</source><target>Esploratore Dogecoin</target></trans-unit>
       <trans-unit id="tx-taxi.search.choose-chain-current" datatype="html"><source>Choose search chain, selected: <x id="name" equiv-text="name"/></source><target>Scegli la blockchain di ricerca, selezionata: <x id="name" equiv-text="name"/></target></trans-unit>
+          <trans-unit id="tx-taxi.doge.pool-luck-description" datatype="html">
+        <source>The overall luck of all mining pools over the past week. A luck above 100% means the average block interval during that week was less than the 1-minute Dogecoin target.</source>
+        <target>La fortuna complessiva di tutti i pool di mining nell’ultima settimana. Una fortuna superiore al 100% significa che l’intervallo medio tra i blocchi in quella settimana era inferiore all’obiettivo di 1 minuto di Dogecoin.</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

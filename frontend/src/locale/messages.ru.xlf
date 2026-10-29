@@ -11881,6 +11881,10 @@
       <trans-unit id="taxi.timezone.plus13" datatype="html"><source>Tonga Time (TOT)</source><target>Время Тонги (TOT)</target></trans-unit>
       <trans-unit id="taxi.timezone.plus14" datatype="html"><source>Line Islands Time (LINT)</source><target>Время островов Лайн (LINT)</target></trans-unit>
       <trans-unit id="tx-taxi.search.choose-chain-current" datatype="html"><source>Choose search chain, selected: <x id="name" equiv-text="name"/></source><target>Выбрать блокчейн для поиска, выбрано: <x id="name" equiv-text="name"/></target></trans-unit>
+          <trans-unit id="tx-taxi.doge.pool-luck-description" datatype="html">
+        <source>The overall luck of all mining pools over the past week. A luck above 100% means the average block interval during that week was less than the 1-minute Dogecoin target.</source>
+        <target>Общая удача всех майнинг-пулов за последнюю неделю. Значение выше 100% означает, что средний интервал между блоками за эту неделю был меньше целевой для Dogecoin 1 минуты.</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

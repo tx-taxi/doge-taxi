@@ -103,7 +103,7 @@ export class PoolRankingComponent implements OnInit {
       )
       .pipe(
         map(data => {
-          data['minersLuck'] = (100 * (data.blockCount / 4032)).toFixed(2); // luck 1w
+          data['minersLuck'] = (100 * (data.blockCount / 10080)).toFixed(2); // Dogecoin targets one block per minute: 10,080 per week.
           return data;
         }),
         tap(data => {
