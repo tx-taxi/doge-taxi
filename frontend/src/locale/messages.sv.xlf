@@ -4486,8 +4486,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="meta.description.bitcoin.blocks" datatype="html">
-        <source>See the most recent Bitcoin<x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)" /> blocks along with basic stats such as block height, block reward, block size, and more.</source>
-        <target>Se de senaste Bitcoin<x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)" />-blocken tillsammans med grundläggande statistik som blockhöjd, blockbelöning, blockstorlek och mer.</target>
+        <source>See the most recent Dogecoin<x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)" /> blocks along with basic stats such as block height, block reward, block size, and more.</source>
+        <target>Se de senaste Dogecoin<x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)" />-blocken tillsammans med grundläggande statistik som blockhöjd, blockbelöning, blockstorlek och mer.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/blocks-list/blocks-list.component.ts</context>
           <context context-type="linenumber">76</context>

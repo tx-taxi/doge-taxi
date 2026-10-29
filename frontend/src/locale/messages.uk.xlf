@@ -4428,8 +4428,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="meta.description.bitcoin.blocks" datatype="html">
-        <source>See the most recent Bitcoin<x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)" /> blocks along with basic stats such as block height, block reward, block size, and more.</source>
-        <target>Перегляньте останні блоки Біткоїна <x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)" /> з їх базовими характеристиками, такими як висота, нагорода, розмір та іншими.</target>
+        <source>See the most recent Dogecoin<x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)" /> blocks along with basic stats such as block height, block reward, block size, and more.</source>
+        <target>Перегляньте останні блоки Dogecoin <x id="PH" equiv-text="seoDescriptionNetwork(this.stateService.network)" /> з їх базовими характеристиками, такими як висота, нагорода, розмір та іншими.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/blocks-list/blocks-list.component.ts</context>
           <context context-type="linenumber">76</context>
