@@ -237,7 +237,7 @@
               "outputPath": "dist/spanish"
             },
             "french-german": {
-              "localize": ["fr", "de"],
+              "localize": ["fr", "de", "it"],
               "outputPath": "dist/french-german"
             }
           },
