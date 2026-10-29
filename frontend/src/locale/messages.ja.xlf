@@ -8023,9 +8023,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="df5fd5288dc0b13ce611a0c857e97baee9595e67" datatype="html">
-        <source> This transaction ID appears twice in the blockchain as the coinbase of blocks <x id="START_LINK" ctype="x-a" equiv-text="&lt;a [routerLink]=&quot;['/block/' | relativeUrl, duplicateTxBlocks[0]]&quot;&gt;" /><x id="INTERPOLATION" equiv-text="locks[0] }}" /><x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;" /> and <x id="START_LINK_1" equiv-text="&lt;a [routerLink]=&quot;['/block/' | relativeUrl, duplicateTxBlocks[1]]&quot;&gt;" /><x id="INTERPOLATION_1" equiv-text="cks[1] }}" /><x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;" />, due to a bug later mitigated by <x id="START_LINK_2" equiv-text="&lt;a href=&quot;https://github.com/bitcoin/bips/blob/master/bip-0030.mediawiki&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;" />BIP-30<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;" />. </source>
-        <target> この取引IDはブロック<x id="START_LINK" ctype="x-a" equiv-text="&lt;a [routerLink]=&quot;['/block/' | relativeUrl, duplicateTxBlocks[0]]&quot;&gt;" /><x id="INTERPOLATION" equiv-text="locks[0] }}" /><x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;" />と<x id="START_LINK_1" equiv-text="&lt;a [routerLink]=&quot;['/block/' | relativeUrl, duplicateTxBlocks[1]]&quot;&gt;" /><x id="INTERPOLATION_1" equiv-text="cks[1] }}" /><x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;" />のコインベースとしてブロックチェーン上に2回現れます。後に<x id="START_LINK_2" equiv-text="&lt;a href=&quot;https://github.com/bitcoin/bips/blob/master/bip-0030.mediawiki&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;" />BIP-30<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;" />で緩和されたバグによるものです。 </target>
-        <context-group purpose="location">
+        <source> This transaction ID appears twice in the blockchain as the coinbase of blocks <x id="START_LINK" ctype="x-a" equiv-text="&lt;a [routerLink]=&quot;['/block/' | relativeUrl, duplicateTxBlocks[0]]&quot;&gt;" /><x id="INTERPOLATION" equiv-text="{{ duplicateTxBlocks[0] }}" /><x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;" /> and <x id="START_LINK_1" equiv-text="&lt;a [routerLink]=&quot;['/block/' | relativeUrl, duplicateTxBlocks[1]]&quot;&gt;" /><x id="INTERPOLATION_1" equiv-text="{{ duplicateTxBlocks[1] }}" /><x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;" />, due to a bug later mitigated by <x id="START_LINK_2" equiv-text="&lt;a href=&quot;https://github.com/bitcoin/bips/blob/master/bip-0030.mediawiki&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;" />BIP-30<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;" />. </source>
+        <target state="needs-review-translation"> 後に <x id="START_LINK_2" equiv-text="&lt;a href=&quot;https://github.com/bitcoin/bips/blob/master/bip-0030.mediawiki&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;" />BIP-30<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;" /> により緩和されたバグのため、この取引 ID はブロック <x id="START_LINK" ctype="x-a" equiv-text="&lt;a [routerLink]=&quot;['/block/' | relativeUrl, duplicateTxBlocks[0]]&quot;&gt;" /><x id="INTERPOLATION" equiv-text="{{ duplicateTxBlocks[0] }}" /><x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;" /> と <x id="START_LINK_1" equiv-text="&lt;a [routerLink]=&quot;['/block/' | relativeUrl, duplicateTxBlocks[1]]&quot;&gt;" /><x id="INTERPOLATION_1" equiv-text="{{ duplicateTxBlocks[1] }}" /><x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;" /> のコインベース取引としてブロックチェーンに 2 回現れます。 </target><context-group purpose="location">
           <context context-type="sourcefile">src/app/components/transaction/transaction.component.html</context>
           <context context-type="linenumber">40,42</context>
         </context-group>
@@ -8845,9 +8844,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="meta.description.docs.faq" datatype="html">
-        <source>Get answers to common questions like: What is a mempool? Why isn't my transaction confirming? How can I run my own instance of The Mempool Open Source Project? And more.</source>
-        <target>「mempool とは何ですか?」「取引が承認されないのはなぜですか?」 「Mempool オープンソース プロジェクトの独自のインスタンスを実行するにはどうすればよいですか?」などの一般的な質問に対する回答が得られます。</target>
-        <context-group purpose="location">
+        <source>Get answers to common Dogecoin questions, including block timing, AuxPoW, fees, pending observations, transactions, and available explorer data.</source>
+        <target state="needs-review-translation">ブロック時間、AuxPoW、手数料、未承認観測、取引、利用可能なエクスプローラーデータなど、Dogecoin に関するよくある質問に回答します。</target><context-group purpose="location">
           <context context-type="sourcefile">src/app/docs/docs/docs.component.ts</context>
           <context context-type="linenumber">48</context>
         </context-group>
@@ -8869,9 +8867,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="meta.description.docs.rest-bitcoin" datatype="html">
-        <source>Documentation for the mempool.space REST API service: get info on addresses, transactions, blocks, fees, mining, the Lightning network, and more.</source>
-        <target>mempool.space REST API サービスのドキュメント: アドレス、トランザクション、ブロック、手数料、マイニング、Lightning ネットワークなどに関する情報を入手します。</target>
-        <context-group purpose="location">
+        <source>Documentation for the doge.tx.taxi REST API: query available Dogecoin block, transaction, address, fee, and network data.</source>
+        <target state="needs-review-translation">doge.tx.taxi REST API のドキュメント。利用可能な Dogecoin のブロック、取引、アドレス、手数料、ネットワークデータを照会します。</target><context-group purpose="location">
           <context context-type="sourcefile">src/app/docs/docs/docs.component.ts</context>
           <context context-type="linenumber">56</context>
         </context-group>
@@ -8893,9 +8890,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="meta.description.docs.websocket-bitcoin" datatype="html">
-        <source>Documentation for the mempool.space WebSocket API service: get real-time info on blocks, mempools, transactions, addresses, and more.</source>
-        <target>mempool.space WebSocket API サービスのドキュメント: ブロック、メモリプール、トランザクション、アドレスなどに関するリアルタイム情報を取得します。</target>
-        <context-group purpose="location">
+        <source>Documentation for the doge.tx.taxi WebSocket API: receive current Dogecoin block, transaction, address, pending-sample, and provider-freshness updates.</source>
+        <target state="needs-review-translation">doge.tx.taxi WebSocket API のドキュメント。Dogecoin の現在のブロック、取引、アドレス、未承認サンプル、提供元の鮮度の更新を受信します。</target><context-group purpose="location">
           <context context-type="sourcefile">src/app/docs/docs/docs.component.ts</context>
           <context context-type="linenumber">64</context>
         </context-group>
@@ -12856,6 +12852,1315 @@
           <context context-type="linenumber">9</context>
         </context-group>
       </trans-unit>
-      </body>
+      <trans-unit id="tx-taxi.doge.legal.2" datatype="html">
+        <source>Updated: September 20, 2026</source>
+        <target state="needs-review-translation">更新日：2026年9月20日</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/privacy-policy/privacy-policy.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.3" datatype="html">
+        <source>Audience measurement</source>
+        <target state="needs-review-translation">アクセス数の計測</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/privacy-policy/privacy-policy.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.inline.1" datatype="html">
+        <source>tx.taxi uses Cloudflare Web Analytics for page views and performance, and a first-party daily cookie shared across its explorers to count browsers once per UTC day. The daily audience collector stores only a daily identifier, the explorer hostname, and whether there was interaction. It does not receive search text, addresses, transaction IDs, URLs, or IP addresses. Individual daily records expire after 31 days; aggregate counts are retained for 400 days. Do Not Track and Global Privacy Control disable this first-party measurement.</source>
+        <target state="needs-review-translation">tx.taxi はページ表示とパフォーマンスの計測に Cloudflare Web Analytics を使用し、全エクスプローラーで共有するファーストパーティのデイリー Cookie により、UTC 日ごとにブラウザーを一度だけ計数します。デイリー集計では、日ごとの識別子、エクスプローラーのホスト名、操作の有無のみを保存します。検索テキスト、アドレス、取引 ID、URL、IP アドレスは受け取りません。日ごとの個別記録は 31 日後に期限切れとなり、集計値は 400 日間保存されます。Do Not Track または Global Privacy Control により、このファーストパーティ計測は無効になります。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/privacy-policy/privacy-policy.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.inline.2" datatype="html">
+        <source>Details and opt-out</source>
+        <target state="needs-review-translation">詳細とオプトアウト</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/privacy-policy/privacy-policy.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.4" datatype="html">
+        <source>Use Your Own Node When Privacy Matters</source>
+        <target state="needs-review-translation">プライバシーが重要な場合は自分のノードを使用</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/privacy-policy/privacy-policy.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.10" datatype="html">
+        <source>doge.tx.taxi displays public Dogecoin chain and mempool data through the backend configured by the site operator. For independent verification and the strongest network privacy, use your own Dogecoin node and explorer.</source>
+        <target state="needs-review-translation">doge.tx.taxi はサイト運営者が設定したバックエンドを通じて、公開 Dogecoin チェーンとメンプールのデータを表示します。独立した検証と最大限のネットワークプライバシーのためには、ご自身の Dogecoin ノードとエクスプローラーをご利用ください。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/privacy-policy/privacy-policy.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.5" datatype="html">
+        <source>Request Data</source>
+        <target state="needs-review-translation">リクエストデータ</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/privacy-policy/privacy-policy.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.11" datatype="html">
+        <source>Normal website and API requests can reveal standard web metadata to the operator, including your IP address, user agent, requested URL, and request time. Server logs may be retained for reliability, abuse prevention, and debugging.</source>
+        <target state="needs-review-translation">通常のウェブサイトや API のリクエストにより、IP アドレス、ユーザーエージェント、要求 URL、要求時刻などの標準的なウェブメタデータが運営者に伝わる場合があります。サーバーログは信頼性の確保、悪用防止、デバッグのために保存されることがあります。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/privacy-policy/privacy-policy.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.6" datatype="html">
+        <source>Local Preferences</source>
+        <target state="needs-review-translation">ローカル設定</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/privacy-policy/privacy-policy.component.html</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.12" datatype="html">
+        <source>Display preferences such as theme, denomination, fiat currency, language, and timezone may be stored in your browser. doge.tx.taxi does not require an account for ordinary explorer use.</source>
+        <target state="needs-review-translation">テーマ、表示単位、法定通貨、言語、タイムゾーンなどの表示設定はブラウザーに保存されることがあります。通常の利用に doge.tx.taxi のアカウントは不要です。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/privacy-policy/privacy-policy.component.html</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.7" datatype="html">
+        <source>Public Blockchain Data</source>
+        <target state="needs-review-translation">公開ブロックチェーンデータ</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/privacy-policy/privacy-policy.component.html</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.13" datatype="html">
+        <source>Dogecoin transactions, addresses, scripts, and blocks are public. Looking up an address or transaction can associate that lookup with your network metadata. Do not treat a public explorer as a privacy boundary.</source>
+        <target state="needs-review-translation">Dogecoin の取引、アドレス、スクリプト、ブロックは公開されています。アドレスや取引の検索がネットワークメタデータと関連付けられる場合があります。公開エクスプローラーをプライバシーの境界と見なさないでください。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/privacy-policy/privacy-policy.component.html</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.8" datatype="html">
+        <source>External Links</source>
+        <target state="needs-review-translation">外部リンク</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/privacy-policy/privacy-policy.component.html</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.14" datatype="html">
+        <source>This site links to tx.taxi contact channels, Dogecoin documentation, and upstream source code. Those external services have their own privacy policies.</source>
+        <target state="needs-review-translation">本サイトは tx.taxi の連絡先、Dogecoin のドキュメント、上流のソースコードにリンクしています。外部サービスにはそれぞれ独自のプライバシーポリシーがあります。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/privacy-policy/privacy-policy.component.html</context>
+          <context context-type="linenumber">36</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.9" datatype="html">
+        <source>Open Source Attribution</source>
+        <target state="needs-review-translation">オープンソースの帰属表示</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/privacy-policy/privacy-policy.component.html</context>
+          <context context-type="linenumber">40</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.15" datatype="html">
+        <source>Mempool names, logos, and trademarks remain the property of their respective owners; doge.tx.taxi is not affiliated with or endorsed by Mempool Holdings S.A. de C.V.</source>
+        <target state="needs-review-translation">Mempool の名称、ロゴ、商標はそれぞれの所有者に帰属します。doge.tx.taxi は Mempool Holdings S.A. de C.V. と提携しておらず、その承認を受けていません。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/privacy-policy/privacy-policy.component.html</context>
+          <context context-type="linenumber">41</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.meta.desc.1" datatype="html">
+        <source>Privacy notes for doge.tx.taxi, including public Dogecoin data, browser preferences, server logs, and independent verification.</source>
+        <target state="needs-review-translation">公開 Dogecoin データ、ブラウザー設定、サーバーログ、独立検証を含む doge.tx.taxi のプライバシーに関する説明。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/privacy-policy/privacy-policy.component.ts</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.17" datatype="html">
+        <source>Updated: September 20, 2026</source>
+        <target state="needs-review-translation">更新日：2026年9月20日</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/terms-of-service/terms-of-service.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.18" datatype="html">
+        <source>Informational Explorer</source>
+        <target state="needs-review-translation">情報提供エクスプローラー</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/terms-of-service/terms-of-service.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.24" datatype="html">
+        <source>doge.tx.taxi provides a view of public Dogecoin blocks, transactions, addresses, mining data, fee estimates, and mempool state. It is an informational service, not a wallet, exchange, custodian, payment processor, or transaction-priority service.</source>
+        <target state="needs-review-translation">doge.tx.taxi は公開された Dogecoin ブロック、取引、アドレス、マイニングデータ、手数料の推定値、メンプールの状態を表示します。これは情報提供サービスであり、ウォレット、取引所、カストディアン、決済事業者、取引優先サービスではありません。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/terms-of-service/terms-of-service.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.19" datatype="html">
+        <source>No Control Over Dogecoin Transactions</source>
+        <target state="needs-review-translation">Dogecoin 取引を制御できません</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/terms-of-service/terms-of-service.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.25" datatype="html">
+        <source>The operator cannot reverse, cancel, accelerate, recover, or redirect a Dogecoin transaction. For wallet, exchange, or payment issues, contact the service that created or received the transaction.</source>
+        <target state="needs-review-translation">運営者は Dogecoin 取引を取り消し、キャンセル、加速、復旧、転送することはできません。ウォレット、取引所、決済に関する問題は、取引を作成または受領したサービスにお問い合わせください。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/terms-of-service/terms-of-service.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.20" datatype="html">
+        <source>Data and Availability</source>
+        <target state="needs-review-translation">データと可用性</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/terms-of-service/terms-of-service.component.html</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.26" datatype="html">
+        <source>Explorer data may be delayed, incomplete, unavailable, or different from another node's view. Fee estimates are estimates only and do not guarantee confirmation. The service is provided as-is without a promise of uninterrupted availability or fitness for a particular purpose.</source>
+        <target state="needs-review-translation">エクスプローラーのデータは遅延、不完全、利用不能、または他のノードの表示と異なる場合があります。手数料の推定値はあくまで推定であり、承認を保証しません。本サービスは現状有姿で提供され、継続的な可用性や特定目的への適合性を保証しません。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/terms-of-service/terms-of-service.component.html</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.21" datatype="html">
+        <source>Acceptable Use</source>
+        <target state="needs-review-translation">適切な利用</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/terms-of-service/terms-of-service.component.html</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.27" datatype="html">
+        <source>Do not abuse the website or API, interfere with service operation, bypass reasonable rate limits, or use the service unlawfully. Access may be limited when necessary to protect availability.</source>
+        <target state="needs-review-translation">ウェブサイトや API を悪用したり、サービスの運営を妨害したり、合理的なレート制限を回避したり、違法に利用したりしないでください。可用性を守るため、必要に応じてアクセスが制限されることがあります。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/terms-of-service/terms-of-service.component.html</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.22" datatype="html">
+        <source>External Services</source>
+        <target state="needs-review-translation">外部サービス</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/terms-of-service/terms-of-service.component.html</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.28" datatype="html">
+        <source>This site may link to tx.taxi contact channels, Dogecoin references, upstream source code, and infrastructure dependencies. External websites have their own terms and policies.</source>
+        <target state="needs-review-translation">本サイトは tx.taxi の連絡先、Dogecoin の参考資料、上流のソースコード、インフラ依存先にリンクすることがあります。外部サイトには独自の利用規約とポリシーがあります。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/terms-of-service/terms-of-service.component.html</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.23" datatype="html">
+        <source>Open Source</source>
+        <target state="needs-review-translation">オープンソース</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/terms-of-service/terms-of-service.component.html</context>
+          <context context-type="linenumber">38</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.inline.3" datatype="html">
+        <source>doge.tx.taxi is derived from</source>
+        <target state="needs-review-translation">doge.tx.taxi は次のソフトウェアから派生しています：</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/terms-of-service/terms-of-service.component.html</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.inline.4" datatype="html">
+        <source>. Contact</source>
+        <target state="needs-review-translation">。現在のレビュー済みフォークのソースパッケージについては</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/terms-of-service/terms-of-service.component.html</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.inline.5" datatype="html">
+        <source>for the current reviewed fork source package.</source>
+        <target state="needs-review-translation">までお問い合わせください。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/terms-of-service/terms-of-service.component.html</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.meta.desc.2" datatype="html">
+        <source>Terms for using doge.tx.taxi as an informational Dogecoin block and mempool explorer.</source>
+        <target state="needs-review-translation">Dogecoin のブロックとメンプールの情報提供エクスプローラーとして doge.tx.taxi を利用するための規約。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/terms-of-service/terms-of-service.component.ts</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="taxi.timezone.minus12" datatype="html">
+        <source>Anywhere on Earth (AoE)</source>
+        <target state="needs-review-translation">地球上の任意地点時間（AoE）</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/timezone-selector/timezone-selector.component.ts</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="taxi.timezone.minus11" datatype="html">
+        <source>Samoa Standard Time (SST)</source>
+        <target state="needs-review-translation">サモア標準時（SST）</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/timezone-selector/timezone-selector.component.ts</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="taxi.timezone.minus10" datatype="html">
+        <source>Hawaii Standard Time (HST)</source>
+        <target state="needs-review-translation">ハワイ標準時（HST）</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/timezone-selector/timezone-selector.component.ts</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="taxi.timezone.minus9" datatype="html">
+        <source>Alaska Standard Time (AKST)</source>
+        <target state="needs-review-translation">アラスカ標準時（AKST）</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/timezone-selector/timezone-selector.component.ts</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="taxi.timezone.minus8" datatype="html">
+        <source>Pacific Standard Time (PST)</source>
+        <target state="needs-review-translation">太平洋標準時（PST）</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/timezone-selector/timezone-selector.component.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="taxi.timezone.minus7" datatype="html">
+        <source>Mountain Standard Time (MST)</source>
+        <target state="needs-review-translation">山岳部標準時（MST）</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/timezone-selector/timezone-selector.component.ts</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="taxi.timezone.minus6" datatype="html">
+        <source>Central Standard Time (CST)</source>
+        <target state="needs-review-translation">中部標準時（CST）</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/timezone-selector/timezone-selector.component.ts</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="taxi.timezone.minus5" datatype="html">
+        <source>Eastern Standard Time (EST)</source>
+        <target state="needs-review-translation">東部標準時（EST）</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/timezone-selector/timezone-selector.component.ts</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="taxi.timezone.minus4" datatype="html">
+        <source>Atlantic Standard Time (AST)</source>
+        <target state="needs-review-translation">大西洋標準時（AST）</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/timezone-selector/timezone-selector.component.ts</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="taxi.timezone.minus3" datatype="html">
+        <source>Argentina Time (ART)</source>
+        <target state="needs-review-translation">アルゼンチン時間（ART）</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/timezone-selector/timezone-selector.component.ts</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="taxi.timezone.minus2" datatype="html">
+        <source>Fernando de Noronha Time (FNT)</source>
+        <target state="needs-review-translation">フェルナンド・デ・ノローニャ時間（FNT）</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/timezone-selector/timezone-selector.component.ts</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="taxi.timezone.minus1" datatype="html">
+        <source>Azores Time (AZOT)</source>
+        <target state="needs-review-translation">アゾレス時間（AZOT）</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/timezone-selector/timezone-selector.component.ts</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="taxi.timezone.plus0" datatype="html">
+        <source>Greenwich Mean Time (GMT)</source>
+        <target state="needs-review-translation">グリニッジ標準時（GMT）</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/timezone-selector/timezone-selector.component.ts</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="taxi.timezone.plus1" datatype="html">
+        <source>Central European Time (CET)</source>
+        <target state="needs-review-translation">中央ヨーロッパ時間（CET）</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/timezone-selector/timezone-selector.component.ts</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="taxi.timezone.plus2" datatype="html">
+        <source>Eastern European Time (EET)</source>
+        <target state="needs-review-translation">東ヨーロッパ時間（EET）</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/timezone-selector/timezone-selector.component.ts</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="taxi.timezone.plus3" datatype="html">
+        <source>Moscow Standard Time (MSK)</source>
+        <target state="needs-review-translation">モスクワ標準時（MSK）</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/timezone-selector/timezone-selector.component.ts</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="taxi.timezone.plus4" datatype="html">
+        <source>Armenia Time (AMT)</source>
+        <target state="needs-review-translation">アルメニア時間（AMT）</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/timezone-selector/timezone-selector.component.ts</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="taxi.timezone.plus5" datatype="html">
+        <source>Pakistan Standard Time (PKT)</source>
+        <target state="needs-review-translation">パキスタン時間（PKT）</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/timezone-selector/timezone-selector.component.ts</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="taxi.timezone.plus6" datatype="html">
+        <source>Xinjiang Time (XJT)</source>
+        <target state="needs-review-translation">新疆時間（XJT）</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/timezone-selector/timezone-selector.component.ts</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="taxi.timezone.plus7" datatype="html">
+        <source>Indochina Time (ICT)</source>
+        <target state="needs-review-translation">インドシナ時間（ICT）</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/timezone-selector/timezone-selector.component.ts</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="taxi.timezone.plus8" datatype="html">
+        <source>Hong Kong Time (HKT)</source>
+        <target state="needs-review-translation">香港時間（HKT）</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/timezone-selector/timezone-selector.component.ts</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="taxi.timezone.plus9" datatype="html">
+        <source>Japan Standard Time (JST)</source>
+        <target state="needs-review-translation">日本標準時（JST）</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/timezone-selector/timezone-selector.component.ts</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="taxi.timezone.plus10" datatype="html">
+        <source>Australian Eastern Standard Time (AEST)</source>
+        <target state="needs-review-translation">オーストラリア東部標準時（AEST）</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/timezone-selector/timezone-selector.component.ts</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="taxi.timezone.plus11" datatype="html">
+        <source>Norfolk Time (NFT)</source>
+        <target state="needs-review-translation">ノーフォーク島時間（NFT）</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/timezone-selector/timezone-selector.component.ts</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="taxi.timezone.plus12" datatype="html">
+        <source>New Zealand Standard Time (NZST)</source>
+        <target state="needs-review-translation">ニュージーランド標準時（NZST）</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/timezone-selector/timezone-selector.component.ts</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="taxi.timezone.plus13" datatype="html">
+        <source>Tonga Time (TOT)</source>
+        <target state="needs-review-translation">トンガ時間（TOT）</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/timezone-selector/timezone-selector.component.ts</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="taxi.timezone.plus14" datatype="html">
+        <source>Line Islands Time (LINT)</source>
+        <target state="needs-review-translation">ライン諸島時間（LINT）</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/timezone-selector/timezone-selector.component.ts</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.29" datatype="html">
+        <source>Trademark &amp; Attribution</source>
+        <target state="needs-review-translation">商標と帰属表示</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/trademark-policy/trademark-policy.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.30" datatype="html">
+        <source>Updated: September 20, 2026</source>
+        <target state="needs-review-translation">更新日：2026年9月20日</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/trademark-policy/trademark-policy.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.31" datatype="html">
+        <source>tx.taxi Identity</source>
+        <target state="needs-review-translation">tx.taxi のアイデンティティ</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/trademark-policy/trademark-policy.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.35" datatype="html">
+        <source>doge.tx.taxi is an independently operated Dogecoin explorer in the tx.taxi family. Its domain, wordmark, chain palette, and service identity distinguish this fork from the upstream project.</source>
+        <target state="needs-review-translation">doge.tx.taxi は tx.taxi ファミリーの独立運営の Dogecoin エクスプローラーです。ドメイン、ワードマーク、チェーン配色、サービスのアイデンティティにより、このフォークを上流プロジェクトと区別しています。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/trademark-policy/trademark-policy.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.32" datatype="html">
+        <source>Upstream Attribution</source>
+        <target state="needs-review-translation">上流の帰属表示</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/trademark-policy/trademark-policy.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.inline.6" datatype="html">
+        <source>This software is derived from</source>
+        <target state="needs-review-translation">このソフトウェアは次から派生しています：</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/trademark-policy/trademark-policy.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.inline.7" datatype="html">
+        <source>. The upstream source code, visual system, project names, logos, and trademarks belong to their respective owners.</source>
+        <target state="needs-review-translation">。上流のソースコード、ビジュアルシステム、プロジェクト名、ロゴ、商標はそれぞれの所有者に帰属します。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/trademark-policy/trademark-policy.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.33" datatype="html">
+        <source>No Affiliation</source>
+        <target state="needs-review-translation">提携関係なし</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/trademark-policy/trademark-policy.component.html</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.36" datatype="html">
+        <source>doge.tx.taxi is not affiliated with, sponsored by, or endorsed by Mempool Holdings S.A. de C.V. References to mempool.space and mempool/mempool are nominative attribution to the software from which this fork derives.</source>
+        <target state="needs-review-translation">doge.tx.taxi は Mempool Holdings S.A. de C.V. と提携しておらず、同社から支援または承認を受けていません。mempool.space および mempool/mempool への言及は、このフォークの元となったソフトウェアへの名称を用いた帰属表示です。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/trademark-policy/trademark-policy.component.html</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.37" datatype="html">
+        <source>Dogecoin is an open network and protocol. References to Dogecoin, DOGE, koinu, blocks, transactions, addresses, and merged mining describe the network data presented by this explorer.</source>
+        <target state="needs-review-translation">Dogecoin はオープンなネットワークとプロトコルです。Dogecoin、DOGE、koinu、ブロック、取引、アドレス、マージマイニングへの言及は、本エクスプローラーが表示するネットワークデータを説明するものです。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/trademark-policy/trademark-policy.component.html</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.meta.title.3" datatype="html">
+        <source>Trademark &amp; Attribution</source>
+        <target state="needs-review-translation">商標と帰属表示</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/trademark-policy/trademark-policy.component.ts</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.meta.desc.3" datatype="html">
+        <source>Trademark and attribution notes for doge.tx.taxi, including upstream mempool/mempool attribution and project independence.</source>
+        <target state="needs-review-translation">上流の mempool/mempool への帰属表示とプロジェクトの独立性を含む doge.tx.taxi の商標と帰属表示に関する説明。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/trademark-policy/trademark-policy.component.ts</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.label.1" datatype="html">
+        <source>Connection</source>
+        <target state="needs-review-translation">接続</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.label.2" datatype="html">
+        <source>Initialize the stream</source>
+        <target state="needs-review-translation">ストリームを初期化</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.description.19" datatype="html">
+        <source>Connect to &lt;code&gt;wss://doge.tx.taxi/api/v1/ws&lt;/code&gt;, then send this message. The service returns the current block, fee, pending-sample, and provider-freshness snapshot when available.</source>
+        <target state="needs-review-translation">&lt;code&gt;wss://doge.tx.taxi/api/v1/ws&lt;/code&gt; に接続し、このメッセージを送信します。利用可能な場合、サービスは現在のブロック、手数料、未承認サンプル、データ提供元の鮮度のスナップショットを返します。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.label.3" datatype="html">
+        <source>Track one transaction</source>
+        <target state="needs-review-translation">1 件の取引を追跡</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.description.20" datatype="html">
+        <source>Track a 64-character transaction ID. The service sends &lt;code&gt;tx&lt;/code&gt; when it can retrieve the transaction and stops tracking it after confirmation.</source>
+        <target state="needs-review-translation">64 文字の取引 ID を追跡します。サービスは取引を取得できる場合に &lt;code&gt;tx&lt;/code&gt; を送信し、承認後は追跡を停止します。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.label.4" datatype="html">
+        <source>Track an address</source>
+        <target state="needs-review-translation">アドレスを追跡</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.description.21" datatype="html">
+        <source>Track a standard Dogecoin address. New unconfirmed transactions arrive as &lt;code&gt;address-transactions&lt;/code&gt;; confirmations arrive as &lt;code&gt;block-transactions&lt;/code&gt;. Address history remains subject to provider availability.</source>
+        <target state="needs-review-translation">標準 Dogecoin アドレスを追跡します。新しい未承認取引は &lt;code&gt;address-transactions&lt;/code&gt;、承認は &lt;code&gt;block-transactions&lt;/code&gt; として届きます。アドレス履歴はデータ提供元の可用性に依存します。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.label.5" datatype="html">
+        <source>Inspect the pending sample</source>
+        <target state="needs-review-translation">未承認サンプルを確認</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.description.22" datatype="html">
+        <source>Request the transactions included in the explorer’s bounded pending sample. This is a sampled visualization of the latest provider observation, not the network-wide mempool and not a confirmation promise.</source>
+        <target state="needs-review-translation">エクスプローラーの上限付き未承認サンプルに含まれる取引を要求します。これは提供元の最新観測値のサンプル表示であり、ネットワーク全体のメンプールでも承認の保証でもありません。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.label.6" datatype="html">
+        <source>Network</source>
+        <target state="needs-review-translation">ネットワーク</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.label.7" datatype="html">
+        <source>Get the tip height</source>
+        <target state="needs-review-translation">チェーン先端の高さを取得</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.description.1" datatype="html">
+        <source>Returns the current best-chain height as plain text.</source>
+        <target state="needs-review-translation">現在の最良チェーンの高さをプレーンテキストで返します。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.label.8" datatype="html">
+        <source>Get the tip hash</source>
+        <target state="needs-review-translation">チェーン先端のハッシュを取得</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.description.2" datatype="html">
+        <source>Returns the current best-chain block hash as plain text.</source>
+        <target state="needs-review-translation">現在の最良チェーンのブロックハッシュをプレーンテキストで返します。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.label.9" datatype="html">
+        <source>Get explorer network data</source>
+        <target state="needs-review-translation">エクスプローラーのネットワークデータを取得</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.description.3" datatype="html">
+        <source>Returns the latest observed Dogecoin target block time, permanent subsidy, provider observation timestamps, and tip snapshot. Timestamps describe the source observation, not a guarantee of live network state.</source>
+        <target state="needs-review-translation">最新の観測に基づく Dogecoin の目標ブロック時間、恒久的な補助金、提供元の観測時刻、チェーン先端のスナップショットを返します。時刻は提供元の観測を示し、ネットワークのリアルタイム状態を保証しません。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.label.11" datatype="html">
+        <source>Get a block hash by height</source>
+        <target state="needs-review-translation">高さからブロックハッシュを取得</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.description.4" datatype="html">
+        <source>Resolves a decimal block height to its canonical block hash.</source>
+        <target state="needs-review-translation">10 進数のブロック高さを正規のブロックハッシュに解決します。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.label.12" datatype="html">
+        <source>Get a block</source>
+        <target state="needs-review-translation">ブロックを取得</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.description.5" datatype="html">
+        <source>Returns indexed block data including height, timestamp, header fields, transaction count, fees when available, and reward. Recent strip data is cross-checked against raw Dogecoin block data before use; older detail availability depends on the historical provider.</source>
+        <target state="needs-review-translation">高さ、時刻、ヘッダーフィールド、取引数、利用可能な場合の手数料、報酬などのインデックス済みブロックデータを返します。最新のブロック列データは利用前に Dogecoin の生ブロックデータと照合します。古い詳細データの可用性は履歴データ提供元に依存します。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.label.13" datatype="html">
+        <source>Get a block transaction page</source>
+        <target state="needs-review-translation">ブロック内の取引ページを取得</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.description.6" datatype="html">
+        <source>Returns up to 25 indexed transactions from a block. The gateway rejects incomplete pages rather than silently returning partial data.</source>
+        <target state="needs-review-translation">ブロックから最大 25 件のインデックス済み取引を返します。ゲートウェイは不完全なページを黙って部分返却せず、拒否します。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.label.14" datatype="html">
+        <source>Get all indexed transaction IDs</source>
+        <target state="needs-review-translation">インデックス済み取引 ID をすべて取得</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.description.7" datatype="html">
+        <source>Returns a complete transaction-ID list only when the provider can supply the whole block.</source>
+        <target state="needs-review-translation">提供元がブロック全体を提供できる場合にのみ、完全な取引 ID リストを返します。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.label.16" datatype="html">
+        <source>Get a transaction</source>
+        <target state="needs-review-translation">取引を取得</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">37</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.description.8" datatype="html">
+        <source>Returns a transaction with inputs, outputs, koinu values, and confirmation status. Amounts are in koinu; 100,000,000 koinu equals 1 DOGE.</source>
+        <target state="needs-review-translation">入力、出力、koinu の値、承認状態を含む取引を返します。金額は koinu 単位で、100,000,000 koinu は 1 DOGE です。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">37</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.label.17" datatype="html">
+        <source>Get transaction status</source>
+        <target state="needs-review-translation">取引状態を取得</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">38</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.description.9" datatype="html">
+        <source>Returns only the confirmation status and, when known, the containing block.</source>
+        <target state="needs-review-translation">承認状態と、判明している場合は収録されたブロックのみを返します。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">38</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.label.18" datatype="html">
+        <source>Get output spends</source>
+        <target state="needs-review-translation">出力の使用状態を取得</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.description.10" datatype="html">
+        <source>Returns one entry per output describing whether it has been spent, when the historical provider has the data.</source>
+        <target state="needs-review-translation">履歴データ提供元にデータがある場合、各出力について使用済みかどうかを示す項目を返します。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.label.19" datatype="html">
+        <source>Get raw transaction data</source>
+        <target state="needs-review-translation">生の取引データを取得</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">40</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.description.11" datatype="html">
+        <source>Returns a transaction serialized as hexadecimal when it remains available from the provider.</source>
+        <target state="needs-review-translation">提供元から取得可能な場合、16 進数でシリアライズされた取引を返します。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">40</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.label.21" datatype="html">
+        <source>Get address statistics</source>
+        <target state="needs-review-translation">アドレスの統計を取得</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">42</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.description.12" datatype="html">
+        <source>Returns indexed funded, spent, and transaction totals for a standard Dogecoin address. The explorer does not provide wallet balances or private-key services.</source>
+        <target state="needs-review-translation">標準 Dogecoin アドレスについて、インデックス済みの入金額、支出額、取引総数を返します。エクスプローラーはウォレット残高や秘密鍵のサービスを提供しません。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">42</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.label.22" datatype="html">
+        <source>Get address transactions</source>
+        <target state="needs-review-translation">アドレスの取引を取得</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">43</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.description.13" datatype="html">
+        <source>Returns the current provider page of transactions for an address. Use the chain cursor endpoint to continue through confirmed history.</source>
+        <target state="needs-review-translation">提供元が現在返すアドレスの取引ページを返します。承認済み履歴の続きを取得するにはチェーンカーソルのエンドポイントを使用します。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">43</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.label.23" datatype="html">
+        <source>Continue confirmed address history</source>
+        <target state="needs-review-translation">承認済みアドレス履歴の続きを取得</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">44</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.description.14" datatype="html">
+        <source>Returns the next historical page before a confirmed transaction ID. Historical depth is limited by the upstream indexed provider.</source>
+        <target state="needs-review-translation">指定した承認済み取引 ID より前の履歴ページを返します。履歴の深さは上流のインデックス提供元に制限されます。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">44</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.label.24" datatype="html">
+        <source>Validate an address format</source>
+        <target state="needs-review-translation">アドレスの形式を検証</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">45</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.description.15" datatype="html">
+        <source>Checks whether a value matches the gateway’s standard Dogecoin address format. This is format validation, not an ownership or balance check.</source>
+        <target state="needs-review-translation">値がゲートウェイの標準 Dogecoin アドレス形式に一致するか検証します。形式の検証であり、所有権や残高の確認ではありません。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">45</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.label.25" datatype="html">
+        <source>Fees and pending sample</source>
+        <target state="needs-review-translation">手数料と未承認サンプル</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">46</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.label.26" datatype="html">
+        <source>Get fee estimates</source>
+        <target state="needs-review-translation">手数料の推定値を取得</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">47</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.description.16" datatype="html">
+        <source>Returns source fee suggestions in koinu/B. They are observations from the configured provider and should be checked when creating a transaction.</source>
+        <target state="needs-review-translation">データ提供元の手数料推奨値を koinu/B で返します。設定された提供元の観測値であり、取引作成時に確認してください。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">47</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.label.27" datatype="html">
+        <source>Get the bounded pending sample</source>
+        <target state="needs-review-translation">上限付き未承認サンプルを取得</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">48</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.description.17" datatype="html">
+        <source>Returns the explorer’s packed sample of recently observed pending transactions. It is capped at one million bytes and may be empty or stale during source outages; it is not a complete mempool view.</source>
+        <target state="needs-review-translation">最近観測された未承認取引を詰めたエクスプローラーのサンプルを返します。上限は 100 万バイトで、データ提供元の障害時には空または古い場合があります。完全なメンプール表示ではありません。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">48</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.label.28" datatype="html">
+        <source>Get recently observed pending transactions</source>
+        <target state="needs-review-translation">最近観測された未承認取引を取得</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">49</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.api.description.18" datatype="html">
+        <source>Returns the bounded recent pending observation used by the explorer. It does not enumerate every transaction relayed by the Dogecoin network.</source>
+        <target state="needs-review-translation">エクスプローラーが使用する上限付きの最新未承認観測を返します。Dogecoin ネットワークで中継されたすべての取引を列挙するものではありません。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">49</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.faq.heading.1" datatype="html">
+        <source>Dogecoin basics</source>
+        <target state="needs-review-translation">Dogecoin の基礎</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">53</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.faq.heading.2" datatype="html">
+        <source>What units does the explorer use?</source>
+        <target state="needs-review-translation">エクスプローラーはどの単位を使いますか？</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">54</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.faq.heading.3" datatype="html">
+        <source>How quickly are blocks found?</source>
+        <target state="needs-review-translation">ブロックはどのくらいの速さで生成されますか？</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">55</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.faq.heading.4" datatype="html">
+        <source>What is AuxPoW merged mining?</source>
+        <target state="needs-review-translation">AuxPoW マージマイニングとは何ですか？</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">56</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.faq.heading.5" datatype="html">
+        <source>Using this explorer</source>
+        <target state="needs-review-translation">このエクスプローラーの使い方</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">57</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.faq.heading.6" datatype="html">
+        <source>What can I search for?</source>
+        <target state="needs-review-translation">何を検索できますか？</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">58</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.faq.heading.7" datatype="html">
+        <source>What does the pending strip represent?</source>
+        <target state="needs-review-translation">未承認ブロック列は何を表しますか？</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">59</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.faq.heading.8" datatype="html">
+        <source>How should I read fee estimates?</source>
+        <target state="needs-review-translation">手数料の推定値はどう読みますか？</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">60</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.faq.heading.9" datatype="html">
+        <source>Why is historical data sometimes unavailable?</source>
+        <target state="needs-review-translation">過去のデータが利用できないことがあるのはなぜですか？</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">61</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.faq.heading.10" datatype="html">
+        <source>Transactions and confirmations</source>
+        <target state="needs-review-translation">取引と承認</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">62</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.faq.heading.11" datatype="html">
+        <source>Why is my transaction still unconfirmed?</source>
+        <target state="needs-review-translation">取引がまだ未承認なのはなぜですか？</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">63</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.faq.heading.12" datatype="html">
+        <source>Can this site change or recover a transaction?</source>
+        <target state="needs-review-translation">このサイトで取引を変更または復旧できますか？</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs-data.ts</context>
+          <context context-type="linenumber">64</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.docs.disclaimer-title" datatype="html">
+        <source>doge.tx.taxi shows public Dogecoin data.</source>
+        <target state="needs-review-translation">doge.tx.taxi は公開された Dogecoin データを表示します。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.docs.disclaimer-body" datatype="html">
+        <source>It cannot access wallets, recover funds, reverse a transaction, or control when a miner confirms it.</source>
+        <target state="needs-review-translation">ウォレットへのアクセス、資金の復旧、取引の取り消し、マイナーが承認する時刻の制御はできません。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.docs.rest-intro" datatype="html">
+        <source>The Dogecoin REST API is read-only. Requests use</source>
+        <target state="needs-review-translation">Dogecoin REST API は読み取り専用です。リクエストには</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.docs.rest-outro" datatype="html">
+        <source>; unavailable source capabilities return an error instead of placeholder data.</source>
+        <target state="needs-review-translation">を使用します。提供元が対応していない機能は、プレースホルダーではなくエラーを返します。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.docs.ws-intro" datatype="html">
+        <source>The WebSocket endpoint is</source>
+        <target state="needs-review-translation">WebSocket エンドポイントは</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.docs.ws-outro" datatype="html">
+        <source>. It is a read-only stream with a shared, rate-bounded collector.</source>
+        <target state="needs-review-translation">です。共有のレート制限付きコレクターを使用する読み取り専用ストリームです。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.docs.payload" datatype="html">
+        <source>Payload</source>
+        <target state="needs-review-translation">ペイロード</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.faq.units-intro" datatype="html">
+        <source>Dogecoin amounts are displayed in DOGE and the smallest unit, koinu.</source>
+        <target state="needs-review-translation">Dogecoin の金額は DOGE と最小単位の koinu で表示します。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.faq.unit-equivalence" datatype="html">
+        <source>1 DOGE = 100,000,000 koinu.</source>
+        <target state="needs-review-translation">1 DOGE = 100,000,000 koinu。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.faq.units-outro" datatype="html">
+        <source>Transaction fees and fee estimates use koinu per byte (koinu/B).</source>
+        <target state="needs-review-translation">取引手数料とその推定値には 1 バイトあたりの koinu（koinu/B）を使用します。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.faq.block-time" datatype="html">
+        <source>Dogecoin targets one block about every minute. Actual intervals vary because proof of work is probabilistic. DigiShield adjusts difficulty frequently to keep the target cadence.</source>
+        <target state="needs-review-translation">Dogecoin の目標は約 1 分ごとに 1 ブロックです。プルーフ・オブ・ワークは確率的なため、実際の間隔は変動します。DigiShield は目標ペースを保つために難易度を頻繁に調整します。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs.component.html</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.faq.merged-mining" datatype="html">
+        <source>Dogecoin uses Scrypt proof of work and supports AuxPoW merged mining. A miner can use work performed for a parent chain to prove Dogecoin work when the AuxPoW commitment satisfies Dogecoin’s consensus rules.</source>
+        <target state="needs-review-translation">Dogecoin は Scrypt プルーフ・オブ・ワークを使用し、AuxPoW マージマイニングをサポートします。AuxPoW コミットメントが Dogecoin のコンセンサスルールを満たす場合、マイナーは親チェーン向けに行った作業を Dogecoin の作業証明に利用できます。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs.component.html</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.faq.searching" datatype="html">
+        <source>Search a block height, block hash, transaction ID, or standard Dogecoin address. A hash can be meaningful on more than one chain, so tx.taxi keeps manual chain selection available.</source>
+        <target state="needs-review-translation">ブロックの高さ、ブロックハッシュ、取引 ID、または標準 Dogecoin アドレスを検索できます。ハッシュは複数のチェーンで意味を持つ場合があるため、tx.taxi ではチェーンを手動で選択できます。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs.component.html</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.faq.pending-sample-faq" datatype="html">
+        <source>The pending strip is a bounded sample from the explorer’s most recent provider observation. It is packed up to one million bytes for visualization and can be incomplete, empty, or stale when the source is unavailable. It does not claim to show Dogecoin’s entire network mempool.</source>
+        <target state="needs-review-translation">未承認ブロック列はエクスプローラーの提供元による最新観測から得た上限付きサンプルです。可視化のため最大 100 万バイトまで詰められ、提供元が利用できない場合には不完全、空、または古い場合があります。Dogecoin ネットワーク全体のメンプールを表示しているとは限りません。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs.component.html</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.faq.fee-estimates" datatype="html">
+        <source>Fee estimates are provider observations expressed in koinu/B. They are a guide for transaction creation, not a service-level confirmation promise; check the current estimate in your wallet before broadcasting.</source>
+        <target state="needs-review-translation">手数料の推定値は koinu/B で表した提供元の観測値です。取引作成時の目安であり、サービスによる承認の保証ではありません。ブロードキャスト前にウォレットで現在の推定値を確認してください。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs.component.html</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.faq.historical-data" datatype="html">
+        <source>Recent strip blocks are enriched from indexed data and raw Dogecoin blocks. Older block, raw-hex, transaction, address, and outspend lookups depend on the historical provider. If it cannot supply complete data within the gateway’s bounds, the API returns an unavailable response rather than incomplete results.</source>
+        <target state="needs-review-translation">最近のブロック列はインデックス済みデータと Dogecoin の生ブロックで補完されています。古いブロック、生の 16 進データ、取引、アドレス、出力の使用状態の検索は履歴データ提供元に依存します。ゲートウェイの制限内で完全なデータを提供できない場合、API は不完全な結果ではなく利用不可を返します。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs.component.html</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.faq.unconfirmed" datatype="html">
+        <source>Confirmation depends on propagation, fees, miner selection, and the next proof-of-work block. Dogecoin’s target is about one minute, but a target is not a deadline. The explorer cannot accelerate a transaction.</source>
+        <target state="needs-review-translation">承認は伝播、手数料、マイナーの選択、次のプルーフ・オブ・ワークブロックに依存します。Dogecoin の目標は約 1 分ですが、目標は期限ではありません。エクスプローラーは取引を加速できません。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs.component.html</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.faq.not-custodial" datatype="html">
+        <source>No. This explorer only reads public chain and provider data. Contact the wallet, exchange, or payment service that created a transaction for account or transaction support.</source>
+        <target state="needs-review-translation">できません。このエクスプローラーは公開チェーンとデータ提供元のデータを読み取るだけです。アカウントや取引のサポートについては、取引を作成したウォレット、取引所、決済サービスにお問い合わせください。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs.component.html</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.docs.category.1" datatype="html">
+        <source>connection</source>
+        <target state="needs-review-translation">接続</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs.component.ts</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.docs.category.2" datatype="html">
+        <source>network</source>
+        <target state="needs-review-translation">ネットワーク</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs.component.ts</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.docs.category.4" datatype="html">
+        <source>transactions</source>
+        <target state="needs-review-translation">取引</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs.component.ts</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.docs.category.6" datatype="html">
+        <source>fees</source>
+        <target state="needs-review-translation">手数料</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs.component.ts</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.docs.category.7" datatype="html">
+        <source>about</source>
+        <target state="needs-review-translation">概要</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs.component.ts</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.docs.category.8" datatype="html">
+        <source>explorer</source>
+        <target state="needs-review-translation">エクスプローラー</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/docs/api-docs/api-docs.component.ts</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="af6627251e98f2ee627f2f8c84f135b65c3fffee" datatype="html">
+        <source>This transaction belongs to a chunk of 1 transaction, with combined effective fee rate <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;" /><x id="INTERPOLATION" equiv-text="s.chunkFeerate | feeRounding }}" /> koinu/B<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;" />.</source>
+        <target state="needs-review-translation">この取引は 1 件の取引からなるチャンクに属し、合算した実効手数料率は <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;" /><x id="INTERPOLATION" equiv-text="s.chunkFeerate | feeRounding }}" /> koinu/B<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;" /> です。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/transaction/transaction-details/transaction-details.component.html</context>
+          <context context-type="linenumber">244</context>
+        </context-group>
+        <note priority="1" from="description">cluster.preview.chunk-line-one</note>
+      </trans-unit>
+      <trans-unit id="ae0a475bfce03fadb87c9090e64081a9310beea2" datatype="html">
+        <source>This transaction belongs to a chunk of <x id="INTERPOLATION" equiv-text="{{ clusterPreviewStats.chunkSize }}" /> transactions, with combined effective fee rate <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;" /><x id="INTERPOLATION_1" equiv-text="s.chunkFeerate | feeRounding }}" /> koinu/B<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;" />.</source>
+        <target state="needs-review-translation">この取引は <x id="INTERPOLATION" equiv-text="{{ clusterPreviewStats.chunkSize }}" /> 件の取引からなるチャンクに属し、合算した実効手数料率は <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;" /><x id="INTERPOLATION_1" equiv-text="s.chunkFeerate | feeRounding }}" /> koinu/B<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;" /> です。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/transaction/transaction-details/transaction-details.component.html</context>
+          <context context-type="linenumber">246</context>
+        </context-group>
+        <note priority="1" from="description">cluster.preview.chunk-line-many</note>
+      </trans-unit>
+      <trans-unit id="c7678f3be45eefaebe9bda75a0a30f97204433b5" datatype="html">
+        <source>In a mempool cluster containing 1 other chunk.</source>
+        <target state="needs-review-translation">他に 1 件のチャンクを含むメンプールクラスター内にあります。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/transaction/transaction-details/transaction-details.component.html</context>
+          <context context-type="linenumber">249</context>
+        </context-group>
+        <note priority="1" from="description">cluster.preview.cluster-line-one</note>
+      </trans-unit>
+      <trans-unit id="acf9470007b6c76f037bf8aec23fc8d2ba2267a4" datatype="html">
+        <source>In a mempool cluster containing <x id="INTERPOLATION" equiv-text="{{ clusterPreviewStats.otherChunks }}" /> other chunks.</source>
+        <target state="needs-review-translation">他に <x id="INTERPOLATION" equiv-text="{{ clusterPreviewStats.otherChunks }}" /> 件のチャンクを含むメンプールクラスター内にあります。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/transaction/transaction-details/transaction-details.component.html</context>
+          <context context-type="linenumber">251</context>
+        </context-group>
+        <note priority="1" from="description">cluster.preview.cluster-line-many</note>
+      </trans-unit>
+      <trans-unit id="tx-taxi.missing-prevouts" datatype="html">
+        <source>Missing prevouts are not loaded. Some fields like fee rate cannot be calculated.</source>
+        <target state="needs-review-translation">不足している前の出力が読み込まれていません。手数料率など一部の項目は計算できません。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/transaction/transaction-raw.component.html</context>
+          <context context-type="linenumber">68</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.prevouts-error" datatype="html">
+        <source>Error loading missing prevouts</source>
+        <target state="needs-review-translation">不足している前の出力の読み込みエラー</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/transaction/transaction-raw.component.html</context>
+          <context context-type="linenumber">70</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.cpfp-error" datatype="html">
+        <source>Error loading CPFP data</source>
+        <target state="needs-review-translation">CPFP データの読み込みエラー</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/transaction/transaction-raw.component.html</context>
+          <context context-type="linenumber">77</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="92626adb4b7e2aff0d35c2db5e023aac29d27f0f" datatype="html">
+        <source>Cluster</source>
+        <target state="needs-review-translation">クラスター</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/transaction/transaction-raw.component.html</context>
+          <context context-type="linenumber">100</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/transaction/transaction.component.html</context>
+          <context context-type="linenumber">88</context>
+        </context-group>
+        <note priority="1" from="description">Cluster</note>
+        <note priority="1" from="meaning">transaction.cluster</note>
+      </trans-unit>
+      <trans-unit id="719f62092a6b4142d8fa32d09bb8a72d9e613aa7" datatype="html">
+        <source>Only ~<x id="INTERPOLATION" equiv-text="{{ medianFeeNeeded | feeRounding }}" /> koinu/B was needed to get into this block</source>
+        <target state="needs-review-translation">このブロックに入るために必要だったのは約 <x id="INTERPOLATION" equiv-text="{{ medianFeeNeeded | feeRounding }}" /> koinu/B だけでした</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/tx-fee-rating/tx-fee-rating.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/tx-fee-rating/tx-fee-rating.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+        <note priority="1" from="description">tx-fee-rating.warning-tooltip</note>
+      </trans-unit>
+      <trans-unit id="tx-taxi.pending-transactions" datatype="html">
+        <source>Pending Transactions</source>
+        <target state="needs-review-translation">未承認取引</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge-chart-unavailable" datatype="html">
+        <source>Chart unavailable.</source>
+        <target state="needs-review-translation">グラフを利用できません。</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.view-pending" datatype="html">
+        <source>View pending transactions</source>
+        <target state="needs-review-translation">未承認取引を表示</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tx-taxi.not-available" datatype="html">
+        <source>Not available</source>
+        <target state="needs-review-translation">利用不可</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="c19bde6e194e95b60145a4e312fc31941197d90c" datatype="html">
+        <source>LBTC Supply vs. BTC Holdings</source>
+        <target state="needs-review-translation">LBTC 供給量と BTC 保有量</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">103</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">236</context>
+        </context-group>
+        <note priority="1" from="description">dashboard.lbtc-supply-vs-btc-holdings</note>
+      </trans-unit>
+      <trans-unit id="7af8cba6646f8c9de5351a05976188876d00d58e" datatype="html">
+        <source>sat/B</source>
+        <target state="needs-review-translation">sat/B</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/accelerate-checkout/accelerate-checkout.component.html</context>
+          <context context-type="linenumber">121</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/accelerate-checkout/accelerate-checkout.component.html</context>
+          <context context-type="linenumber">143</context>
+        </context-group>
+        <note priority="1" from="description">sat/B</note>
+        <note priority="1" from="meaning">shared.sat-vbyte</note>
+      </trans-unit>
+      <trans-unit id="1ac50ef21ed21d7f6b6dcb0bc74ad5c0ba6c144e" datatype="html">
+        <source>DOGE</source>
+        <target state="needs-review-translation">DOGE</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/amount-selector/amount-selector.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/balance-widget/balance-widget.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/balance-widget/balance-widget.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/balance-widget/balance-widget.component.html</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/liquid-reserves-audit/recent-pegs-stats/recent-pegs-stats.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/liquid-reserves-audit/recent-pegs-stats/recent-pegs-stats.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/liquid-reserves-audit/reserves-ratio-stats/reserves-ratio-stats.component.html</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+        <note priority="1" from="description">BTC</note>
+        <note priority="1" from="meaning">shared.btc</note>
+      </trans-unit>
+      <trans-unit id="806c6ccce363f1fdd06d9323210a9248bd7b4b6b" datatype="html">
+        <source>koinu</source>
+        <target state="needs-review-translation">koinu</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/amount-selector/amount-selector.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/block-overview-tooltip/block-overview-tooltip.component.html</context>
+          <context context-type="linenumber">43</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/calculator/calculator.component.html</context>
+          <context context-type="linenumber">42</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/calculator/calculator.component.html</context>
+          <context context-type="linenumber">61</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/cluster-diagram/cluster-diagram.component.html</context>
+          <context context-type="linenumber">135</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/rbf-timeline/rbf-timeline-tooltip.component.html</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/transaction/transaction-details/transaction-details.component.html</context>
+          <context context-type="linenumber">201</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/transaction/transaction-preview.component.html</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/transactions-list/transactions-list.component.html</context>
+          <context context-type="linenumber">518</context>
+        </context-group>
+        <note priority="1" from="description">shared.sats</note>
+      </trans-unit>
+      <trans-unit id="055c54ed5f836870d20d1b85c45c56d9864d7281" datatype="html">
+        <source>koinu/tx</source>
+        <target state="needs-review-translation">koinu/tx</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/reward-stats/reward-stats.component.html</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+        <note priority="1" from="description">koinu/B</note>
+        <note priority="1" from="meaning">shared.sat-vbyte</note>
+      </trans-unit>
+      <trans-unit id="tx-taxi.doge.legal.34" datatype="html">
+        <source>Dogecoin</source>
+        <target state="needs-review-translation">Dogecoin</target><context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/trademark-policy/trademark-policy.component.html</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
+            <trans-unit id="tx-taxi.doge.pool-luck-description" datatype="html">
+        <source>The overall luck of all mining pools over the past week. A luck above 100% means the average block interval during that week was less than the 1-minute Dogecoin target.</source>
+        <target>過去 1 週間の全マイニングプールの総合的な運。100% を超える場合、その週の平均ブロック間隔が Dogecoin の目標である 1 分未満だったことを示します。</target>
+      </trans-unit>
+    </body>
   </file>
 </xliff>
