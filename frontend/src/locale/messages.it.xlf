@@ -11880,6 +11880,7 @@
       <trans-unit id="tx-taxi.clipboard.copied-title" datatype="html"><source>Copied</source><target>Copiato</target></trans-unit>
       <trans-unit id="tx-taxi.doge.logo-alt" datatype="html"><source>doge.tx.taxi Dogecoin explorer</source><target>doge.tx.taxi, esploratore Dogecoin</target></trans-unit>
       <trans-unit id="tx-taxi.doge.search-icon-alt" datatype="html"><source>Dogecoin explorer</source><target>Esploratore Dogecoin</target></trans-unit>
+      <trans-unit id="tx-taxi.search.choose-chain-current" datatype="html"><source>Choose search chain, selected: <x id="name" equiv-text="name"/></source><target>Scegli la blockchain di ricerca, selezionata: <x id="name" equiv-text="name"/></target></trans-unit>
     </body>
   </file>
 </xliff>

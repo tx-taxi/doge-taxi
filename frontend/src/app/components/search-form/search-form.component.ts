@@ -46,6 +46,7 @@ export class SearchFormComponent implements OnInit {
   readonly loadingExplorersLabel = $localize`:@@tx-taxi.global.loading-explorers:Loading explorers`;
   readonly foundLabel = $localize`:@@tx-taxi.search.found:Found`;
   readonly possibleLabel = $localize`:@@tx-taxi.search.possible:Possible`;
+  chooseSearchChainLabel(name: string): string { return $localize`:@@tx-taxi.search.choose-chain-current:Choose search chain, selected: ${name}:name:`; }
   openExplorerLabel(name: string): string { return $localize`:@@tx-taxi.search.open-explorer:Open ${name}:name:`; }
   openExplorerInNewTabLabel(name: string): string { return $localize`:@@tx-taxi.search.open-new-tab:Open ${name}:name: in a new tab`; }
   switchExplorerLabel(name: string): string { return $localize`:@@tx-taxi.search.switch-explorer:Switch to ${name}:name:`; }
