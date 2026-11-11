@@ -165,15 +165,18 @@ const emit=(client,data)=>{if(client.readyState===1)client.send(JSON.stringify(d
 function pendingFrame(d){const ids=new Set(d['mempool-blocks']?.[0]?.transactionIds||[]);return {'projected-block-transactions':{index:0,sequence,blockTransactions:d.transactions.filter(t=>ids.has(t.txid)).map(t=>[t.txid,t.fee,t.vsize,t.value,t.fee/t.vsize,0])}};}
 async function updateDetail(client){
  const id=client.trackedTx,generation=client.generation;
- if(!id)return;
+ if(!id||client.detailInFlight)return;
+ client.detailInFlight=true;try{
  const r=await api('/api/tx/'+id);
  if(client.trackedTx!==id||client.generation!==generation)return;
  if(r.status===200){emit(client,{tx:r.data});if(r.data.status?.confirmed)client.trackedTx=null;}
  else emit(client,{'tracking-unavailable':true});
+ }finally{client.detailInFlight=false;}
 }
 async function updateAddress(client){
  const address=client.trackedAddress,generation=client.addressGeneration;
- if(!address)return;
+ if(!address||client.addressInFlight)return;
+ client.addressInFlight=true;try{
  const r=await api('/api/address/'+address+'/txs');
  if(client.trackedAddress!==address||client.addressGeneration!==generation)return;
  if(r.status!==200||!Array.isArray(r.data)){emit(client,{'tracking-unavailable':true});return;}
@@ -186,6 +189,7 @@ async function updateAddress(client){
   for(const [id,status] of before)if(!current.has(id))current.set(id,status);
  }
  client.addressSeen=new Map([...current].slice(0,500));
+ }finally{client.addressInFlight=false;}
 }
 async function collect(){
  if(collection)return collection;
@@ -193,16 +197,16 @@ async function collect(){
   try{
    const d=dogecoin.publicSnapshot(await dogecoin.snapshot());lastSnapshot=d;sequence++;health.lastSuccess=dogecoin.liveObservedAt();health.websocket='live';
    for(const client of wss.clients){emit(client,{...d,blocks:[...d.blocks].reverse(),'provider-freshness':{state:currentProviderStatus().stale?'stale':'live',observedAt:dogecoin.liveObservedAt()}});if(client.pendingSample&&dogecoin.pendingFresh(d))emit(client,pendingFrame(d));}
-   await Promise.allSettled([...wss.clients].flatMap(client=>[updateDetail(client),updateAddress(client)]));
-  }catch(e){health.websocket='unavailable';health.lastFailure={at:Date.now(),message:e.message};for(const client of wss.clients)emit(client,{'provider-freshness':{state:'stale',observedAt:dogecoin.liveObservedAt()}});}
+   void Promise.allSettled([...wss.clients].flatMap(client=>[updateDetail(client),updateAddress(client)]));
+  }catch(e){health.websocket='unavailable';health.lastFailure={at:Date.now(),message:e.message};for(const client of wss.clients)emit(client,{'provider-freshness':{state:currentProviderStatus().stale?'stale':'live',observedAt:dogecoin.liveObservedAt()}});}
  })();try{await collection;}finally{collection=null;}
 }
 wss.on('connection',client=>{
  client.generation=0;client.addressGeneration=0;
  client.on('message',async raw=>{let m;try{m=JSON.parse(raw);}catch{return;}
-  if(m.action==='ping'){emit(client,{pong:true});return;}
+  if(m.action==='ping'){emit(client,{pong:true,'provider-freshness':{state:currentProviderStatus().stale?'stale':'live',observedAt:dogecoin.liveObservedAt()}});return;}
   if(m.action==='init'||m['refresh-blocks']){
-   if(lastSnapshot&&Date.now()-dogecoin.liveObservedAt()<dogecoin.refreshInterval)emit(client,{...lastSnapshot,blocks:[...lastSnapshot.blocks].reverse()});
+   if(lastSnapshot&&Date.now()-dogecoin.liveObservedAt()<dogecoin.refreshInterval)emit(client,{...lastSnapshot,blocks:[...lastSnapshot.blocks].reverse(),'provider-freshness':{state:currentProviderStatus().stale?'stale':'live',observedAt:dogecoin.liveObservedAt()}});
    else await collect();
   }
   if(m['track-tx']!==undefined){client.generation++;client.trackedTx=/^[a-f0-9]{64}$/.test(m['track-tx'])?m['track-tx']:null;await updateDetail(client);}
@@ -211,6 +215,7 @@ wss.on('connection',client=>{
  });
 });
 setInterval(collect,dogecoin.collectorInterval).unref();
+setInterval(()=>{void Promise.allSettled([...wss.clients].flatMap(client=>[updateDetail(client),updateAddress(client)]));},20000).unref();
 setInterval(()=>{for(const client of wss.clients)emit(client,{heartbeat:Date.now(),'provider-freshness':{state:currentProviderStatus().stale?'stale':'live',observedAt:dogecoin.liveObservedAt()}});},20000).unref();
 collect();
 server.listen(Number(process.env.PORT||4351),process.env.DOGE_HOST||'127.0.0.1',()=>console.log('DOGE adapter on 127.0.0.1:'+ (process.env.PORT||4351)));

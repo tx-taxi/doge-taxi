@@ -3,17 +3,17 @@
 const fs=require('node:fs'),path=require('node:path');
 const {prune}=require('./cache-limits.cjs');
 const dir=path.join(process.env.DOGE_DATA_DIR||path.join(__dirname,'../.local'),'atomic');fs.mkdirSync(dir,{recursive:true});
-const root=process.env.DOGE_ATOMIC_URL||'https://dogecoin.atomicwallet.io/api/v2';
+const root=process.env.DOGE_ATOMIC_URL||'https://doge.trusteeglobal.com/api/v2';
 const budget=require('./request-budget.cjs').createBudget(path.join(dir,'budget.json'),{hourly:240,collector:240,detail:60});
 const queue=require('./provider-queue.cjs').createQueue();
 const cooldownFile=path.join(dir,'cooldown.json');let cooldown=0;try{cooldown=JSON.parse(fs.readFileSync(cooldownFile)).until;}catch{}
-let next=0;const health={source:'atomicwallet-blockbook',lastSuccess:null,lastFailure:null};
+let next=0;const health={source:'blockbook',provider:root,lastSuccess:null,lastFailure:null};
 async function request(p,lane='collector'){return queue.schedule(async()=>{
  if(Date.now()<cooldown)throw new Error('AtomicWallet provider cooling down');
  await new Promise(r=>setTimeout(r,Math.max(0,next-Date.now())));budget.claim(lane);next=Date.now()+1100;
  try{
   const r=await fetch(root+p,{signal:AbortSignal.timeout(12000)});
-  if(!r.ok){if([403,429,503].includes(r.status)){cooldown=Date.now()+Math.max(300000,Number(r.headers.get('retry-after')||0)*1000);fs.writeFileSync(cooldownFile,JSON.stringify({until:cooldown}));}const body=await r.text();let error;try{error=JSON.parse(body).error}catch{};const missing=r.status===400&&/^Transaction '[a-f0-9]{64}' not found$/.test(error||'');throw Object.assign(new Error(missing?'Transaction not found':'AtomicWallet HTTP '+r.status),{status:missing?404:r.status});}
+  if(!r.ok){if([403,429,503].includes(r.status)){cooldown=Date.now()+Math.max(300000,Number(r.headers.get('retry-after')||0)*1000);fs.writeFileSync(cooldownFile,JSON.stringify({until:cooldown}));}const body=await r.text();let error;try{error=JSON.parse(body).error}catch{};const missing=r.status===400&&/^Transaction '[a-f0-9]{64}' not found$/.test(error||'');throw Object.assign(new Error(missing?'Transaction not found':'AtomicWallet HTTP '+r.status),{status:missing?404:r.status===404?503:r.status});}
   const text=await r.text();if(text.length>12000000)throw new Error('Provider response exceeds bound');const d=JSON.parse(text);if(d.error)throw new Error('AtomicWallet data unavailable');health.lastSuccess=Date.now();return d;
  }catch(e){if(e.status!==404)health.lastFailure={at:Date.now(),message:e.message};throw e;}
  },lane);}
